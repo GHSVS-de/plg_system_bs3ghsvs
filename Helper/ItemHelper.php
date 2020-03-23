@@ -78,6 +78,8 @@ class Bs3ghsvsItem
 				!isset($item->Imagesghsvs)
 				|| !($item->Imagesghsvs instanceof Registry)
 			){
+				$item->Imagesghsvs = null;
+
 				// Something somewhere adds stupidly $item->images = '{}' to e.g. category.
 				if ($context !== 'category' && !empty($item->images) && $item->images !== '{}')
 				{
