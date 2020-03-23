@@ -9,16 +9,6 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 {
 	public function preflight($type, $parent)
 	{
-		if (!parent::preflight($type, $parent))
-		{
-			return false;
-		}
-
-		if ($type === 'update')
-		{
-			$this->removeOldUpdateservers();
-		}
-
 		$manifest = @$parent->getManifest();
 
 		if ($manifest instanceof SimpleXMLElement)
@@ -67,6 +57,17 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 				$this->allowDowngrades = true;
 			}
 		}
+
+		if (!parent::preflight($type, $parent))
+		{
+			return false;
+		}
+
+		if ($type === 'update')
+		{
+			$this->removeOldUpdateservers();
+		}
+
 		return true;
 	}
 
