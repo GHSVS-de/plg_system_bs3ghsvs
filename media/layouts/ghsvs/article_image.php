@@ -34,12 +34,14 @@ $data_title = htmlspecialchars($data_title, ENT_QUOTES, 'UTF-8');
 
 $caption = $alt;
 
+$venobox = 0;
+
 if (PluginHelper::isEnabled('system', 'venoboxghsvs'))
 {
 	$imgClasses = explode(' ', $attributes->get('class', ''));
 	$imgClasses = array_map('trim', $imgClasses);	
 
-	if (!in_array(array('excludevenobox', 'EXCLUDEVENOBOX'), $imgClasses))
+	if (!in_array('EXCLUDEVENOBOX', $imgClasses) && !in_array('excludevenobox', $imgClasses))
 	{
 		HTMLHelper::_('plgvenoboxghsvs.venobox');
 		$venobox = 1;
