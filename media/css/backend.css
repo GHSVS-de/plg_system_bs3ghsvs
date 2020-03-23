@@ -1,0 +1,31 @@
+/* CSS Document */
+.extended-width
+{
+	min-width:90%;
+}
+form.form-validate
+{
+	padding-bottom:250px;
+}
+#attrib-FieldsetImageResize .controls,
+#attrib-FieldsetOpenGraph .controls,
+#attrib-fieldsetEnabledchecker .controls
+{
+	margin-left: 0;
+}
+#attrib-FieldsetImageResize .control-label,
+#attrib-FieldsetOpenGraph  .control-label
+{
+	float: none;
+}
+#attrib-FieldsetImageResize .control-label label,
+#attrib-FieldsetOpenGraph .control-label label
+{
+	font-weight: bold;
+}
+#attrib-FieldsetImageResize hr
+{
+	margin: 0;
+	border-color: black;
+	min-width: 90%;
+}

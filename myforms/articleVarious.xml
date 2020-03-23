@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="bs3ghsvs_various">
+
+		<fieldset name="bs3ghsvsFieldset"
+			label="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS"
+			description="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS_DESC">
+
+			<field name="variousSpacer" type="spacer"
+					label="PLG_SYSTEM_BS3GHSVS_HEAD_VARIOUS"
+					description=""/>
+
+			<field name="bs3ghsvs_various_active" type="list" default="0"
+				label="PLG_SYSTEM_BS3GHSVS_ACTIVE"
+				description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+				filter="integer">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+			<field name="articlesubtitle" type="text" filter="string"
+				label="PLG_SYSTEM_BS3GHSVS_ARTICLESUBTITLE1"
+				description="PLG_SYSTEM_BS3GHSVS_ARTICLESUBTITLE1_DESC"
+				class="extended-width" />
+
+			<field name="articleStatus" type="list" filter="integer"
+				label="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS"
+				description="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_DESC">
+				<option value="0">JNONE</option>
+				<option value="1">Unfertiger Artikel in Arbeit!</option>
+			</field>
+		</fieldset>
+	</fields><!--/attribs-->
+</form>

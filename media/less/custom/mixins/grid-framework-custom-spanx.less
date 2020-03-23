@@ -1,0 +1,88 @@
+/* grid-framework-custom-spanx.less */
+
+// span1 bis span12 für BS2-Fallback
+
+.make-grid-columns-spanx() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .colspan(@index) { // initial
+    @item: ~"span@{index}";
+    .colspan((@index + 1), @item);
+  }
+  .colspan(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".span@{index}";
+    .colspan((@index + 1), ~"@{list}, @{item}");
+  }
+  .colspan(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      // Prevent columns from collapsing when empty
+      min-height: 1px;
+      // Inner gutter via padding
+      padding-left:  ceil((@grid-gutter-width / 2));
+      padding-right: floor((@grid-gutter-width / 2));
+    }
+  }
+  .colspan(1); // kickstart it
+}
+
+.float-grid-columns-spanx(@class: span) {
+  .colspan(@index) { // initial
+    @item: ~".@{class}@{index}";
+    .colspan((@index + 1), @item);
+  }
+  .colspan(@index, @list) when (@index =< @grid-columns) { // general
+    @item: ~".@{class}@{index}";
+    .colspan((@index + 1), ~"@{list}, @{item}");
+  }
+  .colspan(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      float: left;
+    }
+  }
+  .colspan(1); // kickstart it
+}
+
+.calc-grid-column-spanx(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .@{class}@{index} {
+    width: percentage((@index / @grid-columns));
+  }
+}
+.calc-grid-column-spanx(@index, @class, @type) when (@type = push) and (@index > 0) {
+  .@{class}-push-@{index} {
+    left: percentage((@index / @grid-columns));
+  }
+}
+.calc-grid-column-spanx(@index, @class, @type) when (@type = push) and (@index = 0) {
+  .@{class}-push-0 {
+    left: auto;
+  }
+}
+.calc-grid-column-spanx(@index, @class, @type) when (@type = pull) and (@index > 0) {
+  .@{class}-pull-@{index} {
+    right: percentage((@index / @grid-columns));
+  }
+}
+.calc-grid-column-spanx(@index, @class, @type) when (@type = pull) and (@index = 0) {
+  .@{class}-pull-0 {
+    right: auto;
+  }
+}
+.calc-grid-column-spanx(@index, @class, @type) when (@type = offset) {
+  .offset@{index} {
+    margin-left: percentage((@index / @grid-columns));
+  }
+}
+
+.loop-grid-columns-spanx(@index, @class, @type) when (@index >= 0) {
+  .calc-grid-column-spanx(@index, @class, @type);
+  // next iteration
+  .loop-grid-columns-spanx((@index - 1), @class, @type);
+}
+
+.make-grid-spanx(@class) {
+  .float-grid-columns-spanx(@class);
+  .loop-grid-columns-spanx(@grid-columns, @class, width);
+  .loop-grid-columns-spanx(@grid-columns, @class, pull);
+  .loop-grid-columns-spanx(@grid-columns, @class, push);
+  .loop-grid-columns-spanx(@grid-columns, @class, offset);
+}

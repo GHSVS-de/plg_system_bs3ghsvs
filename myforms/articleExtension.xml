@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<!--To be saved in db table #__bs3ghsvs_article-->
+	<fields name="bs3ghsvs_extension">
+
+		<fieldset name="bs3ghsvsFieldset"
+			label="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS"
+			description="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS_DESC">
+
+				<field name="extensionSpacer" type="spacer"
+					label="PLG_SYSTEM_BS3GHSVS_HEAD_EXTENSION"
+					description=""/>
+				
+				<field name="bs3ghsvs_extension_active" type="list" default="0"
+					label="PLG_SYSTEM_BS3GHSVS_ACTIVE"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					filter="integer">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				
+				<field name="name" type="text" filter="string"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_NAME" class="extended-width"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="description" type="textarea" filter="string"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_DESCRIPTION" rows="5" class="extended-width"
+					maxlength="1000"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="inspiredby" type="text" filter="string"
+					description="PLG_SYSTEM_BS3GHSVS_EXTENSION_INSPIREDBY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_INSPIREDBY" class="extended-width"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="urlspacer" type="spacer"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_URLSPACER"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="url" type="url" filter="url" validate="url"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_URL" class="extended-width"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="updateserver" type="list" default=""
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_UPDATESERVER"
+					showon="bs3ghsvs_extension_active:1">
+						<option value="0">PLG_SYSTEM_BS3GHSVS_EXTENSION_UPDATESERVER_0</option>
+						<option value="1">PLG_SYSTEM_BS3GHSVS_EXTENSION_UPDATESERVER_1</option>
+				</field>
+
+				<field name="project" type="url" filter="url" validate="url"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_PROJECT" class="extended-width"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="comment" type="textarea" filter="string"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_COMMENT" rows="5" class="extended-width"
+					maxlength="1000"
+					showon="bs3ghsvs_extension_active:1"/>
+
+				<field name="languages" type="filelist" directory="media/mod_languages/images/"
+					stripext="1" hide_none="1" hide_default="1" filter="\.gif$"
+					multiple="true"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_LANGUAGES"
+					showon="bs3ghsvs_extension_active:1"/>
+				
+				<field name="history" filter="url" validate="url"
+					description="PLG_SYSTEM_BS3GHSV_EMPTY_DESC"
+					label="PLG_SYSTEM_BS3GHSVS_EXTENSION_HISTORY" rows="5" class="extended-width"
+					showon="bs3ghsvs_extension_active:1"/>
+
+  </fieldset><!--/bs3ghsvsFieldset-->
+
+ </fields><!--/bs3ghsvs_extension-->
+</form>

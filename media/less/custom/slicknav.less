@@ -1,0 +1,199 @@
+/* slicknav.less */
+.slicknavActive{
+	ul.nav.menu{
+		@media (max-width: @navbarCollapseWidth){
+		 display: none;
+		}
+	}
+	div.slicknav_menu{
+		display: none;
+		@media (max-width: @navbarCollapseWidth){
+		 display: block;
+		}
+	}
+}
+
+/*!
+ * SlickNav Responsive Mobile Menu v1.0.3
+ * (c) 2015 Josh Cope
+ * licensed under MIT
+ */
+// Gesamter Button, umgebender A-Tag
+.slicknav_btn {
+	position: relative;
+	display: inline-block;
+	background-color: @slicknav-btn-bg-color;
+	vertical-align: middle;
+	/*float: right;*/
+	padding: 0.438em 0.625em 0.438em 0.625em;
+	line-height: 1.125em;
+	cursor: pointer;
+	margin: 5px 5px 6px;
+	text-decoration: none;
+	border-radius: 4px;
+
+	// Hamburger-Linien:
+	.slicknav_icon-bar + .slicknav_icon-bar{
+  margin-top: 0.188em;
+	}
+}
+
+.slicknav_menu{
+ *zoom: 1;
+
+	// vermutlich Label zum Hamburger:
+	.slicknav_menutxt{
+		display: block;
+		line-height: 1.188em;
+		float: left;
+		color: #fff;
+		//font-weight: bold;
+	}
+	// Hamburger:
+	.slicknav_icon{
+		// https://github.com/ComputerWolf/SlickNav/commit/18fda5d4662b46b254e17014c3679332f743f0e0
+		width: 1.125em;
+		height: 0.875em;
+
+ 	margin: 0.188em 0 0 0.438em;
+		
+		// v1.0.5.5
+		&:before {
+			background: transparent;
+			width: 1.125em;
+			height: 0.875em;
+			display: block;
+			content: "";
+			position: absolute;
+		}
+	}
+
+
+
+
+
+	.slicknav_no-text{
+  margin: 0;
+	}
+	// Hamburger-Linien
+ .slicknav_icon-bar{
+  display: block;
+  width: 1.125em;
+  height: 0.125em;
+  border-radius: @border-radius-small;
+		background-color: @navbar-default-bg;
+ }
+
+	&:before{
+  content: " ";
+  display: table;
+	}
+	&:after{
+  content: " ";
+  display: table;
+  clear: both;
+	}
+	
+	font-size: 16px;
+	box-sizing: border-box;
+	background: @navbar-default-bg;
+	border: @navbar-default-border;
+	padding: 5px;
+	
+	* {
+		box-sizing: border-box;
+	}
+} // end .slicknav_menu
+
+
+
+// Haupt-UL
+.slicknav_nav{
+ clear: both;
+	// nav-child:
+	ul{
+  display: block;
+		list-style: none;
+		overflow: hidden;
+		padding: 0;
+		margin: 0 0 0 10px;
+	}
+	
+ li{
+  display: block;
+	}
+	
+ .slicknav_arrow{
+  font-size: 0.8em;
+  margin: 0 0 0 0.4em;
+	}
+	
+	// Abwärtspfeil aus Nichtmobil-Menü:
+	b.caret{
+		display: none;
+	}
+	
+	.slicknav_item{
+  cursor: pointer;
+		a{
+			display: inline;
+   padding: 0;
+   margin: 0;
+		}
+	}
+	
+	// Momentan wohl nur "totes" Schnipsel-Parent
+	.slicknav_row{
+  display: block;
+		padding: 5px 10px;
+		margin: 2px 5px;
+		&:hover {
+   border-radius: @border-radius-base;
+   background: #ccc;
+   color: #fff;
+		}
+	}
+	
+	a{
+  display: block;
+		padding: 5px 10px;
+		margin: 2px 5px;
+		text-decoration: none !important;
+		color: @navbar-default-link-color;
+		span.nav-header{
+			color: @black !important;
+		}
+		&:hover {
+   border-radius: @border-radius-base;
+   background: @navbar-default-link-hover-bg;
+   color: @navbar-default-link-hover-color;
+		}
+	}
+	
+	.slicknav_parent-link a{
+  display: inline;
+  padding: 0;
+  margin: 0;
+	}
+	
+	margin: 0;
+	padding: 0;
+	font-size: 0.875em;
+	list-style: none;
+	overflow: hidden;
+
+ .slicknav_txtnode{
+  margin-left: 15px;
+ }
+
+} // end .slicknav_nav
+
+.slicknav_brand{
+ float: left;
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 7px 12px;
+	height: 44px;
+}
+/* slicknav.less ENDE */

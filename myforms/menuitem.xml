@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="bs3ghsvsFieldset"
+			label="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS"
+			description="PLG_SYSTEM_BS3GHSVS_FIELDSET_BS3GHSVSFIELDS_MENUITEM_DESC">
+
+			<field name="pageheader_suffix_ghsvs" type="text"
+				label="Class-Suffix für .page-header H1 [pageheader_suffix_ghsvs]"
+				description="Siehe z.B. JLayout ghsvs.page_heading"
+				class="extended-width"/>
+
+			<field name="page_subheading_ghsvs" type="text" filter="string"
+				label="Seitenuntertitel [page_subheading_ghsvs]"
+				description="Wird von Joomla-eigenem 'Seitenuntertitel' überschrieben, falls ausgefüllt. Nicht alle Joomla-Menüeinträge haben ein Feld 'Seitenuntertitel'."
+				class="extended-width"/>
+
+			<field name="mega-menu-ul-class" type="list" default=""
+				label="mega-menu-ul-class (around child items)"
+				description=""
+				class="extended-width">
+					<option value="">JNONE</option>
+					<option value="sub-menu">[sub-menu] Standard (with 1-column) submenu)</option>
+					<option value="mega-menu|three-column">mega-menu three-column</option>
+					<option value="mega-menu|four-column">mega-menu four-column</option>
+			</field>
+			<field name="mega-menu-li-class" type="list" default=""
+				label="mega-menu-li-class"
+				description=""
+				class="extended-width">
+					<option value="">JNONE</option>
+					<option value="mega-menu-banner">mega-menu-banner (Needs a 'Bild zum Link')</option>
+			</field>
+			<!--<field name="mega-menu-banner" type="media" default=""
+				label="mega-menu-banner"
+				description=""
+				class="extended-width"/>-->
+			
+			
+		</fieldset>
+	</fields>
+</form>

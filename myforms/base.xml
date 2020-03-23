@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="dummy" addfieldpath="plugins/system/bs3ghsvs/Field">
+		<fieldset name="basic">
+			<field name="assetsbe" type="plgSystemBs3Ghsvs.assetsbe"
+				loadjs="false" loadJQuery="false" loadcss="true" />
+		</fieldset>
+	</fields>
+</form>

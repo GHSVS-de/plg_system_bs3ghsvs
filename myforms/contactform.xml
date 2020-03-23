@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="contact">
+		<field name="contact_phoneghsvs" type="text" filter="string"
+			description="COM_CONTACT_CONTACT_VIEW_GHSVS_TELEPHONE_DESC"
+			label="COM_CONTACT_CONTACT_VIEW_GHSVS_TELEPHONE" />
+
+		<field name="contact_consentghsvs" type="spacer"
+			description=""
+			label="COM_CONTACT_CONTACT_VIEW_GHSVS_CONSENT">
+			</field>
+	</fieldset>
+</form>

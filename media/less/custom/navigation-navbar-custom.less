@@ -1,0 +1,106 @@
+.nav {
+ > li {
+		> span {
+			position: relative;
+			display: block;
+			padding: @nav-link-padding;
+			cursor:cell;
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background-color: @nav-link-hover-bg;
+			}
+		}
+	}
+	// Submenü-UL
+	.nav-child{
+		list-style:none;
+	 position:absolute;
+		z-index:@zindex-dropdown;
+		display:none;
+		min-width:280px;
+		background-color:@dropdown-bg;
+  font-size: @font-size-base;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background-color: @dropdown-bg;
+  border: 1px solid @dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @dropdown-border;
+  border-radius: @border-radius-base;
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
+  background-clip: padding-box;
+		padding:5px;
+		a,
+		span{
+			padding: @nav-link-padding;
+			color:@dropdown-link-color;
+			position: relative;
+			display: block;
+			/*line-height:@font-size-base * 1.1;
+			font-size:@font-size-base;*/
+			/*padding:5px 0;*/
+		}
+
+		&>li{
+			&:hover > a,
+			&:hover > span,
+			&:focus > a,
+			&:focus > span,
+			& > a:hover,
+			& > span:hover,
+			& > a:focus,
+			& > span:focus{
+				text-decoration: none;
+    background-color: @nav-link-hover-bg;
+			}
+		}
+		&>li{
+			&.active > a,
+			&.active > span,
+			&.alias-parent-active > a,
+			&.alias-parent-active > span{
+				color: @nav-pills-active-link-hover-color;
+				background-color: @nav-pills-active-link-hover-bg;
+			}
+		}
+		// deeper nav-childs, deeper Submenü-ULs
+		.nav-child{
+			z-index:@zindex-dropdown + 1;
+		}
+	}
+}
+.jsNotActive body div#div4all,
+.menuslideNotActive body div#div4all
+{
+	.nav  li:hover > .nav-child,
+	.nav  li > a:focus + .nav-child{
+		display:block;
+	}
+}
+.nav-pills {
+	> li > a.glyphicon{
+		line-height: inherit;
+	}
+  > li {
+    > span {
+      border-radius: @nav-pills-border-radius;
+    }
+    // Active state
+    &.active > span {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-pills-active-link-hover-color;
+        background-color: @nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+//.navbar
+.nav.menu > li > span{
+	&:after{
+		content:" ";
+		.caret;
+		//color: @white;
+	}
+}

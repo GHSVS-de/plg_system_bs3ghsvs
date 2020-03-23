@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+
+		<fieldset name="bootstrap" label="Bs3Ghsvs">
+
+			<fields name="bs3ghsvsModule">
+
+				<field name="lederBG" type="mediajce" default="images/template/bg/bg-title-shop.jpg"
+					addfieldpath="plugins/system/jce/fields"
+					label="Nur für Leder-Hofmann und Breadcrumb-Module mit Layouts, die Breadcrump-Hintergrund-Bild verwenden."
+					description="Leder-Hofmann Special" />
+
+				<!--<field name="lederCOLOR" type="list" default="color-black-important"
+					label="Nur für Leder-Hofmann Breadcrump-Schriftfarben-Klasse, falls Hintergrundbild."
+					description="Leder-Hofmann Special">
+					<option value="">JNONE</option>
+					<option value="color-black-important">color-black-important</option>
+					<option value="color-white-important">color-white-important</option>
+				</field>-->
+				<field name="spoiler" type="list" default="1" filter="integer"
+					label="GHSVS_MODULES_SPOILER_LBL"
+					description="GHSVS_MODULES_SPOILER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+	
+				<field name="spoiler_in" type="list" default="0" filter="integer"
+					label="GHSVS_MODULES_SPOILER_IN_LBL"
+					description="GHSVS_MODULES_SPOILER_IN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+	
+				<field name="robotsHide" type="list" default="0" filter="integer"
+					label="[robotsHide] Hide for robots (needs implementation in ModChrome or Override)"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="freeColClasses" type="text" filter="string"
+					label="Freie Klassen"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					class="extended-width"/>
+				
+				<!--Wird im Plugin bs3ghsvs für Module aufbearbeitet und in params geschrieben.-->
+				<field name="bootstrap_size_new" type="subform"  
+					min="1" max="20" multiple="true"
+					layout="joomla.form.field.subform.repeatable-table" groupByFieldset="false"
+					label="GHSVS_BOOTSTRAP_SIZE_NEW" description="">
+
+					<form>
+				
+						<field name="bootstrap_class" type="list" default="col-" filter="string"
+							label="GHSVS_BOOTSTRAP_CLASS_LBL"
+							description="">
+							<option value="0">JNONE</option>
+							<option value="col">col</option>
+							<option value="col-">col-</option>
+							<option value="col-xs-">col-xs-</option>
+							<option value="col-sm-">col-sm-</option>
+							<option value="col-md-">col-md-</option>
+							<option value="col-lg-">col-lg-</option>
+							<option value="col-xl-">col-xl-</option>
+						</field>
+					
+						<field name="bootstrap_size" type="list"
+							label="COM_MODULES_FIELD_BOOTSTRAP_SIZE_LABEL"
+							description="GHSVS_MODULES_BOOTSTRAP_SIZE_DESC">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="auto">auto</option>
+						</field>
+
+						<field name="active" type="list" default="1"
+							label="PLG_SYSTEM_BS3GHSVS_ACTIVE"
+							description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+							filter="integer">
+							<option value="0">JNO</option>
+							<option value="1">JYES</option>
+						</field>
+					</form>
+	
+				</field>
+			</fields>
+		</fieldset>
+
+	</fields>
+</form>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="FieldsetBs3GhsvsInfo" label="Bs3GhsvsInfo" addfieldpath="/plugins/system/bs3ghsvs/Field">
+		<field name="isLessenabled" type="plgSystemBs3Ghsvs.lessenabled" label="LESS"/>
+	</fieldset>
+</form>
