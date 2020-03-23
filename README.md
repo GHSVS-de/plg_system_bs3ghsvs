@@ -1,2 +1,2 @@
 # plg_system_bs3ghsvs
-Plugin for ghsvs.de teamplates
+Plugin for ghsvs.de templates
