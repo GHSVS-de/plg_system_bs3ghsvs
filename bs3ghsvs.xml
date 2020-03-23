@@ -323,7 +323,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 <fields name="image_intro">
 
 				<field name="attribs_x" type="text"
-				 default="w=1120,quality=80,maxOnly=TRUE"
+				 default="w=700,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
@@ -339,7 +339,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				<field type="spacer" name="spacerl" hr="true" />
 		
 				<field name="attribs_l" type="text"
-				 default="w=400,quality=80,maxOnly=TRUE"
+				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
@@ -416,7 +416,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				<field type="spacer" name="spacerx2" hr="true" />
 		
 				<field name="attribs_x" type="text"
-				 default="w=1120,quality=80,maxOnly=TRUE"
+				 default="w=700,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
@@ -431,7 +431,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		
 		<!--l = large-->
 				<field name="attribs_l" type="text"
-				 default="w=470,quality=80,maxOnly=TRUE"
+				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
@@ -522,7 +522,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 		<!--x = x-large-->
 				<field name="attribs_x" type="text"
-				 default="w=1120,quality=80,maxOnly=TRUE"
+				 default="w=1000,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
@@ -537,7 +537,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		
 		<!--l = large-->
 				<field name="attribs_l" type="text"
-				 default="w=470,quality=80,maxOnly=TRUE"
+				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
