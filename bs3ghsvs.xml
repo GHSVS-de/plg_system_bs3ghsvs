@@ -79,6 +79,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 	<media folder="media" destination="plg_system_bs3ghsvs">
 		<folder>css</folder>
 		<folder>fonts</folder>
+		<folder>fontawesome-free</folder>
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>layouts</folder>
