@@ -570,7 +570,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 				array(1) // stati
 			);
 			
-			if ($activeXml && $this->executeFe === true)
+			if ($activeXml)
 			{
 				// BS-Bootstrap Classes
 				$bs3ghsvsModule = $registry->get('bs3ghsvsModule');
