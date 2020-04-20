@@ -20,6 +20,7 @@
 				description=""
 				class="extended-width">
 					<option value="">JNONE</option>
+					<option value="leftAlignedSub">left aligned sub menu [leftAlignedSub]</option>
 					<option value="sub-menu">[sub-menu] Standard (with 1-column) submenu)</option>
 					<option value="mega-menu|three-column">mega-menu three-column</option>
 					<option value="mega-menu|four-column">mega-menu four-column</option>

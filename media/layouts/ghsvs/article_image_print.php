@@ -16,7 +16,7 @@ $images: Array of arrays. Collected resized images with size keys like _u, _l, _
 extract($displayData);
 
 $aClass = $figcaption = $venobox = '';
-$srcsets = array();
+$sources = array();
 
 $aTitle = 'GHSVS_HIGHER_RESOLUTION_1';
 
@@ -45,7 +45,7 @@ if (PluginHelper::isEnabled('system', 'venoboxghsvs'))
 
 	if (!in_array('EXCLUDEVENOBOX', $imgClasses) && !in_array('excludevenobox', $imgClasses))
 	{
-		HTMLHelper::_('plgvenoboxghsvs.venobox', '.venobox', array('arrowsColor' => "#ffffff"));
+		HTMLHelper::_('plgvenoboxghsvs.venobox');
 		$venobox = 1;
 		$aTitle = 'GHSVS_HIGHER_RESOLUTION_0';
 	}
@@ -53,11 +53,14 @@ if (PluginHelper::isEnabled('system', 'venoboxghsvs'))
 
 $picture = array('<picture>');
 
-$sources = array(
+// Wir sind auf einer Seite, die explizit angefordert hat, dass Bilder für Print nicht verkleinert werden.
+/*$sources = array(
 	'(max-width: 340px)' => !empty($images['_s']['img']) ? $images['_s']['img'] : null,
 	'(max-width: 420px)' => !empty($images['_m']['img']) ? $images['_m'] ['img']: null,
 	'(min-width: 421px)' => !empty($images['_l']['img']) ? $images['_l']['img'] : null,
-);
+);*/
+
+$image = !empty($images['_x']['img']) ? $images['_x']['img'] : $imagepopup;
 
 foreach ($sources as $media => $srcset)
 {
@@ -65,11 +68,11 @@ foreach ($sources as $media => $srcset)
 	$picture[] = '<source srcset="' . $srcset . '" media="' . $media . '">';
 }
 
-$picture[] = '<source srcset="' . $images['_l']['img'] . '">';
+$picture[] = '<source srcset="' . $image . '">';
 
 $picture[] = '<img loading="lazy"'
 	. $pre
-	. ' src="' . $images['_l']['img'] . '"'
+	. ' src="' . $image . '"'
 	. $post;
 
 $picture[] = '</picture>';
@@ -82,8 +85,8 @@ if (!$title)
 	$title = $aTitle;
 }
 ?>
-<figure class="item-image-in-article">
-	<a  data-gall="myGallery" href="<?php echo $imagepopup; ?>" title="<?php echo $title; ?>"
+<figure class="item-image-in-article mw-100 clearfix">
+	<a data-gall="myGallery" href="<?php echo $imagepopup; ?>" title="<?php echo $title; ?>"
 		data-title="<?php echo $data_title; ?>" class="<?php echo ($venobox ? 'venobox' : ''); ?>">
 		<?php echo $picture; ?>
 		<div class="iconGhsvs text-right">
@@ -93,9 +96,12 @@ if (!$title)
 			</div>
 		</div>
 	</a>
-	<?php if ($caption)
+	<?php #if ($caption)
 	{ ?>
-	<figcaption><?php echo $caption; ?></figcaption>
+	<figcaption>
+		<?php echo ($caption ? $caption . '<br />' : ''); ?>
+		<a href="<?php echo $imagepopup; ?>" download class="noprint">Download "<?php echo basename($imagepopup); ?>"</a>
+	</figcaption>
 	<?php
 	} ?>
 </figure>

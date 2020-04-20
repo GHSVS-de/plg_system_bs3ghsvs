@@ -39,6 +39,16 @@
 					<option value="1">JYES</option>
 				</field>
 
+
+<field name="frontendEditingOnSpacer" type="spacer"
+	label="Die Option 'frontendEditingOn' wurde nach Rücksprache mit GS Wesendorf deaktiviert. Frontend-Editing ist generell nicht erwünscht. Es ist egal, was das Feld anzeigt." />
+				<field name="frontendEditingOn" type="list" filter="integer" default="0"
+					label="Front-End-Bearbeitung für dieses Modul erlauben? (Button wird abhängig von Nuterrechten angezeigt)"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
 				<field name="freeColClasses" type="text" filter="string"
 					label="Freie Klassen"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
@@ -84,7 +94,7 @@
 							<option value="auto">auto</option>
 						</field>
 
-						<field name="active" type="list" default="1"
+						<field name="active" type="list" default="0"
 							label="PLG_SYSTEM_BS3GHSVS_ACTIVE"
 							description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 							filter="integer">

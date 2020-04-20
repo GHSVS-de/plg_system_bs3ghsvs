@@ -102,7 +102,7 @@ class Bs3GhsvsFormHelper
 				
 				if (!$field->required)
 				{
-					$hint .= ' ' . Text::_('COM_CONTACT_OPTIONAL');
+					$hint .= ' ' . Text::_('PLG_SYSTEM_BS3GHSVS_OPTIONAL');
 				}
 				else
 				{

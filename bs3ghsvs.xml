@@ -6,7 +6,7 @@
 	<copyright>Copyright (C) 2015 - 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de). All rights reserved.</copyright>
 	<license>GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0.html See LICENSE.txt</license>
 	<authorUrl>https://www.ghsvs.de</authorUrl>
-	<version>2020.03.22</version>
+	<version>2020.04.20</version>
 	<versionHistory>
 2015.10.01: ghsvs.de
 2016.01.16: Komplett neu überarbeitet. Begann wegen Bugs mit Templatestilen in Menüeinträgen.
@@ -45,6 +45,8 @@
 - gs-wd.ghsvs.de
 - Versuch, ohne HTMLHELPER overrides auszukommen wegen f** WebAssetManager ab Joomla 4.
 Meint: Weitere Optionen im Plugin anbieten für dies und das.
+2020.04.20:
+- 
 	https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020
 	</versionHistory>
 	<description>PLG_SYSTEM_BS3GHSVS_DESC</description>
@@ -163,6 +165,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				<field name="initTemplateAlways" type="list" default="0" filter="integer"
 					label="PLG_SYSTEM_BS3GHSVS_INITTEMPLATEALWAYS"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="frontendEditingOnSpacer" type="spacer"
+					label="Die Option 'frontendEditingOn' wurde nach Rücksprache mit GS Wesendorf deaktiviert. Frontend-Editing ist generell nicht erwünscht." />
+
+				<field name="frontendEditingOn" type="list" default="0" filter="integer"
+					label="Plugin-eigene Module-Frontend-Bearbeitung generell nutzbar machen? Macht nur Sinn, wenn auch module.xml geladen wird. [frontendEditingOn]"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					>
 						<option value="0">JNO</option>
 						<option value="1">JYES</option>
 				</field>

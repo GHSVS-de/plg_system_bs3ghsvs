@@ -597,6 +597,25 @@ abstract class Bs3ghsvsArticle
 		return $data->get('various', new stdClass, 'OBJECT');
 	}
 
+	public static function getJcfieldsAsRegistry($item) : Registry
+	{
+		$JcfieldsAsRegistry = new Registry();
+		
+		if (!empty($item->jcfields) && is_array($item->jcfields))
+		{
+			$jcfields = array();
+
+			foreach ($item->jcfields as $jcfield)
+			{
+				$jcfields[$jcfield->name] = $jcfield->rawvalue; 
+			}
+			
+			$JcfieldsAsRegistry = new Registry($jcfields);
+		}
+
+		return $JcfieldsAsRegistry;
+	}
+
 	public static function buildFlagImages(array $languages)
 	{
 		$flags = \array_flip($languages);

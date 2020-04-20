@@ -1,6 +1,6 @@
 <?php
 /**
-"Overrides" for JHtml methods of com_content/helpers/icon.php.
+"Overrides" for HTMLHelper methods of com_content/helpers/icon.php.
 See "Redirects" in system plugin bs3ghsvs.
 */
 ?>
@@ -164,5 +164,68 @@ abstract class JHtmlIconghsvs
 		);
 
 		return '<a href="#" onclick="window.print();return false;">' . $text . '</a>';
+	}
+
+	public static function edit($article, $params, $attribs = array(), $legacy = false)
+	{
+		$user = Factory::getUser();
+		$uri  = Uri::getInstance();
+
+		// Ignore if in a popup window.
+		if ($params && $params->get('popup'))
+		{
+			return;
+		}
+
+		// Ignore if the state is negative (trashed).
+		if ($article->state < 0)
+		{
+			return;
+		}
+
+		// Show checked_out icon if the article is checked out by a different user
+		if (property_exists($article, 'checked_out')
+			&& property_exists($article, 'checked_out_time')
+			&& $article->checked_out > 0
+			&& $article->checked_out != $user->get('id'))
+		{
+			$checkoutUser = Factory::getUser($article->checked_out);
+			$date         = HTMLHelper::_('date', $article->checked_out_time);
+			$tooltip      = Text::sprintf('COM_CONTENT_CHECKED_OUT_BY', $checkoutUser->name)
+				. ', ' . $date;
+			
+			$text = Text::_('JLIB_HTML_CHECKED_OUT');
+
+			$output = '<span class="text-red"><span class="fa fa-edit fa-lg" aria-hidden="true"></span>'
+				. Text::_('COM_CONTENT_EDIT_ITEM') . ' (' .$tooltip . ')</span>';
+
+			return $output;
+		}
+
+		$contentUrl = ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language);
+		$url        = $contentUrl . '&task=article.edit&a_id=' . $article->id . '&return=' . base64_encode($uri);
+
+		if ($article->state == 0)
+		{
+			$overlib = JText::_('JUNPUBLISHED');
+		}
+		else
+		{
+			$overlib = JText::_('JPUBLISHED');
+		}
+
+		//$date   = HTMLHelper::_('date', $article->created);
+		//$author = $article->created_by_alias ?: $article->author;
+
+		//$overlib .= ', ' . $date . ', ';
+		//$overlib .= Text::sprintf('COM_CONTENT_WRITTEN_BY', htmlspecialchars($author, ENT_COMPAT, 'UTF-8'));
+
+		//$text = LayoutHelper::render('joomla.content.icons.edit', array('article' => $article, 'overlib' => $overlib, 'legacy' => $legacy));
+		$text = '<span class="fa fa-edit fa-lg" aria-hidden="true"></span> ' . Text::_('COM_CONTENT_EDIT_ITEM');
+
+		$attribs['title']   = Text::_('JGLOBAL_EDIT_TITLE');
+		$output = HTMLHelper::_('link', JRoute::_($url), $text, $attribs);
+
+		return $output . ' (' . $overlib . ')';
 	}
 }

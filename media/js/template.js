@@ -28,6 +28,37 @@ var waitForFinalEvent = (function () {
 })();
 
 
+var addColorClassesToCharacters = function (selector)
+{
+	var myStr = jQuery.trim(jQuery(selector).text()).split("");
+	
+	if (myStr.length)
+	{
+		var myContents = "";
+
+		for (var i = 0, len = myStr.length; i < len; i++)
+		{
+			myContents += '<span class="coloredLetter letter-color-' + (Math.floor(Math.random() * 16) + 1) + '">' + myStr[i] + '</span>';
+		}
+		jQuery(selector).html(myContents);
+	}
+};
+
+
+var addClassToFirstCharacter = function (myStr)
+{
+	myStr = jQuery.trim(myStr);
+
+	if (myStr.length)
+	{
+		myStr = myStr.split("");
+		myStr[0] = '<span class="first-letterGhsvs">' + myStr[0] + '</span>';
+		return myStr.join("");
+	}
+
+	return myStr;
+};
+
 ;(function($)
 {
 	$("html").removeClass("jsNotActive no-js").addClass("jsActive");

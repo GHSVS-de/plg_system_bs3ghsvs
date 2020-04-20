@@ -19,6 +19,7 @@ use Joomla\CMS\Uri\Uri;
 use Spatie\SchemaOrg\Schema;
 use Joomla\CMS\Filter\InputFilter;
 use Joomla\CMS\Router\Route;
+use Joomla\CMS\Layout\LayoutHelper;
 
 JLoader::register('Bs3ghsvsTemplate', __DIR__ . '/Helper/TemplateHelper.php');
 JLoader::register('Bs3GhsvsFormHelper', __DIR__ . '/Helper/FormHelper.php');
@@ -243,7 +244,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		}
 
 		self::$options = Bs3ghsvsTemplate::getTemplateOptionsFromJson($this->template);
-		
+
 		$this->executeFe = $this->register();
 	}
 
@@ -472,10 +473,13 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			$form->loadFile($this->formPath . '/template.xml', $reset = false, $path = false);
 		}	
 
-		// Module edit in backend.
+		// Module edit in backend UND in Frontend.
 		if (
-			$this->app->isClient('administrator')
-			&& $context === 'com_modules.module'
+			($this->app->isClient('administrator') && $context === 'com_modules.module')
+			// Load form:
+			|| ($this->app->isClient('site') && $context === 'com_config.modules')
+			// Save form (how stupid is that?):
+			|| ($this->app->isClient('site') && $context === 'com_modules.module')
 		){
 			$key = 'Module';
 
@@ -538,6 +542,43 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		}
 		return true;
 	}
+	
+	/**
+	 * called when after a module is rendered on the back- or front-end.
+	*/
+	public function onAfterRenderModule(&$module, $attribs)
+	{
+		// Add frontend module editing button if activated.
+		if ($this->app->isClient('site'))
+		{
+			if (
+				Bs3GhsvsFormHelper::getActiveXml('Module', $this->params, array(1))
+				
+				// Global switch:
+				&& $this->params->get('frontendEditingOn', 0) === 1
+			
+				// Check setting of myforms/module.xml:
+				&& strpos($module->params, '"frontendEditingOn":1') !==false
+
+				// Check the user rights before we do regex shit:
+				&& Factory::getUser()->authorise(
+					'module.edit.frontend', 'com_modules.module.' . $module->id
+				)
+
+				&& trim($module->content)
+			){
+				$editBtn = LayoutHelper::render('ghsvs.frontediting_modules_in_article',
+					array('module' => $module)
+				);
+				
+				// Find first HTML tag. Normally a <div>.
+				$muster = '/^(\s*<(?:div|span|nav|ul|ol|h\d|section|aside|nav|address|article) [^>]*>)/m';
+				
+				// Add editing link directly after the first HTML tag.
+				$module->content = preg_replace($muster, '\\0' . $editBtn, $module->content, 1);
+			}
+		}
+	}
 
 	/**
 	 * Called after the list of modules that must be rendered is created.
@@ -557,7 +598,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		{
 			$registry = new Registry($module->params);
 			$registry->set('iAmAModuleGhsvs', 1);
-			
+
 			###### Bootstrap-Size-Parameters and others from bs3ghsvsModule.xml - START
 			$colClass = array();
 			$freeColClasses = '';
@@ -569,7 +610,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 				$this->params,
 				array(1) // stati
 			);
-			
+
 			if ($activeXml)
 			{
 				// BS-Bootstrap Classes
@@ -638,6 +679,8 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			&& !empty($article->id) && !empty($article->name)
 			&& !empty($article->params) && isset($article->misc)
 			&& !$params->get('iAmAModuleGhsvs', 0);
+		
+		$print = $this->app->input->getBool('print');
 
 		###### image resize - START
 
@@ -709,7 +752,18 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 					'image_articletext',
 					$imagesInArticle['src']
 				);
-					
+
+				// Möglichkeit in einem com_content/article/xyz.php ein eigenes 'jlayout_articletext_print' unterzujubeln.
+				// Anlass war gs-wesendorf, wo im Ausdruck die Bilder full sein müssen.
+				// Derzeit existiert die Einstellung nur im Blog-Layout blogghsvs-standard.xml.
+				if (
+					#$print
+					#&& 
+					$jlayout_articletext_print = trim($article->params->get('jlayout_articletext_print', ''))
+				){
+					$this->params->set('jlayout_articletext', $jlayout_articletext_print);
+				}
+
 				if (($jlayout_articletext = trim($this->params->get('jlayout_articletext', 'ghsvs.article_image'))))
 				{
 					// The array indices are the same for $imgTags and $collect_images.
@@ -914,7 +968,6 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			&& $context === 'com_content.article'
 			&& strpos($article->text, '{pagebreakghsvs-slider ') !== false
 		){
-			$print = $this->app->input->getBool('print');
 			$regex = '#<p[^>]*>\s*{pagebreakghsvs-slider\s+(.+?)}\s*</p>#i';
 			$regexEnd = '#<p[^>]*>\s*{pagebreakghsvs-slider[^}]*slidersEnd[^}]*}\s*</p>#iU';
 			$headingTagGhsvs = $this->params->get('headingTagGhsvs', 'h4');
@@ -1326,10 +1379,13 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 	 * Geht wahrscheinlich besser. Ist zum Resizen von speziellen Modul-Bildern.
 	 * $imagesToResizeCollect Die Bilder, schon als HTML-Tags. Sollen final mit figure HTML zurückgehen.
 	 */
-	public static function moduleImagesResizing(array $imagesToResizeCollect) : array
+	public static function moduleImagesResizing(
+		array $imagesToResizeCollect,
+		$moduleParams = false
+	) : array
 	{
 		$PlgParams = self::getPluginParams();
-		
+
 		// Modules resizing should get an own setting. Too lazy at the moment.
 		if ($PlgParams->get('imageoptimizer_articletext') !== 1)
 		{
@@ -1343,9 +1399,11 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		$imagesInModule = Bs3ghsvsItem::getAllImgSrc(implode($imagesToResizeCollect));
 
 		$collect_images = array();
+		$imagesToResizeCollectTemp = array();
+		$layoutFound = false;
 
 		// First resize found images and collect results. 
-		if ($imagesInModule['src'])
+		if (!empty($imagesInModule['src']))
 		{
 			// Resize and create resized images collection (contains width/height and so on, too).
 			$collect_images = Bs3ghsvsItem::getImageResizeImages(
@@ -1356,8 +1414,17 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 				'image_articletext'
 			);
 
+			if ($moduleParams instanceof Registry)
+			{
+				if (!($jlayout_articletext = trim($moduleParams->get('jlayout_articletext', ''))))
+				{
+					$jlayout_articletext = trim($PlgParams->get('jlayout_articletext',
+						'ghsvs.article_image'));
+				}
+			}
+
 			// Call resize and create figure HTML.
-			if (($jlayout_articletext = trim($PlgParams->get('jlayout_articletext', 'ghsvs.article_image'))))
+			if ($jlayout_articletext)
 			{
 				// The array indices are the same for $imgTags and $collect_images.
 				// Egal welcher Index, aber 'quote' hat kleinsten String. Deshalb den.
@@ -1372,12 +1439,22 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 					);
 
 					$figure = HTMLHelper::_('bs3ghsvs.layout', $jlayout_articletext, $displayData);
+					
+					if ($figure && !$layoutFound)
+					{
+						$layoutFound = true;
+					}
 
-					$imagesToResizeCollect[$imagesToResizeCollectKeys[$key]] = $figure;
+					$imagesToResizeCollectTemp[$imagesToResizeCollectKeys[$key]] = $figure;
 				}
 			}
 		}
+
+		if ($layoutFound)
+		{
+			return $imagesToResizeCollectTemp;
+		}
+		
 		return $imagesToResizeCollect;
 	}
-
 }

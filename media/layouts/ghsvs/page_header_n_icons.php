@@ -14,13 +14,13 @@ defined('_JEXEC') or die;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\Registry\Registry;
 use Joomla\CMS\Router\Route;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Factory;
 
 $params = $displayData['item']->params;
 $print = $displayData['print'];
-
+$titleclass = isset($displayData['class']) ? ' ' . $displayData['class'] : '';
 $titletag = $params->get('article_titletag', 'h2');
-$microdata = !empty($displayData['microdata']);
-
 $displayData = $displayData['item'];
 
 // com_tags-Views
@@ -28,19 +28,20 @@ $typeAlias = isset($displayData->type_alias) ? $displayData->type_alias : false;
 
 $articlesubtitle = '';
 
-if ($params->get('show_title') && $params->get('show_articlesubtitle', 1))
+if ($params->get('show_title'))
 {
 	JLoader::register('Bs3ghsvsArticle', JPATH_PLUGINS . '/system/bs3ghsvs/Helper/ArticleHelper.php');
 	$various = new Registry(Bs3ghsvsArticle::getVariousData($displayData->id));
-	$articlesubtitle = htmlspecialchars($various->get('articlesubtitle'), ENT_COMPAT, 'utf-8');
+	
+	if ($params->get('show_articlesubtitle') !== 0)
+	{
+		$articlesubtitle = htmlspecialchars($various->get('articlesubtitle'), ENT_COMPAT, 'utf-8');
+	}
+	
+	$articleStatus = $various->get('articleStatus', 0);
 }
 
-HTMLHelper::addIncludePath(JPATH_COMPONENT . '/helpers/html');
-
-if (!class_exists('ContentHelperRoute'))
-{
- require_once JPATH_ROOT . '/components/com_content/helpers/route.php';
-}
+\JLoader::register('ContentHelperRoute', JPATH_SITE . '/components/com_content/helpers/route.php');
 
 $linkHeadline = ($params->get('link_titles') && $params->get('access-view'));
 $maskHClass = ($params->get('mask_pageheaderclass_ghsvs', false) ? 'Masked' : '');
@@ -67,35 +68,50 @@ if ($linkHeadline && empty($displayData->linkGhsvs))
   'position' => 'above'
  ));
 ?>
-<?php if ($params->get('show_title')) : ?>
+
+<?php if ($params->get('show_title'))
+{ ?>
 <div class="page-header<?php echo $maskHClass;?> state<?php echo $displayData->state ?>">
-   <?php 
-			$title = $this->escape($displayData->title);
+	<?php
+	if ($articleStatus && Factory::getApplication()->input->get('view') === 'article')
+	{
+		Factory::getDocument()->setMetadata('robots', 'noindex, follow');
+		?>
+	<p class="articleStatus articleStatus_<?php echo $articleStatus; ?>">
+		<?php echo Text::_('PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_' . $articleStatus); ?>
+	</p>
+	<?php
+	} ?>
+		
+	<?php 
+		$title = $this->escape($displayData->title);
+	?>
+	<?php echo '<' . $titletag . ' class="' . $titleclass .' ">'; ?><?php
+	if ($linkHeadline) : ?>
+		<a href="<?php echo $displayData->linkGhsvs; ?>">
+		<?php echo $title; ?>
+		</a>
+	<?php else :
+		echo $title;
+	endif; ?>
+	<?php
+		if ($articlesubtitle)
+		{ ?>
+		<span class="articlesubtitle">(<?php echo $articlesubtitle; ?>)</span>
+		<?php } ?><?php echo '</' . $titletag . '>' ?>
 
-   if ($microdata)
-   {
-    $title = '<span itemprop="name">' . $title . '</span>';
-   }
-   ?>
-    <?php echo '<' . $titletag ?><?php echo ($microdata ? ' itemprop="headline"' : ''); ?>><?php
-    if ($linkHeadline) : ?>
-      <a<?php echo ($microdata ? ' itemprop="url"' : ''); ?> href="<?php echo $displayData->linkGhsvs; ?>"><?php echo $title; ?></a>
-     <?php else :
-      echo $title;
-     endif;
-
-     if ($articlesubtitle)
-		 { ?>
-      <span class="articlesubtitle"><?php echo $articlesubtitle; ?></span>
-     <?php } ?><?php echo '</' . $titletag . '>' ?>
-
+	<?php 
+	if (
+		!empty($displayData->pagination)
+		&& $params->get('ghsvs_show_page_header_pagination', 1) !==0
+	){ ?>
+	<div class="articlePagination above">
+	<?php echo $displayData->pagination; ?>
+	</div>
+	<?php
+	} ?>
   </div><!--/page-header<?php echo $maskHClass;?>-->
-<?php endif; ?>
-<?php echo HTMLHelper::_('bs3ghsvs.layout', 'ghsvs.icons',
- array(
-  'params' => $params,
-  'item' => $displayData,
-  'print' => $print,
-  'position' => 'below'
- ));
-?>
+
+<?php
+}
+

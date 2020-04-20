@@ -21,10 +21,10 @@ $srcsets = array();
 $aTitle = 'GHSVS_HIGHER_RESOLUTION_1';
 
 $imagepopup = $images['_u']['img'];
-
 $alt = $attributes->get('alt', '');
 $title = $attributes->get('title', '');
-$data_title = $attributes->get('data-title', ($alt ? $alt : $title));
+$caption = $attributes->get('data-caption', '');
+$data_title = $attributes->get('data-title', ($caption ? $caption : ($alt ? $alt : $title)));
 
 // Because editors encode already quotes.
 $alt = htmlspecialchars_decode($alt, ENT_QUOTES);
@@ -33,8 +33,6 @@ $title = htmlspecialchars_decode($title, ENT_QUOTES);
 $title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
 $data_title = htmlspecialchars_decode($data_title, ENT_QUOTES);
 $data_title = htmlspecialchars($data_title, ENT_QUOTES, 'UTF-8');
-
-$caption = $alt;
 
 $venobox = 0;
 
@@ -45,7 +43,7 @@ if (PluginHelper::isEnabled('system', 'venoboxghsvs'))
 
 	if (!in_array('EXCLUDEVENOBOX', $imgClasses) && !in_array('excludevenobox', $imgClasses))
 	{
-		HTMLHelper::_('plgvenoboxghsvs.venobox', '.venobox', array('arrowsColor' => "#ffffff"));
+		HTMLHelper::_('plgvenoboxghsvs.venobox');
 		$venobox = 1;
 		$aTitle = 'GHSVS_HIGHER_RESOLUTION_0';
 	}
@@ -83,7 +81,7 @@ if (!$title)
 }
 ?>
 <figure class="item-image-in-article">
-	<a  data-gall="myGallery" href="<?php echo $imagepopup; ?>" title="<?php echo $title; ?>"
+	<a href="<?php echo $imagepopup; ?>" title="<?php echo $title; ?>"
 		data-title="<?php echo $data_title; ?>" class="<?php echo ($venobox ? 'venobox' : ''); ?>">
 		<?php echo $picture; ?>
 		<div class="iconGhsvs text-right">
