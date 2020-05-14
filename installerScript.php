@@ -7,6 +7,32 @@ use Joomla\CMS\Log\Log;
 
 class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 {
+	/**
+	 * A list of files to be deleted with method removeFiles().
+	 *
+	 * @var    array
+	 * @since  2.0
+	 */
+	protected $deleteFiles = array(
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.js',
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.min.js',
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.min.map',
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.js',
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.min.js',
+		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.min.map',
+
+	);
+
+	/**
+	 * A list of folders to be deleted with method removeFiles().
+	 *
+	 * @var    array
+	 * @since  2.0
+	 */
+	protected $deleteFolders = array(
+	);
+
+
 	public function preflight($type, $parent)
 	{
 		$manifest = @$parent->getManifest();
@@ -69,6 +95,25 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		}
 
 		return true;
+	}
+
+	/**
+	 * Runs right after any installation action is preformed on the component.
+	 *
+	 * @param  string    $type   - Type of PostFlight action. Possible values are:
+	 *                           - * install
+	 *                           - * update
+	 *                           - * discover_install
+	 * @param  \stdClass $parent - Parent object calling object.
+	 *
+	 * @return void
+	 */
+	function postflight($type, $parent)
+	{
+		if ($type === 'update')
+		{
+			$this->removeFiles();
+		}
 	}
 
 	/**

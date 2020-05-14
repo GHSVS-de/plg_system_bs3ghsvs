@@ -3,10 +3,10 @@
 	<name>PLG_SYSTEM_BS3GHSVS</name>
 	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de)</author>
 	<creationDate>2015-08-30</creationDate>
-	<copyright>Copyright (C) 2015 - 2019, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de). All rights reserved.</copyright>
+	<copyright>Copyright (C) 2015 - 2020, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de). All rights reserved.</copyright>
 	<license>GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0.html See LICENSE.txt</license>
 	<authorUrl>https://www.ghsvs.de</authorUrl>
-	<version>2020.04.20</version>
+	<version>2020.05.14</version>
 	<versionHistory>
 2015.10.01: ghsvs.de
 2016.01.16: Komplett neu überarbeitet. Begann wegen Bugs mit Templatestilen in Menüeinträgen.
@@ -46,7 +46,9 @@
 - Versuch, ohne HTMLHELPER overrides auszukommen wegen f** WebAssetManager ab Joomla 4.
 Meint: Weitere Optionen im Plugin anbieten für dies und das.
 2020.04.20:
-- 
+2020.05.14:
+- Bootstrap 4.5.0
+- JQuery 3.5.1
 	https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020
 	</versionHistory>
 	<description>PLG_SYSTEM_BS3GHSVS_DESC</description>
@@ -56,6 +58,8 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 	<changelogurl>
 		https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-changelog.xml
 	</changelogurl>
+
+	<infourl>https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020</infourl>
 
 	<scriptfile>installerScript.php</scriptfile>
 	<minimumPhp>7.2.0</minimumPhp>
