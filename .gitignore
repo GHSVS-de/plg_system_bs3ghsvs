@@ -1,4 +1,11 @@
+/node_modules/
+.DS_Store
 _notes/
+__done/
+log.txt
+prepros.config
+prepros-6.config
+*.zip
 __AUFPASSEN Neuer Updateserver/
 __AUFPASSEN Version seit 2020-03/
 __AUFPASSEN Neuer Updateserver bs3ghsvs2020/
