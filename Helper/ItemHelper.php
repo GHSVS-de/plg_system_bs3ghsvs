@@ -6,7 +6,7 @@ use Joomla\CMS\Helper\TagsHelper;
 use Joomla\Registry\Registry;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
-use Joomla\Image\Image;
+use Joomla\CMS\Image\Image;
 use Joomla\CMS\Utility\Utility;
 use Joomla\CMS\Uri\Uri;
 

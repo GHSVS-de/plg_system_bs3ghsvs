@@ -20,7 +20,9 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.js',
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.min.js',
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.slim.min.map',
-
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.11.2/index.html',
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.13.0/index.html',
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5/svgs/solid/haykal.svg',
 	);
 
 	/**
@@ -30,6 +32,8 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 	 * @since  2.0
 	 */
 	protected $deleteFolders = array(
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.11.2',
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.13.0',
 	);
 
 
