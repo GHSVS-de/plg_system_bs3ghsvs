@@ -52,6 +52,8 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 2020.06.30:
 - fontawesome-free 5.13.1
 - use ...CMS\Image\Image; See https://github.com/joomla/joomla-cms/issues/29853
+- Make uninstallation possible if custom requirements don't match.
+
 	https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020
 	</versionHistory>
 	<description>PLG_SYSTEM_BS3GHSVS_DESC</description>
