@@ -83,6 +83,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		<folder>language</folder>
 		<folder>myforms</folder>
 		<folder>sql</folder>
+		<folder>vendor</folder>
 		<filename>installerScript.php</filename>
 		<filename>LICENSE.txt</filename>
 	</files>
