@@ -36,7 +36,9 @@
 		"g-npm-update-check": "ncu",
 		"g-ncu-override-json": "ncu -u"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5"
+	},
 	"devDependencies": {
 		"adm-zip": "0.4.16",
 		"fs-extra": "9.0.1",

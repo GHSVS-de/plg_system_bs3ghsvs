@@ -23,6 +23,10 @@ const {
   await rimRaf("./dist");
   await rimRaf("./package");
 	
+	await rimRaf(".src/media/fontawesome-free");
+  await copy("./node_modules/@fortawesome/fontawesome-free", "./src/media/fontawesome-free");
+	// await unl("./src/media/fontawesome-free/composer.json");
+
 	// Copy and create new work dir.
   await copy("./src", "./package");
 
