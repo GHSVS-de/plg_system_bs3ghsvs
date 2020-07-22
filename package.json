@@ -1,0 +1,47 @@
+{
+	"name": "plg_system_bs3ghsvs",
+	"version": "2020.07.22",
+	"minimumPhp": "7.2.0",
+	"maximumPhp": "",
+	"minimumJoomla": "3.9.8",
+	"maximumJoomla": "3.10.99999",
+	"allowDowngrades": "1",
+	"author": {
+		"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+		"email": "",
+		"url": "https://www.ghsvs.de"
+	},
+	"contributors": [
+		{
+			"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+			"email": "",
+			"url": "https://www.ghsvs.de"
+		}
+	],
+	"bugs": "https://github.com/GHSVS-de/plg_system_bs3ghsvs/issues",
+	"homepage": "https://github.com/GHSVS-de/plg_system_bs3ghsvs#readme",
+	"keywords": [
+		"joomla",
+		"system plugin"
+	],
+	"private": false,
+	"description": "Joomla system plugin to register and override JHtml helpers. And more!",
+	"license": "GPL-3.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://dgrammatiko@github.com/ttc-freebies/plugin-responsive-images.git"
+	},
+	"scripts": {
+		"g-build": "node build.js",
+		"g-npm-update-check": "ncu",
+		"g-ncu-override-json": "ncu -u"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"adm-zip": "0.4.16",
+		"fs-extra": "9.0.1",
+		"rimraf": "3.0.2"
+	},
+	"peerDependencies": {},
+	"browserslist": []
+}
