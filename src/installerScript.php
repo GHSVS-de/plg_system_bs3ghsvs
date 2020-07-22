@@ -34,6 +34,7 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 	protected $deleteFolders = array(
 		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.11.2',
 		'/media/plg_system_bs3ghsvs/fontawesome-free/5/_V5.13.0',
+		'/media/plg_system_bs3ghsvs/fontawesome-free/5',
 	);
 
 
