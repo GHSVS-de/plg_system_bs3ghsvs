@@ -5,7 +5,7 @@ Plugin for ghsvs.de templates.
 
 Don't use it if you don't need it.
 
-## npm/composer. Create new release.
+## npm/composer. Create new Joomla extension installation package.
 
 - Check `/package.json` and add plugin `version` and further settings like `minimumPhp` and so on. Will be copied during build process into manifest XML.
 - Check also versions of dependencies.
