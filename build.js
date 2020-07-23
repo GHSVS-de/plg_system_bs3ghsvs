@@ -6,6 +6,7 @@ const {
   unlink: unl,
   writeFile,
 } = require("fs-extra");
+
 const util = require("util");
 const rimRaf = util.promisify(require("rimraf"));
 const {
@@ -24,8 +25,39 @@ const {
   await rimRaf("./package");
 	
 	await rimRaf(".src/media/fontawesome-free");
-  await copy("./node_modules/@fortawesome/fontawesome-free", "./src/media/fontawesome-free");
+  await copy(
+		"./node_modules/@fortawesome/fontawesome-free",
+		"./src/media/fontawesome-free"
+	);
 	// await unl("./src/media/fontawesome-free/composer.json");
+	
+	await copy(
+		"./node_modules/bootstrap/dist/js",
+		"./src/media/js/bootstrap"
+		// ,
+		// {overwrite:false, errorOnExist:true}
+	);
+	
+	await copy(
+		"./node_modules/bootstrap/dist/css",
+		"./src/media/css/bootstrap"
+		// ,
+		// {overwrite:false, errorOnExist:true}
+	);
+	
+	await copy(
+		"./node_modules/jquery/dist",
+		"./src/media/js/jquery"
+		// ,
+		// {overwrite:false, errorOnExist:true}
+	);
+	
+	await copy(
+		"./node_modules/jquery-migrate/dist",
+		"./src/media/js/jquery-migrate"
+		// ,
+		// {overwrite:false, errorOnExist:true}
+	);
 
 	// Copy and create new work dir.
   await copy("./src", "./package");

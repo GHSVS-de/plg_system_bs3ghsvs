@@ -1,0 +1,29 @@
+{
+	"name": "plg_system_bs3ghsvs_others",
+	"version": "2020.07.22",
+	"author": {
+		"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+		"email": "",
+		"url": "https://www.ghsvs.de"
+	},
+	"contributors": [
+		{
+			"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
+			"email": "",
+			"url": "https://www.ghsvs.de"
+		}
+	],
+	"bugs": "https://github.com/GHSVS-de/plg_system_bs3ghsvs/issues",
+	"homepage": "https://github.com/GHSVS-de/plg_system_bs3ghsvs#readme",
+	"keywords": [],
+	"private": false,
+	"description": "If you want to load other versions of e.g. BS place it here, run npm install in /others/ and don't forget to copy them with /build.js into /src/media.",
+	"license": "GPL-3.0",
+	"repository": {},
+	"scripts": {},
+	"dependencies": {
+		"bootstrap": "^3"
+	},
+	"peerDependencies": {},
+	"browserslist": []
+}

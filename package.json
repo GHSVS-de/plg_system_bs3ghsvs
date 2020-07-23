@@ -37,7 +37,10 @@
 		"g-ncu-override-json": "ncu -u"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-free": "^5"
+		"@fortawesome/fontawesome-free": "^5",
+		"jquery": "^3",
+		"bootstrap": "^4",
+		"jquery-migrate": "^3"
 	},
 	"devDependencies": {
 		"adm-zip": "0.4.16",
