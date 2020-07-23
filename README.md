@@ -6,7 +6,7 @@ Plugin for ghsvs.de templates.
 Don't use it if you don't need it.
 
 ## npm/composer. Create new Joomla extension installation package.
-- Clone repos with WSL or whatever into your server environment.
+- Clone repository into your server environment (WSL or whatever).
 - Check/edit `/package.json` and add plugin `version` and further settings like `minimumPhp` and so on. Will be copied during build process into manifest XML.
 - Check also versions of dependencies, devDependencies.
 - Check versions in `/src/composer.json`.
