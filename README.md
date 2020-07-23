@@ -5,7 +5,7 @@ Plugin for ghsvs.de templates.
 
 Don't use it if you don't need it.
 
-## npm/composer. Create new Joomla extension installation package.
+## npm/composer. Create new Joomla extension installation package
 - Clone repository into your server environment (WSL or whatever).
 - Check/edit `/package.json` and add plugin `version` and further settings like `minimumPhp` and so on. Will be copied during build process into manifest XML.
 - Check also versions of dependencies, devDependencies.
@@ -26,7 +26,7 @@ composer update
 - `cd ..`
 - `npm install`
 
-#### Only if you want to include conflicting, other versions parallel to current ones.
+#### Only if you want to include conflicting, other versions parallel to current ones:
 
 Let's say you have already a Bootstrap 4 dependency in root `/package.json` but want also to download BS3 for later copy actions:
 
@@ -34,7 +34,7 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
 - `cd others`
 - `npm install`
 - `cd ..`
-- Edit `/build.js` to copy the downloaded files to `/src/media/` during build step.
+- Edit `/build.js` to also copy these "downloaded" files to `/src/media/` during build step.
  
 ### Build new Joomla package ZIP.
 
