@@ -84,6 +84,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		<folder>myforms</folder>
 		<folder>sql</folder>
 		<folder>vendor</folder>
+		<folder>versions-installed</folder>
 		<filename>installerScript.php</filename>
 		<filename>LICENSE.txt</filename>
 	</files>

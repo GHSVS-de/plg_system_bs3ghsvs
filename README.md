@@ -15,6 +15,7 @@ Don't use it if you don't need it.
 
 ```
 cd src
+
 composer install
 
 OR
