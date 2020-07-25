@@ -29,7 +29,7 @@
 	"license": "GPL-3.0",
 	"repository": {
 		"type": "git",
-		"url": "git+https://dgrammatiko@github.com/ttc-freebies/plugin-responsive-images.git"
+		"url": "https://github.com/GHSVS-de/plg_system_bs3ghsvs.git"
 	},
 	"scripts": {
 		"g-build": "node build.js",
