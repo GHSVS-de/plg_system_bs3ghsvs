@@ -59,5 +59,5 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
 
 #### For Joomla update server
 - Create new release with new tag.
-- Get download link for new `dist/plg_blahaba_blubber...zip` **inside new tag release** and add to release description.
+- Get download link for new `dist/plg_blahaba_blubber...zip` **inside new tag branch** and add to release description and update server XML.
 
