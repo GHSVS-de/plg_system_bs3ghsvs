@@ -106,7 +106,7 @@ _og min 310
 		<div class="iconGhsvs text-right">
 			<div class="btn btn-default btn-sm">
 				<span class="sr-only"><?php echo Text::_($aTitle); ?></span>
-				<span class="icon-zoom-in" aria-hidden="true"></span>
+				{svg{bi/zoom-in}}
 			</div>
 		</div>
 	</a>

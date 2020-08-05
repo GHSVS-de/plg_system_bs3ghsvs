@@ -14,6 +14,8 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 	 * @since  2.0
 	 */
 	protected $deleteFiles = array(
+		'/media/plg_system_bs3ghsvs/css/index.html',
+		'/media/plg_system_bs3ghsvs/js/jquery/version.txt',
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.js',
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.min.js',
 		'/media/plg_system_bs3ghsvs/js/jquery/jquery-3.4.1.min.map',

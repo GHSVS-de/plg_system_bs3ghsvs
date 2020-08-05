@@ -97,6 +97,8 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		<folder>js</folder>
 		<folder>layouts</folder>
 		<folder>less</folder>
+		<folder>scss</folder>
+		<folder>svgs</folder>
 	</media>
 
 	<install>
@@ -311,8 +313,29 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_IMAGERESIZE"
 				description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
 
-				<field type="spacer" name="forceSpacer"
-					label="PLG_SYSTEM_BS3GHSVS_FORCE_DESC" />
+
+				<field name="resizeGlobalActive" type="list" default="1" filter="integer"
+					label="Resizer global aktivieren"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+					</field>
+
+				<field type="note" name="resizeGlobalActiveSpacer"
+					class="alert alert-block"
+					label="Resizer global aktivieren: Wenn NEIN, sind alle folgenden Einstellungen wirkungslos. Es wird nichts getan." />
+
+				<field name="webpSupport" type="list" default="0" filter="integer"
+					label="WEBP-Support"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+						<option value="2">ONLY</option>
+				</field>
+
+				<field type="note" name="webpSupportSpacer"
+					class="alert alert-block"
+					label="PLG_SYSTEM_BS3GHSVS_WEBPSUPPORT_DESC" />
 
 				<field name="resizeForce" type="list" default="0" filter="integer"
 					label="PLG_SYSTEM_BS3GHSVS_FORCE"
@@ -320,6 +343,10 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 						<option value="0">JNO</option>
 						<option value="1">JYES</option>
 				</field>
+
+				<field type="note" name="forceSpacer"
+					class="alert alert-block"
+					label="PLG_SYSTEM_BS3GHSVS_FORCE_DESC" />
 
 				<field name="resizeForceMessage" type="list" default="1" filter="integer"
 					label="PLG_SYSTEM_BS3GHSVS_FORCEMESSAGE"
@@ -335,8 +362,8 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				<field type="spacer" name="introfullimagespacer"
 					label="PLG_SYSTEM_BS3GHSVS_INTROFULLIMAGES" />
 
-				<field name="imageoptimizer" type="list" default="0" filter="integer"
-					label="Bildoptimierer aktiv"
+				<field name="imageoptimizer_intro_full" type="list" default="0" filter="integer"
+					label="Bildoptimierer für Intro- und Beitrags-Bilder aktiv"
 					description="">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
@@ -525,7 +552,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		<field type="spacer" name="articleimagespacer" label="PLG_SYSTEM_BS3GHSVS_ARTICLEIMAGES" />
 		
 				<field name="imageoptimizer_articletext" type="list" default="0"
-				 label="Bildoptimierer aktiv"
+				 label="Bildoptimierer für Bilder im Beitragstext aktiv"
 				 description=""
 				 filter="integer">
 				 <option value="0">JNO</option>
@@ -648,6 +675,52 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC" />
 
 			</fieldset><!--/FieldsetOpenGraph-->
+
+			<fieldset name="FieldsetSvg"
+				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_SVG"
+				description="PLG_SYSTEM_BS3GHSVS_FIELDSET_SVG_DESC">
+
+				<field name="svgSupport" type="list" default="1"
+					label="SVG support"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					filter="integer">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="svgSpan" type="list" default="1" filter="integer"
+					label="SPAN um's SVG legen"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					showon="svgSupport:1">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="svgSpanClass" type="text" filter="string"
+					default="svgSpan svg-lg"
+					label="CSS-Klasse(n) des umschließenden SPAN (Nicht svg-icon, da bereits anderweitig reserviert!). Leerzeichen für keine." 
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					showon="svgSupport:1[AND]svgSpan:1"
+					/>
+
+				<field name="svgRemoveSpaces" type="list" default="0"
+					label="Remove spaces and newlines around SVG."
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					filter="integer"
+					showon="svgSupport:1">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
+				<field name="removeTagIfNoSvg" type="list" default="1"
+					label="Remove tag if no matching *.svg found (Select NO for debug purposes)"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					filter="integer"
+					showon="svgSupport:1">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+			</fieldset><!--/FieldsetSvg-->
 
 			<fieldset name="FieldsetStructuredData"
 				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_STRUCTUREDDATA"

@@ -15,17 +15,25 @@ Don't use it if you don't need it.
 
 ```
 cd src
-
 composer install
+```
 
 OR
+(whenever libraries in vendor/ have been updated)
 
+```
+cd src
 composer update
 ```
 
 ### "Download" JS/CSS packages into `/node_modules`
 - `cd ..`
 - `npm install`
+
+OR
+
+- `npm update`
+
 
 #### Only if you want to include conflicting, other versions parallel to current ones:
 
@@ -39,8 +47,17 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
  
 ### Build new Joomla package ZIP.
 
+#### Whenever Bootstrap/icons or fontawesome/icons have been updated while `npm update`
+- `node build.js --svg` (to create embeddable icons in `media/svgs/`)
+
+#### else
 - `node build.js`
+
+##### 
 - New ZIP is in `/dist/`
-- Create release with tag.
-- Get download link inside tag release and add to release description.
+- FYI: Packed files for this ZIP can be seen in `/package/`.
+
+#### For Joomla update server
+- Create new release with new tag.
+- Get download link for new `dist/plg_blahaba_blubber...zip` **inside new tag release** and add to release description.
 

@@ -117,10 +117,10 @@ if ($image = $images->get('image_intro'))
 if ($imagepopup)
 {
 ?>
-		<a class="linkWithIconGhsvs venobox" href="<?php echo $imagepopup?>" data-title="<?php echo $imagepopupDescr; ?>" title="Popup. Größere Auflösung."><span class="icon-zoom-in"></span></a>
+		<a class="linkWithIconGhsvs venobox" href="<?php echo $imagepopup?>" data-title="<?php echo $imagepopupDescr; ?>" title="Popup. Größere Auflösung.">{svg{bi/zoom-in}}</a>
 	<?php } ?>
 		<a class="linkWithIconGhsvs" href="<?php echo $displayData['link']; ?>" title="<?php echo Text::_('COM_CONTENT_READ_MORE');?>">
-			<span class="icon-link"></span>
+			{svg{bi/link-45deg}}
 		</a>
 	</div>
 	

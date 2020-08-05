@@ -21,7 +21,19 @@ const {
 	allowDowngrades,
 } = require("./package.json");
 
+const Program = require('commander');
+
 const RootPath = process.cwd();
+
+Program
+  .version(version)
+  .option('--svg', 'Additionally prepare svgs in /svg-icons/ for Joomla usage')
+  .on('--help', () => {
+    // eslint-disable-next-line no-console
+    console.log(`Version: ${version}`);
+    process.exit(0);
+  })
+  .parse(process.argv);
 
 (async function exec()
 {
@@ -42,7 +54,16 @@ const RootPath = process.cwd();
 		// ,
 		// {overwrite:false, errorOnExist:true}
 	);
-	
+
+	await rimRaf("./src/media/scss/bootstrap");
+
+	await Fs.copy(
+		"./node_modules/bootstrap/scss",
+		"./src/media/scss/bootstrap"
+		// ,
+		// {overwrite:false, errorOnExist:true}
+	);
+
 	await Fs.copy(
 		"./node_modules/bootstrap/dist/css",
 		"./src/media/css/bootstrap"
@@ -80,6 +101,25 @@ const RootPath = process.cwd();
 		// {overwrite:false, errorOnExist:true}
 	);
 
+	if (Program.svg)
+	{
+		console.log(`Program.svg: YES`);
+
+		await rimRaf("./src/media/svgs");
+
+  	await Fs.copy(
+			"./node_modules/@fortawesome/fontawesome-free/svgs",
+			"./src/media/svgs"
+		);
+	
+  	await Fs.copy(
+			"./node_modules/bootstrap-icons/icons",
+			"./src/media/svgs/bi"
+		);
+
+		const buildSvgs = await require('./build/build-svgs.js');
+	}
+
 	// Copy and create new work dir.
   await Fs.copy("./src", "./package");
 
@@ -98,9 +138,8 @@ const RootPath = process.cwd();
 	xml = xml.replace(/{{allowDowngrades}}/g, allowDowngrades);
 
   Fs.writeFileSync("./package/bs3ghsvs.xml", xml, { encoding: "utf8" });
-  Fs.unlinkSync("./package/composer.json");
-  Fs.unlinkSync("./package/composer.lock");
 	
+	// HOUSE CLEANING	
 	let directory = `${RootPath}/package/media/fontawesome-free`;
 	Fs.unlinkSync(`${directory}/package.json`);
 	
@@ -145,6 +184,10 @@ const RootPath = process.cwd();
 			console.log(`Unlinked: ${file}`);
 		}
 	});
+	
+  Fs.unlinkSync("./package/composer.json");
+  Fs.unlinkSync("./package/composer.lock");
+	Fs.unlinkSync("./package/media/js/jquery-migrate/.eslintrc.json");
 
   // Package it
   const zip = new (require("adm-zip"))();

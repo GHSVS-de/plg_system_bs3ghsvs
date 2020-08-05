@@ -33,7 +33,7 @@ HTMLHelper::_('bs3ghsvs.smoothscroll', array(
 <div>
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $id; ?>">
 		 <?php echo Text::_('PLG_SYSTEM_BS3GHSVS_SCROLL_TO'); ?>
-		 <span class="caret-down" aria-hidden="true"></span>
+		 {svg{bi/caret-down-fill}}
 	</button>
 <?php # Keine fade class, wenn Smoothscroll im Spiel!! ?>
 	<div id="<?php echo $id; ?>"
@@ -120,7 +120,7 @@ $cnt = 0;
  <div class="dropdown">
   <button class="btn btn-primary" type="button" id="<?php echo $time;?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    <?php echo Text::_('PLG_SYSTEM_BS3GHSVS_SCROLL_TO'); ?>
-   <span class="caret-down" aria-hidden="true"></span>
+   {svg{bi/caret-down-fill}}
   </button>
   <ul class="dropdown-menu controlMaxWidth " aria-labelledby="<?php echo $time;?>">
 		 <?php echo $dropdownHeader; ?>

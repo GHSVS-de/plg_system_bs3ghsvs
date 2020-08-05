@@ -24,11 +24,17 @@
 				class="extended-width" />
 
 			<field name="articleStatus" type="list" filter="integer"
-				label="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS"
-				description="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_DESC">
+				label="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS">
 				<option value="0">JNONE</option>
-				<option value="1">Unfertiger Artikel in Arbeit!</option>
+				<option value="1">PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_1</option>
+				<option value="-1">PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_-1</option>
 			</field>
+			
+			<field name="articleStatusSpacer" type="note"
+			label="PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_DESC" />
+			
+			 
+			
 		</fieldset>
 	</fields><!--/attribs-->
 </form>

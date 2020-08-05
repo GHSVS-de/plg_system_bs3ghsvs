@@ -281,7 +281,7 @@ abstract class JHtmlBootstrapghsvs
 
 			Factory::getDocument()->addScriptDeclaration(implode('', $script));
 
-			static::$loaded[__METHOD__][$selector] = 1;
+			static::$loaded[__METHOD__][$selector] = $opt;
 
 			return "<!--startAccordion-->\n"
 				. '<div class="panel-group accordion" id="'
@@ -303,8 +303,8 @@ abstract class JHtmlBootstrapghsvs
 		// "in" = BS3. "show" = BS4.
 		$in = (static::$loaded[__CLASS__ . '::startAccordion'][$selector]['active'] == $id)
 			? ' in show' : '';
-		
-		$parent = static::$loaded[__CLASS__ . '::startAccordion'][$selector]['parent']
+
+		$parent = isset(static::$loaded[__CLASS__ . '::startAccordion'][$selector]['parent'])
 			? ' data-parent="' . static::$loaded[__CLASS__ . '::startAccordion'][$selector]['parent'] . '"'
 				: '';
   
@@ -325,17 +325,10 @@ abstract class JHtmlBootstrapghsvs
 	
 		$html[] = '<div class="card-header" id="heading' . $id . '">';
 		$html[] = '<' . $headingTagGhsvs . ' class="panel-title">';
-/*		$html[] = '<a class="' . $aClass . '" data-toggle="collapse"'
-			. $parent . ' href="#collapse' . $id . '" aria-expanded="false"'
-			. ' aria-controls="collapse' . $id . '" role="button">';
-		$html[] = '<span class="togglerIcon" aria-hidden="true"></span>';
-		$html[] = $text . $title;
-		$html[] = '</a>';*/
-		
 		$html[] = '<button class="' . $aClass . '" data-toggle="collapse"'
 			. $parent . ' data-target="#collapse' . $id . '" aria-expanded="false"'
 			. ' aria-controls="collapse' . $id . '" role="button">';
-		$html[] = '<span class="togglerIcon" aria-hidden="true"></span>';
+		$html[] = '{svg{solid/plus-square}}';
 		$html[] = $text . $title;
 		$html[] = '</button>';
 		

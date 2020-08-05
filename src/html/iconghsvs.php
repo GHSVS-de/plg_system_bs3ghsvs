@@ -112,7 +112,6 @@ abstract class JHtmlIconghsvs
 		$app = Factory::getApplication();
 		$input = $app->input;
 		$request = $input->request;
-
 		$template = $app->getTemplate();
 
 		if (!is_file(JPATH_THEMES . '/' . $template . '/' . $tmpl . '.php'))
@@ -137,10 +136,12 @@ abstract class JHtmlIconghsvs
 		
 		if ($iconClass)
 		{
-			$iconClass = '<span class="' . $iconClass . '" aria-hidden="true"></span>';
+			if (strpos($iconClass, '{') === false)
+			{
+				$iconClass = '<span class="' . $iconClass . '" aria-hidden="true"></span>';
+			}
 			$text = '<span class="sr-only">' . trim($text) . '</span>'; 
 		}
-
 		return '<a href="' . Route::_($url) . '" ' . $attribs . '>' . $iconClass . $text . '</a>';
 	}
 

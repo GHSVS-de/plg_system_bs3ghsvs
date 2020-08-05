@@ -21,7 +21,10 @@
 		{
 			return;
 		}
-		
+		var svgIcon = Joomla.getOptions('category-blog-list-toggle').chevronRight;
+		var spinnerIcon = '<span class="svgIcon svg-lg svg-spin">'
+			+ Joomla.getOptions('category-blog-list-toggle').arrowRepeat
+			+ '</span>';
 		var KEY = "bloglisttoggler";
 		var PLUGIN = "SessionBs3Ghsvs";
 		var FORMAT = "raw";
@@ -30,7 +33,7 @@
 
 		// Fallback-Starttext für Button
 		var buttonText = 
-			'<span class="icon-chevron-right" aria-hidden="true"> </span> '
+			'<span class="svgIcon svg-lg" aria-hidden="true">' + svgIcon + '</span> '
 			+ Joomla.JText._("SINFOTPL_" + KEY + "_" + currentClass);
 
 		div4Toggler.html(
@@ -72,7 +75,7 @@
 				// data: newClass,
 				onBefore: function(xhr)
 				{
-					$this.html(Joomla.JText._("PLG_SYSTEM_BS3GHSVS_LOADING"));
+					$this.html(Joomla.JText._("PLG_SYSTEM_BS3GHSVS_LOADING") + spinnerIcon);
 					//console.log("onBefore");
 				},
 				onSuccess: function(response, xhr)

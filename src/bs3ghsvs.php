@@ -78,7 +78,14 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		#if (Factory::getDocument()->getType() !== 'html')
 
 		parent::__construct($subject, $config);
-		
+
+		if ($this->params->get('resizeGlobalActive', 1) === 0)
+		{
+			$this->params->set('resizeForce', 0);
+			$this->params->set('imageoptimizer_intro_full', 0);
+			$this->params->set('imageoptimizer_articletext', 0);
+		}
+
 		// For getter method from outside.
 		static::$plgParams = $this->params;
 
@@ -638,7 +645,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 							$colClass[] = $size->bootstrap_class . $size->bootstrap_size;
 						}
 					}
-					
+
 					// Fine for parameters in first level.
 					$bs3ghsvsModule = new Registry($bs3ghsvsModule);
 					$registry->merge($bs3ghsvsModule);
@@ -652,7 +659,6 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			$module->params = $registry->toString();
 		}
 	}
-
 
 	public function onContentPrepare($context, &$article, &$params, $page = 0)
 	{
@@ -687,7 +693,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		// START image resize Article-Intro-Images in catgeory/featured view.
 		if (
 			$iAmAnArticle
-			&& $this->params->get('imageoptimizer') === 1
+			&& $this->params->get('imageoptimizer_intro_full') === 1
 			&& in_array($context, array('com_content.category', 'com_content.featured'))
 			&& strpos($article->images, '"introtext_imagesghsvs":') === false
 		){
@@ -710,7 +716,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		// START image resize Article-fulltext-Images in article view.
 		if (
 			$iAmAnArticle
-			&& $this->params->get('imageoptimizer') === 1
+			&& $this->params->get('imageoptimizer_intro_full') === 1
 			&& in_array($context, array('com_content.article'))
 			&& strpos($article->images, '"fulltext_imagesghsvs":') === false
 		){
@@ -730,10 +736,10 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		}
 		// END image resize Article-fulltext-Images in article view.
 
-		// START image resize Article-fulltext-Images in article view.
+		// START image resize Article Images in editor text in article view.
 		if (
 			$iAmAnArticle
-			&& $this->params->get('imageoptimizer_articletext') === 1
+			// && $this->params->get('imageoptimizer_articletext') === 1
 			&& in_array($context, array('com_content.article'))
 			&& $view === 'article'
 			// Collection already done?
@@ -744,21 +750,22 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			// Build *basic* $article->Imagesghsvs based upon $article->images and more.
 			Bs3ghsvsItem::getItemImagesghsvs($article);
 			$collect_images = array();
-			
+
 			// First resize found images and collect results.
 			if ($imagesInArticle['src'])
 			{
-				$collect_images = Bs3ghsvsItem::getImageResizeImages(
-					'image_articletext',
-					$imagesInArticle['src']
-				);
+				if ($this->params->get('imageoptimizer_articletext') === 1)
+				{
+					$collect_images = Bs3ghsvsItem::getImageResizeImages(
+						'image_articletext',
+						$imagesInArticle['src']
+					);
+				}
 
 				// Möglichkeit in einem com_content/article/xyz.php ein eigenes 'jlayout_articletext_print' unterzujubeln.
 				// Anlass war gs-wesendorf, wo im Ausdruck die Bilder full sein müssen.
 				// Derzeit existiert die Einstellung nur im Blog-Layout blogghsvs-standard.xml.
 				if (
-					#$print
-					#&& 
 					$jlayout_articletext_print = trim($article->params->get('jlayout_articletext_print', ''))
 				){
 					$this->params->set('jlayout_articletext', $jlayout_articletext_print);
@@ -771,16 +778,26 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 					// Wir brauchen zum "Zählen" nur die $key.
 					foreach($imagesInArticle['quote'] as $key => $dummy)
 					{
+						$imgs = array();
+						
+						if ($this->params->get('imageoptimizer_articletext') === 1)
+						{
+							// Todo: maybe I find the time to avoid this "Krücke".
+							$imgs[0] = $collect_images[$key];
+							$imgs['order'] = $collect_images['order'];					
+						}
+
 						$displayData = array(
 							'attributes' => $imagesInArticle['attributes'][$key],
-							'pre'  => $imagesInArticle['pre'][$key],
-							'post' => $imagesInArticle['post'][$key],
-							'images' => $collect_images[$key]
+							# 'pre'  => $imagesInArticle['pre'][$key],
+							# 'post' => $imagesInArticle['post'][$key],
+							'imgs' => $imgs,
+							'image' => $imagesInArticle['src'][$key],
 						);
 
 						$figure = HTMLHelper::_('bs3ghsvs.layout', $jlayout_articletext, $displayData);
-	
-						// Originalbild gegen Austauschbild austauschen.
+
+						// Originalbild gegen figure/source Konstrukt austauschen.
 						$article->text = str_replace(
 							array(
 								'<p>' . $imagesInArticle['all'][$key] . '</p>',
@@ -799,7 +816,6 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		###### image resize - END
 		
 		###### open graph - START
-		
 		if (
 			$iAmAnArticle
 			&& $this->params->get('opengraphActive') === 1
@@ -811,31 +827,28 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			Bs3ghsvsItem::getItemImagesghsvs($article);
 			
 			if (
-				$this->params->get('imageoptimizer') === 1
+				$this->params->get('imageoptimizer_intro_full') === 1
 				&& $article->Imagesghsvs->get('fulltext_imagesghsvs')
 				&& $this->params->get('image_fulltext')->active_og
 			){
 				// Do we have a _og fulltext image?
-				$this->ogCollection['com_content.article'] = ArrayHelper::getColumn(
+				$ogImages = ArrayHelper::getColumn(
 					(array) $article->Imagesghsvs->get('fulltext_imagesghsvs'),
 					'_og'
 				);
-				
-				// Reduce to only image paths.
-				$this->ogCollection['com_content.article'] = ArrayHelper::getColumn(
-					$this->ogCollection['com_content.article'],
-					'img'
-				);
+
+				if (!empty($ogImages[0]['img-1']))
+				{
+					$this->ogCollection['com_content.article'][] = $ogImages[0]['img-1'];
+				}
 			}
-			
+
 			// Nothing found? Try standard images.
 			if (!$this->ogCollection['com_content.article'])
 			{
 				$imgFields = array(
-					'image_fulltext_uncached',
 					'image_fulltext',
 					'image_fulltext_popupghsvs',
-					'image_intro_uncached',
 					'image_intro',
 					'image_intro_popupghsvs',
 				);
@@ -856,31 +869,33 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 				&& $this->params->get('image_articletext')->active_og
 			){
 				// Do we have _og articletext images?
-				$images_articletext = ArrayHelper::getColumn(
+				if ($ogImages = ArrayHelper::getColumn(
 					(array) $article->Imagesghsvs->get('articletext_imagesghsvs'),
 					'_og'
-				);
-				
-				// Reduce to only image paths.
-				$images_articletext = ArrayHelper::getColumn($images_articletext, 'img');
-				$this->ogCollection['com_content.article'] = \array_merge(
-					$this->ogCollection['com_content.article'],
-					$images_articletext
-				);
+				))
+				{
+					// Reduce to only image paths.
+					if ($ogImages = ArrayHelper::getColumn($ogImages, 'img-1'))
+					{
+						$this->ogCollection['com_content.article'] = \array_merge(
+							$this->ogCollection['com_content.article'],
+							$ogImages
+						);
+					}
+				}
 			}
 			// Nothing found? Get all images by yourself from articletext.
 			else
 			{
-				if ($imagesInArticle = Bs3ghsvsItem::getAllImgSrc($article->text))
+				if ($ogImages = Bs3ghsvsItem::getAllImgSrc($article->text))
 				{
 					$this->ogCollection['com_content.article'] = \array_merge(
 						$this->ogCollection['com_content.article'],
-						$imagesInArticle['src']
+						$ogImages['src']
 					);
 				}
 			}
 		}
-		
 		###### open graph - END
 
 		###### schema-org - START
@@ -1174,37 +1189,64 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 	 */
 	public function onAfterRender()
 	{
-		if (
-			$this->params->get('structureddataActive', 1) === 1
-			&& $this->params->get('sd_killmicrodata') === 1
-		){
-			$all = $this->app->getBody();
+		if (!$this->app->isClient('site'))
+		{
+			return;
+		}
+		
+		$done             = 0;
+		$sd_killmicrodata = $this->params->get('structureddataActive', 1) === 1
+			&& $this->params->get('sd_killmicrodata') === 1;
+		$svgSupport       = $this->params->get('svgSupport', 1) === 1;
+		
+		if ($sd_killmicrodata || $svgSupport)
+		{
+			$html   = [];
+			$all    = $this->app->getBody();
+			$checks = ['<body ', '<body>'];
 			
-			if (strpos($all, '<body') === false)
+			foreach ($checks as $check)
+			{
+				if (strpos($all, $check) !== false)
+				{
+					$html = explode($check, $all);
+
+					if (count($html) === 2)
+					{
+						$sepa = $check;
+					}
+					break;
+				}
+			}
+
+			if ($sepa === '')
 			{
 				return;
 			}
-			$sepa = '<body ';
 
-			$html = explode('<body ', $all);
-			
-			if (!$html)
+			if ($sd_killmicrodata && strpos($html[1], 'itemscope') !== false)
 			{
-				$html = explode('<body>', $all);
-				$sepa = '<body>';
+				$html[1] = str_replace(
+					array(' itemscope ', ' itemtype=', ' itemprop='),
+					array(' data-itemscopeOff ', ' data-itemtypeOff=', ' data-itempropOff='),
+					$html[1], $done);				
 			}
 
-			if (count($html) !== 2 || strpos($html[1], 'itemscope') === false)
+			if ($svgSupport && strpos($html[1], '{svg{') !== false)
 			{
-				return;
+				$html[1] = Bs3ghsvsItem::replaceSvgPlaceholders(
+					$html[1],
+					[
+						'addSpan'   => $this->params->get('svgSpan', 1),
+						'spanClass' => $this->params->get('svgSpanClass', 'svgSpan'),
+						'removeTag' => $this->params->get('removeTagIfNoSvg', 1),
+						'svgRemoveSpaces' => $this->params->get('svgRemoveSpaces', 0),
+					]
+				);
+				$done = 1;
 			}
-
-			$html[1] = str_replace(
-				array(' itemscope ', ' itemtype=', ' itemprop='),
-				array(' data-itemscopeOff ', ' data-itemtypeOff=', ' data-itempropOff='),
-				$html[1], $count);
 				
-			if ($count)
+			if ($done)
 			{
 				$this->app->setBody(implode($sepa, $html));
 			}
@@ -1344,7 +1386,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		$input = $this->app->input;
 		$cmd = $input->get('cmd', '', 'ALNUM');
 		$key = trim($input->get('key', '', 'STRING'));
-// file_put_contents(__DIR__ . '/dannloeschen.txt', $cmd . ' ' . $key);
+
 		if (!$key || !in_array($cmd, array('add', 'get', 'destroy')))
 		{
 			return;

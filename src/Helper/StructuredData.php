@@ -1,6 +1,8 @@
 <?php
 defined('_JEXEC') or die;
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
 use Joomla\CMS\Factory;
 use Joomla\CMS\Uri\Uri;
 use Spatie\SchemaOrg\Schema;
@@ -14,17 +16,19 @@ use Joomla\CMS\Language\Multilanguage;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Language\Text;
 
-JLoader::registerNamespace(
+/*JLoader::registerNamespace(
 	'Spatie\\SchemaOrg',
 	__DIR__ . '/schema-org/src',
 	false,
 	false,
 	'psr4'
-);
+);*/
 
 class Bs3ghsvsStructuredData
 {
 	protected static $loaded = array();
+	
+	// Array (width, height, img) for 'logosmall' plugin parameter.
 	protected static $logosmall;
 	protected static $schemaOrganizationBase;
 	
@@ -60,20 +64,20 @@ class Bs3ghsvsStructuredData
 			);
 			self::$logosmall['img'] = Bs3ghsvsItem::addUriRoot(self::$logosmall['img']);
 		}
-		
+
 		### headline.
-		$various = new Registry(Bs3ghsvsArticle::getVariousData($article->id));
+		$various  = new Registry(Bs3ghsvsArticle::getVariousData($article->id));
 		$headline = $article->title . ($various->get('articlesubtitle', '')
 			? ' (' . $various->get('articlesubtitle') . ')' : '');
 		
-		### articleBody. Used several times for other things.
+		### articleBody. Used several times for other things even if not used in the end.
 		if (!$article->params->get('show_intro'))
 		{
 			$articleBody = Bs3ghsvsItem::strip_tags($article->introtext . $article->text);
 		}
 		else
 		{
-		$articleBody = Bs3ghsvsItem::strip_tags($article->text);
+			$articleBody = Bs3ghsvsItem::strip_tags($article->text);
 		}
 		
 		if (!($description = trim($article->metadesc)))
@@ -116,37 +120,36 @@ class Bs3ghsvsStructuredData
 		}
 		
 		$schema = Schema::article()
-		->url(Uri::current())
-		->mainEntityOfPage(array('@type' => 'WebPage', '@id' => Uri::current()))
-		->name($article->title)
-		// // Google wants 100 chars max.
-		->headline(StringHelper::substr($headline, 0, 110))
-		->articleSection($article->category_title)
-		->author(
-			Schema::Person()->name($article->author)
-		)
-		->publisher(
-			Schema::Organization()->name($organization->get('name'))
-			->if(self::$logosmall['img'], function(Organization $schema)
-			{
-				$schema->logo(
-					Schema::ImageObject()
-					->url(self::$logosmall['img'])
-					->contentUrl(self::$logosmall['img'])
-					->width(self::$logosmall['width'])
-					->height(self::$logosmall['height'])
-				);
-			})
-
-		)
-		->creator($article->author)
-		->datePublished(HTMLHelper::_('date', $article->publish_up, 'c'))
-		->dateCreated(HTMLHelper::_('date', $article->created, 'c'))
-		->dateModified(HTMLHelper::_('date', $article->modified, 'c'))
-		->wordCount(
-			count(explode(' ', $articleBody))
-		)
-		->inLanguage(($article->language === '*') ? $app->get('language') : $article->language)
+			->url(Uri::current())
+			->mainEntityOfPage(array('@type' => 'WebPage', '@id' => Uri::current()))
+			->name($article->title)
+			// Google wants 100 chars max.
+			->headline(StringHelper::substr($headline, 0, 110))
+			->articleSection($article->category_title)
+			->author(
+				Schema::Person()->name($article->author)
+			)
+			->publisher(
+				Schema::Organization()->name($organization->get('name'))
+					->if(self::$logosmall['img'], function(Organization $schema)
+					{
+						$schema->logo(
+							Schema::ImageObject()
+							->url(self::$logosmall['img'])
+							->contentUrl(self::$logosmall['img'])
+							->width(self::$logosmall['width'])
+							->height(self::$logosmall['height'])
+						);
+					})
+				)
+			->creator($article->author)
+			->datePublished(HTMLHelper::_('date', $article->publish_up, 'c'))
+			->dateCreated(HTMLHelper::_('date', $article->created, 'c'))
+			->dateModified(HTMLHelper::_('date', $article->modified, 'c'))
+			->wordCount(
+				count(explode(' ', $articleBody))
+			)
+			->inLanguage(($article->language === '*') ? $app->get('language') : $article->language)
 		;
 
 		if($description)
@@ -172,6 +175,7 @@ class Bs3ghsvsStructuredData
 		
 		foreach ($findImageIn as $key)
 		{
+			// Passes $image as string (=path)
 			if (
 				($imageObject = self::buildImageObject($article->Imagesghsvs->get($key, ''), $minWidth))
 			){
@@ -189,9 +193,10 @@ class Bs3ghsvsStructuredData
 				(array) $articletext_imagesghsvs,
 				'_u'
 			);
-			
+
 			foreach ($articletext_imagesghsvs as $image)
 			{
+				// Passes $image as array ('img-1', width, height)
 				if (
 					($imageObject = self::buildImageObject($image, $minWidth))
 				){
@@ -200,10 +205,11 @@ class Bs3ghsvsStructuredData
 			}
 		}
 		// Puuuh. The hard way.
-		else if ($imagesInArticle = Bs3ghsvsItem::getAllImgSrc($article->text))
+		elseif ($imagesInArticle = Bs3ghsvsItem::getAllImgSrc($article->text))
 		{
 			foreach ($imagesInArticle['src'] as $image)
 			{
+				// Passes $image as string (=path).
 				if (
 					($imageObject = self::buildImageObject($image, $minWidth))
 				){
@@ -213,6 +219,7 @@ class Bs3ghsvsStructuredData
 		}
 
 		// Absolutely nothing found => Try fallback image and ignore $minWidth.
+		// Passes $image as string (=path)
 		if (
 			!$imageObjects
 			&& ($imageObject = self::buildImageObject($organization->get('fallbackimage', ''), 0))
@@ -304,6 +311,7 @@ class Bs3ghsvsStructuredData
 			->email($email)
 			->faxNumber($contact->fax)
 			->availableLanguage(['German','English'])
+			->areaServed('Worldwide')
 		);
 		return $schema;
 	}
@@ -426,7 +434,7 @@ class Bs3ghsvsStructuredData
 		{
 			return false;
 		}
-		
+
 		if (is_string($image))
 		{
 			$size = Bs3ghsvsItem::getImageSize($image);
@@ -435,7 +443,7 @@ class Bs3ghsvsStructuredData
 		{
 			$size['width'] = $image['width'];
 			$size['height'] = $image['height'];
-			$image = $image['img'];
+			$image = $image['img-1'];
 		}
 		
 		if ($size['width'] < $minSize)

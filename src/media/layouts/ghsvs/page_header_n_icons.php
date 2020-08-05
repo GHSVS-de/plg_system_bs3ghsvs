@@ -75,9 +75,12 @@ if ($linkHeadline && empty($displayData->linkGhsvs))
 	<?php
 	if ($articleStatus && Factory::getApplication()->input->get('view') === 'article')
 	{
-		Factory::getDocument()->setMetadata('robots', 'noindex, follow');
+		if ($articleStatus > 0)
+		{
+			Factory::getDocument()->setMetadata('robots', 'noindex, follow');
+		}
 		?>
-	<p class="articleStatus articleStatus_<?php echo $articleStatus; ?>">
+	<p class="articleStatus articleStatus_<?php echo $articleStatus; ?> bg-warning p-3">
 		<?php echo Text::_('PLG_SYSTEM_BS3GHSVS_ARTICLESTATUS_' . $articleStatus); ?>
 	</p>
 	<?php

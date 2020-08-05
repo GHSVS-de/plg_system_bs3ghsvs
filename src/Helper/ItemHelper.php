@@ -9,6 +9,7 @@ use Joomla\CMS\Language\Text;
 use Joomla\CMS\Image\Image;
 use Joomla\CMS\Utility\Utility;
 use Joomla\CMS\Uri\Uri;
+use Joomla\Utilities\ArrayHelper;
 
 class Bs3ghsvsItem
 {
@@ -90,23 +91,11 @@ class Bs3ghsvsItem
 						$item->Imagesghsvs->set('image_intro_popupghsvs', $item->Imagesghsvs->get('image_intro'));
 					}
 
-					// B\C
-					if (!$item->Imagesghsvs->get('image_intro_uncached', ''))
-					{
-						$item->Imagesghsvs->set('image_intro_uncached', $item->Imagesghsvs->get('image_intro'));
-					}
-
 					if (!$item->Imagesghsvs->get('image_fulltext_popupghsvs', ''))
 					{
 						$item->Imagesghsvs->set('image_fulltext_popupghsvs',
 							$item->Imagesghsvs->get('image_fulltext')
 						);
-					}
-
-					// B\C
-					if (!$item->Imagesghsvs->get('image_fulltext_uncached', ''))
-					{
-						$item->Imagesghsvs->set('image_fulltext_uncached', $item->Imagesghsvs->get('image_fulltext'));
 					}
 
 					if (!$item->Imagesghsvs->get('float_fulltext', ''))
@@ -208,13 +197,16 @@ class Bs3ghsvsItem
 	}
 
 	/**
-	 * Create collection and resize images.
+	 * Create collection of all relevant resized images.
 	 * 
 	 * $what 'image_intro', 'image_fulltext', 'image_articletext' (see settings fields in bs3ghsvs.xml)
 	 * and 'image_module' (see PlgSystemBS3Ghsvs::moduleImagesResizing()).
 	 * $useSizePostfixes Force usage of this sizePostfixes. E.g. modules should use 'image_articletext'.
 	 */
-	public static function getImageResizeImages(string $what, $IMAGES, string $useSizePostfixes = '')
+	public static function getImageResizeImages(
+		string $what,
+		$IMAGES,
+		string $useSizePostfixes = ''): array
 	{
 		$collect_images = array();
 		$key = 0;
@@ -228,7 +220,7 @@ class Bs3ghsvsItem
 		// Get plugin settings for resizing.
 		if ($useSizePostfixes === '')
 		{
-		$sizePostfixes = self::getImageResizeAttribs($what);
+			$sizePostfixes = self::getImageResizeAttribs($what);
 		}
 		else
 		{
@@ -241,50 +233,61 @@ class Bs3ghsvsItem
 		}
 		
 		self::loadImageResizer();
-		
+
 		foreach ($IMAGES as $key => $IMAGE)
 		{
-			// Create _u wie unbearbeitet.
-			$collect_images[$key]['_u']['img'] = $IMAGE;
-
+			// _u wie unbearbeitet.
+			// Seit mehrere Formate erzeugt werden könnten, nun doch durche den Prozessor schicken.
 			list(
-				$collect_images[$key]['_u']['width'],
-				$collect_images[$key]['_u']['height']
+				$sizePostfixes['_u']['w'],
+				$sizePostfixes['_u']['h']
 			) = self::getImageSize($IMAGE, true);
+			
+			$sizePostfixes['_u']['maxonly'] = 1;
+			$sizePostfixes['_u']['quality'] = null;
+			$sizePostfixes['_u']['size'] = '_u';
 
-			$collect_images[$key]['_u']['size'] = '_u';
-			
 			$IMAGEorig = $IMAGE;
-			
+
 			foreach ($sizePostfixes as $sizePostfix => $opts)
 			{
 				if ($sizePostfix === '_og')
 				{
-					$scaleMethod = Image::SCALE_OUTSIDE;
+					$scaleMethod = 'SCALE_OUTSIDE';
 				}
 				else
 				{
-					$scaleMethod = Image::SCALE_INSIDE;
+					$scaleMethod = 'SCALE_INSIDE';
 				}
 
-				// Verkleinertes Bild erstellen und abholen.
-				$IMAGE = trim(
-					self::$imageResizer->resize($IMAGEorig,
+				// Verkleinertes Bild erstellen und u.a. relative Pfade abholen.
+				// Enthält aber auch weitere Infos wie width, 2. Bild  etc.
+				$IMAGE = self::$imageResizer->resize($IMAGEorig,
 					$opts,
 					$scaleMethod,
 					$groupPrefix . $sizePostfix
-				), '/\\ ');
+				);
 
-				$collect_images[$key][$sizePostfix]['img'] = $IMAGE;
-				
-				list(
-					$collect_images[$key][$sizePostfix]['width'],
-					$collect_images[$key][$sizePostfix]['height']
-				) = self::getImageSize($IMAGE, true);
-				
+				$collect_images[$key][$sizePostfix]         = $IMAGE;
 				$collect_images[$key][$sizePostfix]['size'] = $sizePostfix;
 			} // end foreach ($sizePostfixes
 		} // end foreach ($IMAGES as $key => $IMAGE)
+
+		// ToDo. 'order' as dynamic plugin parameter if more than 1 image to be created.
+		if ($collect_images)
+		{
+			// Ordering of 'img-1', 'img-2' during output
+			switch (PlgSystemBS3Ghsvs::getPluginParams()->get('webpSupport'))
+			{
+				case 1:
+					$collect_images['order'] = '2,1';
+				break;
+				case 0:
+				case 2:
+					$collect_images['order'] = '1';
+			}
+		}
+
 		return $collect_images;
 	}
 
@@ -303,11 +306,14 @@ class Bs3ghsvsItem
 		*
 		* @param string $txt String that contains IMG tags.
 		* @param string $filter File/image extensions as regex (default: 'png|jpg|jpeg|gif').
+		* @param bool $filter File/image extensions as regex (default: 'png|jpg|jpeg|gif').
 		*
 		* @return array Array with above keys | empty array.
 	 */
-	public static function getAllImgSrc($txt, $filter = 'png|jpg|jpeg|gif')
-	{
+	public static function getAllImgSrc(
+		$txt,
+		$filter = 'png|jpg|jpeg|gif|webp'
+	){
 		if (stripos($txt, '<img ') !== false)
 		{
 			#/<img(\s+[^>]*)src=("|'|)([^>]+?\.(png|jpg|jpeg|gif))("|'|)([^>]*>)/i
@@ -343,6 +349,72 @@ class Bs3ghsvsItem
 			}
 		}
 		return array();
+	}
+
+	/**
+	 * $txt Search in for $muster and repalce $muster with SVG or SPAN/SVG.
+	 * $options array:
+	 * addSpan Surround SVG with SPAN.
+	 * spanClass CSS class of surrounding SPAN.
+	 * removeTag Remove tag/$muster from $txt if no SVG file found
+	 * removeNewlines Removes newlines and spaces around tag respectively SVG.
+	*/
+	public static function replaceSvgPlaceholders(
+		string $txt,
+		$options = array()
+	){
+		$matches = [];
+		$options = new Registry($options);
+
+		if (strpos($txt, '{svg{') !== false)
+		{
+			if ($options->get('svgRemoveSpaces'))
+			{
+				$muster  = '\s*{svg{([^}]+)}}\s*';
+			}
+			else
+			{
+				$muster  = '{svg{([^}]+)}}';
+			}
+
+			$results = [];
+
+			if (preg_match_all('/' . $muster . '/m', $txt, $matches, PREG_SET_ORDER ))
+			{
+				foreach ($matches as $key => $match)
+				{
+					$results['replaceWhat'][$key] = $match[0];
+					$svg = JPATH_SITE . '/media/plg_system_bs3ghsvs/svgs/' . $match[1] . '.svg';
+					
+					if (file_exists($svg))
+					{
+						$svg = file_get_contents($svg);
+						
+						if ($options->get('addSpan'))
+						{
+							$class = trim($options->get('spanClass', ''));
+							$svg   = '<span aria-hidden="true"' . ($class ? ' class="' . $class . '"' : '') . '>'
+								. $svg . '</span>';
+						}
+						$results['replaceWith'][$key] = $svg;
+					}
+					elseif ($options->get('removeTag'))
+					{
+						$results['replaceWith'][$key] = '';
+					}
+					else
+					{
+						unset($results['replaceWhat'][$key]);
+					}
+				}
+
+				if (!empty($results['replaceWith']))
+				{
+					$txt = str_replace($results['replaceWhat'], $results['replaceWith'], $txt);
+				}
+			}
+		}
+		return $txt;
 	}
 
 	protected static function loadImageResizer() 
@@ -409,5 +481,97 @@ class Bs3ghsvsItem
 			return array(0 => $w, 1 => $h);
 		}
 		return array('width' => $w, 'height' => $h);
+	}
+	
+	/**
+	 * Build and return array with sources block and infos for fallback <img>.
+	*/
+	public static function getSources(array $imgs, array $mediaQueries, string $origImage): array
+	{
+		$returnArray = array();
+		
+		// $imgs contains resized images. If resizer deactivated no $imgs.
+		if ($imgs && $mediaQueries)
+		{
+			$sources  = array();
+			$ordering = \explode(',', $imgs['order']);
+			unset($imgs['order']);
+	
+			$srcSetKeys = array(
+				empty($mediaQueries['srcSetKey']) ? time() : $mediaQueries['srcSetKey'],
+				'_x',
+				'_u',
+			);
+			unset($mediaQueries['srcSetKey']);
+	
+			$count = count($mediaQueries);
+	
+			foreach ($imgs as $sizedImageKey => $sizedImages)
+			{
+				foreach ($ordering as $order)
+				{
+					$i      = 1;
+					$imgKey = 'img-' . $order;
+	
+					foreach ($mediaQueries as $mediaQuery => $sizeIndex)
+					{
+						if (!isset($sizedImages[$sizeIndex]))
+						{
+							continue;
+						}
+						
+						$image = $sizedImages[$sizeIndex];
+						
+						// Fall back to first image.
+						if ($image['count'] < $order)
+						{
+							$imgKey = 'img-1';
+						}
+	
+						$sources[$sizedImageKey][] = '<source srcset="' . $image[$imgKey] . '" media="' . $mediaQuery . '">';
+						$i++;
+						
+						if ($i > $count)
+						{
+							foreach ($srcSetKeys as $srcSetKey)
+							{
+								if (isset($sizedImages[$srcSetKey]))
+								{
+									$srcSetImage    = $sizedImages[$srcSetKey][$imgKey];
+									$srcSetKeySaved = $srcSetKey;
+									$imgKeySaved    = $sizedImageKey;
+									break;
+								}
+							}
+							
+							// Paranoia:
+							if (!isset($srcSetImage))
+							{
+								$srcSetImage = $origImage;
+							}
+	
+							$sources[$sizedImageKey][] = '<source srcset="' . $srcSetImage . '">';
+						} // if ($i > $count)
+					} // foreach ($mediaQueries as $mediaQuery => $sizeIndex)
+				} // foreach ($ordering as $order)
+	
+				$returnArray[$sizedImageKey]['sources'] = implode("\n", $sources[$sizedImageKey]);
+				$returnArray[$sizedImageKey]['assets']  = array(
+					'img'    => $imgs[$imgKeySaved][$srcSetKeySaved]['img-1'],
+					'width'  => $imgs[$imgKeySaved][$srcSetKeySaved]['width'],
+					'height' => $imgs[$imgKeySaved][$srcSetKeySaved]['height'],
+				);
+			} // foreach ($imgs as $sizedImageKey => $sizedImages)
+		} // if ($imgs && $mediaQueries)
+		
+		// Resizer disabled.
+		if (!$returnArray && $origImage)
+		{
+			$returnArray[0]['sources']       = '<source srcset="' . $origImage . '">';
+			$returnArray[0]['assets']['img'] = $origImage;
+			$returnArray[0]['assets']        = \array_merge($returnArray[0]['assets'], self::getImageSize($origImage));
+			
+		}
+		return $returnArray;
 	}
 }
