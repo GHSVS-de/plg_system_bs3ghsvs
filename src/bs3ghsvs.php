@@ -1204,6 +1204,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			$html   = [];
 			$all    = $this->app->getBody();
 			$checks = ['<body ', '<body>'];
+			$sepa   = '';
 			
 			foreach ($checks as $check)
 			{
