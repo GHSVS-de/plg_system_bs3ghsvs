@@ -357,7 +357,7 @@ class Bs3ghsvsItem
 	 * addSpan Surround SVG with SPAN.
 	 * spanClass CSS class of surrounding SPAN.
 	 * removeTag Remove tag/$muster from $txt if no SVG file found
-	 * removeNewlines Removes newlines and spaces around tag respectively SVG.
+	 * removeSpaces Removes newlines and spaces around tag respectively SVG.
 	*/
 	public static function replaceSvgPlaceholders(
 		string $txt,
@@ -368,7 +368,7 @@ class Bs3ghsvsItem
 
 		if (strpos($txt, '{svg{') !== false)
 		{
-			if ($options->get('svgRemoveSpaces'))
+			if ($options->get('removeSpaces'))
 			{
 				$muster  = '\s*{svg{([^}]+)}}\s*';
 			}

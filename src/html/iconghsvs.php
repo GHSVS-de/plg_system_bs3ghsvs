@@ -197,7 +197,7 @@ abstract class JHtmlIconghsvs
 			
 			$text = Text::_('JLIB_HTML_CHECKED_OUT');
 
-			$output = '<span class="text-red"><span class="fa fa-edit fa-lg" aria-hidden="true"></span>'
+			$output = '<span class="text-red">{svg{regular/edit}}</span>'
 				. Text::_('COM_CONTENT_EDIT_ITEM') . ' (' .$tooltip . ')</span>';
 
 			return $output;
@@ -215,14 +215,7 @@ abstract class JHtmlIconghsvs
 			$overlib = JText::_('JPUBLISHED');
 		}
 
-		//$date   = HTMLHelper::_('date', $article->created);
-		//$author = $article->created_by_alias ?: $article->author;
-
-		//$overlib .= ', ' . $date . ', ';
-		//$overlib .= Text::sprintf('COM_CONTENT_WRITTEN_BY', htmlspecialchars($author, ENT_COMPAT, 'UTF-8'));
-
-		//$text = LayoutHelper::render('joomla.content.icons.edit', array('article' => $article, 'overlib' => $overlib, 'legacy' => $legacy));
-		$text = '<span class="fa fa-edit fa-lg" aria-hidden="true"></span> ' . Text::_('COM_CONTENT_EDIT_ITEM');
+		$text = '{svg{regular/edit}} ' . Text::_('COM_CONTENT_EDIT_ITEM');
 
 		$attribs['title']   = Text::_('JGLOBAL_EDIT_TITLE');
 		$output = HTMLHelper::_('link', JRoute::_($url), $text, $attribs);

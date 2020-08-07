@@ -120,6 +120,12 @@ abstract class JHtmlFootableghsvs
 			);
 		}
 
+		HTMLHelper::_('stylesheet',
+			self::$basepath . '/glyphicons-fonts-loader.css',
+			array('relative' => true, 'version' => $version),
+			$attribs
+		);
+
 		$files[0] = 'footable.core.bootstrap';
 
 		foreach ($files as $file)

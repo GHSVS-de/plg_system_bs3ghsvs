@@ -1241,7 +1241,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 						'addSpan'   => $this->params->get('svgSpan', 1),
 						'spanClass' => $this->params->get('svgSpanClass', 'svgSpan'),
 						'removeTag' => $this->params->get('removeTagIfNoSvg', 1),
-						'svgRemoveSpaces' => $this->params->get('svgRemoveSpaces', 0),
+						'removeSpaces' => $this->params->get('svgRemoveSpaces', 0),
 					]
 				);
 				$done = 1;
