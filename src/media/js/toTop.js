@@ -13,8 +13,10 @@ function scrollFunction()
     document.getElementById("toTop").style.display = "none";
   }
 }
+/* Ich mache jetzt doch ohne, mit normalem #TOP-Link, weil sonst
+TOC-Sprungmarken nicht zurückgesetzt werden.
 function topFunction()
 {
 	document.body.scrollTop = 0; // For Safari
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+}*/

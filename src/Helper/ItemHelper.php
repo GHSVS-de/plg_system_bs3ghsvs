@@ -370,11 +370,11 @@ class Bs3ghsvsItem
 		{
 			if ($options->get('removeSpaces'))
 			{
-				$muster  = '\s*{svg{([^}]+)}}\s*';
+				$muster  = '\s*{svg{([^}]+)}.*}\s*';
 			}
 			else
 			{
-				$muster  = '{svg{([^}]+)}}';
+				$muster  = '{svg{([^}]+)}.*}';
 			}
 
 			$results = [];
@@ -393,6 +393,13 @@ class Bs3ghsvsItem
 						if ($options->get('addSpan'))
 						{
 							$class = trim($options->get('spanClass', ''));
+							$passedAttributes = Utility::parseAttributes($match[0]);
+
+							if (isset($passedAttributes['class']))
+							{
+								$class .= ' ' . $passedAttributes['class'];
+							}
+							
 							$svg   = '<span aria-hidden="true"' . ($class ? ' class="' . $class . '"' : '') . '>'
 								. $svg . '</span>';
 						}

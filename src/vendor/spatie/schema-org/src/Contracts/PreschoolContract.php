@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface PreschoolContract
 {
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy);
+
     public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
@@ -38,6 +40,8 @@ interface PreschoolContract
 
     public function containsPlace($containsPlace);
 
+    public function correctionsPolicy($correctionsPolicy);
+
     public function department($department);
 
     public function description($description);
@@ -46,6 +50,10 @@ interface PreschoolContract
 
     public function dissolutionDate($dissolutionDate);
 
+    public function diversityPolicy($diversityPolicy);
+
+    public function diversityStaffingReport($diversityStaffingReport);
+
     public function duns($duns);
 
     public function email($email);
@@ -53,6 +61,8 @@ interface PreschoolContract
     public function employee($employee);
 
     public function employees($employees);
+
+    public function ethicsPolicy($ethicsPolicy);
 
     public function event($event);
 
@@ -72,21 +82,55 @@ interface PreschoolContract
 
     public function geo($geo);
 
+    public function geoContains($geoContains);
+
+    public function geoCoveredBy($geoCoveredBy);
+
+    public function geoCovers($geoCovers);
+
+    public function geoCrosses($geoCrosses);
+
+    public function geoDisjoint($geoDisjoint);
+
+    public function geoEquals($geoEquals);
+
+    public function geoIntersects($geoIntersects);
+
+    public function geoOverlaps($geoOverlaps);
+
+    public function geoTouches($geoTouches);
+
+    public function geoWithin($geoWithin);
+
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCredential($hasCredential);
+
+    public function hasDriveThroughService($hasDriveThroughService);
+
     public function hasMap($hasMap);
+
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hasPOS($hasPOS);
 
+    public function hasProductReturnPolicy($hasProductReturnPolicy);
+
     public function identifier($identifier);
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isicV4($isicV4);
+
+    public function knowsAbout($knowsAbout);
+
+    public function knowsLanguage($knowsLanguage);
 
     public function latitude($latitude);
 
@@ -120,13 +164,15 @@ interface PreschoolContract
 
     public function name($name);
 
-    public function numberOfEmployees($numberOfEmployees);
+    public function nonprofitStatus($nonprofitStatus);
 
-    public function offeredBy($offeredBy);
+    public function numberOfEmployees($numberOfEmployees);
 
     public function openingHours($openingHours);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);
 
@@ -167,6 +213,10 @@ interface PreschoolContract
     public function taxID($taxID);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
+
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy);
 
     public function url($url);
 

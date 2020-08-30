@@ -44,7 +44,7 @@ if ($params->get('show_title'))
 \JLoader::register('ContentHelperRoute', JPATH_SITE . '/components/com_content/helpers/route.php');
 
 $linkHeadline = ($params->get('link_titles') && $params->get('access-view'));
-$maskHClass = ($params->get('mask_pageheaderclass_ghsvs', false) ? 'Masked' : '');
+$maskHClass = ($params->get('mask_pageheaderclass_ghsvs', 0) ? 'Masked' : '');
 
 if ($linkHeadline && empty($displayData->linkGhsvs))
 {

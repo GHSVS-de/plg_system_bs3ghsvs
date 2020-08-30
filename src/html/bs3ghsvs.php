@@ -431,6 +431,9 @@ abstract class JHtmlBs3ghsvs
 			);
 			static::$loaded[__METHOD__] = 1;
 		}
-		return '<button onclick="topFunction()" id="toTop" aria-hidden="true" tabindex="-1" aria-label="' . Text::_('PLG_SYSTEM_BS3GHSVS_TO_TOP') . '"></button>';
+		return '<a href="#TOP" id="toTop" tabindex="-1">
+			<span class="sr-only">' . Text::_('PLG_SYSTEM_BS3GHSVS_TO_TOP') . '</span>
+		</a>';
+		// return '<button onclick="topFunction()" id="toTop" aria-hidden="true" tabindex="-1" aria-label="' . Text::_('PLG_SYSTEM_BS3GHSVS_TO_TOP') . '"></button>';
 	}
 }

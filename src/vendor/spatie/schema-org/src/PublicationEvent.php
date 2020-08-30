@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * a CreativeWork of any type e.g. a broadcast event, an on-demand event, a
  * book/journal publication via a variety of delivery media.
  *
- * @see http://schema.org/PublicationEvent
+ * @see https://schema.org/PublicationEvent
  *
  */
 class PublicationEvent extends BaseType implements PublicationEventContract, EventContract, ThingContract
@@ -23,7 +23,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -39,7 +40,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see https://schema.org/actor
      */
     public function actor($actor)
     {
@@ -58,7 +59,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -73,7 +74,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -87,7 +88,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -101,7 +102,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/attendee
+     * @see https://schema.org/attendee
      */
     public function attendee($attendee)
     {
@@ -115,7 +116,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/attendees
+     * @see https://schema.org/attendees
      */
     public function attendees($attendees)
     {
@@ -129,7 +130,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -144,7 +145,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see https://schema.org/composer
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public function composer($composer)
     {
@@ -158,7 +160,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -172,7 +174,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -188,7 +190,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see https://schema.org/director
      */
     public function director($director)
     {
@@ -205,7 +207,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -219,7 +221,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/doorTime
+     * @see https://schema.org/doorTime
      */
     public function doorTime($doorTime)
     {
@@ -234,7 +236,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
@@ -249,11 +251,59 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see https://schema.org/endDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function endDate($endDate)
     {
         return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * The eventAttendanceMode of an event indicates whether it occurs online,
+     * offline, or a mix.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract|\Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract[] $eventAttendanceMode
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventAttendanceMode
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function eventAttendanceMode($eventAttendanceMode)
+    {
+        return $this->setProperty('eventAttendanceMode', $eventAttendanceMode);
+    }
+
+    /**
+     * Associates an [[Event]] with a [[Schedule]]. There are circumstances
+     * where it is preferable to share a schedule for a series of
+     *       repeating events rather than data on the individual events
+     * themselves. For example, a website or application might prefer to publish
+     * a schedule for a weekly
+     *       gym class rather than provide data on every event. A schedule could
+     * be processed by applications to add forthcoming events to a calendar. An
+     * [[Event]] that
+     *       is associated with a [[Schedule]] using this property should not
+     * have [[startDate]] or [[endDate]] properties. These are instead defined
+     * within the associated
+     *       [[Schedule]], this avoids any ambiguity for clients using the data.
+     * The property might have repeated values to specify different schedules,
+     * e.g. for different months
+     *       or seasons.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $eventSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventSchedule
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1457
+     */
+    public function eventSchedule($eventSchedule)
+    {
+        return $this->setProperty('eventSchedule', $eventSchedule);
     }
 
     /**
@@ -264,7 +314,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/eventStatus
+     * @see https://schema.org/eventStatus
      */
     public function eventStatus($eventStatus)
     {
@@ -278,7 +328,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/free
+     * @see https://schema.org/free
      */
     public function free($free)
     {
@@ -293,7 +343,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -311,7 +361,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -326,7 +376,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -343,7 +393,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
+     * @link https://github.com/schemaorg/schemaorg/issues/2382
      */
     public function inLanguage($inLanguage)
     {
@@ -357,7 +408,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -368,11 +419,11 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -388,7 +439,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -402,11 +453,47 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumPhysicalAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumPhysicalAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
+    {
+        return $this->setProperty('maximumPhysicalAttendeeCapacity', $maximumPhysicalAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumVirtualAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumVirtualAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
+    {
+        return $this->setProperty('maximumVirtualAttendeeCapacity', $maximumVirtualAttendeeCapacity);
     }
 
     /**
@@ -416,7 +503,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -437,7 +524,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -451,7 +539,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/organizer
+     * @see https://schema.org/organizer
      */
     public function organizer($organizer)
     {
@@ -466,7 +554,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/performer
+     * @see https://schema.org/performer
      */
     public function performer($performer)
     {
@@ -481,7 +569,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/performers
+     * @see https://schema.org/performers
      */
     public function performers($performers)
     {
@@ -496,7 +584,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -514,11 +602,26 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/previousStartDate
+     * @see https://schema.org/previousStartDate
      */
     public function previousStartDate($previousStartDate)
     {
         return $this->setProperty('previousStartDate', $previousStartDate);
+    }
+
+    /**
+     * An agent associated with the publication event.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $publishedBy
+     *
+     * @return static
+     *
+     * @see https://schema.org/publishedBy
+     * @see http://bib.schema.org
+     */
+    public function publishedBy($publishedBy)
+    {
+        return $this->setProperty('publishedBy', $publishedBy);
     }
 
     /**
@@ -528,7 +631,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/publishedOn
+     * @see https://schema.org/publishedOn
      */
     public function publishedOn($publishedOn)
     {
@@ -542,7 +645,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/recordedIn
+     * @see https://schema.org/recordedIn
      */
     public function recordedIn($recordedIn)
     {
@@ -556,7 +659,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/remainingAttendeeCapacity
+     * @see https://schema.org/remainingAttendeeCapacity
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
@@ -570,7 +673,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -586,7 +689,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -602,7 +705,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -617,7 +720,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see https://schema.org/startDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function startDate($startDate)
     {
@@ -633,7 +737,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/subEvent
+     * @see https://schema.org/subEvent
      */
     public function subEvent($subEvent)
     {
@@ -648,7 +752,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/subEvents
+     * @see https://schema.org/subEvents
      */
     public function subEvents($subEvents)
     {
@@ -662,7 +766,8 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -678,7 +783,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/superEvent
+     * @see https://schema.org/superEvent
      */
     public function superEvent($superEvent)
     {
@@ -694,7 +799,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -708,7 +813,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -722,7 +827,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -738,7 +843,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/workFeatured
+     * @see https://schema.org/workFeatured
      */
     public function workFeatured($workFeatured)
     {
@@ -753,7 +858,7 @@ class PublicationEvent extends BaseType implements PublicationEventContract, Eve
      *
      * @return static
      *
-     * @see http://schema.org/workPerformed
+     * @see https://schema.org/workPerformed
      */
     public function workPerformed($workPerformed)
     {

@@ -12,11 +12,45 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A product or service offered by a bank whereby one may deposit, withdraw or
  * transfer money and in some cases be paid interest.
  *
- * @see http://schema.org/BankAccount
+ * @see https://schema.org/BankAccount
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
  *
  */
 class BankAccount extends BaseType implements BankAccountContract, FinancialProductContract, IntangibleContract, ServiceContract, ThingContract
 {
+    /**
+     * A minimum amount that has to be paid in every month.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $accountMinimumInflow
+     *
+     * @return static
+     *
+     * @see https://schema.org/accountMinimumInflow
+     * @see http://pending.schema.org
+     */
+    public function accountMinimumInflow($accountMinimumInflow)
+    {
+        return $this->setProperty('accountMinimumInflow', $accountMinimumInflow);
+    }
+
+    /**
+     * An overdraft is an extension of credit from a lending institution when an
+     * account reaches zero. An overdraft allows the individual to continue
+     * withdrawing money even if the account has no funds in it. Basically the
+     * bank allows people to borrow a set amount of money.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MonetaryAmountContract|\Spatie\SchemaOrg\Contracts\MonetaryAmountContract[] $accountOverdraftLimit
+     *
+     * @return static
+     *
+     * @see https://schema.org/accountOverdraftLimit
+     * @see http://pending.schema.org
+     */
+    public function accountOverdraftLimit($accountOverdraftLimit)
+    {
+        return $this->setProperty('accountOverdraftLimit', $accountOverdraftLimit);
+    }
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -29,7 +63,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -44,7 +78,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -58,7 +92,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -75,7 +109,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/annualPercentageRate
+     * @see https://schema.org/annualPercentageRate
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -89,7 +124,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -103,7 +138,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -118,7 +153,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see https://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -132,11 +167,26 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
         return $this->setProperty('award', $award);
+    }
+
+    /**
+     * The type of a bank account.
+     *
+     * @param string|string[] $bankAccountType
+     *
+     * @return static
+     *
+     * @see https://schema.org/bankAccountType
+     * @see http://pending.schema.org
+     */
+    public function bankAccountType($bankAccountType)
+    {
+        return $this->setProperty('bankAccountType', $bankAccountType);
     }
 
     /**
@@ -147,7 +197,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -164,7 +214,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -175,11 +225,11 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -193,7 +243,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -210,7 +260,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -225,7 +275,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/feesAndCommissionsSpecification
+     * @see https://schema.org/feesAndCommissionsSpecification
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -240,7 +291,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -254,7 +305,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -272,7 +323,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -287,7 +338,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -302,7 +353,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/interestRate
+     * @see https://schema.org/interestRate
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function interestRate($interestRate)
     {
@@ -316,7 +368,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -331,7 +384,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -345,7 +399,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -361,7 +416,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -375,7 +430,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -396,7 +451,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -411,7 +467,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -426,7 +482,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see https://schema.org/produces
      */
     public function produces($produces)
     {
@@ -442,7 +498,8 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -456,7 +513,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see https://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -470,7 +527,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -486,7 +543,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -500,7 +557,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -514,7 +571,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see https://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -529,7 +586,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see https://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
@@ -540,11 +597,11 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      * The type of service being offered, e.g. veterans' benefits, emergency
      * relief, etc.
      *
-     * @param string|string[] $serviceType
+     * @param \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract|\Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract[]|string|string[] $serviceType
      *
      * @return static
      *
-     * @see http://schema.org/serviceType
+     * @see https://schema.org/serviceType
      */
     public function serviceType($serviceType)
     {
@@ -558,7 +615,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -572,11 +629,28 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Human-readable terms of service documentation.
+     *
+     * @param string|string[] $termsOfService
+     *
+     * @return static
+     *
+     * @see https://schema.org/termsOfService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1423
+     */
+    public function termsOfService($termsOfService)
+    {
+        return $this->setProperty('termsOfService', $termsOfService);
     }
 
     /**
@@ -586,7 +660,7 @@ class BankAccount extends BaseType implements BankAccountContract, FinancialProd
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

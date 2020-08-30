@@ -52,7 +52,7 @@ HTMLHelper::_('bs3ghsvs.smoothscroll', array(
 					</p>
 					<button type="button" class="close" data-dismiss="modal"
 								aria-label="<?php echo Text::_('PLG_SYSTEM_BS3GHSVS_CLOSE'); ?>">
-						<span aria-hidden="true">&times;</span>
+						{svg{bi/x-circle-fill}class="text-danger"}
 					</button>
 				</div><!--/modal-header-->
 				<div class="modal-body container-fluid">

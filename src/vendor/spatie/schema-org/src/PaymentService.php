@@ -12,7 +12,8 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A Service to transfer funds from a person or organization to a beneficiary
  * person or organization.
  *
- * @see http://schema.org/PaymentService
+ * @see https://schema.org/PaymentService
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
  *
  */
 class PaymentService extends BaseType implements PaymentServiceContract, FinancialProductContract, IntangibleContract, ServiceContract, ThingContract
@@ -29,7 +30,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -44,7 +45,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -58,7 +59,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -75,7 +76,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/annualPercentageRate
+     * @see https://schema.org/annualPercentageRate
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function annualPercentageRate($annualPercentageRate)
     {
@@ -89,7 +91,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -103,7 +105,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -118,7 +120,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see https://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -132,7 +134,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -147,7 +149,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -164,7 +166,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -175,11 +177,11 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -193,7 +195,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -210,7 +212,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -225,7 +227,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/feesAndCommissionsSpecification
+     * @see https://schema.org/feesAndCommissionsSpecification
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification)
     {
@@ -240,7 +243,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -254,7 +257,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -272,7 +275,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -287,7 +290,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -302,7 +305,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/interestRate
+     * @see https://schema.org/interestRate
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO
      */
     public function interestRate($interestRate)
     {
@@ -316,7 +320,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -331,7 +336,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -345,7 +351,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -361,7 +368,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -375,7 +382,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -396,7 +403,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -411,7 +419,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -426,7 +434,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see https://schema.org/produces
      */
     public function produces($produces)
     {
@@ -442,7 +450,8 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -456,7 +465,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see https://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -470,7 +479,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -486,7 +495,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -500,7 +509,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -514,7 +523,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see https://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -529,7 +538,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see https://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
@@ -540,11 +549,11 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      * The type of service being offered, e.g. veterans' benefits, emergency
      * relief, etc.
      *
-     * @param string|string[] $serviceType
+     * @param \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract|\Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract[]|string|string[] $serviceType
      *
      * @return static
      *
-     * @see http://schema.org/serviceType
+     * @see https://schema.org/serviceType
      */
     public function serviceType($serviceType)
     {
@@ -558,7 +567,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -572,11 +581,28 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Human-readable terms of service documentation.
+     *
+     * @param string|string[] $termsOfService
+     *
+     * @return static
+     *
+     * @see https://schema.org/termsOfService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1423
+     */
+    public function termsOfService($termsOfService)
+    {
+        return $this->setProperty('termsOfService', $termsOfService);
     }
 
     /**
@@ -586,7 +612,7 @@ class PaymentService extends BaseType implements PaymentServiceContract, Financi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

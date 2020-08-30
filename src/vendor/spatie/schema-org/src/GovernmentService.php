@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A service provided by a government organization, e.g. food stamps, veterans
  * benefits, etc.
  *
- * @see http://schema.org/GovernmentService
+ * @see https://schema.org/GovernmentService
  *
  */
 class GovernmentService extends BaseType implements GovernmentServiceContract, IntangibleContract, ServiceContract, ThingContract
@@ -28,7 +28,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +43,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -57,7 +57,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -71,7 +71,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -85,7 +85,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -100,7 +100,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see https://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -114,7 +114,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -129,7 +129,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -146,7 +146,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -157,11 +157,11 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -175,7 +175,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -192,7 +192,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -207,7 +207,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -221,7 +221,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -239,7 +239,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -254,7 +254,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -268,7 +268,8 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -283,11 +284,29 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function isSimilarTo($isSimilarTo)
     {
         return $this->setProperty('isSimilarTo', $isSimilarTo);
+    }
+
+    /**
+     * Indicates a legal jurisdiction, e.g. of some legislation, or where some
+     * government service is based.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AdministrativeAreaContract|\Spatie\SchemaOrg\Contracts\AdministrativeAreaContract[]|string|string[] $jurisdiction
+     *
+     * @return static
+     *
+     * @see https://schema.org/jurisdiction
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/2534
+     */
+    public function jurisdiction($jurisdiction)
+    {
+        return $this->setProperty('jurisdiction', $jurisdiction);
     }
 
     /**
@@ -297,7 +316,8 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
      */
     public function logo($logo)
     {
@@ -313,7 +333,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -327,7 +347,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -348,7 +368,8 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -363,7 +384,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -378,7 +399,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see https://schema.org/produces
      */
     public function produces($produces)
     {
@@ -394,7 +415,8 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function provider($provider)
     {
@@ -408,7 +430,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see https://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -422,7 +444,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -438,7 +460,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -452,7 +474,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -466,7 +488,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see https://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -482,7 +504,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/serviceOperator
+     * @see https://schema.org/serviceOperator
      */
     public function serviceOperator($serviceOperator)
     {
@@ -497,7 +519,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see https://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
@@ -508,11 +530,11 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      * The type of service being offered, e.g. veterans' benefits, emergency
      * relief, etc.
      *
-     * @param string|string[] $serviceType
+     * @param \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract|\Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract[]|string|string[] $serviceType
      *
      * @return static
      *
-     * @see http://schema.org/serviceType
+     * @see https://schema.org/serviceType
      */
     public function serviceType($serviceType)
     {
@@ -526,7 +548,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -540,11 +562,28 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Human-readable terms of service documentation.
+     *
+     * @param string|string[] $termsOfService
+     *
+     * @return static
+     *
+     * @see https://schema.org/termsOfService
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1423
+     */
+    public function termsOfService($termsOfService)
+    {
+        return $this->setProperty('termsOfService', $termsOfService);
     }
 
     /**
@@ -554,7 +593,7 @@ class GovernmentService extends BaseType implements GovernmentServiceContract, I
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

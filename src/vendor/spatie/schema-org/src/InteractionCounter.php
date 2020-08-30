@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A summary of how users have interacted with this CreativeWork. In most cases,
  * authors will use a subtype to specify the specific type of interaction.
  *
- * @see http://schema.org/InteractionCounter
+ * @see https://schema.org/InteractionCounter
  *
  */
 class InteractionCounter extends BaseType implements InteractionCounterContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -28,7 +28,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +42,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +56,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -73,7 +73,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -91,7 +91,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -106,11 +106,25 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The WebSite or SoftwareApplication where the interactions took place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\SoftwareApplicationContract|\Spatie\SchemaOrg\Contracts\SoftwareApplicationContract[]|\Spatie\SchemaOrg\Contracts\WebSiteContract|\Spatie\SchemaOrg\Contracts\WebSiteContract[] $interactionService
+     *
+     * @return static
+     *
+     * @see https://schema.org/interactionService
+     */
+    public function interactionService($interactionService)
+    {
+        return $this->setProperty('interactionService', $interactionService);
     }
 
     /**
@@ -122,7 +136,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/interactionType
+     * @see https://schema.org/interactionType
      */
     public function interactionType($interactionType)
     {
@@ -138,7 +152,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -152,7 +166,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -167,7 +181,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -183,7 +197,7 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -197,7 +211,8 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -211,11 +226,26 @@ class InteractionCounter extends BaseType implements InteractionCounterContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication.
+     *
+     * @param int|int[] $userInteractionCount
+     *
+     * @return static
+     *
+     * @see https://schema.org/userInteractionCount
+     */
+    public function userInteractionCount($userInteractionCount)
+    {
+        return $this->setProperty('userInteractionCount', $userInteractionCount);
     }
 
 }

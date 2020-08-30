@@ -12,7 +12,8 @@ use \Spatie\SchemaOrg\Contracts\UserInteractionContract;
  * interacting with pages. It is generally better to use [[Action]]-based
  * vocabulary, alongside types such as [[Comment]].
  *
- * @see http://schema.org/UserComments
+ * @see https://schema.org/UserComments
+ * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews
  *
  */
 class UserComments extends BaseType implements UserCommentsContract, EventContract, ThingContract, UserInteractionContract
@@ -24,7 +25,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function about($about)
     {
@@ -40,7 +42,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see https://schema.org/actor
      */
     public function actor($actor)
     {
@@ -59,7 +61,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -74,7 +76,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -88,7 +90,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -102,7 +104,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/attendee
+     * @see https://schema.org/attendee
      */
     public function attendee($attendee)
     {
@@ -116,7 +118,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/attendees
+     * @see https://schema.org/attendees
      */
     public function attendees($attendees)
     {
@@ -130,7 +132,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -144,7 +146,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/commentText
+     * @see https://schema.org/commentText
      */
     public function commentText($commentText)
     {
@@ -158,7 +160,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/commentTime
+     * @see https://schema.org/commentTime
      */
     public function commentTime($commentTime)
     {
@@ -173,7 +175,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see https://schema.org/composer
+     * @link http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
     public function composer($composer)
     {
@@ -187,7 +190,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -202,7 +205,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/creator
+     * @see https://schema.org/creator
      */
     public function creator($creator)
     {
@@ -216,7 +219,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -232,7 +235,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see https://schema.org/director
      */
     public function director($director)
     {
@@ -249,7 +252,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -263,7 +266,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/discusses
+     * @see https://schema.org/discusses
      */
     public function discusses($discusses)
     {
@@ -277,7 +280,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/doorTime
+     * @see https://schema.org/doorTime
      */
     public function doorTime($doorTime)
     {
@@ -292,7 +295,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
@@ -307,11 +310,59 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see https://schema.org/endDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function endDate($endDate)
     {
         return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * The eventAttendanceMode of an event indicates whether it occurs online,
+     * offline, or a mix.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract|\Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract[] $eventAttendanceMode
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventAttendanceMode
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function eventAttendanceMode($eventAttendanceMode)
+    {
+        return $this->setProperty('eventAttendanceMode', $eventAttendanceMode);
+    }
+
+    /**
+     * Associates an [[Event]] with a [[Schedule]]. There are circumstances
+     * where it is preferable to share a schedule for a series of
+     *       repeating events rather than data on the individual events
+     * themselves. For example, a website or application might prefer to publish
+     * a schedule for a weekly
+     *       gym class rather than provide data on every event. A schedule could
+     * be processed by applications to add forthcoming events to a calendar. An
+     * [[Event]] that
+     *       is associated with a [[Schedule]] using this property should not
+     * have [[startDate]] or [[endDate]] properties. These are instead defined
+     * within the associated
+     *       [[Schedule]], this avoids any ambiguity for clients using the data.
+     * The property might have repeated values to specify different schedules,
+     * e.g. for different months
+     *       or seasons.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $eventSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventSchedule
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1457
+     */
+    public function eventSchedule($eventSchedule)
+    {
+        return $this->setProperty('eventSchedule', $eventSchedule);
     }
 
     /**
@@ -322,7 +373,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/eventStatus
+     * @see https://schema.org/eventStatus
      */
     public function eventStatus($eventStatus)
     {
@@ -337,7 +388,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -355,7 +406,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -370,7 +421,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -387,7 +438,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
+     * @link https://github.com/schemaorg/schemaorg/issues/2382
      */
     public function inLanguage($inLanguage)
     {
@@ -401,7 +453,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -412,11 +464,11 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -432,7 +484,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -446,11 +498,47 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumPhysicalAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumPhysicalAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
+    {
+        return $this->setProperty('maximumPhysicalAttendeeCapacity', $maximumPhysicalAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumVirtualAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumVirtualAttendeeCapacity
+     * @see http://pending.schema.org
+     * @link https://github.com/schemaorg/schemaorg/issues/1842
+     */
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
+    {
+        return $this->setProperty('maximumVirtualAttendeeCapacity', $maximumVirtualAttendeeCapacity);
     }
 
     /**
@@ -460,7 +548,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -481,7 +569,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
+     * @link https://github.com/schemaorg/schemaorg/issues/2289
      */
     public function offers($offers)
     {
@@ -495,7 +584,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/organizer
+     * @see https://schema.org/organizer
      */
     public function organizer($organizer)
     {
@@ -510,7 +599,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/performer
+     * @see https://schema.org/performer
      */
     public function performer($performer)
     {
@@ -525,7 +614,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/performers
+     * @see https://schema.org/performers
      */
     public function performers($performers)
     {
@@ -540,7 +629,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -558,7 +647,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/previousStartDate
+     * @see https://schema.org/previousStartDate
      */
     public function previousStartDate($previousStartDate)
     {
@@ -572,7 +661,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/recordedIn
+     * @see https://schema.org/recordedIn
      */
     public function recordedIn($recordedIn)
     {
@@ -586,7 +675,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/remainingAttendeeCapacity
+     * @see https://schema.org/remainingAttendeeCapacity
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
@@ -600,7 +689,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/replyToUrl
+     * @see https://schema.org/replyToUrl
      */
     public function replyToUrl($replyToUrl)
     {
@@ -614,7 +703,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -630,7 +719,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -646,7 +735,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -661,7 +750,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see https://schema.org/startDate
+     * @link https://github.com/schemaorg/schemaorg/issues/2486
      */
     public function startDate($startDate)
     {
@@ -677,7 +767,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/subEvent
+     * @see https://schema.org/subEvent
      */
     public function subEvent($subEvent)
     {
@@ -692,7 +782,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/subEvents
+     * @see https://schema.org/subEvents
      */
     public function subEvents($subEvents)
     {
@@ -706,7 +796,8 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
+     * @link https://github.com/schemaorg/schemaorg/issues/1670
      */
     public function subjectOf($subjectOf)
     {
@@ -722,7 +813,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/superEvent
+     * @see https://schema.org/superEvent
      */
     public function superEvent($superEvent)
     {
@@ -738,7 +829,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -752,7 +843,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -766,7 +857,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -782,7 +873,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/workFeatured
+     * @see https://schema.org/workFeatured
      */
     public function workFeatured($workFeatured)
     {
@@ -797,7 +888,7 @@ class UserComments extends BaseType implements UserCommentsContract, EventContra
      *
      * @return static
      *
-     * @see http://schema.org/workPerformed
+     * @see https://schema.org/workPerformed
      */
     public function workPerformed($workPerformed)
     {

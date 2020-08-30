@@ -38,6 +38,8 @@ interface OccupationContract
 
     public function sameAs($sameAs);
 
+    public function skills($skills);
+
     public function subjectOf($subjectOf);
 
     public function url($url);
