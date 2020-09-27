@@ -6,6 +6,11 @@
 
 			<fields name="bs3ghsvsModule">
 
+				<field name="connectorKey" type="text" filter="ALNUM"
+					label="Eindeutiger, alphanumerischer Key zum Verbinden mehrerer Module. Bspw. Button und Modal-Inhalt. Das ist nur nötig für Module, von denen mehrere auf 1 Seite denkbar sind."
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					class="extended-width"/>
+
 				<field name="lederBG" type="mediajce" default="images/template/bg/bg-title-shop.jpg"
 					addfieldpath="plugins/system/jce/fields"
 					label="Nur für Leder-Hofmann und Breadcrumb-Module mit Layouts, die Breadcrump-Hintergrund-Bild verwenden."
