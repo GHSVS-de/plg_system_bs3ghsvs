@@ -370,11 +370,11 @@ class Bs3ghsvsItem
 		{
 			if ($options->get('removeSpaces'))
 			{
-				$muster  = '\s*{svg{([^}]+)}[^}]*}\s*';
+				$muster  = '\s*{svg{([^}]+)}.*}\s*';
 			}
 			else
 			{
-				$muster  = '{svg{([^}]+)}[^}]*}';
+				$muster  = '{svg{([^}]+)}.*}';
 			}
 
 			$results = [];

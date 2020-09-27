@@ -73,14 +73,14 @@
 			// visibility: "onFocus",
 			// GHSVS. Not used.
 			// customClass: "",
-			attachElement: "",
+			attachElement: document.body,
 			// GHSVS. Custom ID for outer div container.
 			divId: "scrollToHeadlineMenu",
 			// GHSVS. Custom container selector to search in.
-			containerWithHeadings: "",
+			containerWithHeadings: "div.item-page",
 			// GHSVS. Custom CSS class for hiding if containerWithHeadings not exists.
-			hideIfNothingFound: "",
-
+			hideIfNothingFound: ".HIDEIFNOTHINGFOUND",
+			// GHSVS. Joomla specific. Extends hideIfNothingFound.
 			moduleId: "",
 			// GHSVS. Output length for <li> text.
 			textLimit: 30,
@@ -119,43 +119,29 @@
 			}
 		},
 
-		init: function (appConfig)
-		{	
-			let attachElement = null,
-			key;
-
+		init: function (appConfig) {
+			
   		this.setUpConfig(appConfig);
-
-			if (this.config.containerWithHeadings && this.config.attachElement)
+			// GHSVS.
+			this.containerWithHeadings = document.querySelector(this.config.containerWithHeadings);
+			if (this.containerWithHeadings === null && this.config.hideIfNothingFound)
 			{
-				this.containerWithHeadings = document.querySelector(this.config.containerWithHeadings);
-				attachElement = document.querySelector(this.config.attachElement);
-			}
-
-			if (
-				this.containerWithHeadings === null
-				|| attachElement === null
-			){
-				this.hideIfNothingFound();
+				var hideMe = this.config.hideIfNothingFound;
+				this.addStyles(hideMe + "{display:none !important;");
 				return;
 			}
 
-			this.getHeadings();
-			if (Object.keys(this.headingElementsArr).length < 1)
-			{
-				this.hideIfNothingFound();
-				return;
-			}
-
+			// GHSVS. Use custom configuration id instead hard coded 'skipToMenu'.
 			var divId = this.config.divId;
 			// if the menu exists, recreate it
-			if (document.getElementById(divId) !== null)
+			if(document.getElementById(divId) !== null)
 			{
 				var existingMenu = document.getElementById(divId);
 				existingMenu.parentNode.removeChild(existingMenu);
 			}
 
 			var div = document.createElement('div'),
+			attachElement = (!this.config.attachElement.nodeType) ? document.querySelector(this.config.attachElement) : this.config.attachElement,
 			htmlStr = '';
 
 			div.setAttribute('id', divId);
@@ -182,6 +168,13 @@
 			// GHSVS. Button not needed.
 			this.dropdownHTML = '';
 
+			/*this.dropdownHTML = '<a accesskey="'+ this.config.accessKey +'" tabindex="0" data-wrap="'+ this.config.wrap +'"class="dropMenu-toggle skipTo '+ this.config.visibility + ' '+ this.config.customClass +'" id="drop4" role="button" aria-haspopup="true" ';
+			this.dropdownHTML += 'aria-expanded="false" data-toggle="dropMenu" data-target="menu1"';
+			if (this.config.hashOnMenu === 'true') {
+				this.dropdownHTML += ' href="#"';
+			}
+			this.dropdownHTML += '>' + this.config.buttonLabel + '<span class="caret"></span></a>';*/
+			// GHSVS. ulId if provided.
 			let ulId = '';
 			if (this.config.ulId)
 			{
@@ -213,8 +206,16 @@
 					+ this.config.ulAriaLabel
 					+ '"';
 			}
-
 			this.dropdownHTML += '<ul' + ulId + '>';
+			// GHSVS. Not used.
+			// this.getLandMarks(this.config.main);
+			// this.getLandMarks(this.config.landmarks);
+			// this.getSections(this.config.sections);
+			// GHSVS. Not used.
+			// this.getIdElements();
+
+			this.getHeadings();
+
 			htmlStr = this.getdropdownHTML();
 			this.dropdownHTML += htmlStr + '</ul>';
 
@@ -223,17 +224,11 @@
 				div.className = this.config.divClass;
 				attachElement.insertBefore(div, attachElement.firstChild);
 				div.innerHTML = this.dropdownHTML;
+				// GHSVS. Not needed.
+				// this.addListeners();
 			}
-		},
-
-		hideIfNothingFound: function()
-		{
-			if (
-				this.config.hideIfNothingFound 
-				&& document.querySelector(this.config.hideIfNothingFound) !== null
-			){
-				this.addStyles(this.config.hideIfNothingFound + "{display:none !important;visibility: hidden !important");
-			}
+			// GHSVS. Not needed. JS removed.
+			// window.skipToDropDownInit(this.config);
 		},
 
 		normalizeName: function (name) {
@@ -279,6 +274,38 @@
 			}
 			return str;
 		},
+		// GHSVS. Not used.
+		/*getAccessibleName: function (elem) {
+			var labelledbyIds = elem.getAttribute('aria-labelledby'),
+			label = elem.getAttribute('aria-label'),
+			title = elem.getAttribute('title'),
+			name = "";
+			
+			if (labelledbyIds && labelledbyIds.length) {
+				var str,
+				strings = [],
+				ids = labelledbyIds.split(' ');
+				if (!ids.length) ids = [labelledbyIds];
+				for (var i = 0, l = ids.length; i < l; i += 1) {
+					var e = document.getElementById(ids[i]);
+					if (e) str = this.getTextContent(e);
+					if (str.length) strings.push(str);
+				}
+				name = strings.join(" ");
+			}
+			else {
+				if (label && label.length) {
+					name = label;
+				}
+				else {
+					if (title && title.length) {
+						name = title;
+					}
+				}
+			}
+			return name;
+		},*/
+
 		getHeadings: function () {
 			var targets = this.config.headings;
 			if (typeof targets !== 'string' || targets.length === 0) return;
@@ -398,21 +425,194 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 			
 			return isVisibleRec(element, forceIsItVisibleClasses);
 		},
+		// GHSVS. Not used.
+		/*getSections: function (targets) {
+			if (typeof targets !== 'string' || targets.length === 0) return;
+			// GHSVS Search in custom container.
+			//var sections = document.querySelectorAll(targets),
+			var sections = this.containerWithHeadings.querySelectorAll(targets),
+				k,
+				l,
+				section,
+				id1,
+				role,
+				val,
+				name;
+
+			for (k = 0, l = sections.length; k < l; k = k + 1) {
+				section = sections[k];
+				role = section.getAttribute(role);
+				if ((typeof role === 'string') && (role === 'presentation')) continue;
+				if (this.isVisible(section)) {
+					id1 = section.getAttribute('id') || 'ui-skip-' + Math.floor((Math.random() * 100) + 1);
+					section.tabIndex = "-1";
+					section.setAttribute('id', id1);
+					role = section.tagName.toLowerCase();
+
+					val = (this.config.enumerateElements === 'false') ? this.normalizeName(role) + ": " : '';
+					name = this.getAccessibleName(section);
+
+					if (name && name.length) {
+						val += name;
+					}
+					else {
+						if (role === 'main') {
+							val += this.config.contentLabel;
+						}
+					}
+					this.landmarkElementsArr[id1] = val;
+				}
+			}
+		},*/
+		// GHSVS. Not used.
+		/*getLandMarks: function (targets) {
+			if (typeof targets !== 'string' || targets.length === 0) return;
+			// GHSVS Search in custom container.
+			//var landmarks = document.querySelectorAll(targets),
+			var landmarks = this.containerWithHeadings.querySelectorAll(targets),
+				k,
+				l,
+				landmark,
+				id1,
+				role,
+				name,
+				val;
+
+			for (k = 0, l = landmarks.length; k < l; k = k + 1) {
+				landmark = landmarks[k];
+				role = landmark.getAttribute('role');
+				if ((typeof role === 'string') && (role === 'presentation')) continue;
+				if (this.isVisible(landmark)) {
+					id1 = landmark.getAttribute('id') || 'ui-skip-' + Math.floor((Math.random() * 100) + 1);
+					landmark.tabIndex = "-1";
+					landmark.setAttribute('id', id1);
+					if (!role) role = landmark.tagName.toLowerCase();
+					name = this.getAccessibleName(landmark);
+
+					if (role === 'banner') {
+						role = 'header';
+					} // banner landmark is the same as header element in HTML5
+
+					if (role === 'contentinfo') {
+						role = 'footer';
+					} //contentinfo landmark is the same as footer element in HTML5
+
+					if (role === 'navigation') {
+						role = 'nav';
+					} // navigation landmark is the same as nav element in HTML5
+
+					val = (this.config.enumerateElements === 'false') ? this.normalizeName(role) + ": " : '';
+
+					if (name && name.length) {
+						val += name;
+					}
+					else {
+						if (role === 'main') {
+							val += this.config.contentLabel;
+						}
+					}
+					this.landmarkElementsArr[id1] = val;
+				}
+			}
+		},*/
+		// GHSVS. Not used.
+		/*getIdElements: function () {
+			var i, els, el, id, val;
+
+			if (typeof this.config.ids === 'object') {
+				els = this.config.ids;
+			} else if (typeof this.config.ids === 'string') {
+				els = this.config.ids.split(',');
+				els = els.map(function (el) {
+					return {id: el.trim()};
+				});
+			} else {
+				els = [];
+			}
+
+			for (i = 0; i < els.length; i = i + 1) {
+				id = els[i].id.replace('#', '');
+				el = document.getElementById(id);
+				if (el === null) continue;
+
+				val = els[i].description || el.innerHTML.replace(/<\/?[^>]+>/gi, '').replace(/\s+/g, ' ').replace(/^\s+|\s+$/g, "");//for IE8
+				if (val.length > 30) {
+					val = val.replace(val, val.substr(0, 30) + '...');
+				}
+
+				if (this.config.enumerateElements === 'false') {
+					val = "id: " + val;
+				}
+				this.idElementsArr[id] = val;
+			}
+		},*/
+
 		getdropdownHTML: function(){
 			var key,
 				val,
 				htmlStr = '',
+				// GHSVS. Not used.
+				// landmarkSep = true,
+				// GHSVS. Not used.
+				// headingSep = true,
 				headingClass = '',
 				elementCnt = 1,
 				indentChar = '',
 				prefix = '',
 				listEntryPrefix = '',
 				isItVisible = true;
+			//IE8 fix: for...in loop enumerates over all properties in an object including its prototype. This was returning some undesirable items such as indexof
+			//Make sure that the key is not from the prototype.
+			// GHSVS. Not used.
+			/*for (key in this.landmarkElementsArr) {
+				if (this.landmarkElementsArr.hasOwnProperty(key)){
+					if (landmarkSep) {
+						htmlStr += '<li role="separator" style="list-style:none outside none">' + this.config.landmarksLabel + '</li>';
+						landmarkSep = false;
+					}
+					val = this.landmarkElementsArr[key];
+					htmlStr += '<li role="presentation" style="list-style:none outside none"><a tabindex="-1" role="menuitem" href="#';
+					htmlStr += key + '">';
+					if (this.config.enumerateElements !== 'false') {
+						htmlStr += elementCnt + ": ";
+						elementCnt = elementCnt + 1;
+					}
+					htmlStr += val + '</a></li>';
+				}
+			}*/
 
+			//IE8 fix: for...in loop enumerates over all properties in an object including its prototype. This was returning some undesirable items such as indexof
+			//Make sure that the key is not from the prototype.
+			// GHSVS. Not used.
+			/*for (key in this.idElementsArr) {
+				if (this.idElementsArr.hasOwnProperty(key)){
+					if (landmarkSep) {
+						htmlStr += '<li role="separator" style="list-style:none outside none">' + this.config.landmarksLabel + '</li>';
+						landmarkSep = false;
+					}
+					val = this.idElementsArr[key];
+					htmlStr += '<li role="presentation" style="list-style:none outside none"><a tabindex="-1" role="menuitem" href="#';
+					htmlStr += key + '">';
+					if (this.config.enumerateElements !== 'false') {
+						htmlStr += elementCnt + ": ";
+						elementCnt = elementCnt + 1;
+					}
+					htmlStr += val + '</a></li>';
+				}
+			}*/
 			//for...in loop enumerates over all properties in an object including its prototype. This was returning some undesirable items such as indexof
 			//James' workaround to get for JSON name/value pair appears to address the issue.
 			for (key in this.headingElementsArr) {
 				if (this.headingElementsArr[key].name){
+					// GHSVS. Not needed.
+					/*if (headingSep) {
+						htmlStr += '<li role="separator" style="list-style:none outside none">' + this.config.headingsLabel + '</li>';
+						headingSep = false;
+					}*/
+					//val = this.headingElementsArr[key].name;
+
+					//headingClass = val.substring(0,2);
+					// headingClass = this.headingElementsArr[key].prefix;
 					
 					if (this.config.indentChar)
 					{
@@ -472,7 +672,23 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 				tt1 = document.createTextNode(cssString);
 				ss1.appendChild(tt1);
 			}
-		}
+		},
+
+		// GHSVS. Not used. See above. Call deactivated.
+		/*addListeners: function () {
+			if (this.config.focusOnClick === 'false') {
+				window.addEventListener("hashchange", function () {
+					var element = document.getElementById(location.hash.substring(1));
+					if (element) {
+						if (!/^(?:a|select|input|button|textarea)$/i.test(element.tagName)) {
+							element.tabIndex = -1;
+						}
+						element.focus();
+						element.scrollIntoView(true); //IE8 - Make sure to scroll to top
+					}
+				}, false);
+			}
+		}*/
 	};
 
 	window.tocGhsvsInit = function(customConfig)
@@ -481,4 +697,4 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 	};
 
 }({}));
-
+/*@end @*/
