@@ -873,9 +873,20 @@ class="extended-width" />
 				label="Pagebreakghsvs-Slider"
 				description="Im Zusammenspiel mit Editor-Plugin 'pagebreakghsvs' (Button for Editors (insert slide markers) by GHSVS.de)">
 
-				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
-					label="HTML-Container für Slide-Toggler [headingTagGhsvs]"
+				<field name="toggleContainer" type="text" default="div" filter="string"
+					label="HTML-Container für Slide-Toggler [toggleContainer]"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"/>
+
+				<field name="headingTagGhsvs" type="text" default="h4" filter="string"
+					label="Headline-Tag für Slider-Überschrift [headingTagGhsvs]"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"/>
+
+				<field name="activeToSession" type="list" default="1" filter="integer"
+					label="Aktive IDs in Session schreiben mit Ajax-Plugin [activeToSession]"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
 
 			</fieldset><!--/FieldsetPagebreak-->
 
