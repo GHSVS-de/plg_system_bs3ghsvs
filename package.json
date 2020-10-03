@@ -1,11 +1,14 @@
 {
 	"name": "plg_system_bs3ghsvs",
-	"version": "2020.10.03",
+	"version": "2020.10.04",
 	"minimumPhp": "7.2.0",
 	"maximumPhp": "",
 	"minimumJoomla": "3.9.8",
 	"maximumJoomla": "3.10.99999",
 	"allowDowngrades": "1",
+	"creationDate": "2015-08-30",
+	"licenseLong": "GNU General Public License version 3 or later; see LICENSE.txt.",
+	"copyright": "(C) 2015, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.",
 	"author": {
 		"name": "G@HService Berlin Neukölln, Volkmar Volli Schlothauer",
 		"email": "",

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.9" type="plugin" group="system" method="upgrade">
-	<name>PLG_SYSTEM_BS3GHSVS</name>
+	<name>{{nameUpper}}</name>
 	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de)</author>
-	<creationDate>2015-08-30</creationDate>
-	<copyright>Copyright (C) 2015, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de). All rights reserved.</copyright>
-	<license>GNU GPLv3 http://www.gnu.org/licenses/gpl-3.0.html See LICENSE.txt</license>
-	<authorUrl>https://www.ghsvs.de</authorUrl>
+	<creationDate>{{creationDate}}</creationDate>
+	<copyright>{{copyright}}</copyright>
+	<license>{{licenseLong}}</license>
+	<authorUrl>{{authorUrl}}</authorUrl>
 	<version>{{version}}</version>
 	<versionHistory>
 2015.10.01: ghsvs.de
@@ -56,9 +56,9 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 	https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020
 	</versionHistory>
-	<description>PLG_SYSTEM_BS3GHSVS_DESC</description>
+	<description>{{nameUpper}}_DESC</description>
 
-	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_BS3GHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-update.xml</server></updateservers>
+	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-update.xml</server></updateservers>
 
 	<changelogurl>
 		https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-changelog.xml
@@ -89,7 +89,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 		<filename>LICENSE.txt</filename>
 	</files>
 
-	<media folder="media" destination="plg_system_bs3ghsvs">
+	<media folder="media" destination="{{name}}">
 		<folder>css</folder>
 		<folder>fonts</folder>
 		<folder>fontawesome-free</folder>

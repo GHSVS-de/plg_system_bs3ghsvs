@@ -1,19 +1,16 @@
-/*const {
-  //copy,
-  //exists,
-  //mkdir,
-  //readFile,
-  unlink: unl,
-  // writeFile,
-} = require("fs-extra");*/
-
-const Fs = require('fs-extra');
-// const Path = require('path');
-
+const fse = require('fs-extra');
 const util = require("util");
 const rimRaf = util.promisify(require("rimraf"));
+
+const Manifest = "./package/bs3ghsvs.xml";
+
 const {
+	author,
+	creationDate,
+	copyright,
+	name,
 	version,
+	licenseLong,
 	minimumPhp,
 	maximumPhp,
 	minimumJoomla,
@@ -37,64 +34,75 @@ Program
 
 (async function exec()
 {
-	// Remove old folders.
-  await rimRaf("./dist");
-  await rimRaf("./package");
-	
-	await rimRaf("./src/media/fontawesome-free");
-  await Fs.copy(
-		"./node_modules/@fortawesome/fontawesome-free",
-		"./src/media/fontawesome-free"
-	);
-	// await unl("./src/media/fontawesome-free/composer.json");
-	
-	await Fs.copy(
-		"./node_modules/bootstrap/dist/js",
-		"./src/media/js/bootstrap"
-		// ,
-		// {overwrite:false, errorOnExist:true}
+	const firstCleanOuts = [
+		`./package`,
+		`./dist`,
+		"./src/media/fontawesome-free",
+		"./src/media/scss/bootstrap",
+		"./src/versions-installed"
+	];
+
+	for (const file of firstCleanOuts)
+	{
+		await rimRaf(file).then(
+			answer => console.log(`rimrafed: ${file}.`)
+		);
+	}
+
+	let source = "./node_modules/@fortawesome/fontawesome-free";
+	let target = "./src/media/fontawesome-free";
+
+  await fse.copy(source, target
+	).then(
+		answer => console.log(`Copied ${source} to ${target}.`)
 	);
 
-	await rimRaf("./src/media/scss/bootstrap");
+	source = "./node_modules/bootstrap/dist/js";
+	target = "./src/media/js/bootstrap";
 
-	await Fs.copy(
-		"./node_modules/bootstrap/scss",
-		"./src/media/scss/bootstrap"
-		// ,
-		// {overwrite:false, errorOnExist:true}
+  await fse.copy(source, target
+	).then(
+		answer => console.log(`Copied ${source} to ${target}.`)
 	);
 
-	await Fs.copy(
-		"./node_modules/bootstrap/dist/css",
-		"./src/media/css/bootstrap"
-		// ,
-		// {overwrite:false, errorOnExist:true}
+	source = "./node_modules/bootstrap/scss";
+	target = "./src/media/scss/bootstrap";
+
+  await fse.copy(source, target
+	).then(
+		answer => console.log(`Copied ${source} to ${target}.`)
+	);
+
+	source = "./node_modules/bootstrap/dist/css";
+	target = "./src/media/css/bootstrap";
+
+  await fse.copy(source, target
+	).then(
+		answer => console.log(`Copied ${source} to ${target}.`)
 	);
 	
-	await Fs.copy(
+	await fse.copy(
 		"./node_modules/jquery/dist",
 		"./src/media/js/jquery"
 		// ,
 		// {overwrite:false, errorOnExist:true}
 	);
 	
-	await Fs.copy(
+	await fse.copy(
 		"./node_modules/jquery-migrate/dist",
 		"./src/media/js/jquery-migrate"
 		// ,
 		// {overwrite:false, errorOnExist:true}
 	);
 
-	await rimRaf("./src/versions-installed");
-
-	await Fs.copy(
+	await fse.copy(
 		"./package-lock.json",
 		"./src/versions-installed/npm_package-lock.json"
-		// ,
-		// {overwrite:false, errorOnExist:true}
+	).then(
+		answer => console.log(`Copied ./package-lock.json.`)
 	);
 
-	await Fs.copy(
+	await fse.copy(
 		"./src/vendor/composer/installed.json",
 		"./src/versions-installed/composer_installed.json"
 		// ,
@@ -107,12 +115,12 @@ Program
 
 		await rimRaf("./src/media/svgs");
 
-  	await Fs.copy(
+  	await fse.copy(
 			"./node_modules/@fortawesome/fontawesome-free/svgs",
 			"./src/media/svgs"
 		);
 	
-  	await Fs.copy(
+  	await fse.copy(
 			"./node_modules/bootstrap-icons/icons",
 			"./src/media/svgs/bi"
 		);
@@ -121,27 +129,43 @@ Program
 	}
 
 	// Copy and create new work dir.
-  await Fs.copy("./src", "./package");
+  await fse.copy("./src", "./package"
+	).then(
+		answer => console.log(`Copied ./src to ./package.`)
+	);
 
 	// Create new dist dir.
-  if (!(await Fs.exists("./dist")))
+  if (!(await fse.exists("./dist")))
 	{
-    await Fs.mkdir("./dist");
+    await fse.mkdir("./dist"
+		).then(
+			answer => console.log(`Created ./dist.`)
+		);
   }
 
-  let xml = await Fs.readFile("./package/bs3ghsvs.xml", { encoding: "utf8" });
+  let xml = await fse.readFile(Manifest, { encoding: "utf8" });
+	xml = xml.replace(/{{name}}/g, name);
+	xml = xml.replace(/{{nameUpper}}/g, name.toUpperCase());
+	xml = xml.replace(/{{authorName}}/g, author.name);
+	xml = xml.replace(/{{creationDate}}/g, creationDate);
+	xml = xml.replace(/{{copyright}}/g, copyright);
+	xml = xml.replace(/{{licenseLong}}/g, licenseLong);
+	xml = xml.replace(/{{authorUrl}}/g, author.url);
   xml = xml.replace(/{{version}}/g, version);
 	xml = xml.replace(/{{minimumPhp}}/g, minimumPhp);
 	xml = xml.replace(/{{maximumPhp}}/g, maximumPhp);
 	xml = xml.replace(/{{minimumJoomla}}/g, minimumJoomla);
 	xml = xml.replace(/{{maximumJoomla}}/g, maximumJoomla);
 	xml = xml.replace(/{{allowDowngrades}}/g, allowDowngrades);
-
-  Fs.writeFileSync("./package/bs3ghsvs.xml", xml, { encoding: "utf8" });
+	
+	await fse.writeFile(Manifest, xml, { encoding: "utf8" }
+	).then(
+		answer => console.log(`Replaced entries in ${Manifest}.`)
+	);;
 	
 	// HOUSE CLEANING	
 	let directory = `${RootPath}/package/media/fontawesome-free`;
-	Fs.unlinkSync(`${directory}/package.json`);
+	fse.unlinkSync(`${directory}/package.json`);
 	
 	let folders = [
 		"js",
@@ -149,16 +173,17 @@ Program
 		"metadata",
 	];
 
-	folders.forEach((file) => {
+
+	for (let file of folders)
+	{
 		file = `${directory}/${file}`;
-	
-		if (Fs.existsSync(file) && Fs.lstatSync(file).isDirectory())
+		if (fse.existsSync(file) && fse.lstatSync(file).isDirectory())
 		{
-			// rimRaf(file, ["rmdirSync"]);
-			rimRaf(file);
-			console.log(`rimrafed: ${file}`);
+			await rimRaf(file).then(
+				answer => console.log(`rimrafed: ${file}.`)
+			);
 		}
-	});
+	};
 
 	// Für weiter vendor-Ordner zu faul!!!
 	directory = `${RootPath}/package/vendor/spatie/schema-org`;
@@ -178,16 +203,16 @@ Program
 	files.forEach((file) => {
 		file = `${directory}/${file}`;
 	
-		if (Fs.existsSync(file) && Fs.lstatSync(file).isFile())
+		if (fse.existsSync(file) && fse.lstatSync(file).isFile())
 		{
-			Fs.unlinkSync(file);
+			fse.unlinkSync(file);
 			console.log(`Unlinked: ${file}`);
 		}
 	});
 	
-  Fs.unlinkSync("./package/composer.json");
-  Fs.unlinkSync("./package/composer.lock");
-	Fs.unlinkSync("./package/media/js/jquery-migrate/.eslintrc.json");
+  fse.unlinkSync("./package/composer.json");
+  fse.unlinkSync("./package/composer.lock");
+	fse.unlinkSync("./package/media/js/jquery-migrate/.eslintrc.json");
 
   // Package it
   const zip = new (require("adm-zip"))();
