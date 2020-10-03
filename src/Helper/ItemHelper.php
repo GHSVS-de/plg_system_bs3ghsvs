@@ -470,17 +470,23 @@ class Bs3ghsvsItem
 		if (!self::hasScheme($image))
 		{
 			$image = JPATH_SITE . '/' . ltrim($image, '/\\');
-		}
 
-		$imagesize = @getimagesize($image);
+			// A smmll fall back for urlencoded images (space replaced with %20 and other shit).
+			if (!\is_file($image) && \is_file(urldecode($image)))
+			{
+				$image = urldecode($image);
+			}
+		}
 		
-		if (empty($imagesize))
+		// Since PHP 8 "@getimagesize()" throws error. Therefore some stupid bullshit:
+		try
+		{
+			$imagesize = getimagesize($image);
+			list($w, $h) = $imagesize;
+		}
+		catch (Exception $e)
 		{
 			$w = $h = 0;
-		}
-		else
-		{
-			list($w, $h) = $imagesize;
 		}
 		
 		if ($numericalIndices === true)
@@ -496,7 +502,7 @@ class Bs3ghsvsItem
 	public static function getSources(array $imgs, array $mediaQueries, string $origImage): array
 	{
 		$returnArray = array();
-		
+
 		// $imgs contains resized images. If resizer deactivated no $imgs.
 		if ($imgs && $mediaQueries)
 		{
@@ -563,6 +569,18 @@ class Bs3ghsvsItem
 				} // foreach ($ordering as $order)
 	
 				$returnArray[$sizedImageKey]['sources'] = implode("\n", $sources[$sizedImageKey]);
+				
+				// ToDo: There should be an earlier place in code to get missing width and height
+				//  instead of running self::getImageSize() again and again here and there.
+				//  The imageresizer returns false in _checkImage(...) with no width/height and
+				//  a 'resized' => 0 that can be used to check w/h earlier.
+				if (!isset($imgs[$imgKeySaved][$srcSetKeySaved]['width']))
+				{
+					$size = self::getImageSize($imgs[$imgKeySaved][$srcSetKeySaved]['img-1']);
+					$imgs[$imgKeySaved][$srcSetKeySaved]['width'] = $size['width'];
+					$imgs[$imgKeySaved][$srcSetKeySaved]['height'] = $size['height'];
+				}
+
 				$returnArray[$sizedImageKey]['assets']  = array(
 					'img'    => $imgs[$imgKeySaved][$srcSetKeySaved]['img-1'],
 					'width'  => $imgs[$imgKeySaved][$srcSetKeySaved]['width'],

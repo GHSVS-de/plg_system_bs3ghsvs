@@ -79,8 +79,7 @@ class Bs3GhsvsFormHelper
 					$field->group
 				);
 			}
-#echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($field->fieldname, true) . '</pre>';#exit;
-#echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($field->group, true) . '</pre>';#exit;
+
 			if (
 				!empty($overrides[$field->fieldname])
 				&& $overrides[$field->fieldname]['group'] === $field->group
@@ -95,7 +94,7 @@ class Bs3GhsvsFormHelper
 			{
 				$hint = $field->getAttribute('label');
 			}
-#echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($hint, true) . '</pre>';
+
 			if ($hint)
 			{
 				$hint = Text::_($hint);
@@ -113,7 +112,7 @@ class Bs3GhsvsFormHelper
 				$form->setFieldAttribute($field->fieldname, 'translateHint', true, $field->group);
 		
 				$class = $field->getAttribute('labelclass');
-#echo ' 4654sd48sa7d98sD81s8d71dsa class<pre>' . print_r($class, true) . '</pre>';
+
 				if (strpos($class, 'sr-only') === false)
 				{
 					$form->setFieldAttribute(

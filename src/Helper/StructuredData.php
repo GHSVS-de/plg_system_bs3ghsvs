@@ -441,8 +441,17 @@ class Bs3ghsvsStructuredData
 		}
 		else
 		{
+			// Another f'ing fallback
+			if (empty($image['width']) || empty($image['height']))
+			{
+				$size = Bs3ghsvsItem::getImageSize($image['img-1']);
+			}
+			else
+			{
 			$size['width'] = $image['width'];
 			$size['height'] = $image['height'];
+			}
+
 			$image = $image['img-1'];
 		}
 		

@@ -485,14 +485,14 @@ Array $origPathInfos
 
 		$this->origBildAbs = Path::clean(JPATH_SITE . '/' . $this->origBildRel, '/');
 		
-		if (!\file_exists($this->origBildAbs))
+		if (!\is_file($this->origBildAbs))
 		{
 			return false;
 		}
 
 		try
 		{
-			@$this->origImageInfos = \getimagesize($this->origBildAbs);
+			$this->origImageInfos = \getimagesize($this->origBildAbs);
 
 			if (!$this->origImageInfos)
 			{
