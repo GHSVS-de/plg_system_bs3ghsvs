@@ -7,6 +7,9 @@ Don't use it if you don't need it.
 
 ## npm/composer. Create new Joomla extension installation package
 - Clone repository into your server environment (WSL or whatever).
+
+- `cd /mnt/z/git-kram/plg_system_bs3ghsvs`
+
 - Check/edit `/package.json` and add plugin `version` and further settings like `minimumPhp` and so on. Will be copied during build process into manifest XML.
 - Check also versions of dependencies, devDependencies. `npm run g-npm-update-check` and `npm run g-ncu-override-json`
 - Check/adapt versions in `/src/composer.json`. Something to bump in `vendor/`?
