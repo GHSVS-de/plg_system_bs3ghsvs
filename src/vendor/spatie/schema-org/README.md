@@ -6,7 +6,7 @@
 [![StyleCI](https://styleci.io/repos/74684096/shield?branch=master)](https://styleci.io/repos/74684096)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/schema-org.svg?style=flat-square)](https://packagist.org/packages/spatie/schema-org)
 
-`spatie/schema-org` provides a fluent builder for **all** Schema.org types and their properties. The code in `src` is generated from Schema.org's [JSOSN-LD standards file](https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/9.0/schemaorg-all-https.jsonld), so it provides objects and methods for the entire core vocabulary. The classes and methods are also fully documented as a quick reference.
+`spatie/schema-org` provides a fluent builder for **all** Schema.org types and their properties. The code in `src` is generated from Schema.org's [JSON-LD standards file](https://raw.githubusercontent.com/schemaorg/schemaorg/main/data/releases/9.0/schemaorg-all-https.jsonld), so it provides objects and methods for the entire core vocabulary. The classes and methods are also fully documented as a quick reference.
 
 ```php
 use Spatie\SchemaOrg\Schema;
@@ -36,7 +36,7 @@ echo $localBusiness->toScript();
 
 ## Support us
 
-[![Image](https://github-ads.s3.eu-central-1.amazonaws.com/schema-org.jpg)](https://spatie.be/github-ad-click/schema-org)
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/schema-org.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/schema-org)
 
 We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
 
