@@ -61,7 +61,7 @@
 				
 				<!--Wird im Plugin bs3ghsvs für Module aufbearbeitet und in params geschrieben.-->
 				<field name="bootstrap_size_new" type="subform"  
-					min="1" max="20" multiple="true"
+					min="0" max="20" multiple="true"
 					layout="joomla.form.field.subform.repeatable-table" groupByFieldset="false"
 					label="GHSVS_BOOTSTRAP_SIZE_NEW" description="">
 
