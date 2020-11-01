@@ -126,11 +126,6 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		}
 	}
 
-	public function update($installer)
-	{
-		$this->updateManifestCaches();
-	}
-
 	/**
 	 * Remove the outdated updateservers.
 	 *
@@ -176,59 +171,4 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
  			return;
  		}
  	}
-	/**
-	 * Update the manifest caches
-	 *
-	 * @return  void
-	 */
-	protected function updateManifestCaches()
-	{
-		/* [type, element, folder, client_id] */
-		$extensions = [
-			['plugin', 'bs3ghsvs', 'system', 0],
-		];
-
-		// Attempt to refresh manifest caches
-		$db    = Factory::getDbo();
-		$query = $db->getQuery(true)
-			->select('*')
-			->from('#__extensions');
-
-		foreach ($extensions as $extension)
-		{
-			$query->where(
-				'type=' . $db->quote($extension[0])
-				. ' AND element=' . $db->quote($extension[1])
-				. ' AND folder=' . $db->quote($extension[2])
-				. ' AND client_id=' . $extension[3], 'OR'
-			);
-		}
-
-		$db->setQuery($query);
-
-		try
-		{
-			$extensions = $db->loadObjectList();
-		}
-		catch (Exception $e)
-		{
-			echo Text::sprintf(
-				'DB function failed with error number %s <br /><span style=\"color: red;\">%s</span>',
-				$e->getCode(), $e->getMessage()) . '<br>';
-
-			return;
-		}
-
-		$installer = new Installer;
-
-		foreach ($extensions as $extension)
-		{
-			if (!$installer->refreshManifestCache($extension->extension_id))
-			{
-				echo Text::sprintf(
-					'Error on updating manifest cache: (type, element, folder, client) = (%s, %s, %s, %s)',
-					$extension->type, $extension->element, $extension->name, $extension->client_id) . '<br>';
-			}
-		}
-	}
 }
