@@ -114,6 +114,20 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		$this->formPath = JPATH_PLUGINS . '/system/bs3ghsvs/myforms/';
 
 		HTMLHelper::addIncludePath(__DIR__ . '/html');
+			
+		// Lade bzw. registriere Namespaces für ScssPHP früh. Keine Garantie, dass das klappt.
+		if ($this->params->get('loadScssPhpEarly', 0) === 1)
+		{
+			// Leider funktioniert das nicht im Zusammenspiel mit Astroid-Template.
+			require_once __DIR__ . '/vendor/autoload.php';
+			
+			// Also fieser "Trick". Block loading via "require_once scss.inc.php".
+			// Geht aber nur, falls nicht jemand früher dran war.
+			if (! class_exists('ScssPhp\ScssPhp\Version', false))
+			{
+				include_once __DIR__ . '/vendor/scssphp/scssphp/src/Version.php';
+			}
+		}
 
 		if (!$this->templates || !$this->app->isClient('site'))
 		{

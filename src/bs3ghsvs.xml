@@ -147,6 +147,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 						<option value="1">JYES</option>
 				</field>
 
+				<field name="loadScssPhpEarlySpacer" type="note"
+					label="Load ScssPhp early?"
+					description="The plugin tries to establish it's ScssPHP class earlier than other extensions by firing the composer autoloader.php. It's not guaranteed that it's possible to do so." />
+
+				<field name="loadScssPhpEarly" type="list" default="0" filter="integer"
+					label="Load ScssPhp early"
+					description="Plugin loads Bootstrap as early as possible in relevant templates.">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+
 				<field name="loadBootstrapEarly" type="list" default="1" filter="integer"
 					label="Load Bootstrap early"
 					description="Plugin loads Bootstrap as early as possible in relevant templates.">

@@ -15,6 +15,7 @@ class ComposerStaticInit8b88cd3e3d6b19ea4632569b9b091460
         'S' => 
         array (
             'Spatie\\SchemaOrg\\' => 17,
+            'ScssPhp\\ScssPhp\\' => 16,
         ),
         'P' => 
         array (
@@ -34,6 +35,10 @@ class ComposerStaticInit8b88cd3e3d6b19ea4632569b9b091460
         'Spatie\\SchemaOrg\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/schema-org/src',
+        ),
+        'ScssPhp\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/scssphp/scssphp/src',
         ),
         'Psr\\Http\\Message\\' => 
         array (

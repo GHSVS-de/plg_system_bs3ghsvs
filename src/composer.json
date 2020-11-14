@@ -1,6 +1,7 @@
 {
     "require": {
         "intervention/image": "^2.5",
-				"spatie/schema-org": "^3.0"
+		"spatie/schema-org": "^3.0",
+		"scssphp/scssphp": "^1.3"
     }
 }

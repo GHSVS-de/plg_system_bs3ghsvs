@@ -47,6 +47,8 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		'/media/plg_system_bs3ghsvs/css/bootstrap/4',
 		'/plugins/system/bs3ghsvs/Helper/schema-org',
 		'/media/plg_system_bs3ghsvs/js/skipto',
+		'/plugins/system/bs3ghsvs/vendor/scssphp/scssphp/bin',
+		'/plugins/system/bs3ghsvs/vendor/bin',
 	);
 
 
