@@ -116,7 +116,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		HTMLHelper::addIncludePath(__DIR__ . '/html');
 			
 		// Lade bzw. registriere Namespaces für ScssPHP früh. Keine Garantie, dass das klappt.
-		if ($this->params->get('loadScssPhpEarly', 0) === 1)
+		if ($this->params->get('loadScssPhpEarly', 0) === 1 && $this->app->isClient('site'))
 		{
 			// Leider funktioniert das nicht im Zusammenspiel mit Astroid-Template.
 			require_once __DIR__ . '/vendor/autoload.php';

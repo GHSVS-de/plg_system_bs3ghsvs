@@ -193,11 +193,12 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 						<option value="1">JYES</option>
 				</field>
 
-				<field name="frontendEditingOnSpacer" type="spacer"
-					label="Die Option 'frontendEditingOn' wurde nach Rücksprache mit GS Wesendorf deaktiviert. Frontend-Editing ist generell nicht erwünscht." />
+				<field name="frontendEditingOnSpacer" type="note" class="alert alert-info"
+					label="Frontend-Bearbeitung für Module aktivieren?"
+					description="PLG_SYSTEM_BS3GHSVS_MODULE_FRONTENDEDITING2" />
 
 				<field name="frontendEditingOn" type="list" default="0" filter="integer"
-					label="Plugin-eigene Module-Frontend-Bearbeitung generell nutzbar machen? Macht nur Sinn, wenn auch module.xml geladen wird. [frontendEditingOn]"
+					label="Plugin-eigene Module-Frontend-Bearbeitung generell nutzbar machen? [frontendEditingOn]"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					>
 						<option value="0">JNO</option>

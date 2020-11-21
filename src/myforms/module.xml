@@ -45,8 +45,9 @@
 				</field>
 
 
-<field name="frontendEditingOnSpacer" type="spacer"
-	label="Die Option 'frontendEditingOn' wurde nach Rücksprache mit GS Wesendorf deaktiviert. Frontend-Editing ist generell nicht erwünscht. Es ist egal, was das Feld anzeigt." />
+<field name="frontendEditingOnSpacer" type="note" class="alert alert-info"
+	label="Frontend-Editing-Feature für dieses Modul aktivieren?"
+	description="PLG_SYSTEM_BS3GHSVS_MODULE_FRONTENDEDITING" />
 				<field name="frontendEditingOn" type="list" filter="integer" default="0"
 					label="Front-End-Bearbeitung für dieses Modul erlauben? (Button wird abhängig von Nuterrechten angezeigt)"
 					>
