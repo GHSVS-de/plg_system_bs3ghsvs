@@ -6,8 +6,18 @@
 
 			<fields name="bs3ghsvsModule">
 
+				<field type="note" name="moduleSubHeaderNote"
+				label="Modul Sub-Header [moduleSubHeader]"
+					description="Setzt Modul-Override voraus, der Feld 'moduleSubHeader' verwendet. Es kann auch ein Sprach-String eingegeben werden."/>
+				
+				<field name="moduleSubHeader" type="text" filter="string"
+					label="Modul Sub-Header"
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+					class="extended-width"/>				
+				
+				
 				<field name="connectorKey" type="text" filter="ALNUM"
-					label="Eindeutiger, alphanumerischer Key zum Verbinden mehrerer Module. Bspw. Button und Modal-Inhalt. Das ist nur nötig für Module, von denen mehrere auf 1 Seite denkbar sind."
+					label="Eindeutiger, alphanumerischer Key zum Verknüpfen mehrerer Module. Bspw. Button und Modal-Inhalt in 2 verschiedenen Positionen. Das ist nur nötig für Module, von denen mehrere auf 1 Seite denkbar sind. Setzt Modul-Override voraus, der Feld 'connectorKey' verwendet."
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					class="extended-width"/>
 

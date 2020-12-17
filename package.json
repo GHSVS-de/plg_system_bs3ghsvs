@@ -1,6 +1,6 @@
 {
 	"name": "plg_system_bs3ghsvs",
-	"version": "2020.12.01",
+	"version": "2020.12.18",
 	"minimumPhp": "7.3.0",
 	"maximumPhp": "",
 	"minimumJoomla": "3.9.8",
@@ -44,18 +44,18 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^5",
 		"bootstrap": "^4.5.3",
-		"bootstrap-icons": "^1.1.0",
+		"bootstrap-icons": "^1.2.1",
 		"jquery": "^3",
 		"jquery-migrate": "^3",
 		"skipto": "^3"
 	},
 	"devDependencies": {
-		"adm-zip": "0.4.16",
+		"adm-zip": "0.5.1",
 		"chalk": "^4.1.0",
 		"cheerio": "^1.0.0-rc.3",
-		"commander": "^6.2.0",
+		"commander": "^6.2.1",
 		"fs-extra": "9.0.1",
-		"js-yaml": "^3.14.0",
+		"js-yaml": "^3.14.1",
 		"klaw-sync": "^6.0.0",
 		"path": "^0.12.7",
 		"recursive-readdir": "^2.2.2",

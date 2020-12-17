@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldpath="/plugins/system/articlesubtitleghsvs/fields">
+	<fields name="images" label="COM_CONTENT_FIELD_IMAGE_OPTIONS">
+
+		<field name="float_intro" type="list" default="" filter="string"
+			label="Bild-Klasse"
+
+			class="extended-width">
+				<option value="">Vom System geerbt (=Standard)</option>
+				<option value="ghsvs_img-full-width">ghsvs_img-full-width</option>
+		</field>
+
+		<field name="float_fulltext" type="list" default="" filter="string"
+			label="Bild-Klasse"
+
+			class="extended-width">
+				<option value="">Vom System geerbt (=Standard)</option>
+				<option value="ghsvs_img-full-width">ghsvs_img-full-width</option>
+		</field>
+
+			
+	</fields>
+</form>

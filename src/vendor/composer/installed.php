@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0fb18d1ab8adba2f14cfcad5c3a0969ed048d4de',
+    'reference' => '98fb2b9a385878e7404b7cb3d3ce4eb02f0dd1ce',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0fb18d1ab8adba2f14cfcad5c3a0969ed048d4de',
+      'reference' => '98fb2b9a385878e7404b7cb3d3ce4eb02f0dd1ce',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -74,12 +74,12 @@
     ),
     'spatie/schema-org' => 
     array (
-      'pretty_version' => '3.2.0',
-      'version' => '3.2.0.0',
+      'pretty_version' => '3.2.1',
+      'version' => '3.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a9aff51a891058d8d58f8bb4b4b425d1382dba00',
+      'reference' => '3b22822c19b1c6e4a889ea7af3b8cc76ca8fc622',
     ),
   ),
 );

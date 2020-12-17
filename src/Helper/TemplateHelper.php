@@ -337,7 +337,25 @@ Array
 		}
 		return static::$loaded[__METHOD__];
 	}
-	
+
+	public static function getActiveMenu()
+	{
+		if (!isset(static::$loaded[__METHOD__]))
+		{
+			$menu = Factory::getApplication()->getMenu()->getActive();
+
+			//Bugfix removed isset($menu->params). Always false.
+			if ($menu)
+			{
+				static::$loaded[__METHOD__] = $menu;
+			}
+			else
+			{
+				static::$loaded[__METHOD__] = false;
+			}
+		}
+		return static::$loaded[__METHOD__];
+	}
 	/**
 	 * Get template name (without params) e.g. in onAfterRoute.
 	 * From https://github.com/joomla/joomla-cms/blob/4.0.0-alpha10/libraries/src/Application/SiteApplication.php#L397

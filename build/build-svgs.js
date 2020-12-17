@@ -126,9 +126,9 @@ result.data = result.data.replace(/[\n\r]/g, '');
 
           // $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
 					
-					$(svg).attr('class', `bi ${CLASSPREFIX}-${path.basename(file, '.svg')}`)
-
-          fs.writeFile(file, $(svg), 'utf8')
+					$(svg).attr('class', `bi ${CLASSPREFIX}-${path.basename(file, '.svg')}`);
+// console.log(file);
+          fse.writeFile(file, $(svg), 'utf8')
             .then(() => {
               //console.log(`- ${path.basename(file, '.svg')}`)
 							loger.push([CLASSPREFIX, path.basename(file, '.svg')]);
@@ -141,7 +141,8 @@ result.data = result.data.replace(/[\n\r]/g, '');
     .catch(error => reject(error))
 })
 
-const main = async () => {
+// const main = async () => {
+module.exports.main = async () => {
   const basename = path.basename(__filename)
   const timeLabel = chalk.cyan(`[${basename}] finished`)
 
@@ -174,7 +175,9 @@ const main = async () => {
   console.timeEnd(timeLabel)
 	
 	console.log(chalk.green(loger.length));
-	fse.writeFile(iconsDir + '/prepped-icons.txt', JSON.stringify(loger, null, 2));
+  fse.writeFile(iconsDir + '/prepped-icons.txt', JSON.stringify(loger, null, 2));
+
+  return true;
 }
 
-main()
+//main()

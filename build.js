@@ -115,17 +115,18 @@ Program
 
 		await rimRaf("./src/media/svgs");
 
-  	await fse.copy(
+  		await fse.copy(
 			"./node_modules/@fortawesome/fontawesome-free/svgs",
 			"./src/media/svgs"
 		);
 	
-  	await fse.copy(
+  		await fse.copy(
 			"./node_modules/bootstrap-icons/icons",
 			"./src/media/svgs/bi"
 		);
 
-		const buildSvgs = await require('./build/build-svgs.js');
+		const buildSvgs = require('./build/build-svgs.js');
+		await buildSvgs.main();
 	}
 
 	// Copy and create new work dir.
@@ -172,7 +173,6 @@ Program
 		"less",
 		"metadata",
 	];
-
 
 	for (let file of folders)
 	{

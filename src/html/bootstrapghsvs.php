@@ -317,7 +317,7 @@ abstract class JHtmlBootstrapghsvs
 		
 		if ($title = trim($title))
 		{
-			$title = ' <span class="hidden-xs">- ' . $title . '</span>';
+			$title = ' <span class="d-none d-sm-inline">- ' . $title . '</span>';
 		}
 		
 		$html = array();
@@ -328,7 +328,8 @@ abstract class JHtmlBootstrapghsvs
 		$html[] = '<button class="' . $aClass . '" data-toggle="collapse"'
 			. $parent . ' data-target="#collapse' . $id . '" aria-expanded="false"'
 			. ' aria-controls="collapse' . $id . '" role="button">';
-		$html[] = '{svg{solid/plus-square}}';
+		$html[] = '{svg{bi/arrows-expand}class="hideIfActive"}';
+		$html[] = '{svg{bi/arrows-collapse}class="showIfActive"}';
 		$html[] = $text . $title;
 		$html[] = '</button>';
 		

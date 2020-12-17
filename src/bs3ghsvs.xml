@@ -216,7 +216,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 						label="PLG_SYSTEM_BS3GHSVS_XMLACTIVE_ARTICLE"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"/>
 
-					<field name="xml_base" type="list" default="2"
+					<field name="xml_base" type="list" default="0"
 						filter="integer"
 						label="base.xml (System)"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
@@ -224,7 +224,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="0">JNO</option>
 					</field>
 	
-					<field name="xml_articleVarious" type="list" default="1"
+					<field name="xml_articleVarious" type="list" default="0"
 						filter="integer"
 						label="articleVarious.xml"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
@@ -232,9 +232,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="0">JNO</option>
 					</field>
 	
-					<field name="xml_articleExtension" type="list" default="1"
+					<field name="xml_articleExtension" type="list" default="0"
 						filter="integer"
 						label="articleExtension.xml"
+						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+							<option value="1">JYES</option>
+							<option value="0">JNO</option>
+					</field>
+	
+					<field name="xml_articleImages" type="list" default="0"
+						filter="integer"
+						label="articleImages.xml"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
 							<option value="1">JYES</option>
 							<option value="0">JNO</option>
@@ -271,8 +279,12 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 						label="PLG_SYSTEM_BS3GHSVS_XMLACTIVE_CONTACTFORM"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"/>
 	
-					<field name="xml_contactform" type="list" default="1"
-						readonly="true" filter="integer"
+					<field name="XmlActiveContactFormNote" type="note"
+						class="alert aler-info"
+						label=""
+						description="Kontaktformularen wird im Frontend ein Telefon-Feld hinzugefügt. Außerdem können paar Felder auf 'Optional' umgestellt werden."/>
+
+					<field name="xml_contactform" type="list" default="1" filter="integer"
 						label="contactform.xml"
 						description="">
 							<option value="1">JYES</option>
@@ -281,14 +293,16 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 					<field name="contact_phoneghsvs_required" type="list" default="0" filter="integer"
 						label="PLG_SYSTEM_BS3GHSVS_PHONE_REQUIRED"
-						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+						showon="xml_contactform:1">
 							<option value="0">JNO</option>
 							<option value="1">JYES</option>
 					</field>
 
 					<field name="contact_name_required" type="list" default="0" filter="integer"
 						label="PLG_SYSTEM_BS3GHSVS_NAME_REQUIRED"
-						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
+						showon="xml_contactform:1">
 							<option value="0">JNO</option>
 							<option value="1">JYES</option>
 					</field>

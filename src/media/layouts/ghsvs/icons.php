@@ -9,7 +9,8 @@ $canEdit = $displayData['params']->get('access-edit');
 
 $position = (!isset($displayData['position']) ? '' : ' '.$displayData['position']);
 ?>
-<?php if (empty($displayData['print']))
+<?php 
+if (empty($displayData['print']))
 { ?>
 	<?php if ($canEdit) : ?>
 	<div class="icons<?php echo $position; ?>">

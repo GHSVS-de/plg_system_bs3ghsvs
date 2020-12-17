@@ -43,11 +43,14 @@ class Bs3GhsvsFormHelper
 	/**
 	 * Placeholder einsetzen statt Labels. Labels erhalten sr-only, damit Validierung noch klappt.
 	 * Klasse form-control einsetzen für BS 3.
+	 * In Fällen, wo ein JLayout (renderfield()) verwendet wird, das anschließend form-control setzt,
+	 *  kann z.B. durch $ignore = ['form-control'] unterbunden werden, damit nicht doppelt gesetzt wird.
 	 */
 	public static function prepareFormFields(
 		&$form,
 		$hintSource = 'description',
-		$overrides = array()
+		$overrides = array(),
+		$ignore = []
 	){
 		$fields = $form->getGroup('');
 
@@ -68,16 +71,19 @@ class Bs3GhsvsFormHelper
 				continue;
 			}
 			
-			$class = $field->getAttribute('class');
-
-			if (strpos($class, 'form-control') === false)
+			if (!\in_array('form-control', $ignore))
 			{
-				$form->setFieldAttribute(
-					$field->fieldname,
-					'class',
-					$class . ' form-control',
-					$field->group
-				);
+				$class = $field->getAttribute('class');
+
+				if (strpos($class, 'form-control') === false)
+				{
+					$form->setFieldAttribute(
+						$field->fieldname,
+						'class',
+						$class . ' form-control',
+						$field->group
+					);
+				}
 			}
 
 			if (
@@ -110,17 +116,19 @@ class Bs3GhsvsFormHelper
 		
 				$form->setFieldAttribute($field->fieldname, 'hint', $hint, $field->group);
 				$form->setFieldAttribute($field->fieldname, 'translateHint', true, $field->group);
-		
-				$class = $field->getAttribute('labelclass');
 
-				if (strpos($class, 'sr-only') === false)
+				if (!\in_array('sr-only', $ignore))
 				{
-					$form->setFieldAttribute(
-						$field->fieldname,
-						'labelclass',
-						$class . ' sr-only',
-						$field->group
-					);
+					$class = $field->getAttribute('labelclass');
+					if (strpos($class, 'sr-only') === false)
+					{
+						$form->setFieldAttribute(
+							$field->fieldname,
+							'labelclass',
+							$class . ' sr-only',
+							$field->group
+						);
+					}
 				}
 			}
 		}

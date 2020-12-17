@@ -515,7 +515,9 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			$this->app->isClient('administrator')
 			&& $context === 'com_content.article'
 		){
-			foreach (Bs3GhsvsFormHelper::getActiveXml('Article', $this->params) as $file => $x)
+			$key = 'Article';
+
+			foreach (Bs3GhsvsFormHelper::getActiveXml($key, $this->params) as $file => $x)
 			{
 				$form->loadFile($this->formPath . '/' . $file . '.xml', $reset = false, $path = false);
 			}
@@ -559,7 +561,6 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 						$paras->get($field . '_required', 0) ? 'true' : 'false');
 				}
 			}
-			#
 		}
 		return true;
 	}

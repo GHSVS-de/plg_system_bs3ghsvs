@@ -45,7 +45,7 @@ abstract class JHtmlIconghsvs
 		// Add the button classes to the attribs array
 		if (isset($attribs['class']))
 		{
-			$attribs['class'] .= ' btn btn-primary';
+			$attribs['class'] = 'btn btn-primary ' . $attribs['class'];
 		}
 		else
 		{
@@ -123,15 +123,21 @@ abstract class JHtmlIconghsvs
 		$url .= '&tmpl=' . $tmpl . '&print=1&layout=default';
 
 		$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=yes';
-		
+
 		$text = HTMLHelper::_('bs3ghsvs.layout',
 			'joomla.content.icons.print_popup',
 			array('params' => $params, 'legacy' => $legacy)
 		);
 
-		$attribs['title']   = htmlspecialchars(Text::sprintf('JGLOBAL_PRINT_TITLE', $article->title, ENT_QUOTES, 'UTF-8'));
-		$attribs['onclick'] = "window.open(this.href,'win2','" . $status . "'); return false;";
-		$attribs['rel']     = 'nofollow';
+		$attribs['title']   = htmlspecialchars(
+			Text::sprintf('PLG_SYSTEM_BS3GHSVS_PRINT', $article->title, ENT_QUOTES, 'UTF-8')
+		);
+		#$attribs['onclick'] = "window.open(this.href,'win2','" . $status . "'); return false;";
+		$attribs['rel']     = 'nofollow noopener noreferrer';
+		
+		$attribs['target'] = '_blank';
+		
+		
 		$attribs = ArrayHelper::toString($attribs);
 		
 		if ($iconClass)
@@ -143,6 +149,7 @@ abstract class JHtmlIconghsvs
 			$text = '<span class="sr-only">' . trim($text) . '</span>'; 
 		}
 		return '<a href="' . Route::_($url) . '" ' . $attribs . '>' . $iconClass . $text . '</a>';
+		# return '<a href="' . Route::_($url) . '" target="_blank">' . $iconClass . $text . '</a>';
 	}
 
 	/**
@@ -158,7 +165,7 @@ abstract class JHtmlIconghsvs
 	 */
 	public static function print_screen($article, $params, $attribs = array(), $legacy = false)
 	{
-		
+
 		$text = HTMLHelper::_('bs3ghsvs.layout',
 			'joomla.content.icons.print_screen',
 			array('params' => $params, 'legacy' => $legacy)
