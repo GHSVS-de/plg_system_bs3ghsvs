@@ -67,7 +67,7 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
  
 ### Build new Joomla package ZIP.
 
-- `nvm use 12` or `nvm use 13` to get rid of f'ing messages of NodeJs 14 that nobody understands but the creators and JS professors. Only `node build.js --svg` has still problems.
+- <strike>`nvm use 12` or `nvm use 13` to get rid of f'ing messages of NodeJs 14 that nobody understands but the creators and JS professors. Only `node build.js --svg` has still problems.</strike>
 
 #### Whenever Bootstrap/icons or fontawesome/icons have been updated while `npm update`
 - `node build.js --svg` (to create embeddable icons in `media/svgs/`)
@@ -78,7 +78,7 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
 #### if you have new icons
 
 - `php bin/icons-html.php`
-- Creates `/bin/nur-test.html` (an overview with all icons).
+- Creates `/dist/icons-overview.html` (an overview with all icons).
 
 ##### 
 - New ZIP is in `/dist/`

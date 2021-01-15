@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '98fb2b9a385878e7404b7cb3d3ce4eb02f0dd1ce',
+    'reference' => '4071e7f866b07b32c8fec3d1573252587582db8a',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '98fb2b9a385878e7404b7cb3d3ce4eb02f0dd1ce',
+      'reference' => '4071e7f866b07b32c8fec3d1573252587582db8a',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -63,23 +63,14 @@
       ),
       'reference' => '120b605dfeb996808c31b6477290a714d356e822',
     ),
-    'scssphp/scssphp' => 
-    array (
-      'pretty_version' => 'v1.4.0',
-      'version' => '1.4.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f7c9088320e218ca42e4ef0074259a1ba24ec93a',
-    ),
     'spatie/schema-org' => 
     array (
-      'pretty_version' => '3.2.1',
-      'version' => '3.2.1.0',
+      'pretty_version' => '3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3b22822c19b1c6e4a889ea7af3b8cc76ca8fc622',
+      'reference' => 'c847dc09c78e8ba8fe3a32e062c05368388671c1',
     ),
   ),
 );

@@ -2,6 +2,8 @@ const fse = require('fs-extra');
 const util = require("util");
 const rimRaf = util.promisify(require("rimraf"));
 
+const chalk = require('chalk');
+
 const Manifest = "./package/bs3ghsvs.xml";
 
 const {
@@ -19,11 +21,11 @@ const {
 	allowDowngrades,
 } = require("./package.json");
 
-const Program = require('commander');
+const program = require('commander');
 
 const RootPath = process.cwd();
 
-Program
+program
   .version(version)
   .option('--svg', 'Additionally prepare svgs in /svg-icons/ for Joomla usage')
   .on('--help', () => {
@@ -32,6 +34,10 @@ Program
     process.exit(0);
   })
   .parse(process.argv);
+
+const Program = program.opts();
+//console.log(Program.svg);
+//process.exit(0);
 
 (async function exec()
 {
@@ -53,7 +59,7 @@ Program
 	let source = "./node_modules/@fortawesome/fontawesome-free";
 	let target = "./src/media/fontawesome-free";
 
-  await fse.copy(source, target
+	await fse.copy(source, target
 	).then(
 		answer => console.log(`Copied ${source} to ${target}.`)
 	);
@@ -61,7 +67,7 @@ Program
 	source = "./node_modules/bootstrap/dist/js";
 	target = "./src/media/js/bootstrap";
 
-  await fse.copy(source, target
+	await fse.copy(source, target
 	).then(
 		answer => console.log(`Copied ${source} to ${target}.`)
 	);
@@ -69,7 +75,7 @@ Program
 	source = "./node_modules/bootstrap/scss";
 	target = "./src/media/scss/bootstrap";
 
-  await fse.copy(source, target
+	await fse.copy(source, target
 	).then(
 		answer => console.log(`Copied ${source} to ${target}.`)
 	);
@@ -77,7 +83,7 @@ Program
 	source = "./node_modules/bootstrap/dist/css";
 	target = "./src/media/css/bootstrap";
 
-  await fse.copy(source, target
+	await fse.copy(source, target
 	).then(
 		answer => console.log(`Copied ${source} to ${target}.`)
 	);
@@ -110,9 +116,10 @@ Program
 		// {overwrite:false, errorOnExist:true}
 	);
 
-	if (Program.svg)
+	if (Program.svg === true)
 	{
-		console.log(`Program.svg: YES`);
+		console.log(chalk.green(`Program.svg: YES`));
+		console.log(chalk.red(`Be patient!`));
 
 		await rimRaf("./src/media/svgs");
 
@@ -131,21 +138,21 @@ Program
 	}
 
 	// Copy and create new work dir.
-  await fse.copy("./src", "./package"
+	await fse.copy("./src", "./package"
 	).then(
 		answer => console.log(`Copied ./src to ./package.`)
 	);
 
 	// Create new dist dir.
-  if (!(await fse.exists("./dist")))
+	if (!(await fse.exists("./dist")))
 	{
-    await fse.mkdir("./dist"
+    	await fse.mkdir("./dist"
 		).then(
 			answer => console.log(`Created ./dist.`)
 		);
-  }
+	}
 
-  let xml = await fse.readFile(Manifest, { encoding: "utf8" });
+	let xml = await fse.readFile(Manifest, { encoding: "utf8" });
 	xml = xml.replace(/{{name}}/g, name);
 	xml = xml.replace(/{{nameUpper}}/g, name.toUpperCase());
 	xml = xml.replace(/{{authorName}}/g, author.name);
@@ -212,13 +219,16 @@ Program
 		}
 	});
 
-  fse.unlinkSync("./package/composer.json");
-  fse.unlinkSync("./package/composer.lock");
+	fse.unlinkSync("./package/composer.json");
+	fse.unlinkSync("./package/composer.lock");
 	fse.unlinkSync("./package/media/js/jquery-migrate/.eslintrc.json");
 
-  // Package it
-  const zip = new (require("adm-zip"))();
-  zip.addLocalFolder("package", false);
-  zip.writeZip(`dist/plg_system_bs3ghsvs-${version}.zip`);
+	// Pack it.
+	const zip = new (require("adm-zip"))();
+	const zipFilePath = `dist/${name}-${version}.zip`;
 
+	zip.addLocalFolder("package", false);
+	zip.writeZip(`${zipFilePath}`);
+
+	console.log(chalk.green(`${zipFilePath} written.`));
 })();
