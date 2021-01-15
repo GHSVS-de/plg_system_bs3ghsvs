@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.9" type="plugin" group="system" method="upgrade">
 	<name>{{nameUpper}}</name>
-	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de)</author>
+	<author>{{authorName}}</author>
 	<creationDate>{{creationDate}}</creationDate>
 	<copyright>{{copyright}}</copyright>
 	<license>{{licenseLong}}</license>
@@ -29,7 +29,7 @@
 - http://localhost/leder-hofmann: Grave bug in TemplateHelper.php::getLessPluginParams (getTemplate removed). Needs also fix in html/lessghsvs.php (See $tplName).
 - Versuch in onAfterRoute Vorschalt-Seite zu integrieren.
 2019.09.29:
-- spielereien.illovo.de Optionen 'otherFileName' (vielleicht sinnfrei?) und 'mediaLoad' 
+- spielereien.illovo.de Optionen 'otherFileName' (vielleicht sinnfrei?) und 'mediaLoad'
 - Add fontawesome-free 5
 2019.11.09:
 - relaunch-bs3.ghsvs.de
@@ -76,7 +76,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 	<databaseServerType>mysql</databaseServerType>
 
 	<files>
-		<filename plugin="bs3ghsvs">bs3ghsvs.php</filename>
+		<filename plugin="{{filename}}">{{filename}}.php</filename>
 		<folder>Field</folder>
 		<folder>Helper</folder>
 		<folder>html</folder>
@@ -153,7 +153,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 				<field name="loadScssPhpEarly" type="list" default="0" filter="integer"
 					label="Load ScssPhp early"
-					description="Plugin loads Bootstrap as early as possible in relevant templates.">
+					description="">
 						<option value="0">JNO</option>
 						<option value="1">JYES</option>
 				</field>
@@ -223,7 +223,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="2">JYES</option>
 							<option value="0">JNO</option>
 					</field>
-	
+
 					<field name="xml_articleVarious" type="list" default="0"
 						filter="integer"
 						label="articleVarious.xml"
@@ -231,7 +231,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="1">JYES</option>
 							<option value="0">JNO</option>
 					</field>
-	
+
 					<field name="xml_articleExtension" type="list" default="0"
 						filter="integer"
 						label="articleExtension.xml"
@@ -239,7 +239,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="1">JYES</option>
 							<option value="0">JNO</option>
 					</field>
-	
+
 					<field name="xml_articleImages" type="list" default="0"
 						filter="integer"
 						label="articleImages.xml"
@@ -262,7 +262,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="2">JYES</option>
 							<option value="0">JNO</option>
 					</field>
-	
+
 					<field name="xml_module" type="list" default="1"
 						filter="integer"
 						label="module.xml"
@@ -278,7 +278,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 					<field name="XmlActiveContactForm" type="spacer"
 						label="PLG_SYSTEM_BS3GHSVS_XMLACTIVE_CONTACTFORM"
 						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"/>
-	
+
 					<field name="XmlActiveContactFormNote" type="note"
 						class="alert aler-info"
 						label=""
@@ -321,7 +321,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="2">JYES</option>
 							<option value="0">JNO</option>
 					</field>
-	
+
 					<field name="xml_menuitem" type="list" default="1"
 						readonly="true" filter="integer"
 						label="menuitem.xml"
@@ -405,7 +405,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
-		
+
 				<field name="active_x" type="list" default="0"
 				 label="x-large aktiv"
 				 description=""
@@ -413,15 +413,15 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 				<field type="spacer" name="spacerl" hr="true" />
-		
+
 				<field name="attribs_l" type="text"
 				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
-				 
+
 				<field name="active_l" type="list"
 				 label="large aktiv"
 				 description=""
@@ -431,17 +431,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--m = medium-->
-		
+
 				<field type="spacer" name="spacerm" hr="true" />
-		
+
 				<field name="attribs_m" type="text"
 				 default="w=360,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_M_LBL"
 				 description="" class="extended-width"
 				 showon="active_m:1"/>
-		
+
 				<field name="active_m" type="list" default="0"
 				 label="medium aktiv"
 				 description=""
@@ -449,17 +449,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--s = small-->
-		
+
 				<field type="spacer" name="spacers" hr="true" />
-		
+
 				<field name="attribs_s" type="text"
 				 default="w=320,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_S_LBL"
 				 description="" class="extended-width"
 				 showon="active_s:1"/>
-				 
+
 				<field name="active_s" type="list" default="0"
 				 label="small aktiv"
 				 description=""
@@ -467,17 +467,17 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--og = opengraph-->
-		
+
 				<field type="spacer" name="spacerog" hr="true" />
-		
+
 				<field name="attribs_og" type="text"
 				 default="w=310,h=310,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_INTRO_OG_LBL"
 				 description="" class="extended-width"
 				 showon="active_og:1"/>
-		
+
 				<field name="active_og" type="list" default="0"
 				 label="open graph aktiv"
 				 description=""
@@ -490,15 +490,15 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 <fields name="image_fulltext">
 		<!--x = x-large-->
-		
+
 				<field type="spacer" name="spacerx2" hr="true" />
-		
+
 				<field name="attribs_x" type="text"
 				 default="w=700,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
-		
+
 				<field name="active_x" type="list" default="0"
 				 label="x-large aktiv"
 				 description=""
@@ -506,14 +506,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--l = large-->
 				<field name="attribs_l" type="text"
 				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
-				 
+
 				<field name="active_l" type="list"
 				 label="large aktiv"
 				 description=""
@@ -523,14 +523,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-				 
+
 		<!--m = medium-->
 				<field name="attribs_m" type="text"
 				 default="w=400,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_M_LBL"
 				 description="" class="extended-width"
 				 showon="active_m:1"/>
-				 
+
 				<field name="active_m" type="list" default="0"
 				 label="medium aktiv"
 				 description=""
@@ -538,14 +538,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--s = small-->
 				<field name="attribs_s" type="text"
 				 default="w=320,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_S_LBL"
 				 description="" class="extended-width"
 				 showon="active_s:1"/>
-		
+
 				<field name="active_s" type="list" default="0"
 				 label="small aktiv"
 				 description=""
@@ -553,14 +553,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--og = opengraph-->
 				<field name="attribs_og" type="text"
 				 default="w=310,h=310,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_FULL_OG_LBL"
 				 description="" class="extended-width"
 				 showon="active_og:1"/>
-		
+
 				<field name="active_og" type="list" default="0"
 				 label="open graph aktiv"
 				 description=""
@@ -576,7 +576,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 <field type="spacer" name="spacer156123" hr="true" />
 
 		<field type="spacer" name="articleimagespacer" label="PLG_SYSTEM_BS3GHSVS_ARTICLEIMAGES" />
-		
+
 				<field name="imageoptimizer_articletext" type="list" default="0"
 				 label="Bildoptimierer für Bilder im Beitragstext aktiv"
 				 description=""
@@ -584,7 +584,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 				<field name="jlayout_articletextSpacer" type="spacer"
 					label="PLG_SYSTEM_BS3GHSVS_LAYOUT_ARTICLETEXTSPACER"
 					description="">
@@ -604,7 +604,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_X_LBL"
 				 description="" class="extended-width"
 				 showon="active_x:1"/>
-		
+
 				<field name="active_x" type="list" default="0"
 				 label="x-large aktiv"
 				 description=""
@@ -612,14 +612,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--l = large-->
 				<field name="attribs_l" type="text"
 				 default="w=480,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_L_LBL"
 				 description="" class="extended-width"
 				 showon="active_l:1"/>
-		
+
 				<field name="active_l" type="list"
 				 label="large aktiv"
 				 description=""
@@ -629,14 +629,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--m = medium-->
 				<field name="attribs_m" type="text"
 				 default="w=400,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_M_LBL"
 				 description="" class="extended-width"
 				 showon="active_m:1"/>
-		
+
 				<field name="active_m" type="list" default="0"
 				 label="medium aktiv"
 				 description=""
@@ -644,14 +644,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--s = small-->
 				<field name="attribs_s" type="text"
 				 default="w=320,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_S_LBL"
 				 description="" class="extended-width"
 				 showon="active_s:1"/>
-		
+
 				<field name="active_s" type="list" default="0"
 				 label="small aktiv"
 				 description=""
@@ -659,14 +659,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 				 <option value="0">JNO</option>
 				 <option value="1">JYES</option>
 				</field>
-		
+
 		<!--og = opengrah-->
 				<field name="attribs_og" type="text"
 				 default="w=310,h=310,quality=80,maxOnly=TRUE"
 				 label="PLG_SYSTEM_BS3GHSVS_FIELD_ARTICLETEXT_OG_LBL"
 				 description="" class="extended-width"
 				 showon="active_og:1"/>
-		
+
 				<field name="active_og" type="list" default="0"
 				 label="open graph aktiv"
 				 description=""
@@ -678,11 +678,11 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 </fields><!--/image_articletext-->
 
 			</fieldset><!--/FieldsetImageResize-->
-			
+
 			<fieldset name="FieldsetOpenGraph"
 				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_OPENGRAPH"
 				description="PLG_SYSTEM_BS3GHSVS_FIELDSET_OPENGRAPH_DESC">
-				
+
 				<field name="opengraphActive" type="list" default="1"
 					label="PLG_SYSTEM_BS3GHSVS_OPENGRAPHACTIVE"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
@@ -693,11 +693,11 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 				<field name="default_imagesspacer" type="spacer"
 					label="PLG_CONTENT_FACEBOOKOPENGRAPHGHSVS_DEFAULT_IMAGE_DESC" />
-	
+
 				<field name="og_default_images" type="text"
 					default="images/fb_default_images"
 					readonly="true"
-					label="PLG_CONTENT_FACEBOOKOPENGRAPHGHSVS_DEFAULT_IMAGE" 
+					label="PLG_CONTENT_FACEBOOKOPENGRAPHGHSVS_DEFAULT_IMAGE"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC" />
 
 			</fieldset><!--/FieldsetOpenGraph-->
@@ -724,7 +724,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 
 				<field name="svgSpanClass" type="text" filter="string"
 					default="svgSpan svg-lg"
-					label="CSS-Klasse(n) des umschließenden SPAN (Nicht svg-icon, da bereits anderweitig reserviert!). Leerzeichen für keine." 
+					label="CSS-Klasse(n) des umschließenden SPAN (Nicht svg-icon, da bereits anderweitig reserviert!). Leerzeichen für keine."
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					showon="svgSupport:1[AND]svgSpan:1"
 					/>
@@ -751,7 +751,7 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 			<fieldset name="FieldsetStructuredData"
 				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_STRUCTUREDDATA"
 				description="PLG_SYSTEM_BS3GHSVS_FIELDSET_STRUCTUREDDATA_DESC">
-				
+
 				<field name="structureddataActive" type="list" default="1"
 					label="PLG_SYSTEM_BS3GHSVS_STRUCTUREDDATAACTIVE"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
@@ -801,7 +801,7 @@ description="Seit 2016 für Google wohl nicht mehr nötig"
 
 					<field name="sd_organizationspacer" type="spacer"
 						label="PLG_SYSTEM_BS3GHSVS_HEAD_SD_ORGANIZATION" />
-					
+
 					<field name="name" type="text" default="GHSVS Berlin Neukölln"
 						label="Organization name"
 						description=""
@@ -835,7 +835,7 @@ description="Seit 2016 für Google wohl nicht mehr nötig"
 								label="Organization foundingLocation"
 								description=""
 								class="extended-width" />
-							
+
 							<field name="founder" type="text" default="Volkmar Volli Schlothauer"
 								label="Organization founder (Name of Person)"
 								description=""
@@ -878,7 +878,7 @@ class="extended-width" />
 				</fields>
 
 			</fieldset><!--/FieldsetStructuredData-->
-			
+
 			<fieldset name="FieldsetVorschaltseite"
 				label="Vorschaltseite"
 				description="Sie benötigen 1 Menü mit Menütyp: 'vorschaltmenue' ! Darin der Menüeintrag, der die Vorschaltseite ist. Zum Aktivieren der Vorschaltseite können Sie sie dann hier wählen.">
@@ -894,7 +894,7 @@ class="extended-width" />
 				</field>
 
 			</fieldset><!--/FieldsetVorschaltseite-->
-			
+
 			<fieldset name="FieldsetPagebreak"
 				label="Pagebreakghsvs-Slider"
 				description="Im Zusammenspiel mit Editor-Plugin 'pagebreakghsvs' (Button for Editors (insert slide markers) by GHSVS.de)">

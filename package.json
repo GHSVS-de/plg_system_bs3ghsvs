@@ -1,6 +1,7 @@
 {
 	"name": "plg_system_bs3ghsvs",
-	"version": "2020.12.18",
+	"filename": "bs3ghsvs",
+	"version": "2021.01.15",
 	"minimumPhp": "7.3.0",
 	"maximumPhp": "",
 	"minimumJoomla": "3.9.8",

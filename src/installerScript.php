@@ -49,8 +49,8 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		'/media/plg_system_bs3ghsvs/js/skipto',
 		'/plugins/system/bs3ghsvs/vendor/scssphp/scssphp/bin',
 		'/plugins/system/bs3ghsvs/vendor/bin',
+		'/plugins/system/bs3ghsvs/vendor/scssphp',
 	);
-
 
 	public function preflight($type, $parent)
 	{
@@ -80,7 +80,7 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 				if ($maximumPhp && version_compare(PHP_VERSION, $maximumPhp, '>'))
 				{
 					$msg = 'Your PHP version (' . PHP_VERSION . ') is too high for this extension. Maximum PHP version is: ' . $maximumPhp . '.';
-	
+
 					Log::add($msg, Log::WARNING, 'jerror');
 				}
 
@@ -95,7 +95,7 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 				$this->allowDowngrades = true;
 			}
 		}
-		
+
 		if (!parent::preflight($type, $parent))
 		{
 			return false;

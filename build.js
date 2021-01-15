@@ -8,6 +8,7 @@ const {
 	author,
 	creationDate,
 	copyright,
+	filename,
 	name,
 	version,
 	licenseLong,
@@ -80,14 +81,14 @@ Program
 	).then(
 		answer => console.log(`Copied ${source} to ${target}.`)
 	);
-	
+
 	await fse.copy(
 		"./node_modules/jquery/dist",
 		"./src/media/js/jquery"
 		// ,
 		// {overwrite:false, errorOnExist:true}
 	);
-	
+
 	await fse.copy(
 		"./node_modules/jquery-migrate/dist",
 		"./src/media/js/jquery-migrate"
@@ -119,7 +120,7 @@ Program
 			"./node_modules/@fortawesome/fontawesome-free/svgs",
 			"./src/media/svgs"
 		);
-	
+
   		await fse.copy(
 			"./node_modules/bootstrap-icons/icons",
 			"./src/media/svgs/bi"
@@ -152,22 +153,23 @@ Program
 	xml = xml.replace(/{{copyright}}/g, copyright);
 	xml = xml.replace(/{{licenseLong}}/g, licenseLong);
 	xml = xml.replace(/{{authorUrl}}/g, author.url);
-  xml = xml.replace(/{{version}}/g, version);
+	xml = xml.replace(/{{version}}/g, version);
 	xml = xml.replace(/{{minimumPhp}}/g, minimumPhp);
 	xml = xml.replace(/{{maximumPhp}}/g, maximumPhp);
 	xml = xml.replace(/{{minimumJoomla}}/g, minimumJoomla);
 	xml = xml.replace(/{{maximumJoomla}}/g, maximumJoomla);
 	xml = xml.replace(/{{allowDowngrades}}/g, allowDowngrades);
-	
+	xml = xml.replace(/{{filename}}/g, filename);
+
 	await fse.writeFile(Manifest, xml, { encoding: "utf8" }
 	).then(
 		answer => console.log(`Replaced entries in ${Manifest}.`)
 	);;
-	
-	// HOUSE CLEANING	
+
+	// HOUSE CLEANING
 	let directory = `${RootPath}/package/media/fontawesome-free`;
 	fse.unlinkSync(`${directory}/package.json`);
-	
+
 	let folders = [
 		"js",
 		"less",
@@ -187,9 +189,9 @@ Program
 
 	// Für weiter vendor-Ordner zu faul!!!
 	directory = `${RootPath}/package/vendor/spatie/schema-org`;
-	
+
 	await rimRaf(`${directory}/.github`);
-	
+
 	let files = [
 		".editorconfig",
 		".styleci.yml",
@@ -202,14 +204,14 @@ Program
 
 	files.forEach((file) => {
 		file = `${directory}/${file}`;
-	
+
 		if (fse.existsSync(file) && fse.lstatSync(file).isFile())
 		{
 			fse.unlinkSync(file);
 			console.log(`Unlinked: ${file}`);
 		}
 	});
-	
+
   fse.unlinkSync("./package/composer.json");
   fse.unlinkSync("./package/composer.lock");
 	fse.unlinkSync("./package/media/js/jquery-migrate/.eslintrc.json");
