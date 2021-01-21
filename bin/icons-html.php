@@ -68,3 +68,4 @@ $html[] = '</body></html>';
 file_put_contents(JPATH_MAIN . 'dist/icons-overview.html', implode("\n\n", $html));
 file_put_contents(__DIR__ . '/icons-overview.html', implode("\n\n", $html));
 //echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($collector, true) . '</pre>';exit;
+echo 'dist/icons-overview.html written.';

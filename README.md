@@ -64,7 +64,7 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
 - `npm install`
 - `cd ..`
 - Edit `/build.js` to also copy these "downloaded" files to `/src/media/` during build step.
- 
+
 ### Build new Joomla package ZIP.
 
 - <strike>`nvm use 12` or `nvm use 13` to get rid of f'ing messages of NodeJs 14 that nobody understands but the creators and JS professors. Only `node build.js --svg` has still problems.</strike>
@@ -77,14 +77,13 @@ Let's say you have already a Bootstrap 4 dependency in root `/package.json` but 
 
 #### if you have new icons
 
-- `php bin/icons-html.php`
+- <strike>`php bin/icons-html.php`</strike> (Meanwhile included in `build.js`.
 - Creates `/dist/icons-overview.html` (an overview with all icons).
 
-##### 
+#####
 - New ZIP is in `/dist/`
 - FYI: Packed files for this ZIP can be seen in `/package/`.
 
 #### For Joomla update server
 - Create new release with new tag.
 - Get download link for new `dist/plg_blahaba_blubber...zip` **inside new tag branch** and add to release description and update server XML.
-

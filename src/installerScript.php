@@ -50,6 +50,14 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		'/plugins/system/bs3ghsvs/vendor/scssphp/scssphp/bin',
 		'/plugins/system/bs3ghsvs/vendor/bin',
 		'/plugins/system/bs3ghsvs/vendor/scssphp',
+		'/media/plg_system_bs3ghsvs/less',
+		'/media/plg_system_bs3ghsvs/js/bootstrap/3',
+		'/media/plg_system_bs3ghsvs/js/bootstrap/3.4.1',
+		'/media/plg_system_bs3ghsvs/css/bootstrap/3',
+		'/media/plg_system_bs3ghsvs/css/bootstrap/3.4.1',
+		'/media/plg_system_bs3ghsvs/js/jquery/1.12.4',
+		'/media/plg_system_bs3ghsvs/js/jquery/2.2.4',
+		'/media/plg_system_bs3ghsvs/js/jquery/3.4.1',
 	);
 
 	public function preflight($type, $parent)

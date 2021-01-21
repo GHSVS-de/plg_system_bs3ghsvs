@@ -4,6 +4,8 @@ const rimRaf = util.promisify(require("rimraf"));
 
 const chalk = require('chalk');
 
+const exec = util.promisify(require('child_process').exec);
+
 const Manifest = "./package/bs3ghsvs.xml";
 
 const {
@@ -38,6 +40,17 @@ program
 const Program = program.opts();
 //console.log(Program.svg);
 //process.exit(0);
+
+async function buildOverview()
+{
+	const { stdout, stderr } = await exec('php bin/icons-html.php');
+
+	if (stderr)
+	{
+		console.error(`error during icons-html.php: ${stderr}`);
+	}
+	console.log(`${stdout}`);
+}
 
 (async function exec()
 {
@@ -137,6 +150,8 @@ const Program = program.opts();
 		await buildSvgs.main();
 	}
 
+	await console.log(chalk.red(`Be patient! Copy actions!`));
+
 	// Copy and create new work dir.
 	await fse.copy("./src", "./package"
 	).then(
@@ -231,4 +246,6 @@ const Program = program.opts();
 	zip.writeZip(`${zipFilePath}`);
 
 	console.log(chalk.green(`${zipFilePath} written.`));
+
+	await buildOverview();
 })();
