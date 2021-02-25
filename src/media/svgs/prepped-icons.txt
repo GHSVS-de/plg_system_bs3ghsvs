@@ -1,10 +1,6 @@
 [
   [
     "bi",
-    "alarm"
-  ],
-  [
-    "bi",
     "alarm-fill"
   ],
   [
@@ -17,11 +13,7 @@
   ],
   [
     "bi",
-    "align-end"
-  ],
-  [
-    "bi",
-    "align-start"
+    "alarm"
   ],
   [
     "bi",
@@ -29,11 +21,7 @@
   ],
   [
     "bi",
-    "alt"
-  ],
-  [
-    "bi",
-    "app-indicator"
+    "align-start"
   ],
   [
     "bi",
@@ -41,19 +29,27 @@
   ],
   [
     "bi",
+    "app-indicator"
+  ],
+  [
+    "bi",
+    "app"
+  ],
+  [
+    "bi",
+    "align-middle"
+  ],
+  [
+    "bi",
+    "alt"
+  ],
+  [
+    "bi",
     "archive-fill"
   ],
   [
     "bi",
-    "arrow-90deg-down"
-  ],
-  [
-    "bi",
     "arrow-90deg-right"
-  ],
-  [
-    "bi",
-    "arrow-90deg-left"
   ],
   [
     "bi",
@@ -69,11 +65,11 @@
   ],
   [
     "bi",
-    "arrow-bar-right"
+    "arrow-90deg-down"
   ],
   [
     "bi",
-    "arrow-bar-up"
+    "arrow-bar-right"
   ],
   [
     "bi",
@@ -81,11 +77,11 @@
   ],
   [
     "bi",
-    "arrow-counterclockwise"
+    "arrow-down-circle-fill"
   ],
   [
     "bi",
-    "arrow-down-circle-fill"
+    "arrow-90deg-left"
   ],
   [
     "bi",
@@ -97,6 +93,18 @@
   ],
   [
     "bi",
+    "arrow-down-left-circle"
+  ],
+  [
+    "bi",
+    "arrow-down-left-square-fill"
+  ],
+  [
+    "bi",
+    "arrow-counterclockwise"
+  ],
+  [
+    "bi",
     "arrow-down-left-square"
   ],
   [
@@ -105,19 +113,7 @@
   ],
   [
     "bi",
-    "arrow-down-left-square-fill"
-  ],
-  [
-    "bi",
-    "arrow-down-left-circle"
-  ],
-  [
-    "bi",
     "arrow-down-right-square-fill"
-  ],
-  [
-    "bi",
-    "arrow-down-right-circle-fill"
   ],
   [
     "bi",
@@ -125,11 +121,7 @@
   ],
   [
     "bi",
-    "arrow-down-short"
-  ],
-  [
-    "bi",
-    "arrow-down-right"
+    "arrow-down-right-circle"
   ],
   [
     "bi",
@@ -137,7 +129,15 @@
   ],
   [
     "bi",
-    "arrow-down-up"
+    "arrow-down-short"
+  ],
+  [
+    "bi",
+    "arrow-left-circle-fill"
+  ],
+  [
+    "bi",
+    "arrow-down-right-circle-fill"
   ],
   [
     "bi",
@@ -149,10 +149,6 @@
   ],
   [
     "bi",
-    "arrow-left-circle-fill"
-  ],
-  [
-    "bi",
     "arrow-left-circle"
   ],
   [
@@ -161,7 +157,7 @@
   ],
   [
     "bi",
-    "arrow-left-short"
+    "arrow-left"
   ],
   [
     "bi",
@@ -169,19 +165,11 @@
   ],
   [
     "bi",
-    "arrow-left-right"
-  ],
-  [
-    "bi",
-    "arrow-down-right-circle"
+    "arrow-left-short"
   ],
   [
     "bi",
     "arrow-repeat"
-  ],
-  [
-    "bi",
-    "arrow-left"
   ],
   [
     "bi",
@@ -193,11 +181,11 @@
   ],
   [
     "bi",
-    "arrow-right-circle-fill"
+    "arrow-right-short"
   ],
   [
     "bi",
-    "arrow-right-circle"
+    "arrow-right-circle-fill"
   ],
   [
     "bi",
@@ -205,7 +193,7 @@
   ],
   [
     "bi",
-    "arrow-right-short"
+    "arrow-right-circle"
   ],
   [
     "bi",
@@ -221,6 +209,10 @@
   ],
   [
     "bi",
+    "arrow-right-square"
+  ],
+  [
+    "bi",
     "arrow-up-left-circle-fill"
   ],
   [
@@ -229,15 +221,7 @@
   ],
   [
     "bi",
-    "arrow-up-left-square-fill"
-  ],
-  [
-    "bi",
     "arrow-up-left-square"
-  ],
-  [
-    "bi",
-    "arrow-up-left"
   ],
   [
     "bi",
@@ -245,39 +229,15 @@
   ],
   [
     "bi",
+    "arrow-up-left-square-fill"
+  ],
+  [
+    "bi",
     "arrow-up-right-circle"
   ],
   [
     "bi",
-    "arrow-up-right-square-fill"
-  ],
-  [
-    "bi",
-    "arrow-up-right-square"
-  ],
-  [
-    "bi",
-    "arrow-up-square"
-  ],
-  [
-    "bi",
-    "arrow-up-square-fill"
-  ],
-  [
-    "bi",
-    "arrow-up"
-  ],
-  [
-    "bi",
-    "arrows-angle-contract"
-  ],
-  [
-    "bi",
-    "arrows-angle-expand"
-  ],
-  [
-    "bi",
-    "arrows-collapse"
+    "arrow-up-left"
   ],
   [
     "bi",
@@ -285,19 +245,11 @@
   ],
   [
     "bi",
-    "arrows-expand"
+    "arrow-up-right-square"
   ],
   [
     "bi",
-    "arrows-fullscreen"
-  ],
-  [
-    "bi",
-    "aspect-ratio-fill"
-  ],
-  [
-    "bi",
-    "arrows-move"
+    "arrow-up-right-square-fill"
   ],
   [
     "bi",
@@ -305,11 +257,55 @@
   ],
   [
     "bi",
+    "arrow-up-square-fill"
+  ],
+  [
+    "bi",
+    "arrow-up-square"
+  ],
+  [
+    "bi",
+    "arrow-up"
+  ],
+  [
+    "bi",
+    "arrows-angle-expand"
+  ],
+  [
+    "bi",
+    "arrows-expand"
+  ],
+  [
+    "bi",
+    "arrows-angle-contract"
+  ],
+  [
+    "bi",
+    "arrows-move"
+  ],
+  [
+    "bi",
+    "arrows-collapse"
+  ],
+  [
+    "bi",
+    "arrows-fullscreen"
+  ],
+  [
+    "bi",
+    "arrow-down-right"
+  ],
+  [
+    "bi",
     "aspect-ratio"
   ],
   [
     "bi",
-    "asterisk"
+    "arrow-left-right"
+  ],
+  [
+    "bi",
+    "aspect-ratio-fill"
   ],
   [
     "bi",
@@ -317,19 +313,7 @@
   ],
   [
     "bi",
-    "award-fill"
-  ],
-  [
-    "bi",
     "award"
-  ],
-  [
-    "bi",
-    "back"
-  ],
-  [
-    "bi",
-    "backspace-fill"
   ],
   [
     "bi",
@@ -337,11 +321,23 @@
   ],
   [
     "bi",
+    "backspace"
+  ],
+  [
+    "bi",
+    "backspace-fill"
+  ],
+  [
+    "bi",
+    "back"
+  ],
+  [
+    "bi",
     "backspace-reverse"
   ],
   [
     "bi",
-    "backspace"
+    "badge-4k-fill"
   ],
   [
     "bi",
@@ -349,7 +345,7 @@
   ],
   [
     "bi",
-    "badge-4k-fill"
+    "arrow-down-up"
   ],
   [
     "bi",
@@ -361,15 +357,11 @@
   ],
   [
     "bi",
-    "badge-8k-fill"
-  ],
-  [
-    "bi",
     "badge-8k"
   ],
   [
     "bi",
-    "badge-ad-fill"
+    "badge-ar"
   ],
   [
     "bi",
@@ -381,7 +373,7 @@
   ],
   [
     "bi",
-    "badge-ar"
+    "badge-ad-fill"
   ],
   [
     "bi",
@@ -393,6 +385,10 @@
   ],
   [
     "bi",
+    "badge-vo-fill"
+  ],
+  [
+    "bi",
     "badge-hd-fill"
   ],
   [
@@ -401,7 +397,7 @@
   ],
   [
     "bi",
-    "badge-tm-fill"
+    "badge-vr-fill"
   ],
   [
     "bi",
@@ -409,15 +405,19 @@
   ],
   [
     "bi",
-    "badge-vo-fill"
-  ],
-  [
-    "bi",
     "badge-vo"
   ],
   [
     "bi",
-    "badge-vr-fill"
+    "badge-tm-fill"
+  ],
+  [
+    "bi",
+    "badge-wc"
+  ],
+  [
+    "bi",
+    "bag-check"
   ],
   [
     "bi",
@@ -429,7 +429,7 @@
   ],
   [
     "bi",
-    "badge-wc"
+    "bag-dash-fill"
   ],
   [
     "bi",
@@ -437,19 +437,7 @@
   ],
   [
     "bi",
-    "bag-check"
-  ],
-  [
-    "bi",
-    "bag-dash-fill"
-  ],
-  [
-    "bi",
     "bag-dash"
-  ],
-  [
-    "bi",
-    "bag-plus-fill"
   ],
   [
     "bi",
@@ -457,11 +445,11 @@
   ],
   [
     "bi",
-    "bag-plus"
+    "bag-plus-fill"
   ],
   [
     "bi",
-    "bag-x-fill"
+    "bag-plus"
   ],
   [
     "bi",
@@ -469,7 +457,15 @@
   ],
   [
     "bi",
+    "bar-chart-line-fill"
+  ],
+  [
+    "bi",
     "bag-x"
+  ],
+  [
+    "bi",
+    "bag-x-fill"
   ],
   [
     "bi",
@@ -477,7 +473,7 @@
   ],
   [
     "bi",
-    "bar-chart-line-fill"
+    "bar-chart-steps"
   ],
   [
     "bi",
@@ -485,7 +481,7 @@
   ],
   [
     "bi",
-    "bar-chart-steps"
+    "basket"
   ],
   [
     "bi",
@@ -501,7 +497,11 @@
   ],
   [
     "bi",
-    "basket"
+    "basket3-fill"
+  ],
+  [
+    "bi",
+    "basket3"
   ],
   [
     "bi",
@@ -509,15 +509,7 @@
   ],
   [
     "bi",
-    "basket3-fill"
-  ],
-  [
-    "bi",
     "battery-charging"
-  ],
-  [
-    "bi",
-    "basket3"
   ],
   [
     "bi",
@@ -549,11 +541,19 @@
   ],
   [
     "bi",
+    "binoculars-fill"
+  ],
+  [
+    "bi",
+    "blockquote-left"
+  ],
+  [
+    "bi",
     "bicycle"
   ],
   [
     "bi",
-    "binoculars-fill"
+    "blockquote-right"
   ],
   [
     "bi",
@@ -565,19 +565,11 @@
   ],
   [
     "bi",
-    "blockquote-left"
-  ],
-  [
-    "bi",
-    "blockquote-right"
+    "book"
   ],
   [
     "bi",
     "book-half"
-  ],
-  [
-    "bi",
-    "book"
   ],
   [
     "bi",
@@ -589,15 +581,15 @@
   ],
   [
     "bi",
-    "bookmark-dash-fill"
-  ],
-  [
-    "bi",
     "bookmark-dash"
   ],
   [
     "bi",
     "bookmark-fill"
+  ],
+  [
+    "bi",
+    "bookmark-dash-fill"
   ],
   [
     "bi",
@@ -609,10 +601,6 @@
   ],
   [
     "bi",
-    "bookmark-plus-fill"
-  ],
-  [
-    "bi",
     "bookmark-plus"
   ],
   [
@@ -621,11 +609,11 @@
   ],
   [
     "bi",
-    "bookmark-star"
+    "bookmark-plus-fill"
   ],
   [
     "bi",
-    "bookmark-x-fill"
+    "bookmark-star"
   ],
   [
     "bi",
@@ -637,7 +625,11 @@
   ],
   [
     "bi",
-    "bookmarks-fill"
+    "bookshelf"
+  ],
+  [
+    "bi",
+    "bookmark-x-fill"
   ],
   [
     "bi",
@@ -645,15 +637,15 @@
   ],
   [
     "bi",
-    "bookshelf"
-  ],
-  [
-    "bi",
     "bootstrap-fill"
   ],
   [
     "bi",
-    "border-all"
+    "badge-8k-fill"
+  ],
+  [
+    "bi",
+    "asterisk"
   ],
   [
     "bi",
@@ -661,11 +653,7 @@
   ],
   [
     "bi",
-    "bootstrap-reboot"
-  ],
-  [
-    "bi",
-    "border-bottom"
+    "border-center"
   ],
   [
     "bi",
@@ -673,11 +661,7 @@
   ],
   [
     "bi",
-    "border-center"
-  ],
-  [
-    "bi",
-    "border-left"
+    "border-outer"
   ],
   [
     "bi",
@@ -685,15 +669,15 @@
   ],
   [
     "bi",
-    "border-outer"
+    "border-bottom"
   ],
   [
     "bi",
-    "border-right"
+    "award-fill"
   ],
   [
     "bi",
-    "border-style"
+    "border-all"
   ],
   [
     "bi",
@@ -701,11 +685,7 @@
   ],
   [
     "bi",
-    "border-width"
-  ],
-  [
-    "bi",
-    "bounding-box-circles"
+    "border-right"
   ],
   [
     "bi",
@@ -713,7 +693,15 @@
   ],
   [
     "bi",
-    "bounding-box"
+    "bootstrap-reboot"
+  ],
+  [
+    "bi",
+    "box-arrow-down-left"
+  ],
+  [
+    "bi",
+    "border-width"
   ],
   [
     "bi",
@@ -721,7 +709,15 @@
   ],
   [
     "bi",
-    "align-middle"
+    "bounding-box-circles"
+  ],
+  [
+    "bi",
+    "bounding-box"
+  ],
+  [
+    "bi",
+    "box-arrow-in-down-left"
   ],
   [
     "bi",
@@ -733,15 +729,7 @@
   ],
   [
     "bi",
-    "box-arrow-in-down-left"
-  ],
-  [
-    "bi",
-    "box-arrow-down-left"
-  ],
-  [
-    "bi",
-    "box-arrow-in-left"
+    "border-left"
   ],
   [
     "bi",
@@ -749,7 +737,15 @@
   ],
   [
     "bi",
+    "box-arrow-left"
+  ],
+  [
+    "bi",
     "box-arrow-in-up-left"
+  ],
+  [
+    "bi",
+    "box-arrow-in-up"
   ],
   [
     "bi",
@@ -761,11 +757,7 @@
   ],
   [
     "bi",
-    "box-arrow-in-up"
-  ],
-  [
-    "bi",
-    "box-arrow-left"
+    "box-arrow-up-left"
   ],
   [
     "bi",
@@ -773,7 +765,7 @@
   ],
   [
     "bi",
-    "box-arrow-up-left"
+    "box-arrow-up-right"
   ],
   [
     "bi",
@@ -781,31 +773,7 @@
   ],
   [
     "bi",
-    "box-arrow-up-right"
-  ],
-  [
-    "bi",
-    "box"
-  ],
-  [
-    "bi",
     "box-seam"
-  ],
-  [
-    "bi",
-    "braces"
-  ],
-  [
-    "bi",
-    "bricks"
-  ],
-  [
-    "bi",
-    "briefcase-fill"
-  ],
-  [
-    "bi",
-    "briefcase"
   ],
   [
     "bi",
@@ -813,11 +781,23 @@
   ],
   [
     "bi",
-    "brightness-alt-high"
+    "bricks"
   ],
   [
     "bi",
-    "brightness-alt-low-fill"
+    "braces"
+  ],
+  [
+    "bi",
+    "box"
+  ],
+  [
+    "bi",
+    "briefcase"
+  ],
+  [
+    "bi",
+    "briefcase-fill"
   ],
   [
     "bi",
@@ -825,11 +805,15 @@
   ],
   [
     "bi",
+    "brightness-alt-high"
+  ],
+  [
+    "bi",
     "brightness-high-fill"
   ],
   [
     "bi",
-    "app"
+    "brightness-alt-low-fill"
   ],
   [
     "bi",
@@ -837,11 +821,19 @@
   ],
   [
     "bi",
+    "brightness-low-fill"
+  ],
+  [
+    "bi",
+    "broadcast-pin"
+  ],
+  [
+    "bi",
     "brightness-low"
   ],
   [
     "bi",
-    "brightness-low-fill"
+    "brush"
   ],
   [
     "bi",
@@ -853,35 +845,7 @@
   ],
   [
     "bi",
-    "broadcast-pin"
-  ],
-  [
-    "bi",
     "bucket-fill"
-  ],
-  [
-    "bi",
-    "brush"
-  ],
-  [
-    "bi",
-    "arrow-right-square"
-  ],
-  [
-    "bi",
-    "bucket"
-  ],
-  [
-    "bi",
-    "building"
-  ],
-  [
-    "bi",
-    "calculator-fill"
-  ],
-  [
-    "bi",
-    "bug-fill"
   ],
   [
     "bi",
@@ -889,11 +853,19 @@
   ],
   [
     "bi",
+    "bucket"
+  ],
+  [
+    "bi",
     "bullseye"
   ],
   [
     "bi",
-    "calendar-check-fill"
+    "bug-fill"
+  ],
+  [
+    "bi",
+    "building"
   ],
   [
     "bi",
@@ -901,11 +873,15 @@
   ],
   [
     "bi",
-    "calendar-check"
+    "calculator-fill"
   ],
   [
     "bi",
-    "calendar-date-fill"
+    "calendar-check-fill"
+  ],
+  [
+    "bi",
+    "calendar-check"
   ],
   [
     "bi",
@@ -913,7 +889,7 @@
   ],
   [
     "bi",
-    "calendar-date"
+    "calendar-date-fill"
   ],
   [
     "bi",
@@ -921,15 +897,7 @@
   ],
   [
     "bi",
-    "calendar-fill"
-  ],
-  [
-    "bi",
-    "calendar-event-fill"
-  ],
-  [
-    "bi",
-    "calendar-minus"
+    "calendar-date"
   ],
   [
     "bi",
@@ -937,23 +905,19 @@
   ],
   [
     "bi",
-    "calendar-month-fill"
+    "calendar-event-fill"
   ],
   [
     "bi",
-    "calendar-month"
+    "box-arrow-in-left"
   ],
   [
     "bi",
-    "calendar-range-fill"
+    "bookmarks-fill"
   ],
   [
     "bi",
-    "calendar-plus-fill"
-  ],
-  [
-    "bi",
-    "calendar-week-fill"
+    "calendar-fill"
   ],
   [
     "bi",
@@ -961,11 +925,15 @@
   ],
   [
     "bi",
-    "calendar-range"
+    "calendar-minus"
   ],
   [
     "bi",
-    "calendar-event"
+    "calendar-month"
+  ],
+  [
+    "bi",
+    "calendar-plus-fill"
   ],
   [
     "bi",
@@ -973,11 +941,15 @@
   ],
   [
     "bi",
-    "calendar-x-fill"
+    "calendar-range"
   ],
   [
     "bi",
-    "calendar"
+    "calendar-week-fill"
+  ],
+  [
+    "bi",
+    "calendar-range-fill"
   ],
   [
     "bi",
@@ -985,7 +957,7 @@
   ],
   [
     "bi",
-    "calendar2-check-fill"
+    "calendar-x-fill"
   ],
   [
     "bi",
@@ -993,15 +965,7 @@
   ],
   [
     "bi",
-    "calendar2-day-fill"
-  ],
-  [
-    "bi",
-    "calendar2-day"
-  ],
-  [
-    "bi",
-    "calendar2-event"
+    "calendar"
   ],
   [
     "bi",
@@ -1009,11 +973,27 @@
   ],
   [
     "bi",
-    "calendar2-date"
+    "calendar2-check-fill"
+  ],
+  [
+    "bi",
+    "calendar2-day"
+  ],
+  [
+    "bi",
+    "calendar2-day-fill"
   ],
   [
     "bi",
     "calendar2-event-fill"
+  ],
+  [
+    "bi",
+    "calendar2-date"
+  ],
+  [
+    "bi",
+    "calendar2-event"
   ],
   [
     "bi",
@@ -1025,11 +1005,19 @@
   ],
   [
     "bi",
+    "calendar2-month"
+  ],
+  [
+    "bi",
     "calendar2-month-fill"
   ],
   [
     "bi",
-    "calendar2-range-fill"
+    "calendar2-minus-fill"
+  ],
+  [
+    "bi",
+    "calendar2-plus-fill"
   ],
   [
     "bi",
@@ -1041,11 +1029,11 @@
   ],
   [
     "bi",
-    "calendar2-minus-fill"
+    "calendar2-week-fill"
   ],
   [
     "bi",
-    "calendar2-week"
+    "calendar2-range-fill"
   ],
   [
     "bi",
@@ -1053,7 +1041,7 @@
   ],
   [
     "bi",
-    "calendar2"
+    "calendar2-week"
   ],
   [
     "bi",
@@ -1061,27 +1049,19 @@
   ],
   [
     "bi",
+    "calendar2-x"
+  ],
+  [
+    "bi",
+    "calendar2"
+  ],
+  [
+    "bi",
     "calendar3-event"
   ],
   [
     "bi",
-    "calendar2-month"
-  ],
-  [
-    "bi",
-    "calendar2-week-fill"
-  ],
-  [
-    "bi",
-    "calendar3-range-fill"
-  ],
-  [
-    "bi",
-    "calendar3-week-fill"
-  ],
-  [
-    "bi",
-    "calendar3-week"
+    "calendar3-fill"
   ],
   [
     "bi",
@@ -1089,7 +1069,7 @@
   ],
   [
     "bi",
-    "calendar4-event"
+    "calendar3-week-fill"
   ],
   [
     "bi",
@@ -1097,7 +1077,23 @@
   ],
   [
     "bi",
+    "calendar4-event"
+  ],
+  [
+    "bi",
+    "calendar3-range-fill"
+  ],
+  [
+    "bi",
+    "calendar3-week"
+  ],
+  [
+    "bi",
     "calendar4-range"
+  ],
+  [
+    "bi",
+    "camera-fill"
   ],
   [
     "bi",
@@ -1109,11 +1105,7 @@
   ],
   [
     "bi",
-    "camera-fill"
-  ],
-  [
-    "bi",
-    "calendar2-x"
+    "camera-video-fill"
   ],
   [
     "bi",
@@ -1125,6 +1117,10 @@
   ],
   [
     "bi",
+    "camera-video-off"
+  ],
+  [
+    "bi",
     "camera-video-off-fill"
   ],
   [
@@ -1133,7 +1129,7 @@
   ],
   [
     "bi",
-    "camera-video-off"
+    "camera2"
   ],
   [
     "bi",
@@ -1141,7 +1137,7 @@
   ],
   [
     "bi",
-    "camera2"
+    "capslock"
   ],
   [
     "bi",
@@ -1153,7 +1149,7 @@
   ],
   [
     "bi",
-    "capslock"
+    "card-image"
   ],
   [
     "bi",
@@ -1161,7 +1157,7 @@
   ],
   [
     "bi",
-    "card-image"
+    "card-text"
   ],
   [
     "bi",
@@ -1169,15 +1165,7 @@
   ],
   [
     "bi",
-    "card-text"
-  ],
-  [
-    "bi",
     "caret-down-fill"
-  ],
-  [
-    "bi",
-    "caret-down-square-fill"
   ],
   [
     "bi",
@@ -1190,6 +1178,10 @@
   [
     "bi",
     "caret-left-fill"
+  ],
+  [
+    "bi",
+    "caret-down-square-fill"
   ],
   [
     "bi",
@@ -1209,11 +1201,11 @@
   ],
   [
     "bi",
-    "caret-right-square-fill"
+    "caret-right-square"
   ],
   [
     "bi",
-    "caret-right-square"
+    "caret-right-square-fill"
   ],
   [
     "bi",
@@ -1221,19 +1213,19 @@
   ],
   [
     "bi",
-    "caret-up-fill"
-  ],
-  [
-    "bi",
     "caret-up-square-fill"
   ],
   [
     "bi",
-    "caret-up-square"
+    "caret-up"
   ],
   [
     "bi",
-    "caret-up"
+    "caret-up-fill"
+  ],
+  [
+    "bi",
+    "caret-up-square"
   ],
   [
     "bi",
@@ -1261,7 +1253,7 @@
   ],
   [
     "bi",
-    "cart-plus"
+    "cart-x"
   ],
   [
     "bi",
@@ -1269,11 +1261,15 @@
   ],
   [
     "bi",
-    "cart-x"
+    "cart-plus"
   ],
   [
     "bi",
     "cart-x-fill"
+  ],
+  [
+    "bi",
+    "cart3"
   ],
   [
     "bi",
@@ -1285,15 +1281,7 @@
   ],
   [
     "bi",
-    "cart3"
-  ],
-  [
-    "bi",
     "cash-stack"
-  ],
-  [
-    "bi",
-    "cast"
   ],
   [
     "bi",
@@ -1301,11 +1289,7 @@
   ],
   [
     "bi",
-    "chat-dots-fill"
-  ],
-  [
-    "bi",
-    "chat-dots"
+    "cast"
   ],
   [
     "bi",
@@ -1314,6 +1298,14 @@
   [
     "bi",
     "chat-left-dots-fill"
+  ],
+  [
+    "bi",
+    "chat-dots-fill"
+  ],
+  [
+    "bi",
+    "chat-dots"
   ],
   [
     "bi",
@@ -1341,14 +1333,6 @@
   ],
   [
     "bi",
-    "chat-left"
-  ],
-  [
-    "bi",
-    "chat-quote-fill"
-  ],
-  [
-    "bi",
     "chat-quote"
   ],
   [
@@ -1357,7 +1341,19 @@
   ],
   [
     "bi",
+    "chat-left"
+  ],
+  [
+    "bi",
     "chat-right-dots"
+  ],
+  [
+    "bi",
+    "chat-right-text"
+  ],
+  [
+    "bi",
+    "chat-quote-fill"
   ],
   [
     "bi",
@@ -1373,7 +1369,7 @@
   ],
   [
     "bi",
-    "chat-right-text-fill"
+    "chat-square-dots-fill"
   ],
   [
     "bi",
@@ -1381,11 +1377,7 @@
   ],
   [
     "bi",
-    "chat-right-text"
-  ],
-  [
-    "bi",
-    "chat-square-dots-fill"
+    "chat-right-text-fill"
   ],
   [
     "bi",
@@ -1405,15 +1397,19 @@
   ],
   [
     "bi",
-    "chat-square-text-fill"
-  ],
-  [
-    "bi",
     "chat-square"
   ],
   [
     "bi",
     "chat-text-fill"
+  ],
+  [
+    "bi",
+    "chat-square-text-fill"
+  ],
+  [
+    "bi",
+    "chat-square-text"
   ],
   [
     "bi",
@@ -1425,11 +1421,7 @@
   ],
   [
     "bi",
-    "chat-square-text"
-  ],
-  [
-    "bi",
-    "check-circle-fill"
+    "check-all"
   ],
   [
     "bi",
@@ -1437,11 +1429,19 @@
   ],
   [
     "bi",
+    "check-circle-fill"
+  ],
+  [
+    "bi",
     "check-square-fill"
   ],
   [
     "bi",
-    "check-all"
+    "check-square"
+  ],
+  [
+    "bi",
+    "check2-square"
   ],
   [
     "bi",
@@ -1453,7 +1453,7 @@
   ],
   [
     "bi",
-    "check2-square"
+    "check2-all"
   ],
   [
     "bi",
@@ -1465,15 +1465,7 @@
   ],
   [
     "bi",
-    "chevron-bar-expand"
-  ],
-  [
-    "bi",
     "chevron-bar-left"
-  ],
-  [
-    "bi",
-    "chevron-bar-up"
   ],
   [
     "bi",
@@ -1481,15 +1473,23 @@
   ],
   [
     "bi",
-    "chevron-compact-down"
-  ],
-  [
-    "bi",
     "chevron-compact-left"
   ],
   [
     "bi",
+    "chevron-bar-expand"
+  ],
+  [
+    "bi",
     "chevron-compact-right"
+  ],
+  [
+    "bi",
+    "chevron-bar-up"
+  ],
+  [
+    "bi",
+    "chevron-compact-down"
   ],
   [
     "bi",
@@ -1517,10 +1517,6 @@
   ],
   [
     "bi",
-    "chevron-down"
-  ],
-  [
-    "bi",
     "chevron-expand"
   ],
   [
@@ -1529,15 +1525,23 @@
   ],
   [
     "bi",
+    "check"
+  ],
+  [
+    "bi",
+    "chevron-down"
+  ],
+  [
+    "bi",
     "chevron-right"
   ],
   [
     "bi",
-    "chevron-up"
+    "circle-fill"
   ],
   [
     "bi",
-    "circle-fill"
+    "circle-square"
   ],
   [
     "bi",
@@ -1549,15 +1553,15 @@
   ],
   [
     "bi",
-    "circle-square"
-  ],
-  [
-    "bi",
-    "clipboard-data"
+    "chevron-up"
   ],
   [
     "bi",
     "clipboard-check"
+  ],
+  [
+    "bi",
+    "clipboard-data"
   ],
   [
     "bi",
@@ -1577,19 +1581,7 @@
   ],
   [
     "bi",
-    "clock-fill"
-  ],
-  [
-    "bi",
-    "clock-history"
-  ],
-  [
-    "bi",
     "clock"
-  ],
-  [
-    "bi",
-    "cloud-arrow-down-fill"
   ],
   [
     "bi",
@@ -1597,15 +1589,27 @@
   ],
   [
     "bi",
+    "clock-history"
+  ],
+  [
+    "bi",
+    "clock-fill"
+  ],
+  [
+    "bi",
+    "cloud-arrow-down-fill"
+  ],
+  [
+    "bi",
     "cloud-arrow-up-fill"
   ],
   [
     "bi",
-    "cloud-arrow-up"
+    "cloud-check-fill"
   ],
   [
     "bi",
-    "cloud-check-fill"
+    "cloud-arrow-up"
   ],
   [
     "bi",
@@ -1621,15 +1625,11 @@
   ],
   [
     "bi",
-    "cloud-drizzle-fill"
-  ],
-  [
-    "bi",
     "cloud-drizzle"
   ],
   [
     "bi",
-    "cloud-fog-fill"
+    "cloud-drizzle-fill"
   ],
   [
     "bi",
@@ -1637,7 +1637,11 @@
   ],
   [
     "bi",
-    "cloud-fog2-fill"
+    "cloud-fog-fill"
+  ],
+  [
+    "bi",
+    "cloud-hail"
   ],
   [
     "bi",
@@ -1649,11 +1653,11 @@
   ],
   [
     "bi",
-    "cloud-hail-fill"
+    "cloud-haze"
   ],
   [
     "bi",
-    "cloud-hail"
+    "cloud-hail-fill"
   ],
   [
     "bi",
@@ -1661,7 +1665,7 @@
   ],
   [
     "bi",
-    "cloud-haze"
+    "cloud-haze2-fill"
   ],
   [
     "bi",
@@ -1669,7 +1673,7 @@
   ],
   [
     "bi",
-    "cloud-haze2-fill"
+    "cloud-lightning-fill"
   ],
   [
     "bi",
@@ -1677,7 +1681,11 @@
   ],
   [
     "bi",
-    "cloud-lightning-fill"
+    "cloud-fog2-fill"
+  ],
+  [
+    "bi",
+    "cloud-minus-fill"
   ],
   [
     "bi",
@@ -1689,19 +1697,11 @@
   ],
   [
     "bi",
-    "cloud-minus"
-  ],
-  [
-    "bi",
     "cloud-moon-fill"
   ],
   [
     "bi",
-    "cloud-moon"
-  ],
-  [
-    "bi",
-    "cloud-plus-fill"
+    "cloud-minus"
   ],
   [
     "bi",
@@ -1709,7 +1709,19 @@
   ],
   [
     "bi",
+    "cloud-plus-fill"
+  ],
+  [
+    "bi",
+    "cloud-moon"
+  ],
+  [
+    "bi",
     "cloud-plus"
+  ],
+  [
+    "bi",
+    "cloud-rain-heavy"
   ],
   [
     "bi",
@@ -1717,7 +1729,7 @@
   ],
   [
     "bi",
-    "calendar3-fill"
+    "cloud-sleet-fill"
   ],
   [
     "bi",
@@ -1729,19 +1741,11 @@
   ],
   [
     "bi",
-    "cloud-rain-heavy"
+    "cloud-slash"
   ],
   [
     "bi",
-    "cloud-sleet-fill"
-  ],
-  [
-    "bi",
-    "check"
-  ],
-  [
-    "bi",
-    "check-square"
+    "cloud-sleet"
   ],
   [
     "bi",
@@ -1753,19 +1757,19 @@
   ],
   [
     "bi",
-    "cloud-upload-fill"
-  ],
-  [
-    "bi",
     "cloud-sun"
   ],
   [
     "bi",
-    "cloud-slash"
+    "cloud-snow-fill"
   ],
   [
     "bi",
-    "cloud"
+    "cloud-upload-fill"
+  ],
+  [
+    "bi",
+    "cloud-upload"
   ],
   [
     "bi",
@@ -1781,15 +1785,11 @@
   ],
   [
     "bi",
-    "cloud-upload"
+    "cloud"
   ],
   [
     "bi",
-    "cloudy"
-  ],
-  [
-    "bi",
-    "code-square"
+    "code-slash"
   ],
   [
     "bi",
@@ -1797,11 +1797,11 @@
   ],
   [
     "bi",
-    "collection-fill"
+    "code-square"
   ],
   [
     "bi",
-    "collection-play"
+    "collection-fill"
   ],
   [
     "bi",
@@ -1809,7 +1809,11 @@
   ],
   [
     "bi",
-    "code-slash"
+    "collection"
+  ],
+  [
+    "bi",
+    "command"
   ],
   [
     "bi",
@@ -1821,7 +1825,7 @@
   ],
   [
     "bi",
-    "command"
+    "collection-play"
   ],
   [
     "bi",
@@ -1829,15 +1833,7 @@
   ],
   [
     "bi",
-    "compass"
-  ],
-  [
-    "bi",
-    "collection"
-  ],
-  [
-    "bi",
-    "cone-striped"
+    "cloudy"
   ],
   [
     "bi",
@@ -1845,11 +1841,19 @@
   ],
   [
     "bi",
-    "cpu-fill"
+    "controller"
   ],
   [
     "bi",
-    "cpu"
+    "compass"
+  ],
+  [
+    "bi",
+    "cone-striped"
+  ],
+  [
+    "bi",
+    "cpu-fill"
   ],
   [
     "bi",
@@ -1857,11 +1861,7 @@
   ],
   [
     "bi",
-    "credit-card-2-front-fill"
-  ],
-  [
-    "bi",
-    "controller"
+    "cpu"
   ],
   [
     "bi",
@@ -1869,11 +1869,7 @@
   ],
   [
     "bi",
-    "credit-card-fill"
-  ],
-  [
-    "bi",
-    "credit-card"
+    "credit-card-2-front-fill"
   ],
   [
     "bi",
@@ -1885,11 +1881,15 @@
   ],
   [
     "bi",
-    "camera-video-fill"
+    "cup-fill"
   ],
   [
     "bi",
-    "calendar2-plus-fill"
+    "credit-card-fill"
+  ],
+  [
+    "bi",
+    "credit-card"
   ],
   [
     "bi",
@@ -1897,7 +1897,7 @@
   ],
   [
     "bi",
-    "cursor"
+    "cup"
   ],
   [
     "bi",
@@ -1905,15 +1905,19 @@
   ],
   [
     "bi",
+    "cursor"
+  ],
+  [
+    "bi",
+    "cursor-fill"
+  ],
+  [
+    "bi",
     "dash-circle-fill"
   ],
   [
     "bi",
-    "cup-fill"
-  ],
-  [
-    "bi",
-    "cup"
+    "dash-square-dotted"
   ],
   [
     "bi",
@@ -1921,71 +1925,7 @@
   ],
   [
     "bi",
-    "check2-all"
-  ],
-  [
-    "bi",
-    "dash-circle"
-  ],
-  [
-    "bi",
-    "dash-square"
-  ],
-  [
-    "bi",
-    "diagram-2"
-  ],
-  [
-    "bi",
-    "diagram-3"
-  ],
-  [
-    "bi",
-    "diamond-half"
-  ],
-  [
-    "bi",
     "dash-square-fill"
-  ],
-  [
-    "bi",
-    "diagram-3-fill"
-  ],
-  [
-    "bi",
-    "dice-1-fill"
-  ],
-  [
-    "bi",
-    "dice-1"
-  ],
-  [
-    "bi",
-    "dice-2-fill"
-  ],
-  [
-    "bi",
-    "dice-2"
-  ],
-  [
-    "bi",
-    "diagram-2-fill"
-  ],
-  [
-    "bi",
-    "diamond"
-  ],
-  [
-    "bi",
-    "dice-4-fill"
-  ],
-  [
-    "bi",
-    "dice-4"
-  ],
-  [
-    "bi",
-    "dice-5-fill"
   ],
   [
     "bi",
@@ -1993,19 +1933,55 @@
   ],
   [
     "bi",
-    "dice-5"
+    "dash-circle"
   ],
   [
     "bi",
-    "dice-6"
+    "diagram-2"
   ],
   [
     "bi",
-    "disc-fill"
+    "diagram-2-fill"
   ],
   [
     "bi",
-    "disc"
+    "dash-square"
+  ],
+  [
+    "bi",
+    "diagram-3-fill"
+  ],
+  [
+    "bi",
+    "diagram-3"
+  ],
+  [
+    "bi",
+    "diamond-fill"
+  ],
+  [
+    "bi",
+    "dice-1"
+  ],
+  [
+    "bi",
+    "diamond"
+  ],
+  [
+    "bi",
+    "diamond-half"
+  ],
+  [
+    "bi",
+    "dice-1-fill"
+  ],
+  [
+    "bi",
+    "dice-2"
+  ],
+  [
+    "bi",
+    "dice-2-fill"
   ],
   [
     "bi",
@@ -2013,11 +1989,55 @@
   ],
   [
     "bi",
-    "discord"
+    "dice-4-fill"
+  ],
+  [
+    "bi",
+    "dice-3"
+  ],
+  [
+    "bi",
+    "dice-4"
+  ],
+  [
+    "bi",
+    "dice-5"
+  ],
+  [
+    "bi",
+    "dice-5-fill"
+  ],
+  [
+    "bi",
+    "dice-6-fill"
+  ],
+  [
+    "bi",
+    "dice-6"
+  ],
+  [
+    "bi",
+    "disc"
   ],
   [
     "bi",
     "display"
+  ],
+  [
+    "bi",
+    "display-fill"
+  ],
+  [
+    "bi",
+    "discord"
+  ],
+  [
+    "bi",
+    "disc-fill"
+  ],
+  [
+    "bi",
+    "door-closed-fill"
   ],
   [
     "bi",
@@ -2029,7 +2049,7 @@
   ],
   [
     "bi",
-    "door-closed-fill"
+    "door-open-fill"
   ],
   [
     "bi",
@@ -2037,7 +2057,7 @@
   ],
   [
     "bi",
-    "door-open-fill"
+    "download"
   ],
   [
     "bi",
@@ -2045,11 +2065,7 @@
   ],
   [
     "bi",
-    "dot"
-  ],
-  [
-    "bi",
-    "download"
+    "droplet-half"
   ],
   [
     "bi",
@@ -2057,7 +2073,7 @@
   ],
   [
     "bi",
-    "droplet-half"
+    "dot"
   ],
   [
     "bi",
@@ -2069,6 +2085,10 @@
   ],
   [
     "bi",
+    "egg-fill"
+  ],
+  [
+    "bi",
     "easel-fill"
   ],
   [
@@ -2077,23 +2097,11 @@
   ],
   [
     "bi",
-    "egg-fill"
-  ],
-  [
-    "bi",
-    "egg-fried"
-  ],
-  [
-    "bi",
     "egg"
   ],
   [
     "bi",
-    "eject-fill"
-  ],
-  [
-    "bi",
-    "eject"
+    "egg-fried"
   ],
   [
     "bi",
@@ -2105,15 +2113,15 @@
   ],
   [
     "bi",
+    "eject-fill"
+  ],
+  [
+    "bi",
+    "eject"
+  ],
+  [
+    "bi",
     "emoji-dizzy-fill"
-  ],
-  [
-    "bi",
-    "emoji-dizzy"
-  ],
-  [
-    "bi",
-    "emoji-expressionless-fill"
   ],
   [
     "bi",
@@ -2122,6 +2130,14 @@
   [
     "bi",
     "emoji-frown-fill"
+  ],
+  [
+    "bi",
+    "emoji-dizzy"
+  ],
+  [
+    "bi",
+    "emoji-expressionless-fill"
   ],
   [
     "bi",
@@ -2145,11 +2161,15 @@
   ],
   [
     "bi",
+    "emoji-smile-upside-down-fill"
+  ],
+  [
+    "bi",
     "emoji-neutral-fill"
   ],
   [
     "bi",
-    "emoji-neutral"
+    "emoji-smile-upside-down"
   ],
   [
     "bi",
@@ -2157,31 +2177,7 @@
   ],
   [
     "bi",
-    "emoji-sunglasses-fill"
-  ],
-  [
-    "bi",
-    "emoji-sunglasses"
-  ],
-  [
-    "bi",
-    "emoji-wink-fill"
-  ],
-  [
-    "bi",
-    "emoji-smile-upside-down-fill"
-  ],
-  [
-    "bi",
-    "emoji-wink"
-  ],
-  [
-    "bi",
-    "envelope-open-fill"
-  ],
-  [
-    "bi",
-    "envelope-fill"
+    "emoji-neutral"
   ],
   [
     "bi",
@@ -2189,11 +2185,35 @@
   ],
   [
     "bi",
+    "emoji-sunglasses-fill"
+  ],
+  [
+    "bi",
+    "emoji-wink"
+  ],
+  [
+    "bi",
+    "emoji-sunglasses"
+  ],
+  [
+    "bi",
+    "envelope-fill"
+  ],
+  [
+    "bi",
     "envelope-open"
   ],
   [
     "bi",
+    "emoji-wink-fill"
+  ],
+  [
+    "bi",
     "envelope"
+  ],
+  [
+    "bi",
+    "envelope-open-fill"
   ],
   [
     "bi",
@@ -2205,19 +2225,11 @@
   ],
   [
     "bi",
-    "emoji-smile-upside-down"
-  ],
-  [
-    "bi",
     "exclamation-circle-fill"
   ],
   [
     "bi",
     "exclamation-circle"
-  ],
-  [
-    "bi",
-    "exclamation-diamond-fill"
   ],
   [
     "bi",
@@ -2229,7 +2241,7 @@
   ],
   [
     "bi",
-    "exclamation-octagon"
+    "exclamation-diamond-fill"
   ],
   [
     "bi",
@@ -2241,7 +2253,7 @@
   ],
   [
     "bi",
-    "exclamation-triangle-fill"
+    "exclamation-octagon"
   ],
   [
     "bi",
@@ -2249,7 +2261,15 @@
   ],
   [
     "bi",
+    "eye-slash-fill"
+  ],
+  [
+    "bi",
     "exclamation"
+  ],
+  [
+    "bi",
+    "exclamation-triangle-fill"
   ],
   [
     "bi",
@@ -2261,35 +2281,7 @@
   ],
   [
     "bi",
-    "eye-slash-fill"
-  ],
-  [
-    "bi",
     "eye-slash"
-  ],
-  [
-    "bi",
-    "eyedropper"
-  ],
-  [
-    "bi",
-    "eye"
-  ],
-  [
-    "bi",
-    "eyeglasses"
-  ],
-  [
-    "bi",
-    "facebook"
-  ],
-  [
-    "bi",
-    "file-arrow-down-fill"
-  ],
-  [
-    "bi",
-    "file-arrow-down"
   ],
   [
     "bi",
@@ -2297,7 +2289,11 @@
   ],
   [
     "bi",
-    "file-arrow-up"
+    "facebook"
+  ],
+  [
+    "bi",
+    "eyeglasses"
   ],
   [
     "bi",
@@ -2305,7 +2301,27 @@
   ],
   [
     "bi",
+    "file-arrow-up"
+  ],
+  [
+    "bi",
+    "eyedropper"
+  ],
+  [
+    "bi",
+    "file-arrow-down-fill"
+  ],
+  [
+    "bi",
     "file-bar-graph"
+  ],
+  [
+    "bi",
+    "file-arrow-down"
+  ],
+  [
+    "bi",
+    "eye"
   ],
   [
     "bi",
@@ -2317,7 +2333,7 @@
   ],
   [
     "bi",
-    "file-break-fill"
+    "file-check-fill"
   ],
   [
     "bi",
@@ -2325,11 +2341,7 @@
   ],
   [
     "bi",
-    "file-check-fill"
-  ],
-  [
-    "bi",
-    "file-check"
+    "file-break-fill"
   ],
   [
     "bi",
@@ -2337,11 +2349,15 @@
   ],
   [
     "bi",
-    "file-code"
+    "file-check"
   ],
   [
     "bi",
     "file-diff-fill"
+  ],
+  [
+    "bi",
+    "file-code"
   ],
   [
     "bi",
@@ -2365,19 +2381,11 @@
   ],
   [
     "bi",
-    "file-earmark-bar-graph-fill"
-  ],
-  [
-    "bi",
     "file-earmark-bar-graph"
   ],
   [
     "bi",
-    "file-earmark-binary-fill"
-  ],
-  [
-    "bi",
-    "file-earmark-binary"
+    "file-earmark-bar-graph-fill"
   ],
   [
     "bi",
@@ -2389,7 +2397,11 @@
   ],
   [
     "bi",
-    "file-earmark-check-fill"
+    "file-earmark-binary-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-binary"
   ],
   [
     "bi",
@@ -2397,7 +2409,11 @@
   ],
   [
     "bi",
-    "file-earmark-code-fill"
+    "file-earmark-diff-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-check-fill"
   ],
   [
     "bi",
@@ -2405,7 +2421,7 @@
   ],
   [
     "bi",
-    "file-earmark-diff-fill"
+    "file-earmark-code-fill"
   ],
   [
     "bi",
@@ -2417,15 +2433,11 @@
   ],
   [
     "bi",
-    "file-earmark-easel"
-  ],
-  [
-    "bi",
     "file-earmark-excel-fill"
   ],
   [
     "bi",
-    "file-earmark-excel"
+    "file-earmark-easel"
   ],
   [
     "bi",
@@ -2433,11 +2445,15 @@
   ],
   [
     "bi",
-    "file-earmark-font-fill"
+    "file-earmark-excel"
   ],
   [
     "bi",
-    "display-fill"
+    "calendar-month-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-font"
   ],
   [
     "bi",
@@ -2449,10 +2465,6 @@
   ],
   [
     "bi",
-    "file-earmark-font"
-  ],
-  [
-    "bi",
     "file-earmark-lock-fill"
   ],
   [
@@ -2461,31 +2473,15 @@
   ],
   [
     "bi",
-    "file-earmark-medical-fill"
-  ],
-  [
-    "bi",
-    "file-earmark-lock2"
-  ],
-  [
-    "bi",
     "file-earmark-lock"
   ],
   [
     "bi",
-    "diamond-fill"
+    "file-earmark-medical-fill"
   ],
   [
     "bi",
-    "file-earmark-minus"
-  ],
-  [
-    "bi",
-    "file-earmark-medical"
-  ],
-  [
-    "bi",
-    "file-earmark-music-fill"
+    "calendar-event"
   ],
   [
     "bi",
@@ -2493,15 +2489,15 @@
   ],
   [
     "bi",
+    "file-earmark-medical"
+  ],
+  [
+    "bi",
     "file-earmark-music"
   ],
   [
     "bi",
-    "file-earmark-play-fill"
-  ],
-  [
-    "bi",
-    "file-earmark-plus"
+    "file-earmark-minus"
   ],
   [
     "bi",
@@ -2509,7 +2505,27 @@
   ],
   [
     "bi",
-    "file-earmark-person"
+    "file-earmark-music-fill"
+  ],
+  [
+    "bi",
+    "border-style"
+  ],
+  [
+    "bi",
+    "file-earmark-play"
+  ],
+  [
+    "bi",
+    "file-earmark-play-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-plus-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-plus"
   ],
   [
     "bi",
@@ -2521,10 +2537,6 @@
   ],
   [
     "bi",
-    "file-earmark-ppt-fill"
-  ],
-  [
-    "bi",
     "file-earmark-post"
   ],
   [
@@ -2533,11 +2545,11 @@
   ],
   [
     "bi",
-    "file-earmark-richtext"
+    "file-earmark-ppt-fill"
   ],
   [
     "bi",
-    "dash-square-dotted"
+    "file-earmark-richtext"
   ],
   [
     "bi",
@@ -2545,15 +2557,11 @@
   ],
   [
     "bi",
-    "file-earmark-plus-fill"
-  ],
-  [
-    "bi",
     "file-earmark-ruled"
   ],
   [
     "bi",
-    "file-earmark-slides"
+    "file-earmark-slides-fill"
   ],
   [
     "bi",
@@ -2561,11 +2569,15 @@
   ],
   [
     "bi",
-    "cloud-minus-fill"
+    "file-earmark-slides"
   ],
   [
     "bi",
-    "file-earmark-play"
+    "file-earmark-text-fill"
+  ],
+  [
+    "bi",
+    "file-earmark-spreadsheet"
   ],
   [
     "bi",
@@ -2577,23 +2589,11 @@
   ],
   [
     "bi",
-    "file-earmark-x"
-  ],
-  [
-    "bi",
-    "file-earmark-text-fill"
-  ],
-  [
-    "bi",
     "file-earmark-word"
   ],
   [
     "bi",
-    "file-earmark-zip-fill"
-  ],
-  [
-    "bi",
-    "file-earmark-zip"
+    "file-earmark-x"
   ],
   [
     "bi",
@@ -2601,7 +2601,11 @@
   ],
   [
     "bi",
-    "file-earmark-spreadsheet"
+    "file-earmark-zip"
+  ],
+  [
+    "bi",
+    "file-earmark-zip-fill"
   ],
   [
     "bi",
@@ -2613,7 +2617,7 @@
   ],
   [
     "bi",
-    "file-excel-fill"
+    "file-easel"
   ],
   [
     "bi",
@@ -2621,11 +2625,15 @@
   ],
   [
     "bi",
-    "file-fill"
+    "file-excel-fill"
   ],
   [
     "bi",
-    "dice-6-fill"
+    "file-font-fill"
+  ],
+  [
+    "bi",
+    "file-fill"
   ],
   [
     "bi",
@@ -2633,15 +2641,23 @@
   ],
   [
     "bi",
-    "file-lock-fill"
-  ],
-  [
-    "bi",
     "file-font"
   ],
   [
     "bi",
+    "file-lock-fill"
+  ],
+  [
+    "bi",
     "file-lock"
+  ],
+  [
+    "bi",
+    "file-lock2-fill"
+  ],
+  [
+    "bi",
+    "file-minus-fill"
   ],
   [
     "bi",
@@ -2657,10 +2673,6 @@
   ],
   [
     "bi",
-    "file-minus-fill"
-  ],
-  [
-    "bi",
     "file-minus"
   ],
   [
@@ -2673,7 +2685,7 @@
   ],
   [
     "bi",
-    "file-person-fill"
+    "file-play-fill"
   ],
   [
     "bi",
@@ -2681,11 +2693,15 @@
   ],
   [
     "bi",
-    "file-play-fill"
+    "file-play"
   ],
   [
     "bi",
-    "file-play"
+    "file-person-fill"
+  ],
+  [
+    "bi",
+    "file-plus"
   ],
   [
     "bi",
@@ -2693,7 +2709,7 @@
   ],
   [
     "bi",
-    "file-plus"
+    "file-image"
   ],
   [
     "bi",
@@ -2705,19 +2721,19 @@
   ],
   [
     "bi",
-    "file-ppt-fill"
-  ],
-  [
-    "bi",
     "file-ppt"
   ],
   [
     "bi",
-    "file-richtext-fill"
+    "file-ppt-fill"
   ],
   [
     "bi",
     "file-richtext"
+  ],
+  [
+    "bi",
+    "file-richtext-fill"
   ],
   [
     "bi",
@@ -2733,15 +2749,11 @@
   ],
   [
     "bi",
-    "file-slides"
-  ],
-  [
-    "bi",
     "file-spreadsheet-fill"
   ],
   [
     "bi",
-    "file-spreadsheet"
+    "file-slides"
   ],
   [
     "bi",
@@ -2749,11 +2761,11 @@
   ],
   [
     "bi",
-    "file-text"
+    "file-word-fill"
   ],
   [
     "bi",
-    "file-word-fill"
+    "file-spreadsheet"
   ],
   [
     "bi",
@@ -2761,11 +2773,11 @@
   ],
   [
     "bi",
-    "file-x-fill"
+    "file-text"
   ],
   [
     "bi",
-    "file-x"
+    "file-x-fill"
   ],
   [
     "bi",
@@ -2773,7 +2785,7 @@
   ],
   [
     "bi",
-    "file-zip"
+    "file-x"
   ],
   [
     "bi",
@@ -2781,7 +2793,15 @@
   ],
   [
     "bi",
+    "file-zip"
+  ],
+  [
+    "bi",
     "files-alt"
+  ],
+  [
+    "bi",
+    "film"
   ],
   [
     "bi",
@@ -2789,19 +2809,11 @@
   ],
   [
     "bi",
-    "cloud-sleet"
-  ],
-  [
-    "bi",
-    "filter-circle-fill"
-  ],
-  [
-    "bi",
     "filter-circle"
   ],
   [
     "bi",
-    "filter-right"
+    "filter-circle-fill"
   ],
   [
     "bi",
@@ -2813,11 +2825,19 @@
   ],
   [
     "bi",
-    "filter-square"
+    "filter"
   ],
   [
     "bi",
-    "filter"
+    "flower1"
+  ],
+  [
+    "bi",
+    "filter-right"
+  ],
+  [
+    "bi",
+    "filter-square"
   ],
   [
     "bi",
@@ -2826,10 +2846,6 @@
   [
     "bi",
     "flag"
-  ],
-  [
-    "bi",
-    "flower1"
   ],
   [
     "bi",
@@ -2845,15 +2861,7 @@
   ],
   [
     "bi",
-    "folder-fill"
-  ],
-  [
-    "bi",
-    "file-earmark-slides-fill"
-  ],
-  [
-    "bi",
-    "folder-plus"
+    "folder-minus"
   ],
   [
     "bi",
@@ -2861,11 +2869,15 @@
   ],
   [
     "bi",
-    "folder-symlink"
+    "folder-fill"
   ],
   [
     "bi",
-    "folder-x"
+    "folder-plus"
+  ],
+  [
+    "bi",
+    "folder-symlink"
   ],
   [
     "bi",
@@ -2873,7 +2885,7 @@
   ],
   [
     "bi",
-    "cloud-snow-fill"
+    "folder-x"
   ],
   [
     "bi",
@@ -2881,7 +2893,11 @@
   ],
   [
     "bi",
-    "file-font-fill"
+    "forward"
+  ],
+  [
+    "bi",
+    "folder2-open"
   ],
   [
     "bi",
@@ -2893,7 +2909,7 @@
   ],
   [
     "bi",
-    "forward"
+    "fullscreen-exit"
   ],
   [
     "bi",
@@ -2901,23 +2917,19 @@
   ],
   [
     "bi",
-    "fullscreen-exit"
-  ],
-  [
-    "bi",
     "fullscreen"
   ],
   [
     "bi",
-    "funnel-fill"
-  ],
-  [
-    "bi",
-    "file-image"
-  ],
-  [
-    "bi",
     "funnel"
+  ],
+  [
+    "bi",
+    "gear-wide-connected"
+  ],
+  [
+    "bi",
+    "funnel-fill"
   ],
   [
     "bi",
@@ -2929,7 +2941,7 @@
   ],
   [
     "bi",
-    "file-lock2-fill"
+    "gem"
   ],
   [
     "bi",
@@ -2937,11 +2949,11 @@
   ],
   [
     "bi",
-    "geo-alt-fill"
+    "geo-alt"
   ],
   [
     "bi",
-    "film"
+    "geo-alt-fill"
   ],
   [
     "bi",
@@ -2953,11 +2965,11 @@
   ],
   [
     "bi",
-    "gift-fill"
+    "github"
   ],
   [
     "bi",
-    "gift"
+    "gift-fill"
   ],
   [
     "bi",
@@ -2965,7 +2977,7 @@
   ],
   [
     "bi",
-    "github"
+    "google"
   ],
   [
     "bi",
@@ -2973,7 +2985,7 @@
   ],
   [
     "bi",
-    "gem"
+    "gift"
   ],
   [
     "bi",
@@ -2985,14 +2997,6 @@
   ],
   [
     "bi",
-    "grid-1x2-fill"
-  ],
-  [
-    "bi",
-    "grid-3x2-gap"
-  ],
-  [
-    "bi",
     "grid-1x2"
   ],
   [
@@ -3001,7 +3005,15 @@
   ],
   [
     "bi",
-    "grid-3x3-gap-fill"
+    "grid-1x2-fill"
+  ],
+  [
+    "bi",
+    "grid-3x2-gap-fill"
+  ],
+  [
+    "bi",
+    "grid-3x2-gap"
   ],
   [
     "bi",
@@ -3009,7 +3021,11 @@
   ],
   [
     "bi",
-    "grid-3x3"
+    "grid-3x3-gap-fill"
+  ],
+  [
+    "bi",
+    "grid"
   ],
   [
     "bi",
@@ -3017,7 +3033,7 @@
   ],
   [
     "bi",
-    "grid"
+    "grid-3x3"
   ],
   [
     "bi",
@@ -3029,7 +3045,7 @@
   ],
   [
     "bi",
-    "hammer"
+    "hand-index-thumb-fill"
   ],
   [
     "bi",
@@ -3037,7 +3053,7 @@
   ],
   [
     "bi",
-    "hand-index-thumb-fill"
+    "hammer"
   ],
   [
     "bi",
@@ -3049,19 +3065,7 @@
   ],
   [
     "bi",
-    "hand-thumbs-down-fill"
-  ],
-  [
-    "bi",
     "hand-thumbs-down"
-  ],
-  [
-    "bi",
-    "hand-thumbs-up-fill"
-  ],
-  [
-    "bi",
-    "hand-thumbs-up"
   ],
   [
     "bi",
@@ -3069,11 +3073,19 @@
   ],
   [
     "bi",
-    "hash"
+    "handbag"
   ],
   [
     "bi",
-    "handbag"
+    "hdd-network-fill"
+  ],
+  [
+    "bi",
+    "hand-thumbs-up-fill"
+  ],
+  [
+    "bi",
+    "hash"
   ],
   [
     "bi",
@@ -3081,7 +3093,7 @@
   ],
   [
     "bi",
-    "hdd-network-fill"
+    "hand-thumbs-up"
   ],
   [
     "bi",
@@ -3093,7 +3105,7 @@
   ],
   [
     "bi",
-    "hdd-rack"
+    "hdd"
   ],
   [
     "bi",
@@ -3105,11 +3117,11 @@
   ],
   [
     "bi",
-    "hdd"
+    "hand-thumbs-down-fill"
   ],
   [
     "bi",
-    "headset"
+    "hdd-rack"
   ],
   [
     "bi",
@@ -3121,19 +3133,11 @@
   ],
   [
     "bi",
+    "headset"
+  ],
+  [
+    "bi",
     "heart-half"
-  ],
-  [
-    "bi",
-    "gear-wide-connected"
-  ],
-  [
-    "bi",
-    "google"
-  ],
-  [
-    "bi",
-    "grid-3x2-gap-fill"
   ],
   [
     "bi",
@@ -3145,15 +3149,15 @@
   ],
   [
     "bi",
+    "heptagon"
+  ],
+  [
+    "bi",
     "heptagon-half"
   ],
   [
     "bi",
     "hexagon-fill"
-  ],
-  [
-    "bi",
-    "heptagon"
   ],
   [
     "bi",
@@ -3165,19 +3169,19 @@
   ],
   [
     "bi",
-    "hourglass-bottom"
-  ],
-  [
-    "bi",
     "hourglass-split"
   ],
   [
     "bi",
-    "hourglass-top"
+    "hourglass"
   ],
   [
     "bi",
-    "hourglass"
+    "hourglass-bottom"
+  ],
+  [
+    "bi",
+    "hourglass-top"
   ],
   [
     "bi",
@@ -3189,19 +3193,11 @@
   ],
   [
     "bi",
-    "house-fill"
-  ],
-  [
-    "bi",
     "house"
   ],
   [
     "bi",
-    "hr"
-  ],
-  [
-    "bi",
-    "hurricane"
+    "house-fill"
   ],
   [
     "bi",
@@ -3209,15 +3205,27 @@
   ],
   [
     "bi",
+    "file-earmark-font-fill"
+  ],
+  [
+    "bi",
+    "hurricane"
+  ],
+  [
+    "bi",
     "image-fill"
   ],
   [
     "bi",
-    "image"
+    "images"
   ],
   [
     "bi",
     "inbox-fill"
+  ],
+  [
+    "bi",
+    "image"
   ],
   [
     "bi",
@@ -3229,7 +3237,11 @@
   ],
   [
     "bi",
-    "images"
+    "inboxes-fill"
+  ],
+  [
+    "bi",
+    "info-circle"
   ],
   [
     "bi",
@@ -3241,7 +3253,15 @@
   ],
   [
     "bi",
-    "info-circle"
+    "info"
+  ],
+  [
+    "bi",
+    "file-earmark-lock2"
+  ],
+  [
+    "bi",
+    "file-earmark-person"
   ],
   [
     "bi",
@@ -3249,23 +3269,7 @@
   ],
   [
     "bi",
-    "info"
-  ],
-  [
-    "bi",
-    "input-cursor-text"
-  ],
-  [
-    "bi",
     "input-cursor"
-  ],
-  [
-    "bi",
-    "inboxes-fill"
-  ],
-  [
-    "bi",
-    "intersect"
   ],
   [
     "bi",
@@ -3273,11 +3277,15 @@
   ],
   [
     "bi",
+    "journal-arrow-up"
+  ],
+  [
+    "bi",
     "journal-arrow-down"
   ],
   [
     "bi",
-    "journal-arrow-up"
+    "instagram"
   ],
   [
     "bi",
@@ -3289,10 +3297,6 @@
   ],
   [
     "bi",
-    "journal-check"
-  ],
-  [
-    "bi",
     "journal-code"
   ],
   [
@@ -3301,7 +3305,7 @@
   ],
   [
     "bi",
-    "journal-minus"
+    "journal-check"
   ],
   [
     "bi",
@@ -3309,15 +3313,15 @@
   ],
   [
     "bi",
+    "journal-minus"
+  ],
+  [
+    "bi",
     "journal-richtext"
   ],
   [
     "bi",
-    "instagram"
-  ],
-  [
-    "bi",
-    "journal-x"
+    "journal-text"
   ],
   [
     "bi",
@@ -3325,11 +3329,15 @@
   ],
   [
     "bi",
+    "journal-x"
+  ],
+  [
+    "bi",
     "journals"
   ],
   [
     "bi",
-    "joystick"
+    "input-cursor-text"
   ],
   [
     "bi",
@@ -3337,15 +3345,11 @@
   ],
   [
     "bi",
-    "justify-right"
-  ],
-  [
-    "bi",
     "justify"
   ],
   [
     "bi",
-    "kanban"
+    "justify-right"
   ],
   [
     "bi",
@@ -3357,7 +3361,7 @@
   ],
   [
     "bi",
-    "key"
+    "kanban"
   ],
   [
     "bi",
@@ -3365,15 +3369,11 @@
   ],
   [
     "bi",
+    "key"
+  ],
+  [
+    "bi",
     "keyboard"
-  ],
-  [
-    "bi",
-    "ladder"
-  ],
-  [
-    "bi",
-    "lamp-fill"
   ],
   [
     "bi",
@@ -3381,7 +3381,7 @@
   ],
   [
     "bi",
-    "laptop"
+    "ladder"
   ],
   [
     "bi",
@@ -3389,7 +3389,11 @@
   ],
   [
     "bi",
-    "layer-backward"
+    "lamp-fill"
+  ],
+  [
+    "bi",
+    "laptop"
   ],
   [
     "bi",
@@ -3397,11 +3401,15 @@
   ],
   [
     "bi",
-    "layers-fill"
+    "layer-backward"
   ],
   [
     "bi",
-    "layers-half"
+    "intersect"
+  ],
+  [
+    "bi",
+    "layers-fill"
   ],
   [
     "bi",
@@ -3409,15 +3417,11 @@
   ],
   [
     "bi",
-    "layout-sidebar-inset-reverse"
-  ],
-  [
-    "bi",
     "layout-sidebar-inset"
   ],
   [
     "bi",
-    "layout-sidebar-reverse"
+    "layout-sidebar-inset-reverse"
   ],
   [
     "bi",
@@ -3425,11 +3429,11 @@
   ],
   [
     "bi",
-    "layout-split"
+    "layout-sidebar-reverse"
   ],
   [
     "bi",
-    "layout-text-sidebar-reverse"
+    "layout-split"
   ],
   [
     "bi",
@@ -3437,11 +3441,7 @@
   ],
   [
     "bi",
-    "layout-text-window-reverse"
-  ],
-  [
-    "bi",
-    "layout-three-columns"
+    "layout-text-sidebar-reverse"
   ],
   [
     "bi",
@@ -3449,7 +3449,7 @@
   ],
   [
     "bi",
-    "layout-wtf"
+    "layout-text-window-reverse"
   ],
   [
     "bi",
@@ -3457,11 +3457,11 @@
   ],
   [
     "bi",
-    "journal-text"
+    "joystick"
   ],
   [
     "bi",
-    "lightbulb-off-fill"
+    "layout-three-columns"
   ],
   [
     "bi",
@@ -3469,7 +3469,7 @@
   ],
   [
     "bi",
-    "lightbulb"
+    "hr"
   ],
   [
     "bi",
@@ -3477,15 +3477,11 @@
   ],
   [
     "bi",
-    "dice-3"
+    "layers-half"
   ],
   [
     "bi",
-    "cursor-fill"
-  ],
-  [
-    "bi",
-    "file-easel"
+    "lightbulb-off"
   ],
   [
     "bi",
@@ -3493,19 +3489,7 @@
   ],
   [
     "bi",
-    "link"
-  ],
-  [
-    "bi",
-    "linkedin"
-  ],
-  [
-    "bi",
-    "list-check"
-  ],
-  [
-    "bi",
-    "list-nested"
+    "lightning"
   ],
   [
     "bi",
@@ -3513,11 +3497,31 @@
   ],
   [
     "bi",
-    "list-task"
+    "link-45deg"
   ],
   [
     "bi",
-    "lightbulb-off"
+    "link"
+  ],
+  [
+    "bi",
+    "list-check"
+  ],
+  [
+    "bi",
+    "linkedin"
+  ],
+  [
+    "bi",
+    "list-nested"
+  ],
+  [
+    "bi",
+    "list-stars"
+  ],
+  [
+    "bi",
+    "list-ol"
   ],
   [
     "bi",
@@ -3529,6 +3533,14 @@
   ],
   [
     "bi",
+    "list-task"
+  ],
+  [
+    "bi",
+    "mailbox"
+  ],
+  [
+    "bi",
     "lock-fill"
   ],
   [
@@ -3537,15 +3549,7 @@
   ],
   [
     "bi",
-    "mailbox"
-  ],
-  [
-    "bi",
     "mailbox2"
-  ],
-  [
-    "bi",
-    "map-fill"
   ],
   [
     "bi",
@@ -3553,7 +3557,11 @@
   ],
   [
     "bi",
-    "markdown"
+    "map-fill"
+  ],
+  [
+    "bi",
+    "markdown-fill"
   ],
   [
     "bi",
@@ -3561,19 +3569,11 @@
   ],
   [
     "bi",
+    "markdown"
+  ],
+  [
+    "bi",
     "megaphone-fill"
-  ],
-  [
-    "bi",
-    "list-stars"
-  ],
-  [
-    "bi",
-    "megaphone"
-  ],
-  [
-    "bi",
-    "menu-app-fill"
   ],
   [
     "bi",
@@ -3581,11 +3581,15 @@
   ],
   [
     "bi",
-    "menu-button-fill"
+    "layout-wtf"
   ],
   [
     "bi",
-    "menu-button-wide-fill"
+    "lightbulb"
+  ],
+  [
+    "bi",
+    "megaphone"
   ],
   [
     "bi",
@@ -3593,11 +3597,11 @@
   ],
   [
     "bi",
-    "menu-button"
+    "menu-down"
   ],
   [
     "bi",
-    "menu-down"
+    "menu-button-fill"
   ],
   [
     "bi",
@@ -3605,7 +3609,7 @@
   ],
   [
     "bi",
-    "mic-fill"
+    "menu-button"
   ],
   [
     "bi",
@@ -3617,19 +3621,15 @@
   ],
   [
     "bi",
-    "mic"
-  ],
-  [
-    "bi",
-    "minecart"
-  ],
-  [
-    "bi",
     "minecart-loaded"
   ],
   [
     "bi",
-    "moisture"
+    "mic-fill"
+  ],
+  [
+    "bi",
+    "mic"
   ],
   [
     "bi",
@@ -3637,19 +3637,23 @@
   ],
   [
     "bi",
+    "moisture"
+  ],
+  [
+    "bi",
+    "minecart"
+  ],
+  [
+    "bi",
     "moon-stars-fill"
   ],
   [
     "bi",
-    "moon-stars"
+    "menu-app-fill"
   ],
   [
     "bi",
-    "mouse-fill"
-  ],
-  [
-    "bi",
-    "moon"
+    "lightbulb-off-fill"
   ],
   [
     "bi",
@@ -3661,7 +3665,7 @@
   ],
   [
     "bi",
-    "mouse2"
+    "mouse-fill"
   ],
   [
     "bi",
@@ -3669,11 +3673,19 @@
   ],
   [
     "bi",
-    "mouse3"
+    "music-note-beamed"
   ],
   [
     "bi",
-    "music-note-beamed"
+    "mouse2"
+  ],
+  [
+    "bi",
+    "moon-stars"
+  ],
+  [
+    "bi",
+    "menu-button-wide-fill"
   ],
   [
     "bi",
@@ -3681,7 +3693,7 @@
   ],
   [
     "bi",
-    "music-note"
+    "music-player"
   ],
   [
     "bi",
@@ -3689,11 +3701,11 @@
   ],
   [
     "bi",
-    "markdown-fill"
+    "newspaper"
   ],
   [
     "bi",
-    "music-player"
+    "music-note"
   ],
   [
     "bi",
@@ -3701,15 +3713,7 @@
   ],
   [
     "bi",
-    "node-plus-fill"
-  ],
-  [
-    "bi",
-    "node-plus"
-  ],
-  [
-    "bi",
-    "newspaper"
+    "node-minus-fill"
   ],
   [
     "bi",
@@ -3717,7 +3721,7 @@
   ],
   [
     "bi",
-    "nut"
+    "node-plus"
   ],
   [
     "bi",
@@ -3725,11 +3729,15 @@
   ],
   [
     "bi",
-    "octagon-half"
+    "octagon"
   ],
   [
     "bi",
-    "octagon"
+    "moon"
+  ],
+  [
+    "bi",
+    "octagon-half"
   ],
   [
     "bi",
@@ -3741,19 +3749,7 @@
   ],
   [
     "bi",
-    "paint-bucket"
-  ],
-  [
-    "bi",
-    "palette-fill"
-  ],
-  [
-    "bi",
-    "palette"
-  ],
-  [
-    "bi",
-    "paperclip"
+    "mouse3"
   ],
   [
     "bi",
@@ -3761,11 +3757,15 @@
   ],
   [
     "bi",
-    "paragraph"
+    "paperclip"
   ],
   [
     "bi",
-    "patch-check-fill"
+    "palette-fill"
+  ],
+  [
+    "bi",
+    "paragraph"
   ],
   [
     "bi",
@@ -3773,7 +3773,15 @@
   ],
   [
     "bi",
+    "paint-bucket"
+  ],
+  [
+    "bi",
     "patch-exclamation-fill"
+  ],
+  [
+    "bi",
+    "patch-check-fill"
   ],
   [
     "bi",
@@ -3785,7 +3793,7 @@
   ],
   [
     "bi",
-    "patch-minus"
+    "patch-plus-fill"
   ],
   [
     "bi",
@@ -3793,11 +3801,7 @@
   ],
   [
     "bi",
-    "patch-plus-fill"
-  ],
-  [
-    "bi",
-    "patch-question-fill"
+    "patch-minus"
   ],
   [
     "bi",
@@ -3805,19 +3809,19 @@
   ],
   [
     "bi",
-    "pause-btn-fill"
-  ],
-  [
-    "bi",
     "pause-btn"
   ],
   [
     "bi",
-    "pause-circle-fill"
+    "pause-btn-fill"
   ],
   [
     "bi",
-    "pause-circle"
+    "patch-question-fill"
+  ],
+  [
+    "bi",
+    "pause-circle-fill"
   ],
   [
     "bi",
@@ -3829,7 +3833,7 @@
   ],
   [
     "bi",
-    "peace-fill"
+    "pause-circle"
   ],
   [
     "bi",
@@ -3837,7 +3841,15 @@
   ],
   [
     "bi",
+    "peace-fill"
+  ],
+  [
+    "bi",
     "pen-fill"
+  ],
+  [
+    "bi",
+    "pencil-fill"
   ],
   [
     "bi",
@@ -3845,7 +3857,7 @@
   ],
   [
     "bi",
-    "pencil-fill"
+    "pencil-square"
   ],
   [
     "bi",
@@ -3857,15 +3869,7 @@
   ],
   [
     "bi",
-    "pentagon-half"
-  ],
-  [
-    "bi",
-    "pencil-square"
-  ],
-  [
-    "bi",
-    "people"
+    "pentagon"
   ],
   [
     "bi",
@@ -3877,7 +3881,11 @@
   ],
   [
     "bi",
-    "person-badge-fill"
+    "pentagon-half"
+  ],
+  [
+    "bi",
+    "people"
   ],
   [
     "bi",
@@ -3889,11 +3897,11 @@
   ],
   [
     "bi",
-    "person-check-fill"
+    "person-badge-fill"
   ],
   [
     "bi",
-    "person-check"
+    "person-check-fill"
   ],
   [
     "bi",
@@ -3901,19 +3909,11 @@
   ],
   [
     "bi",
-    "node-minus-fill"
+    "person-check"
   ],
   [
     "bi",
     "person-dash-fill"
-  ],
-  [
-    "bi",
-    "person-dash"
-  ],
-  [
-    "bi",
-    "person-fill"
   ],
   [
     "bi",
@@ -3925,7 +3925,15 @@
   ],
   [
     "bi",
+    "person-x-fill"
+  ],
+  [
+    "bi",
     "person-plus"
+  ],
+  [
+    "bi",
+    "person-fill"
   ],
   [
     "bi",
@@ -3933,23 +3941,15 @@
   ],
   [
     "bi",
-    "person-x"
-  ],
-  [
-    "bi",
-    "person"
-  ],
-  [
-    "bi",
     "phone-fill"
   ],
   [
     "bi",
-    "phone-landscape-fill"
+    "person-dash"
   ],
   [
     "bi",
-    "pentagon"
+    "person-x"
   ],
   [
     "bi",
@@ -3957,11 +3957,15 @@
   ],
   [
     "bi",
+    "person"
+  ],
+  [
+    "bi",
     "phone-vibrate-fill"
   ],
   [
     "bi",
-    "phone-vibrate"
+    "phone-landscape-fill"
   ],
   [
     "bi",
@@ -3969,7 +3973,11 @@
   ],
   [
     "bi",
-    "person-x-fill"
+    "pie-chart-fill"
+  ],
+  [
+    "bi",
+    "phone-vibrate"
   ],
   [
     "bi",
@@ -3977,19 +3985,11 @@
   ],
   [
     "bi",
-    "pin-angle-fill"
-  ],
-  [
-    "bi",
     "pin-angle"
   ],
   [
     "bi",
-    "pin-fill"
-  ],
-  [
-    "bi",
-    "pin"
+    "pin-angle-fill"
   ],
   [
     "bi",
@@ -3997,7 +3997,7 @@
   ],
   [
     "bi",
-    "pip"
+    "pin-fill"
   ],
   [
     "bi",
@@ -4005,7 +4005,7 @@
   ],
   [
     "bi",
-    "play-btn"
+    "pin"
   ],
   [
     "bi",
@@ -4013,7 +4013,11 @@
   ],
   [
     "bi",
-    "play-circle"
+    "pip"
+  ],
+  [
+    "bi",
+    "play-btn"
   ],
   [
     "bi",
@@ -4021,15 +4025,19 @@
   ],
   [
     "bi",
-    "play"
-  ],
-  [
-    "bi",
     "plug-fill"
   ],
   [
     "bi",
+    "play-circle"
+  ],
+  [
+    "bi",
     "plug"
+  ],
+  [
+    "bi",
+    "play"
   ],
   [
     "bi",
@@ -4041,7 +4049,7 @@
   ],
   [
     "bi",
-    "plus-circle"
+    "node-plus-fill"
   ],
   [
     "bi",
@@ -4049,7 +4057,11 @@
   ],
   [
     "bi",
-    "plus-square-dotted"
+    "plus-circle"
+  ],
+  [
+    "bi",
+    "plus"
   ],
   [
     "bi",
@@ -4065,11 +4077,7 @@
   ],
   [
     "bi",
-    "plus"
-  ],
-  [
-    "bi",
-    "printer"
+    "nut"
   ],
   [
     "bi",
@@ -4077,11 +4085,11 @@
   ],
   [
     "bi",
-    "question-circle-fill"
+    "printer"
   ],
   [
     "bi",
-    "printer-fill"
+    "question-circle-fill"
   ],
   [
     "bi",
@@ -4093,15 +4101,15 @@
   ],
   [
     "bi",
+    "question-octagon-fill"
+  ],
+  [
+    "bi",
     "question-diamond"
   ],
   [
     "bi",
-    "question-octagon"
-  ],
-  [
-    "bi",
-    "question-octagon-fill"
+    "palette"
   ],
   [
     "bi",
@@ -4109,27 +4117,11 @@
   ],
   [
     "bi",
-    "question-square"
-  ],
-  [
-    "bi",
-    "pie-chart-fill"
-  ],
-  [
-    "bi",
-    "receipt-cutoff"
-  ],
-  [
-    "bi",
     "question"
   ],
   [
     "bi",
-    "reception-0"
-  ],
-  [
-    "bi",
-    "reception-1"
+    "question-square"
   ],
   [
     "bi",
@@ -4137,7 +4129,23 @@
   ],
   [
     "bi",
+    "receipt"
+  ],
+  [
+    "bi",
+    "reception-0"
+  ],
+  [
+    "bi",
+    "receipt-cutoff"
+  ],
+  [
+    "bi",
     "reception-2"
+  ],
+  [
+    "bi",
+    "reception-1"
   ],
   [
     "bi",
@@ -4149,10 +4157,6 @@
   ],
   [
     "bi",
-    "record-btn-fill"
-  ],
-  [
-    "bi",
     "record-btn"
   ],
   [
@@ -4161,11 +4165,11 @@
   ],
   [
     "bi",
-    "record-circle"
+    "record-btn-fill"
   ],
   [
     "bi",
-    "record-fill"
+    "record-circle"
   ],
   [
     "bi",
@@ -4173,15 +4177,19 @@
   ],
   [
     "bi",
+    "record-fill"
+  ],
+  [
+    "bi",
+    "align-end"
+  ],
+  [
+    "bi",
     "record2-fill"
   ],
   [
     "bi",
-    "record2"
-  ],
-  [
-    "bi",
-    "list-ol"
+    "reply-all-fill"
   ],
   [
     "bi",
@@ -4193,31 +4201,11 @@
   ],
   [
     "bi",
-    "reply"
-  ],
-  [
-    "bi",
     "rss-fill"
   ],
   [
     "bi",
-    "link-45deg"
-  ],
-  [
-    "bi",
-    "rulers"
-  ],
-  [
-    "bi",
-    "save-fill"
-  ],
-  [
-    "bi",
-    "reply-all-fill"
-  ],
-  [
-    "bi",
-    "save2-fill"
+    "reply"
   ],
   [
     "bi",
@@ -4225,7 +4213,19 @@
   ],
   [
     "bi",
-    "save"
+    "plus-square-dotted"
+  ],
+  [
+    "bi",
+    "question-octagon"
+  ],
+  [
+    "bi",
+    "printer-fill"
+  ],
+  [
+    "bi",
+    "save-fill"
   ],
   [
     "bi",
@@ -4233,15 +4233,19 @@
   ],
   [
     "bi",
+    "rulers"
+  ],
+  [
+    "bi",
+    "save"
+  ],
+  [
+    "bi",
+    "save2-fill"
+  ],
+  [
+    "bi",
     "scissors"
-  ],
-  [
-    "bi",
-    "screwdriver"
-  ],
-  [
-    "bi",
-    "server"
   ],
   [
     "bi",
@@ -4249,31 +4253,19 @@
   ],
   [
     "bi",
+    "segmented-nav"
+  ],
+  [
+    "bi",
+    "screwdriver"
+  ],
+  [
+    "bi",
     "share-fill"
   ],
   [
     "bi",
-    "geo-alt"
-  ],
-  [
-    "bi",
-    "folder2-open"
-  ],
-  [
-    "bi",
-    "folder-minus"
-  ],
-  [
-    "bi",
-    "shield-check"
-  ],
-  [
-    "bi",
-    "shield-exclamation"
-  ],
-  [
-    "bi",
-    "shield-fill-check"
+    "server"
   ],
   [
     "bi",
@@ -4281,15 +4273,15 @@
   ],
   [
     "bi",
-    "shield-fill-exclamation"
+    "shield-exclamation"
   ],
   [
     "bi",
-    "segmented-nav"
+    "shield-check"
   ],
   [
     "bi",
-    "lightning"
+    "shield-fill-check"
   ],
   [
     "bi",
@@ -4297,19 +4289,15 @@
   ],
   [
     "bi",
-    "shield-fill"
-  ],
-  [
-    "bi",
-    "shield-lock-fill"
-  ],
-  [
-    "bi",
     "shield-fill-x"
   ],
   [
     "bi",
-    "shield-lock"
+    "shield-fill"
+  ],
+  [
+    "bi",
+    "shield-fill-exclamation"
   ],
   [
     "bi",
@@ -4317,15 +4305,15 @@
   ],
   [
     "bi",
+    "shield-lock-fill"
+  ],
+  [
+    "bi",
     "shield-minus"
   ],
   [
     "bi",
-    "shield-plus"
-  ],
-  [
-    "bi",
-    "shield-slash"
+    "shield-lock"
   ],
   [
     "bi",
@@ -4333,19 +4321,19 @@
   ],
   [
     "bi",
+    "shield-plus"
+  ],
+  [
+    "bi",
     "shield-slash-fill"
   ],
   [
     "bi",
-    "shield"
+    "shield-x"
   ],
   [
     "bi",
-    "shop-window"
-  ],
-  [
-    "bi",
-    "shift"
+    "shield-slash"
   ],
   [
     "bi",
@@ -4353,7 +4341,19 @@
   ],
   [
     "bi",
+    "shift"
+  ],
+  [
+    "bi",
+    "shield"
+  ],
+  [
+    "bi",
     "shop"
+  ],
+  [
+    "bi",
+    "shop-window"
   ],
   [
     "bi",
@@ -4365,7 +4365,7 @@
   ],
   [
     "bi",
-    "shield-x"
+    "signpost-fill"
   ],
   [
     "bi",
@@ -4373,7 +4373,7 @@
   ],
   [
     "bi",
-    "signpost-fill"
+    "signpost-split-fill"
   ],
   [
     "bi",
@@ -4381,7 +4381,7 @@
   ],
   [
     "bi",
-    "signpost-split-fill"
+    "sim-fill"
   ],
   [
     "bi",
@@ -4389,15 +4389,7 @@
   ],
   [
     "bi",
-    "sim-fill"
-  ],
-  [
-    "bi",
     "skip-backward-btn-fill"
-  ],
-  [
-    "bi",
-    "skip-backward-btn"
   ],
   [
     "bi",
@@ -4405,7 +4397,7 @@
   ],
   [
     "bi",
-    "skip-backward-circle"
+    "skip-backward-btn"
   ],
   [
     "bi",
@@ -4413,7 +4405,7 @@
   ],
   [
     "bi",
-    "skip-backward"
+    "skip-backward-circle"
   ],
   [
     "bi",
@@ -4421,7 +4413,7 @@
   ],
   [
     "bi",
-    "skip-end-btn-fill"
+    "skip-backward"
   ],
   [
     "bi",
@@ -4429,7 +4421,11 @@
   ],
   [
     "bi",
-    "skip-end"
+    "skip-end-circle-fill"
+  ],
+  [
+    "bi",
+    "skip-end-btn-fill"
   ],
   [
     "bi",
@@ -4437,11 +4433,15 @@
   ],
   [
     "bi",
-    "skip-end-circle"
+    "skip-end"
   ],
   [
     "bi",
-    "skip-end-circle-fill"
+    "skip-forward-btn-fill"
+  ],
+  [
+    "bi",
+    "skip-end-circle"
   ],
   [
     "bi",
@@ -4449,11 +4449,7 @@
   ],
   [
     "bi",
-    "receipt"
-  ],
-  [
-    "bi",
-    "skip-forward-btn-fill"
+    "skip-forward-circle"
   ],
   [
     "bi",
@@ -4473,11 +4469,11 @@
   ],
   [
     "bi",
-    "skip-start-btn-fill"
+    "skip-start-circle-fill"
   ],
   [
     "bi",
-    "skip-start-circle-fill"
+    "skip-start-btn-fill"
   ],
   [
     "bi",
@@ -4485,15 +4481,7 @@
   ],
   [
     "bi",
-    "slash-circle-fill"
-  ],
-  [
-    "bi",
     "skip-start-fill"
-  ],
-  [
-    "bi",
-    "skip-start"
   ],
   [
     "bi",
@@ -4501,11 +4489,19 @@
   ],
   [
     "bi",
-    "slash-circle"
+    "skip-start"
+  ],
+  [
+    "bi",
+    "slash-circle-fill"
   ],
   [
     "bi",
     "slash-square-fill"
+  ],
+  [
+    "bi",
+    "slash-circle"
   ],
   [
     "bi",
@@ -4517,15 +4513,11 @@
   ],
   [
     "bi",
-    "smartwatch"
-  ],
-  [
-    "bi",
     "sliders"
   ],
   [
     "bi",
-    "snow2"
+    "smartwatch"
   ],
   [
     "bi",
@@ -4533,15 +4525,7 @@
   ],
   [
     "bi",
-    "snow3"
-  ],
-  [
-    "bi",
-    "sort-alpha-up-alt"
-  ],
-  [
-    "bi",
-    "sort-down-alt"
+    "snow2"
   ],
   [
     "bi",
@@ -4549,31 +4533,7 @@
   ],
   [
     "bi",
-    "sort-alpha-up"
-  ],
-  [
-    "bi",
-    "sort-numeric-down"
-  ],
-  [
-    "bi",
-    "sort-numeric-down-alt"
-  ],
-  [
-    "bi",
-    "sort-down"
-  ],
-  [
-    "bi",
-    "sort-numeric-up-alt"
-  ],
-  [
-    "bi",
-    "speaker-fill"
-  ],
-  [
-    "bi",
-    "sort-up"
+    "snow3"
   ],
   [
     "bi",
@@ -4581,11 +4541,51 @@
   ],
   [
     "bi",
-    "soundwave"
+    "sort-alpha-up"
+  ],
+  [
+    "bi",
+    "sort-down-alt"
+  ],
+  [
+    "bi",
+    "sort-alpha-up-alt"
+  ],
+  [
+    "bi",
+    "sort-down"
+  ],
+  [
+    "bi",
+    "sort-numeric-down"
+  ],
+  [
+    "bi",
+    "sort-numeric-up-alt"
+  ],
+  [
+    "bi",
+    "sort-numeric-down-alt"
+  ],
+  [
+    "bi",
+    "sort-numeric-up"
+  ],
+  [
+    "bi",
+    "sort-up"
   ],
   [
     "bi",
     "speedometer2"
+  ],
+  [
+    "bi",
+    "speaker-fill"
+  ],
+  [
+    "bi",
+    "speaker"
   ],
   [
     "bi",
@@ -4597,11 +4597,15 @@
   ],
   [
     "bi",
-    "sort-numeric-up"
+    "square-fill"
   ],
   [
     "bi",
-    "square"
+    "soundwave"
+  ],
+  [
+    "bi",
+    "sort-up-alt"
   ],
   [
     "bi",
@@ -4609,7 +4613,7 @@
   ],
   [
     "bi",
-    "square-fill"
+    "square"
   ],
   [
     "bi",
@@ -4625,15 +4629,7 @@
   ],
   [
     "bi",
-    "speaker"
-  ],
-  [
-    "bi",
-    "sort-up-alt"
-  ],
-  [
-    "bi",
-    "stickies-fill"
+    "star"
   ],
   [
     "bi",
@@ -4641,23 +4637,23 @@
   ],
   [
     "bi",
-    "skip-forward-circle"
+    "stickies-fill"
   ],
   [
     "bi",
-    "sticky-fill"
+    "stickies"
   ],
   [
     "bi",
-    "star"
-  ],
-  [
-    "bi",
-    "sticky"
+    "stop-circle-fill"
   ],
   [
     "bi",
     "stop-btn-fill"
+  ],
+  [
+    "bi",
+    "stop-circle"
   ],
   [
     "bi",
@@ -4669,15 +4665,7 @@
   ],
   [
     "bi",
-    "stop-circle-fill"
-  ],
-  [
-    "bi",
-    "stop-btn"
-  ],
-  [
-    "bi",
-    "stop-circle"
+    "stoplights"
   ],
   [
     "bi",
@@ -4689,10 +4677,6 @@
   ],
   [
     "bi",
-    "stoplights"
-  ],
-  [
-    "bi",
     "subtract"
   ],
   [
@@ -4701,7 +4685,15 @@
   ],
   [
     "bi",
-    "suit-diamond"
+    "suit-club"
+  ],
+  [
+    "bi",
+    "suit-club-fill"
+  ],
+  [
+    "bi",
+    "suit-diamond-fill"
   ],
   [
     "bi",
@@ -4709,15 +4701,19 @@
   ],
   [
     "bi",
+    "suit-diamond"
+  ],
+  [
+    "bi",
     "suit-heart"
   ],
   [
     "bi",
-    "suit-spade-fill"
+    "suit-spade"
   ],
   [
     "bi",
-    "suit-spade"
+    "suit-spade-fill"
   ],
   [
     "bi",
@@ -4729,11 +4725,11 @@
   ],
   [
     "bi",
-    "sunglasses"
+    "sunrise-fill"
   ],
   [
     "bi",
-    "sunrise-fill"
+    "sunglasses"
   ],
   [
     "bi",
@@ -4745,7 +4741,7 @@
   ],
   [
     "bi",
-    "sunset"
+    "sticky"
   ],
   [
     "bi",
@@ -4761,11 +4757,11 @@
   ],
   [
     "bi",
-    "suit-diamond-fill"
+    "tablet-fill"
   ],
   [
     "bi",
-    "tablet-fill"
+    "tablet-landscape-fill"
   ],
   [
     "bi",
@@ -4789,7 +4785,7 @@
   ],
   [
     "bi",
-    "tablet-landscape-fill"
+    "tags"
   ],
   [
     "bi",
@@ -4797,15 +4793,15 @@
   ],
   [
     "bi",
+    "sticky-fill"
+  ],
+  [
+    "bi",
+    "telephone-forward"
+  ],
+  [
+    "bi",
     "telephone-forward-fill"
-  ],
-  [
-    "bi",
-    "telephone-fill"
-  ],
-  [
-    "bi",
-    "tags"
   ],
   [
     "bi",
@@ -4821,23 +4817,15 @@
   ],
   [
     "bi",
+    "record2"
+  ],
+  [
+    "bi",
+    "arrow-bar-up"
+  ],
+  [
+    "bi",
     "telephone-minus"
-  ],
-  [
-    "bi",
-    "suit-club-fill"
-  ],
-  [
-    "bi",
-    "suit-club"
-  ],
-  [
-    "bi",
-    "telephone-forward"
-  ],
-  [
-    "bi",
-    "telephone-outbound-fill"
   ],
   [
     "bi",
@@ -4849,7 +4837,11 @@
   ],
   [
     "bi",
-    "telephone-x-fill"
+    "telephone-outbound-fill"
+  ],
+  [
+    "bi",
+    "telephone-fill"
   ],
   [
     "bi",
@@ -4857,7 +4849,7 @@
   ],
   [
     "bi",
-    "terminal"
+    "telephone"
   ],
   [
     "bi",
@@ -4865,7 +4857,7 @@
   ],
   [
     "bi",
-    "telephone"
+    "terminal"
   ],
   [
     "bi",
@@ -4873,19 +4865,15 @@
   ],
   [
     "bi",
-    "text-center"
-  ],
-  [
-    "bi",
-    "stickies"
-  ],
-  [
-    "bi",
     "text-indent-left"
   ],
   [
     "bi",
-    "textarea-resize"
+    "text-center"
+  ],
+  [
+    "bi",
+    "text-right"
   ],
   [
     "bi",
@@ -4897,63 +4885,11 @@
   ],
   [
     "bi",
-    "text-right"
-  ],
-  [
-    "bi",
     "textarea-t"
   ],
   [
     "bi",
-    "thermometer-high"
-  ],
-  [
-    "bi",
-    "thermometer-snow"
-  ],
-  [
-    "bi",
-    "thermometer-sun"
-  ],
-  [
-    "bi",
-    "thermometer"
-  ],
-  [
-    "bi",
-    "three-dots-vertical"
-  ],
-  [
-    "bi",
-    "three-dots"
-  ],
-  [
-    "bi",
-    "toggle-off"
-  ],
-  [
-    "bi",
-    "toggle-on"
-  ],
-  [
-    "bi",
-    "thermometer-half"
-  ],
-  [
-    "bi",
-    "toggle2-off"
-  ],
-  [
-    "bi",
-    "toggles"
-  ],
-  [
-    "bi",
-    "toggles2"
-  ],
-  [
-    "bi",
-    "tools"
+    "textarea"
   ],
   [
     "bi",
@@ -4961,11 +4897,67 @@
   ],
   [
     "bi",
-    "tornado"
+    "textarea-resize"
   ],
   [
     "bi",
-    "trash2-fill"
+    "thermometer-half"
+  ],
+  [
+    "bi",
+    "three-dots"
+  ],
+  [
+    "bi",
+    "thermometer"
+  ],
+  [
+    "bi",
+    "thermometer-snow"
+  ],
+  [
+    "bi",
+    "stop-btn"
+  ],
+  [
+    "bi",
+    "sunset"
+  ],
+  [
+    "bi",
+    "toggle2-off"
+  ],
+  [
+    "bi",
+    "toggle2-on"
+  ],
+  [
+    "bi",
+    "tools"
+  ],
+  [
+    "bi",
+    "toggles"
+  ],
+  [
+    "bi",
+    "thermometer-high"
+  ],
+  [
+    "bi",
+    "toggle-on"
+  ],
+  [
+    "bi",
+    "telephone-x-fill"
+  ],
+  [
+    "bi",
+    "toggles2"
+  ],
+  [
+    "bi",
+    "tornado"
   ],
   [
     "bi",
@@ -4973,11 +4965,27 @@
   ],
   [
     "bi",
+    "thermometer-sun"
+  ],
+  [
+    "bi",
+    "tree-fill"
+  ],
+  [
+    "bi",
+    "trash2-fill"
+  ],
+  [
+    "bi",
+    "toggle-off"
+  ],
+  [
+    "bi",
     "trash-fill"
   ],
   [
     "bi",
-    "toggle2-on"
+    "tree"
   ],
   [
     "bi",
@@ -4989,7 +4997,11 @@
   ],
   [
     "bi",
-    "trophy"
+    "triangle"
+  ],
+  [
+    "bi",
+    "trophy-fill"
   ],
   [
     "bi",
@@ -5001,11 +5013,19 @@
   ],
   [
     "bi",
-    "truck"
+    "trophy"
   ],
   [
     "bi",
     "tsunami"
+  ],
+  [
+    "bi",
+    "truck"
+  ],
+  [
+    "bi",
+    "twitch"
   ],
   [
     "bi",
@@ -5014,10 +5034,6 @@
   [
     "bi",
     "tv"
-  ],
-  [
-    "bi",
-    "tree-fill"
   ],
   [
     "bi",
@@ -5033,7 +5049,7 @@
   ],
   [
     "bi",
-    "type-h2"
+    "type-italic"
   ],
   [
     "bi",
@@ -5041,11 +5057,7 @@
   ],
   [
     "bi",
-    "type-italic"
-  ],
-  [
-    "bi",
-    "type-strikethrough"
+    "type"
   ],
   [
     "bi",
@@ -5053,11 +5065,19 @@
   ],
   [
     "bi",
-    "type"
+    "type-strikethrough"
   ],
   [
     "bi",
     "ui-checks-grid"
+  ],
+  [
+    "bi",
+    "ui-radios"
+  ],
+  [
+    "bi",
+    "umbrella-fill"
   ],
   [
     "bi",
@@ -5069,35 +5089,7 @@
   ],
   [
     "bi",
-    "umbrella-fill"
-  ],
-  [
-    "bi",
-    "ui-radios"
-  ],
-  [
-    "bi",
-    "trophy-fill"
-  ],
-  [
-    "bi",
-    "umbrella"
-  ],
-  [
-    "bi",
-    "union"
-  ],
-  [
-    "bi",
-    "twitch"
-  ],
-  [
-    "bi",
-    "tree"
-  ],
-  [
-    "bi",
-    "unlock-fill"
+    "three-dots-vertical"
   ],
   [
     "bi",
@@ -5105,27 +5097,31 @@
   ],
   [
     "bi",
-    "upc"
-  ],
-  [
-    "bi",
     "upc-scan"
   ],
   [
     "bi",
-    "upload"
+    "upc"
   ],
   [
     "bi",
-    "vector-pen"
+    "unlock-fill"
   ],
   [
     "bi",
-    "triangle"
+    "thermometer-low"
+  ],
+  [
+    "bi",
+    "view-stacked"
   ],
   [
     "bi",
     "view-list"
+  ],
+  [
+    "bi",
+    "vector-pen"
   ],
   [
     "bi",
@@ -5141,7 +5137,7 @@
   ],
   [
     "bi",
-    "volume-down-fill"
+    "volume-mute-fill"
   ],
   [
     "bi",
@@ -5149,11 +5145,7 @@
   ],
   [
     "bi",
-    "volume-mute-fill"
-  ],
-  [
-    "bi",
-    "volume-off-fill"
+    "volume-down-fill"
   ],
   [
     "bi",
@@ -5165,11 +5157,11 @@
   ],
   [
     "bi",
-    "volume-up-fill"
+    "volume-off-fill"
   ],
   [
     "bi",
-    "volume-up"
+    "volume-up-fill"
   ],
   [
     "bi",
@@ -5177,19 +5169,15 @@
   ],
   [
     "bi",
-    "wallet-fill"
-  ],
-  [
-    "bi",
     "wallet"
   ],
   [
     "bi",
-    "wallet2"
+    "wallet-fill"
   ],
   [
     "bi",
-    "watch"
+    "wallet2"
   ],
   [
     "bi",
@@ -5205,15 +5193,15 @@
   ],
   [
     "bi",
-    "wifi-2"
+    "upload"
   ],
   [
     "bi",
-    "wifi-off"
+    "trash2"
   ],
   [
     "bi",
-    "wifi"
+    "watch"
   ],
   [
     "bi",
@@ -5221,11 +5209,11 @@
   ],
   [
     "bi",
-    "window-dock"
+    "wifi-2"
   ],
   [
     "bi",
-    "window"
+    "window-dock"
   ],
   [
     "bi",
@@ -5249,6 +5237,10 @@
   ],
   [
     "bi",
+    "window"
+  ],
+  [
+    "bi",
     "x-diamond"
   ],
   [
@@ -5261,11 +5253,11 @@
   ],
   [
     "bi",
-    "x-square"
+    "x-square-fill"
   ],
   [
     "bi",
-    "x-square-fill"
+    "x-square"
   ],
   [
     "bi",
@@ -5273,7 +5265,7 @@
   ],
   [
     "bi",
-    "youtube"
+    "zoom-out"
   ],
   [
     "bi",
@@ -5281,31 +5273,31 @@
   ],
   [
     "bi",
-    "zoom-out"
+    "umbrella"
   ],
   [
     "bi",
-    "view-stacked"
+    "wifi"
   ],
   [
     "bi",
-    "trash2"
+    "wifi-off"
   ],
   [
     "bi",
-    "textarea"
+    "youtube"
   ],
   [
     "bi",
-    "thermometer-low"
+    "volume-up"
   ],
   [
-    "brands",
-    "accusoft"
+    "bi",
+    "union"
   ],
   [
-    "brands",
-    "accessible-icon"
+    "bi",
+    "type-h2"
   ],
   [
     "brands",
@@ -5313,19 +5305,7 @@
   ],
   [
     "brands",
-    "acquisitions-incorporated"
-  ],
-  [
-    "brands",
-    "adobe"
-  ],
-  [
-    "brands",
-    "affiliatetheme"
-  ],
-  [
-    "brands",
-    "adversal"
+    "accusoft"
   ],
   [
     "brands",
@@ -5333,7 +5313,23 @@
   ],
   [
     "brands",
+    "adversal"
+  ],
+  [
+    "brands",
+    "affiliatetheme"
+  ],
+  [
+    "brands",
+    "acquisitions-incorporated"
+  ],
+  [
+    "brands",
     "airbnb"
+  ],
+  [
+    "brands",
+    "adobe"
   ],
   [
     "brands",
@@ -5341,11 +5337,11 @@
   ],
   [
     "brands",
-    "amilia"
+    "alipay"
   ],
   [
     "brands",
-    "angrycreative"
+    "algolia"
   ],
   [
     "brands",
@@ -5353,7 +5349,23 @@
   ],
   [
     "brands",
-    "angular"
+    "android"
+  ],
+  [
+    "brands",
+    "amilia"
+  ],
+  [
+    "brands",
+    "angellist"
+  ],
+  [
+    "brands",
+    "accessible-icon"
+  ],
+  [
+    "brands",
+    "angrycreative"
   ],
   [
     "brands",
@@ -5365,11 +5377,11 @@
   ],
   [
     "brands",
-    "angellist"
+    "apple"
   ],
   [
     "brands",
-    "android"
+    "angular"
   ],
   [
     "brands",
@@ -5377,51 +5389,7 @@
   ],
   [
     "brands",
-    "artstation"
-  ],
-  [
-    "brands",
-    "atlassian"
-  ],
-  [
-    "brands",
     "app-store"
-  ],
-  [
-    "brands",
-    "audible"
-  ],
-  [
-    "brands",
-    "autoprefixer"
-  ],
-  [
-    "brands",
-    "apple"
-  ],
-  [
-    "brands",
-    "avianex"
-  ],
-  [
-    "brands",
-    "aviato"
-  ],
-  [
-    "brands",
-    "algolia"
-  ],
-  [
-    "brands",
-    "aws"
-  ],
-  [
-    "brands",
-    "battle-net"
-  ],
-  [
-    "brands",
-    "behance"
   ],
   [
     "brands",
@@ -5429,11 +5397,35 @@
   ],
   [
     "brands",
+    "avianex"
+  ],
+  [
+    "brands",
+    "aws"
+  ],
+  [
+    "brands",
+    "aviato"
+  ],
+  [
+    "brands",
+    "autoprefixer"
+  ],
+  [
+    "brands",
+    "atlassian"
+  ],
+  [
+    "brands",
     "behance-square"
   ],
   [
     "brands",
-    "bitcoin"
+    "battle-net"
+  ],
+  [
+    "brands",
+    "bandcamp"
   ],
   [
     "brands",
@@ -5441,7 +5433,11 @@
   ],
   [
     "brands",
-    "black-tie"
+    "bitcoin"
+  ],
+  [
+    "brands",
+    "behance"
   ],
   [
     "brands",
@@ -5449,7 +5445,7 @@
   ],
   [
     "brands",
-    "blackberry"
+    "black-tie"
   ],
   [
     "brands",
@@ -5461,19 +5457,15 @@
   ],
   [
     "brands",
-    "bluetooth"
-  ],
-  [
-    "brands",
-    "bandcamp"
-  ],
-  [
-    "brands",
-    "alipay"
-  ],
-  [
-    "brands",
     "blogger-b"
+  ],
+  [
+    "brands",
+    "blackberry"
+  ],
+  [
+    "brands",
+    "bootstrap"
   ],
   [
     "brands",
@@ -5481,7 +5473,15 @@
   ],
   [
     "brands",
-    "bootstrap"
+    "bluetooth"
+  ],
+  [
+    "brands",
+    "buromobelexperte"
+  ],
+  [
+    "brands",
+    "btc"
   ],
   [
     "brands",
@@ -5493,15 +5493,11 @@
   ],
   [
     "brands",
-    "btc"
+    "audible"
   ],
   [
     "brands",
-    "cc-amex"
-  ],
-  [
-    "brands",
-    "buromobelexperte"
+    "buysellads"
   ],
   [
     "brands",
@@ -5509,19 +5505,7 @@
   ],
   [
     "brands",
-    "cc-discover"
-  ],
-  [
-    "brands",
-    "cc-jcb"
-  ],
-  [
-    "brands",
-    "cc-diners-club"
-  ],
-  [
-    "brands",
-    "cc-stripe"
+    "cc-amazon-pay"
   ],
   [
     "brands",
@@ -5529,27 +5513,15 @@
   ],
   [
     "brands",
-    "cc-mastercard"
-  ],
-  [
-    "brands",
-    "cc-amazon-pay"
-  ],
-  [
-    "brands",
-    "cc-visa"
-  ],
-  [
-    "brands",
     "cc-paypal"
   ],
   [
     "brands",
-    "chrome"
+    "cc-amex"
   ],
   [
     "brands",
-    "centos"
+    "cc-discover"
   ],
   [
     "brands",
@@ -5557,15 +5529,19 @@
   ],
   [
     "brands",
+    "centos"
+  ],
+  [
+    "brands",
+    "cc-visa"
+  ],
+  [
+    "brands",
+    "cc-mastercard"
+  ],
+  [
+    "brands",
     "centercode"
-  ],
-  [
-    "brands",
-    "codepen"
-  ],
-  [
-    "brands",
-    "cloudsmith"
   ],
   [
     "brands",
@@ -5573,11 +5549,35 @@
   ],
   [
     "brands",
-    "cloudversify"
+    "cc-stripe"
+  ],
+  [
+    "brands",
+    "cloudsmith"
+  ],
+  [
+    "brands",
+    "chrome"
+  ],
+  [
+    "brands",
+    "codepen"
+  ],
+  [
+    "brands",
+    "cc-diners-club"
   ],
   [
     "brands",
     "connectdevelop"
+  ],
+  [
+    "brands",
+    "cloudversify"
+  ],
+  [
+    "brands",
+    "cotton-bureau"
   ],
   [
     "brands",
@@ -5589,11 +5589,7 @@
   ],
   [
     "brands",
-    "cotton-bureau"
-  ],
-  [
-    "brands",
-    "cpanel"
+    "contao"
   ],
   [
     "brands",
@@ -5605,15 +5601,15 @@
   ],
   [
     "brands",
-    "contao"
+    "cc-jcb"
+  ],
+  [
+    "brands",
+    "cpanel"
   ],
   [
     "brands",
     "creative-commons-nc"
-  ],
-  [
-    "brands",
-    "creative-commons-nc-jp"
   ],
   [
     "brands",
@@ -5625,6 +5621,14 @@
   ],
   [
     "brands",
+    "creative-commons-remix"
+  ],
+  [
+    "brands",
+    "creative-commons-pd"
+  ],
+  [
+    "brands",
     "creative-commons-sampling"
   ],
   [
@@ -5633,27 +5637,7 @@
   ],
   [
     "brands",
-    "creative-commons-sampling-plus"
-  ],
-  [
-    "brands",
-    "css3-alt"
-  ],
-  [
-    "brands",
-    "critical-role"
-  ],
-  [
-    "brands",
-    "creative-commons-remix"
-  ],
-  [
-    "brands",
-    "creative-commons"
-  ],
-  [
-    "brands",
-    "css3"
+    "creative-commons-nc-jp"
   ],
   [
     "brands",
@@ -5661,11 +5645,31 @@
   ],
   [
     "brands",
+    "creative-commons-zero"
+  ],
+  [
+    "brands",
+    "creative-commons"
+  ],
+  [
+    "brands",
     "cuttlefish"
   ],
   [
     "brands",
-    "creative-commons-pd"
+    "css3-alt"
+  ],
+  [
+    "brands",
+    "css3"
+  ],
+  [
+    "brands",
+    "d-and-d"
+  ],
+  [
+    "brands",
+    "creative-commons-sampling-plus"
   ],
   [
     "brands",
@@ -5677,14 +5681,6 @@
   ],
   [
     "brands",
-    "dailymotion"
-  ],
-  [
-    "brands",
-    "d-and-d"
-  ],
-  [
-    "brands",
     "deploydog"
   ],
   [
@@ -5693,11 +5689,11 @@
   ],
   [
     "brands",
-    "creative-commons-zero"
+    "dailymotion"
   ],
   [
     "brands",
-    "deezer"
+    "dhl"
   ],
   [
     "brands",
@@ -5705,11 +5701,11 @@
   ],
   [
     "brands",
-    "deviantart"
+    "dev"
   ],
   [
     "brands",
-    "dhl"
+    "digital-ocean"
   ],
   [
     "brands",
@@ -5721,11 +5717,7 @@
   ],
   [
     "brands",
-    "discord"
-  ],
-  [
-    "brands",
-    "digital-ocean"
+    "deviantart"
   ],
   [
     "brands",
@@ -5733,15 +5725,15 @@
   ],
   [
     "brands",
+    "discord"
+  ],
+  [
+    "brands",
     "draft2digital"
   ],
   [
     "brands",
-    "dribbble-square"
-  ],
-  [
-    "brands",
-    "dochub"
+    "deezer"
   ],
   [
     "brands",
@@ -5749,11 +5741,11 @@
   ],
   [
     "brands",
-    "dropbox"
+    "docker"
   ],
   [
     "brands",
-    "docker"
+    "dribbble-square"
   ],
   [
     "brands",
@@ -5765,7 +5757,7 @@
   ],
   [
     "brands",
-    "edge-legacy"
+    "dropbox"
   ],
   [
     "brands",
@@ -5773,11 +5765,31 @@
   ],
   [
     "brands",
-    "elementor"
+    "ebay"
+  ],
+  [
+    "brands",
+    "edge-legacy"
+  ],
+  [
+    "brands",
+    "edge"
   ],
   [
     "brands",
     "ello"
+  ],
+  [
+    "brands",
+    "dochub"
+  ],
+  [
+    "brands",
+    "envira"
+  ],
+  [
+    "brands",
+    "elementor"
   ],
   [
     "brands",
@@ -5789,23 +5801,7 @@
   ],
   [
     "brands",
-    "envira"
-  ],
-  [
-    "brands",
     "erlang"
-  ],
-  [
-    "brands",
-    "etsy"
-  ],
-  [
-    "brands",
-    "evernote"
-  ],
-  [
-    "brands",
-    "expeditedssl"
   ],
   [
     "brands",
@@ -5813,7 +5809,11 @@
   ],
   [
     "brands",
-    "dev"
+    "facebook-f"
+  ],
+  [
+    "brands",
+    "etsy"
   ],
   [
     "brands",
@@ -5821,11 +5821,7 @@
   ],
   [
     "brands",
-    "fedex"
-  ],
-  [
-    "brands",
-    "fantasy-flight-games"
+    "facebook"
   ],
   [
     "brands",
@@ -5833,7 +5829,19 @@
   ],
   [
     "brands",
-    "facebook"
+    "fantasy-flight-games"
+  ],
+  [
+    "brands",
+    "fedora"
+  ],
+  [
+    "brands",
+    "firefox-browser"
+  ],
+  [
+    "brands",
+    "fedex"
   ],
   [
     "brands",
@@ -5845,19 +5853,7 @@
   ],
   [
     "brands",
-    "firefox-browser"
-  ],
-  [
-    "brands",
-    "fedora"
-  ],
-  [
-    "brands",
     "first-order-alt"
-  ],
-  [
-    "brands",
-    "firstdraft"
   ],
   [
     "brands",
@@ -5865,19 +5861,7 @@
   ],
   [
     "brands",
-    "ebay"
-  ],
-  [
-    "brands",
-    "edge"
-  ],
-  [
-    "brands",
-    "facebook-f"
-  ],
-  [
-    "brands",
-    "flipboard"
+    "firstdraft"
   ],
   [
     "brands",
@@ -5885,15 +5869,35 @@
   ],
   [
     "brands",
+    "flipboard"
+  ],
+  [
+    "brands",
+    "evernote"
+  ],
+  [
+    "brands",
+    "font-awesome-alt"
+  ],
+  [
+    "brands",
+    "font-awesome-flag"
+  ],
+  [
+    "brands",
     "font-awesome-logo-full"
   ],
   [
     "brands",
-    "fonticons"
+    "font-awesome"
   ],
   [
     "brands",
-    "font-awesome"
+    "fonticons-fi"
+  ],
+  [
+    "brands",
+    "fonticons"
   ],
   [
     "brands",
@@ -5905,15 +5909,7 @@
   ],
   [
     "brands",
-    "font-awesome-alt"
-  ],
-  [
-    "brands",
-    "fonticons-fi"
-  ],
-  [
-    "brands",
-    "flickr"
+    "forumbee"
   ],
   [
     "brands",
@@ -5921,7 +5917,7 @@
   ],
   [
     "brands",
-    "forumbee"
+    "foursquare"
   ],
   [
     "brands",
@@ -5929,15 +5925,15 @@
   ],
   [
     "brands",
+    "freebsd"
+  ],
+  [
+    "brands",
     "galactic-republic"
   ],
   [
     "brands",
-    "get-pocket"
-  ],
-  [
-    "brands",
-    "foursquare"
+    "galactic-senate"
   ],
   [
     "brands",
@@ -5945,7 +5941,7 @@
   ],
   [
     "brands",
-    "gg"
+    "get-pocket"
   ],
   [
     "brands",
@@ -5953,11 +5949,15 @@
   ],
   [
     "brands",
-    "git"
+    "gg"
   ],
   [
     "brands",
     "git-square"
+  ],
+  [
+    "brands",
+    "git"
   ],
   [
     "brands",
@@ -5969,19 +5969,7 @@
   ],
   [
     "brands",
-    "gitkraken"
-  ],
-  [
-    "brands",
     "github"
-  ],
-  [
-    "brands",
-    "gitlab"
-  ],
-  [
-    "brands",
-    "glide"
   ],
   [
     "brands",
@@ -5989,15 +5977,27 @@
   ],
   [
     "brands",
+    "gitkraken"
+  ],
+  [
+    "brands",
     "glide-g"
   ],
   [
     "brands",
-    "goodreads-g"
+    "glide"
   ],
   [
     "brands",
-    "font-awesome-flag"
+    "gitlab"
+  ],
+  [
+    "brands",
+    "gofore"
+  ],
+  [
+    "brands",
+    "critical-role"
   ],
   [
     "brands",
@@ -6005,15 +6005,27 @@
   ],
   [
     "brands",
-    "google-drive"
-  ],
-  [
-    "brands",
     "google-pay"
   ],
   [
     "brands",
+    "goodreads-g"
+  ],
+  [
+    "brands",
+    "google-drive"
+  ],
+  [
+    "brands",
+    "google-plus-g"
+  ],
+  [
+    "brands",
     "google-play"
+  ],
+  [
+    "brands",
+    "google-wallet"
   ],
   [
     "brands",
@@ -6025,11 +6037,7 @@
   ],
   [
     "brands",
-    "google-wallet"
-  ],
-  [
-    "brands",
-    "google-plus-g"
+    "gratipay"
   ],
   [
     "brands",
@@ -6037,15 +6045,7 @@
   ],
   [
     "brands",
-    "gratipay"
-  ],
-  [
-    "brands",
-    "gofore"
-  ],
-  [
-    "brands",
-    "grav"
+    "gripfire"
   ],
   [
     "brands",
@@ -6053,15 +6053,7 @@
   ],
   [
     "brands",
-    "gripfire"
-  ],
-  [
-    "brands",
-    "hacker-news-square"
-  ],
-  [
-    "brands",
-    "hackerrank"
+    "grav"
   ],
   [
     "brands",
@@ -6069,7 +6061,7 @@
   ],
   [
     "brands",
-    "hips"
+    "gulp"
   ],
   [
     "brands",
@@ -6077,15 +6069,19 @@
   ],
   [
     "brands",
-    "hooli"
-  ],
-  [
-    "brands",
     "hornbill"
   ],
   [
     "brands",
-    "hotjar"
+    "hacker-news-square"
+  ],
+  [
+    "brands",
+    "hips"
+  ],
+  [
+    "brands",
+    "hooli"
   ],
   [
     "brands",
@@ -6093,15 +6089,11 @@
   ],
   [
     "brands",
+    "hotjar"
+  ],
+  [
+    "brands",
     "html5"
-  ],
-  [
-    "brands",
-    "ideal"
-  ],
-  [
-    "brands",
-    "hubspot"
   ],
   [
     "brands",
@@ -6109,19 +6101,35 @@
   ],
   [
     "brands",
-    "instagram-square"
+    "hubspot"
   ],
   [
     "brands",
-    "freebsd"
-  ],
-  [
-    "brands",
-    "galactic-senate"
+    "ideal"
   ],
   [
     "brands",
     "intercom"
+  ],
+  [
+    "brands",
+    "flickr"
+  ],
+  [
+    "brands",
+    "instagram-square"
+  ],
+  [
+    "brands",
+    "internet-explorer"
+  ],
+  [
+    "brands",
+    "instagram"
+  ],
+  [
+    "brands",
+    "ioxhost"
   ],
   [
     "brands",
@@ -6133,7 +6141,7 @@
   ],
   [
     "brands",
-    "ioxhost"
+    "hackerrank"
   ],
   [
     "brands",
@@ -6141,15 +6149,7 @@
   ],
   [
     "brands",
-    "gulp"
-  ],
-  [
-    "brands",
     "java"
-  ],
-  [
-    "brands",
-    "jedi-order"
   ],
   [
     "brands",
@@ -6157,11 +6157,11 @@
   ],
   [
     "brands",
-    "jira"
+    "jedi-order"
   ],
   [
     "brands",
-    "instagram"
+    "jira"
   ],
   [
     "brands",
@@ -6169,7 +6169,7 @@
   ],
   [
     "brands",
-    "internet-explorer"
+    "joomla"
   ],
   [
     "brands",
@@ -6177,19 +6177,7 @@
   ],
   [
     "brands",
-    "joomla"
-  ],
-  [
-    "brands",
-    "jsfiddle"
-  ],
-  [
-    "brands",
     "js-square"
-  ],
-  [
-    "brands",
-    "keycdn"
   ],
   [
     "brands",
@@ -6197,15 +6185,15 @@
   ],
   [
     "brands",
-    "kickstarter"
+    "jsfiddle"
   ],
   [
     "brands",
-    "kaggle"
+    "itunes-note"
   ],
   [
     "brands",
-    "lastfm-square"
+    "keycdn"
   ],
   [
     "brands",
@@ -6213,11 +6201,23 @@
   ],
   [
     "brands",
+    "laravel"
+  ],
+  [
+    "brands",
+    "kickstarter"
+  ],
+  [
+    "brands",
     "lastfm"
   ],
   [
     "brands",
-    "kickstarter-k"
+    "lastfm-square"
+  ],
+  [
+    "brands",
+    "less"
   ],
   [
     "brands",
@@ -6229,11 +6229,7 @@
   ],
   [
     "brands",
-    "laravel"
-  ],
-  [
-    "brands",
-    "leanpub"
+    "linkedin"
   ],
   [
     "brands",
@@ -6241,7 +6237,7 @@
   ],
   [
     "brands",
-    "less"
+    "leanpub"
   ],
   [
     "brands",
@@ -6249,7 +6245,7 @@
   ],
   [
     "brands",
-    "linkedin"
+    "lyft"
   ],
   [
     "brands",
@@ -6257,23 +6253,23 @@
   ],
   [
     "brands",
+    "kickstarter-k"
+  ],
+  [
+    "brands",
     "mailchimp"
   ],
   [
     "brands",
-    "itunes-note"
+    "mandalorian"
   ],
   [
     "brands",
-    "lyft"
+    "markdown"
   ],
   [
     "brands",
     "maxcdn"
-  ],
-  [
-    "brands",
-    "mdb"
   ],
   [
     "brands",
@@ -6285,23 +6281,11 @@
   ],
   [
     "brands",
+    "mdb"
+  ],
+  [
+    "brands",
     "medium"
-  ],
-  [
-    "brands",
-    "megaport"
-  ],
-  [
-    "brands",
-    "medium-m"
-  ],
-  [
-    "brands",
-    "meetup"
-  ],
-  [
-    "brands",
-    "microblog"
   ],
   [
     "brands",
@@ -6309,7 +6293,15 @@
   ],
   [
     "brands",
-    "microsoft"
+    "medium-m"
+  ],
+  [
+    "brands",
+    "megaport"
+  ],
+  [
+    "brands",
+    "microblog"
   ],
   [
     "brands",
@@ -6317,7 +6309,7 @@
   ],
   [
     "brands",
-    "mandalorian"
+    "meetup"
   ],
   [
     "brands",
@@ -6329,7 +6321,27 @@
   ],
   [
     "brands",
+    "microsoft"
+  ],
+  [
+    "brands",
+    "kaggle"
+  ],
+  [
+    "brands",
     "mizuni"
+  ],
+  [
+    "brands",
+    "modx"
+  ],
+  [
+    "brands",
+    "napster"
+  ],
+  [
+    "brands",
+    "neos"
   ],
   [
     "brands",
@@ -6341,7 +6353,7 @@
   ],
   [
     "brands",
-    "neos"
+    "node"
   ],
   [
     "brands",
@@ -6349,23 +6361,11 @@
   ],
   [
     "brands",
-    "npm"
-  ],
-  [
-    "brands",
-    "node"
-  ],
-  [
-    "brands",
-    "nutritionix"
-  ],
-  [
-    "brands",
     "ns8"
   ],
   [
     "brands",
-    "odnoklassniki-square"
+    "npm"
   ],
   [
     "brands",
@@ -6373,11 +6373,15 @@
   ],
   [
     "brands",
+    "odnoklassniki-square"
+  ],
+  [
+    "brands",
     "old-republic"
   ],
   [
     "brands",
-    "opencart"
+    "nutritionix"
   ],
   [
     "brands",
@@ -6393,7 +6397,7 @@
   ],
   [
     "brands",
-    "orcid"
+    "opencart"
   ],
   [
     "brands",
@@ -6401,15 +6405,11 @@
   ],
   [
     "brands",
+    "orcid"
+  ],
+  [
+    "brands",
     "osi"
-  ],
-  [
-    "brands",
-    "pagelines"
-  ],
-  [
-    "brands",
-    "palfed"
   ],
   [
     "brands",
@@ -6417,15 +6417,7 @@
   ],
   [
     "brands",
-    "paypal"
-  ],
-  [
-    "brands",
-    "phabricator"
-  ],
-  [
-    "brands",
-    "php"
+    "palfed"
   ],
   [
     "brands",
@@ -6433,15 +6425,11 @@
   ],
   [
     "brands",
-    "periscope"
+    "pagelines"
   ],
   [
     "brands",
-    "phoenix-squadron"
-  ],
-  [
-    "brands",
-    "pied-piper-alt"
+    "phabricator"
   ],
   [
     "brands",
@@ -6449,11 +6437,15 @@
   ],
   [
     "brands",
-    "pied-piper-square"
+    "paypal"
   ],
   [
     "brands",
-    "pied-piper-pp"
+    "php"
+  ],
+  [
+    "brands",
+    "pied-piper-alt"
   ],
   [
     "brands",
@@ -6461,7 +6453,31 @@
   ],
   [
     "brands",
+    "pied-piper-pp"
+  ],
+  [
+    "brands",
+    "periscope"
+  ],
+  [
+    "brands",
+    "pied-piper-square"
+  ],
+  [
+    "brands",
     "pied-piper"
+  ],
+  [
+    "brands",
+    "phoenix-squadron"
+  ],
+  [
+    "brands",
+    "pinterest-square"
+  ],
+  [
+    "brands",
+    "product-hunt"
   ],
   [
     "brands",
@@ -6477,31 +6493,7 @@
   ],
   [
     "brands",
-    "product-hunt"
-  ],
-  [
-    "brands",
-    "pinterest-square"
-  ],
-  [
-    "brands",
     "python"
-  ],
-  [
-    "brands",
-    "pushed"
-  ],
-  [
-    "brands",
-    "qq"
-  ],
-  [
-    "brands",
-    "quora"
-  ],
-  [
-    "brands",
-    "r-project"
   ],
   [
     "brands",
@@ -6509,19 +6501,19 @@
   ],
   [
     "brands",
+    "pushed"
+  ],
+  [
+    "brands",
+    "r-project"
+  ],
+  [
+    "brands",
+    "qq"
+  ],
+  [
+    "brands",
     "raspberry-pi"
-  ],
-  [
-    "brands",
-    "react"
-  ],
-  [
-    "brands",
-    "readme"
-  ],
-  [
-    "brands",
-    "ravelry"
   ],
   [
     "brands",
@@ -6529,7 +6521,7 @@
   ],
   [
     "brands",
-    "rebel"
+    "react"
   ],
   [
     "brands",
@@ -6537,35 +6529,11 @@
   ],
   [
     "brands",
-    "reddit"
+    "ravelry"
   ],
   [
     "brands",
-    "napster"
-  ],
-  [
-    "brands",
-    "renren"
-  ],
-  [
-    "brands",
-    "redhat"
-  ],
-  [
-    "brands",
-    "reddit-alien"
-  ],
-  [
-    "brands",
-    "replyd"
-  ],
-  [
-    "brands",
-    "rev"
-  ],
-  [
-    "brands",
-    "rocketchat"
+    "rebel"
   ],
   [
     "brands",
@@ -6573,15 +6541,43 @@
   ],
   [
     "brands",
+    "reddit-alien"
+  ],
+  [
+    "brands",
+    "readme"
+  ],
+  [
+    "brands",
+    "reddit"
+  ],
+  [
+    "brands",
+    "reddit-square"
+  ],
+  [
+    "brands",
+    "redhat"
+  ],
+  [
+    "brands",
+    "replyd"
+  ],
+  [
+    "brands",
     "researchgate"
   ],
   [
     "brands",
-    "rust"
+    "renren"
   ],
   [
     "brands",
-    "salesforce"
+    "rocketchat"
+  ],
+  [
+    "brands",
+    "rev"
   ],
   [
     "brands",
@@ -6589,7 +6585,15 @@
   ],
   [
     "brands",
-    "schlix"
+    "rockrms"
+  ],
+  [
+    "brands",
+    "salesforce"
+  ],
+  [
+    "brands",
+    "safari"
   ],
   [
     "brands",
@@ -6597,7 +6601,11 @@
   ],
   [
     "brands",
-    "sellcast"
+    "schlix"
+  ],
+  [
+    "brands",
+    "rust"
   ],
   [
     "brands",
@@ -6605,15 +6613,11 @@
   ],
   [
     "brands",
+    "sellcast"
+  ],
+  [
+    "brands",
     "searchengin"
-  ],
-  [
-    "brands",
-    "sellsy"
-  ],
-  [
-    "brands",
-    "shirtsinbulk"
   ],
   [
     "brands",
@@ -6621,11 +6625,23 @@
   ],
   [
     "brands",
+    "shirtsinbulk"
+  ],
+  [
+    "brands",
+    "sellsy"
+  ],
+  [
+    "brands",
     "shopify"
   ],
   [
     "brands",
-    "reddit-square"
+    "shopware"
+  ],
+  [
+    "brands",
+    "sith"
   ],
   [
     "brands",
@@ -6637,7 +6653,7 @@
   ],
   [
     "brands",
-    "sith"
+    "skyatlas"
   ],
   [
     "brands",
@@ -6645,11 +6661,7 @@
   ],
   [
     "brands",
-    "skyatlas"
-  ],
-  [
-    "brands",
-    "skype"
+    "slack"
   ],
   [
     "brands",
@@ -6657,19 +6669,11 @@
   ],
   [
     "brands",
-    "snapchat-ghost"
-  ],
-  [
-    "brands",
-    "slack"
-  ],
-  [
-    "brands",
     "slideshare"
   ],
   [
     "brands",
-    "snapchat"
+    "snapchat-ghost"
   ],
   [
     "brands",
@@ -6677,11 +6681,11 @@
   ],
   [
     "brands",
-    "soundcloud"
+    "snapchat"
   ],
   [
     "brands",
-    "speakap"
+    "soundcloud"
   ],
   [
     "brands",
@@ -6689,7 +6693,15 @@
   ],
   [
     "brands",
+    "speakap"
+  ],
+  [
+    "brands",
     "speaker-deck"
+  ],
+  [
+    "brands",
+    "spotify"
   ],
   [
     "brands",
@@ -6701,19 +6713,11 @@
   ],
   [
     "brands",
-    "stackpath"
-  ],
-  [
-    "brands",
-    "spotify"
-  ],
-  [
-    "brands",
     "stack-overflow"
   ],
   [
     "brands",
-    "steam-symbol"
+    "stackpath"
   ],
   [
     "brands",
@@ -6725,7 +6729,7 @@
   ],
   [
     "brands",
-    "strava"
+    "steam-symbol"
   ],
   [
     "brands",
@@ -6737,7 +6741,7 @@
   ],
   [
     "brands",
-    "stripe"
+    "strava"
   ],
   [
     "brands",
@@ -6745,7 +6749,7 @@
   ],
   [
     "brands",
-    "shopware"
+    "stripe"
   ],
   [
     "brands",
@@ -6753,11 +6757,11 @@
   ],
   [
     "brands",
-    "studiovinari"
+    "stumbleupon"
   ],
   [
     "brands",
-    "stumbleupon"
+    "studiovinari"
   ],
   [
     "brands",
@@ -6765,11 +6769,15 @@
   ],
   [
     "brands",
-    "swift"
+    "supple"
   ],
   [
     "brands",
     "suse"
+  ],
+  [
+    "brands",
+    "swift"
   ],
   [
     "brands",
@@ -6781,6 +6789,10 @@
   ],
   [
     "brands",
+    "quora"
+  ],
+  [
+    "brands",
     "telegram-plane"
   ],
   [
@@ -6789,15 +6801,7 @@
   ],
   [
     "brands",
-    "tencent-weibo"
-  ],
-  [
-    "brands",
     "the-red-yeti"
-  ],
-  [
-    "brands",
-    "tiktok"
   ],
   [
     "brands",
@@ -6809,7 +6813,11 @@
   ],
   [
     "brands",
-    "think-peaks"
+    "artstation"
+  ],
+  [
+    "brands",
+    "tiktok"
   ],
   [
     "brands",
@@ -6825,11 +6833,11 @@
   ],
   [
     "brands",
-    "safari"
+    "tumblr"
   ],
   [
     "brands",
-    "tumblr-square"
+    "twitter-square"
   ],
   [
     "brands",
@@ -6841,7 +6849,11 @@
   ],
   [
     "brands",
-    "twitter-square"
+    "tumblr-square"
+  ],
+  [
+    "brands",
+    "ubuntu"
   ],
   [
     "brands",
@@ -6850,10 +6862,6 @@
   [
     "brands",
     "uber"
-  ],
-  [
-    "brands",
-    "ubuntu"
   ],
   [
     "brands",
@@ -6873,11 +6881,11 @@
   ],
   [
     "brands",
-    "unsplash"
+    "tencent-weibo"
   ],
   [
     "brands",
-    "untappd"
+    "unsplash"
   ],
   [
     "brands",
@@ -6889,15 +6897,11 @@
   ],
   [
     "brands",
-    "usps"
-  ],
-  [
-    "brands",
-    "vaadin"
-  ],
-  [
-    "brands",
     "ussunnah"
+  ],
+  [
+    "brands",
+    "usps"
   ],
   [
     "brands",
@@ -6909,6 +6913,10 @@
   ],
   [
     "brands",
+    "vaadin"
+  ],
+  [
+    "brands",
     "viadeo"
   ],
   [
@@ -6917,11 +6925,11 @@
   ],
   [
     "brands",
-    "vimeo"
+    "vimeo-v"
   ],
   [
     "brands",
-    "vnv"
+    "vimeo"
   ],
   [
     "brands",
@@ -6929,15 +6937,15 @@
   ],
   [
     "brands",
-    "vimeo-v"
-  ],
-  [
-    "brands",
     "vine"
   ],
   [
     "brands",
-    "rockrms"
+    "vnv"
+  ],
+  [
+    "brands",
+    "vk"
   ],
   [
     "brands",
@@ -6949,15 +6957,11 @@
   ],
   [
     "brands",
+    "waze"
+  ],
+  [
+    "brands",
     "weibo"
-  ],
-  [
-    "brands",
-    "vk"
-  ],
-  [
-    "brands",
-    "whatsapp-square"
   ],
   [
     "brands",
@@ -6969,11 +6973,11 @@
   ],
   [
     "brands",
-    "wikipedia-w"
+    "whmcs"
   ],
   [
     "brands",
-    "whmcs"
+    "wikipedia-w"
   ],
   [
     "brands",
@@ -6989,7 +6993,7 @@
   ],
   [
     "brands",
-    "wordpress"
+    "wordpress-simple"
   ],
   [
     "brands",
@@ -6997,7 +7001,11 @@
   ],
   [
     "brands",
-    "wordpress-simple"
+    "untappd"
+  ],
+  [
+    "brands",
+    "wordpress"
   ],
   [
     "brands",
@@ -7009,10 +7017,6 @@
   ],
   [
     "brands",
-    "wpforms"
-  ],
-  [
-    "brands",
     "wpressr"
   ],
   [
@@ -7021,15 +7025,7 @@
   ],
   [
     "brands",
-    "yahoo"
-  ],
-  [
-    "brands",
-    "xing-square"
-  ],
-  [
-    "brands",
-    "xing"
+    "wpforms"
   ],
   [
     "brands",
@@ -7037,15 +7033,15 @@
   ],
   [
     "brands",
+    "xing"
+  ],
+  [
+    "brands",
+    "xing-square"
+  ],
+  [
+    "brands",
     "yandex-international"
-  ],
-  [
-    "brands",
-    "yarn"
-  ],
-  [
-    "brands",
-    "yammer"
   ],
   [
     "brands",
@@ -7053,27 +7049,19 @@
   ],
   [
     "brands",
+    "yammer"
+  ],
+  [
+    "brands",
+    "whatsapp-square"
+  ],
+  [
+    "brands",
+    "yarn"
+  ],
+  [
+    "brands",
     "yelp"
-  ],
-  [
-    "brands",
-    "yoast"
-  ],
-  [
-    "brands",
-    "supple"
-  ],
-  [
-    "brands",
-    "waze"
-  ],
-  [
-    "brands",
-    "tumblr"
-  ],
-  [
-    "brands",
-    "zhihu"
   ],
   [
     "brands",
@@ -7081,27 +7069,31 @@
   ],
   [
     "brands",
+    "yoast"
+  ],
+  [
+    "brands",
+    "zhihu"
+  ],
+  [
+    "brands",
     "youtube"
   ],
   [
     "brands",
-    "modx"
+    "expeditedssl"
   ],
   [
     "brands",
-    "markdown"
+    "skype"
   ],
   [
     "brands",
-    "buysellads"
+    "yahoo"
   ],
   [
-    "regular",
-    "arrow-alt-circle-down"
-  ],
-  [
-    "regular",
-    "angry"
+    "brands",
+    "think-peaks"
   ],
   [
     "regular",
@@ -7109,15 +7101,15 @@
   ],
   [
     "regular",
-    "arrow-alt-circle-right"
+    "angry"
   ],
   [
     "regular",
-    "bell"
+    "arrow-alt-circle-down"
   ],
   [
     "regular",
-    "bell-slash"
+    "address-card"
   ],
   [
     "regular",
@@ -7125,15 +7117,19 @@
   ],
   [
     "regular",
+    "bell"
+  ],
+  [
+    "regular",
     "arrow-alt-circle-up"
   ],
   [
     "regular",
-    "bookmark"
+    "bell-slash"
   ],
   [
     "regular",
-    "calendar-alt"
+    "arrow-alt-circle-right"
   ],
   [
     "regular",
@@ -7141,11 +7137,15 @@
   ],
   [
     "regular",
-    "calendar-check"
+    "calendar-minus"
   ],
   [
     "regular",
-    "calendar-times"
+    "bookmark"
+  ],
+  [
+    "regular",
+    "calendar-check"
   ],
   [
     "regular",
@@ -7153,15 +7153,27 @@
   ],
   [
     "regular",
-    "caret-square-left"
+    "calendar-alt"
   ],
   [
     "regular",
-    "calendar-minus"
+    "calendar-times"
   ],
   [
     "regular",
     "calendar-plus"
+  ],
+  [
+    "regular",
+    "caret-square-left"
+  ],
+  [
+    "regular",
+    "caret-square-up"
+  ],
+  [
+    "regular",
+    "check-circle"
   ],
   [
     "regular",
@@ -7173,23 +7185,15 @@
   ],
   [
     "regular",
-    "caret-square-up"
-  ],
-  [
-    "regular",
-    "chart-bar"
-  ],
-  [
-    "regular",
-    "check-circle"
-  ],
-  [
-    "regular",
     "clipboard"
   ],
   [
     "regular",
-    "clock"
+    "circle"
+  ],
+  [
+    "regular",
+    "check-square"
   ],
   [
     "regular",
@@ -7197,7 +7201,7 @@
   ],
   [
     "regular",
-    "closed-captioning"
+    "comment"
   ],
   [
     "regular",
@@ -7205,19 +7209,7 @@
   ],
   [
     "regular",
-    "comment"
-  ],
-  [
-    "regular",
     "comments"
-  ],
-  [
-    "regular",
-    "compass"
-  ],
-  [
-    "regular",
-    "copy"
   ],
   [
     "regular",
@@ -7225,7 +7217,7 @@
   ],
   [
     "regular",
-    "credit-card"
+    "closed-captioning"
   ],
   [
     "regular",
@@ -7233,19 +7225,27 @@
   ],
   [
     "regular",
-    "edit"
-  ],
-  [
-    "regular",
-    "envelope-open"
-  ],
-  [
-    "regular",
-    "dot-circle"
+    "credit-card"
   ],
   [
     "regular",
     "envelope"
+  ],
+  [
+    "regular",
+    "edit"
+  ],
+  [
+    "regular",
+    "copy"
+  ],
+  [
+    "regular",
+    "compass"
+  ],
+  [
+    "regular",
+    "dot-circle"
   ],
   [
     "regular",
@@ -7257,23 +7257,23 @@
   ],
   [
     "regular",
+    "envelope-open"
+  ],
+  [
+    "regular",
     "file-alt"
   ],
   [
     "regular",
+    "chart-bar"
+  ],
+  [
+    "regular",
+    "clone"
+  ],
+  [
+    "regular",
     "file-archive"
-  ],
-  [
-    "regular",
-    "file-audio"
-  ],
-  [
-    "regular",
-    "file-code"
-  ],
-  [
-    "regular",
-    "file-excel"
   ],
   [
     "regular",
@@ -7285,7 +7285,19 @@
   ],
   [
     "regular",
-    "file-word"
+    "file"
+  ],
+  [
+    "regular",
+    "file-excel"
+  ],
+  [
+    "regular",
+    "clock"
+  ],
+  [
+    "regular",
+    "file-audio"
   ],
   [
     "regular",
@@ -7297,19 +7309,7 @@
   ],
   [
     "regular",
-    "file"
-  ],
-  [
-    "regular",
-    "flushed"
-  ],
-  [
-    "regular",
     "flag"
-  ],
-  [
-    "regular",
-    "folder-open"
   ],
   [
     "regular",
@@ -7321,11 +7321,7 @@
   ],
   [
     "regular",
-    "address-card"
-  ],
-  [
-    "regular",
-    "frown-open"
+    "flushed"
   ],
   [
     "regular",
@@ -7333,7 +7329,15 @@
   ],
   [
     "regular",
+    "frown-open"
+  ],
+  [
+    "regular",
     "gem"
+  ],
+  [
+    "regular",
+    "grin-beam"
   ],
   [
     "regular",
@@ -7341,15 +7345,7 @@
   ],
   [
     "regular",
-    "grimace"
-  ],
-  [
-    "regular",
-    "check-square"
-  ],
-  [
-    "regular",
-    "grin-beam-sweat"
+    "grin-squint-tears"
   ],
   [
     "regular",
@@ -7361,11 +7357,7 @@
   ],
   [
     "regular",
-    "grin-squint-tears"
-  ],
-  [
-    "regular",
-    "grin-beam"
+    "grin-beam-sweat"
   ],
   [
     "regular",
@@ -7373,15 +7365,7 @@
   ],
   [
     "regular",
-    "grin-tears"
-  ],
-  [
-    "regular",
-    "grin-stars"
-  ],
-  [
-    "regular",
-    "grin-tongue"
+    "grimace"
   ],
   [
     "regular",
@@ -7393,11 +7377,23 @@
   ],
   [
     "regular",
+    "grin-stars"
+  ],
+  [
+    "regular",
+    "grin-tongue"
+  ],
+  [
+    "regular",
+    "grin-tears"
+  ],
+  [
+    "regular",
     "grin"
   ],
   [
     "regular",
-    "grin-wink"
+    "hand-lizard"
   ],
   [
     "regular",
@@ -7409,23 +7405,11 @@
   ],
   [
     "regular",
-    "hand-lizard"
+    "hand-point-right"
   ],
   [
     "regular",
-    "hand-point-left"
-  ],
-  [
-    "regular",
-    "hand-pointer"
-  ],
-  [
-    "regular",
-    "hand-point-up"
-  ],
-  [
-    "regular",
-    "hand-rock"
+    "folder-open"
   ],
   [
     "regular",
@@ -7433,7 +7417,15 @@
   ],
   [
     "regular",
-    "hand-point-down"
+    "grin-wink"
+  ],
+  [
+    "regular",
+    "hand-rock"
+  ],
+  [
+    "regular",
+    "handshake"
   ],
   [
     "regular",
@@ -7445,7 +7437,11 @@
   ],
   [
     "regular",
-    "handshake"
+    "heart"
+  ],
+  [
+    "regular",
+    "id-badge"
   ],
   [
     "regular",
@@ -7453,11 +7449,7 @@
   ],
   [
     "regular",
-    "heart"
-  ],
-  [
-    "regular",
-    "id-badge"
+    "hourglass"
   ],
   [
     "regular",
@@ -7469,19 +7461,7 @@
   ],
   [
     "regular",
-    "hourglass"
-  ],
-  [
-    "regular",
-    "kiss-beam"
-  ],
-  [
-    "regular",
     "images"
-  ],
-  [
-    "regular",
-    "kiss-wink-heart"
   ],
   [
     "regular",
@@ -7493,11 +7473,15 @@
   ],
   [
     "regular",
-    "hand-point-right"
+    "kiss-wink-heart"
   ],
   [
     "regular",
-    "laugh"
+    "laugh-beam"
+  ],
+  [
+    "regular",
+    "file-code"
   ],
   [
     "regular",
@@ -7505,19 +7489,11 @@
   ],
   [
     "regular",
-    "laugh-squint"
-  ],
-  [
-    "regular",
     "lemon"
   ],
   [
     "regular",
-    "lightbulb"
-  ],
-  [
-    "regular",
-    "list-alt"
+    "laugh-squint"
   ],
   [
     "regular",
@@ -7525,11 +7501,27 @@
   ],
   [
     "regular",
-    "meh-blank"
+    "hand-point-up"
+  ],
+  [
+    "regular",
+    "lightbulb"
+  ],
+  [
+    "regular",
+    "hand-pointer"
+  ],
+  [
+    "regular",
+    "list-alt"
   ],
   [
     "regular",
     "meh-rolling-eyes"
+  ],
+  [
+    "regular",
+    "meh"
   ],
   [
     "regular",
@@ -7541,10 +7533,6 @@
   ],
   [
     "regular",
-    "newspaper"
-  ],
-  [
-    "regular",
     "money-bill-alt"
   ],
   [
@@ -7553,15 +7541,7 @@
   ],
   [
     "regular",
-    "paper-plane"
-  ],
-  [
-    "regular",
     "object-group"
-  ],
-  [
-    "regular",
-    "pause-circle"
   ],
   [
     "regular",
@@ -7569,7 +7549,15 @@
   ],
   [
     "regular",
-    "plus-square"
+    "paper-plane"
+  ],
+  [
+    "regular",
+    "newspaper"
+  ],
+  [
+    "regular",
+    "pause-circle"
   ],
   [
     "regular",
@@ -7577,7 +7565,11 @@
   ],
   [
     "regular",
-    "question-circle"
+    "registered"
+  ],
+  [
+    "regular",
+    "plus-square"
   ],
   [
     "regular",
@@ -7585,7 +7577,7 @@
   ],
   [
     "regular",
-    "registered"
+    "question-circle"
   ],
   [
     "regular",
@@ -7593,11 +7585,11 @@
   ],
   [
     "regular",
-    "meh"
+    "save"
   ],
   [
     "regular",
-    "save"
+    "share-square"
   ],
   [
     "regular",
@@ -7609,6 +7601,10 @@
   ],
   [
     "regular",
+    "square"
+  ],
+  [
+    "regular",
     "smile-wink"
   ],
   [
@@ -7617,11 +7613,7 @@
   ],
   [
     "regular",
-    "laugh-beam"
-  ],
-  [
-    "regular",
-    "square"
+    "star-half"
   ],
   [
     "regular",
@@ -7629,7 +7621,7 @@
   ],
   [
     "regular",
-    "sticky-note"
+    "stop-circle"
   ],
   [
     "regular",
@@ -7637,23 +7629,7 @@
   ],
   [
     "regular",
-    "stop-circle"
-  ],
-  [
-    "regular",
     "surprise"
-  ],
-  [
-    "regular",
-    "thumbs-down"
-  ],
-  [
-    "regular",
-    "times-circle"
-  ],
-  [
-    "regular",
-    "thumbs-up"
   ],
   [
     "regular",
@@ -7661,11 +7637,23 @@
   ],
   [
     "regular",
-    "trash-alt"
+    "sticky-note"
+  ],
+  [
+    "regular",
+    "thumbs-up"
   ],
   [
     "regular",
     "user-circle"
+  ],
+  [
+    "regular",
+    "laugh"
+  ],
+  [
+    "regular",
+    "meh-blank"
   ],
   [
     "regular",
@@ -7677,7 +7665,7 @@
   ],
   [
     "regular",
-    "window-maximize"
+    "window-minimize"
   ],
   [
     "regular",
@@ -7685,23 +7673,35 @@
   ],
   [
     "regular",
-    "window-minimize"
+    "times-circle"
   ],
   [
     "regular",
-    "share-square"
+    "hand-point-down"
   ],
   [
     "regular",
-    "circle"
+    "hand-point-left"
   ],
   [
     "regular",
-    "clone"
+    "kiss-beam"
   ],
   [
     "regular",
-    "star-half"
+    "window-maximize"
+  ],
+  [
+    "regular",
+    "file-word"
+  ],
+  [
+    "regular",
+    "thumbs-down"
+  ],
+  [
+    "regular",
+    "trash-alt"
   ],
   [
     "solid",
@@ -7709,11 +7709,11 @@
   ],
   [
     "solid",
-    "address-book"
+    "address-card"
   ],
   [
     "solid",
-    "address-card"
+    "address-book"
   ],
   [
     "solid",
@@ -7721,11 +7721,7 @@
   ],
   [
     "solid",
-    "air-freshener"
-  ],
-  [
-    "solid",
-    "align-justify"
+    "align-left"
   ],
   [
     "solid",
@@ -7733,7 +7729,15 @@
   ],
   [
     "solid",
-    "align-right"
+    "air-freshener"
+  ],
+  [
+    "solid",
+    "american-sign-language-interpreting"
+  ],
+  [
+    "solid",
+    "align-justify"
   ],
   [
     "solid",
@@ -7745,31 +7749,7 @@
   ],
   [
     "solid",
-    "angle-double-down"
-  ],
-  [
-    "solid",
-    "american-sign-language-interpreting"
-  ],
-  [
-    "solid",
-    "angle-down"
-  ],
-  [
-    "solid",
-    "anchor"
-  ],
-  [
-    "solid",
-    "angle-left"
-  ],
-  [
-    "solid",
-    "angle-up"
-  ],
-  [
-    "solid",
-    "angle-double-right"
+    "angle-double-left"
   ],
   [
     "solid",
@@ -7777,15 +7757,23 @@
   ],
   [
     "solid",
-    "angry"
+    "anchor"
   ],
   [
     "solid",
-    "ankh"
+    "angle-double-down"
   ],
   [
     "solid",
-    "archive"
+    "angle-double-right"
+  ],
+  [
+    "solid",
+    "angle-left"
+  ],
+  [
+    "solid",
+    "angle-down"
   ],
   [
     "solid",
@@ -7793,7 +7781,11 @@
   ],
   [
     "solid",
-    "arrow-alt-circle-up"
+    "angry"
+  ],
+  [
+    "solid",
+    "angle-up"
   ],
   [
     "solid",
@@ -7801,7 +7793,11 @@
   ],
   [
     "solid",
-    "arrow-alt-circle-right"
+    "ankh"
+  ],
+  [
+    "solid",
+    "apple-alt"
   ],
   [
     "solid",
@@ -7809,11 +7805,15 @@
   ],
   [
     "solid",
+    "arrow-alt-circle-up"
+  ],
+  [
+    "solid",
     "arrow-alt-circle-down"
   ],
   [
     "solid",
-    "arrow-circle-down"
+    "arrow-alt-circle-right"
   ],
   [
     "solid",
@@ -7825,15 +7825,15 @@
   ],
   [
     "solid",
-    "arrow-circle-up"
+    "arrow-circle-down"
   ],
   [
     "solid",
-    "apple-alt"
+    "arrow-right"
   ],
   [
     "solid",
-    "angle-double-left"
+    "arrows-alt-v"
   ],
   [
     "solid",
@@ -7841,11 +7841,7 @@
   ],
   [
     "solid",
-    "arrow-up"
-  ],
-  [
-    "solid",
-    "arrow-left"
+    "arrow-circle-up"
   ],
   [
     "solid",
@@ -7853,7 +7849,11 @@
   ],
   [
     "solid",
-    "arrows-alt-v"
+    "arrow-left"
+  ],
+  [
+    "solid",
+    "assistive-listening-systems"
   ],
   [
     "solid",
@@ -7865,7 +7865,11 @@
   ],
   [
     "solid",
-    "assistive-listening-systems"
+    "at"
+  ],
+  [
+    "solid",
+    "atlas"
   ],
   [
     "solid",
@@ -7877,7 +7881,7 @@
   ],
   [
     "solid",
-    "align-left"
+    "arrow-up"
   ],
   [
     "solid",
@@ -7889,11 +7893,7 @@
   ],
   [
     "solid",
-    "baby"
-  ],
-  [
-    "solid",
-    "atlas"
+    "baby-carriage"
   ],
   [
     "solid",
@@ -7901,27 +7901,7 @@
   ],
   [
     "solid",
-    "balance-scale-left"
-  ],
-  [
-    "solid",
-    "bacon"
-  ],
-  [
-    "solid",
-    "bahai"
-  ],
-  [
-    "solid",
-    "at"
-  ],
-  [
-    "solid",
-    "baby-carriage"
-  ],
-  [
-    "solid",
-    "arrow-right"
+    "baby"
   ],
   [
     "solid",
@@ -7929,39 +7909,7 @@
   ],
   [
     "solid",
-    "band-aid"
-  ],
-  [
-    "solid",
-    "baseball-ball"
-  ],
-  [
-    "solid",
-    "bath"
-  ],
-  [
-    "solid",
-    "bars"
-  ],
-  [
-    "solid",
-    "basketball-ball"
-  ],
-  [
-    "solid",
-    "battery-half"
-  ],
-  [
-    "solid",
-    "barcode"
-  ],
-  [
-    "solid",
-    "bed"
-  ],
-  [
-    "solid",
-    "balance-scale"
+    "bacon"
   ],
   [
     "solid",
@@ -7969,15 +7917,35 @@
   ],
   [
     "solid",
+    "bahai"
+  ],
+  [
+    "solid",
+    "balance-scale-left"
+  ],
+  [
+    "solid",
     "ban"
   ],
   [
     "solid",
-    "bell-slash"
+    "balance-scale"
   ],
   [
     "solid",
-    "battery-three-quarters"
+    "band-aid"
+  ],
+  [
+    "solid",
+    "balance-scale-right"
+  ],
+  [
+    "solid",
+    "basketball-ball"
+  ],
+  [
+    "solid",
+    "bars"
   ],
   [
     "solid",
@@ -7985,7 +7953,23 @@
   ],
   [
     "solid",
-    "battery-quarter"
+    "barcode"
+  ],
+  [
+    "solid",
+    "battery-half"
+  ],
+  [
+    "solid",
+    "bath"
+  ],
+  [
+    "solid",
+    "battery-three-quarters"
+  ],
+  [
+    "solid",
+    "align-right"
   ],
   [
     "solid",
@@ -7993,15 +7977,23 @@
   ],
   [
     "solid",
+    "battery-quarter"
+  ],
+  [
+    "solid",
     "battery-empty"
   ],
   [
     "solid",
-    "bezier-curve"
+    "bed"
   ],
   [
     "solid",
-    "biking"
+    "bell-slash"
+  ],
+  [
+    "solid",
+    "bezier-curve"
   ],
   [
     "solid",
@@ -8013,55 +8005,15 @@
   ],
   [
     "solid",
-    "biohazard"
-  ],
-  [
-    "solid",
-    "bold"
-  ],
-  [
-    "solid",
-    "blender"
-  ],
-  [
-    "solid",
     "binoculars"
   ],
   [
     "solid",
-    "bomb"
+    "biking"
   ],
   [
     "solid",
-    "bone"
-  ],
-  [
-    "solid",
-    "bolt"
-  ],
-  [
-    "solid",
-    "blind"
-  ],
-  [
-    "solid",
-    "book-dead"
-  ],
-  [
-    "solid",
-    "book-open"
-  ],
-  [
-    "solid",
-    "bong"
-  ],
-  [
-    "solid",
-    "book-medical"
-  ],
-  [
-    "solid",
-    "balance-scale-right"
+    "birthday-cake"
   ],
   [
     "solid",
@@ -8069,7 +8021,47 @@
   ],
   [
     "solid",
-    "border-none"
+    "blind"
+  ],
+  [
+    "solid",
+    "biohazard"
+  ],
+  [
+    "solid",
+    "blender"
+  ],
+  [
+    "solid",
+    "blender-phone"
+  ],
+  [
+    "solid",
+    "blog"
+  ],
+  [
+    "solid",
+    "bolt"
+  ],
+  [
+    "solid",
+    "bold"
+  ],
+  [
+    "solid",
+    "bone"
+  ],
+  [
+    "solid",
+    "book-dead"
+  ],
+  [
+    "solid",
+    "bomb"
+  ],
+  [
+    "solid",
+    "bong"
   ],
   [
     "solid",
@@ -8077,7 +8069,31 @@
   ],
   [
     "solid",
-    "box-open"
+    "book-medical"
+  ],
+  [
+    "solid",
+    "book"
+  ],
+  [
+    "solid",
+    "book-open"
+  ],
+  [
+    "solid",
+    "border-all"
+  ],
+  [
+    "solid",
+    "bookmark"
+  ],
+  [
+    "solid",
+    "border-none"
+  ],
+  [
+    "solid",
+    "border-style"
   ],
   [
     "solid",
@@ -8089,15 +8105,11 @@
   ],
   [
     "solid",
-    "border-style"
+    "box"
   ],
   [
     "solid",
-    "blender-phone"
-  ],
-  [
-    "solid",
-    "brain"
+    "box-open"
   ],
   [
     "solid",
@@ -8105,7 +8117,7 @@
   ],
   [
     "solid",
-    "box"
+    "bread-slice"
   ],
   [
     "solid",
@@ -8117,11 +8129,11 @@
   ],
   [
     "solid",
-    "briefcase-medical"
+    "brain"
   ],
   [
     "solid",
-    "bread-slice"
+    "briefcase-medical"
   ],
   [
     "solid",
@@ -8129,7 +8141,7 @@
   ],
   [
     "solid",
-    "bookmark"
+    "broadcast-tower"
   ],
   [
     "solid",
@@ -8137,15 +8149,7 @@
   ],
   [
     "solid",
-    "bug"
-  ],
-  [
-    "solid",
-    "broadcast-tower"
-  ],
-  [
-    "solid",
-    "bus-alt"
+    "brush"
   ],
   [
     "solid",
@@ -8153,7 +8157,7 @@
   ],
   [
     "solid",
-    "bullseye"
+    "burn"
   ],
   [
     "solid",
@@ -8161,7 +8165,23 @@
   ],
   [
     "solid",
+    "calendar-check"
+  ],
+  [
+    "solid",
+    "bus"
+  ],
+  [
+    "solid",
     "calculator"
+  ],
+  [
+    "solid",
+    "calendar-alt"
+  ],
+  [
+    "solid",
+    "bus-alt"
   ],
   [
     "solid",
@@ -8169,15 +8189,7 @@
   ],
   [
     "solid",
-    "blog"
-  ],
-  [
-    "solid",
-    "calendar-check"
-  ],
-  [
-    "solid",
-    "calendar-alt"
+    "bullseye"
   ],
   [
     "solid",
@@ -8193,7 +8205,15 @@
   ],
   [
     "solid",
-    "bus"
+    "baseball-ball"
+  ],
+  [
+    "solid",
+    "campground"
+  ],
+  [
+    "solid",
+    "camera-retro"
   ],
   [
     "solid",
@@ -8205,23 +8225,7 @@
   ],
   [
     "solid",
-    "camera"
-  ],
-  [
-    "solid",
-    "calendar"
-  ],
-  [
-    "solid",
     "cannabis"
-  ],
-  [
-    "solid",
-    "capsules"
-  ],
-  [
-    "solid",
-    "car-alt"
   ],
   [
     "solid",
@@ -8229,7 +8233,15 @@
   ],
   [
     "solid",
+    "car-alt"
+  ],
+  [
+    "solid",
     "car-crash"
+  ],
+  [
+    "solid",
+    "camera"
   ],
   [
     "solid",
@@ -8237,11 +8249,7 @@
   ],
   [
     "solid",
-    "caravan"
-  ],
-  [
-    "solid",
-    "car"
+    "capsules"
   ],
   [
     "solid",
@@ -8253,7 +8261,15 @@
   ],
   [
     "solid",
-    "caret-square-left"
+    "caravan"
+  ],
+  [
+    "solid",
+    "car"
+  ],
+  [
+    "solid",
+    "calendar"
   ],
   [
     "solid",
@@ -8261,11 +8277,7 @@
   ],
   [
     "solid",
-    "caret-right"
-  ],
-  [
-    "solid",
-    "caret-square-right"
+    "bug"
   ],
   [
     "solid",
@@ -8273,11 +8285,19 @@
   ],
   [
     "solid",
+    "caret-square-left"
+  ],
+  [
+    "solid",
+    "caret-square-right"
+  ],
+  [
+    "solid",
     "carrot"
   ],
   [
     "solid",
-    "caret-up"
+    "caret-right"
   ],
   [
     "solid",
@@ -8285,11 +8305,7 @@
   ],
   [
     "solid",
-    "cart-plus"
-  ],
-  [
-    "solid",
-    "cat"
+    "caret-up"
   ],
   [
     "solid",
@@ -8297,23 +8313,11 @@
   ],
   [
     "solid",
+    "cat"
+  ],
+  [
+    "solid",
     "chair"
-  ],
-  [
-    "solid",
-    "certificate"
-  ],
-  [
-    "solid",
-    "charging-station"
-  ],
-  [
-    "solid",
-    "chart-area"
-  ],
-  [
-    "solid",
-    "chalkboard"
   ],
   [
     "solid",
@@ -8321,11 +8325,31 @@
   ],
   [
     "solid",
-    "check-circle"
+    "cart-plus"
   ],
   [
     "solid",
-    "chart-line"
+    "chart-area"
+  ],
+  [
+    "solid",
+    "charging-station"
+  ],
+  [
+    "solid",
+    "certificate"
+  ],
+  [
+    "solid",
+    "chart-bar"
+  ],
+  [
+    "solid",
+    "chalkboard"
+  ],
+  [
+    "solid",
+    "check-double"
   ],
   [
     "solid",
@@ -8337,23 +8361,7 @@
   ],
   [
     "solid",
-    "check-double"
-  ],
-  [
-    "solid",
-    "brush"
-  ],
-  [
-    "solid",
-    "cheese"
-  ],
-  [
-    "solid",
-    "check"
-  ],
-  [
-    "solid",
-    "chess-board"
+    "check-circle"
   ],
   [
     "solid",
@@ -8361,23 +8369,15 @@
   ],
   [
     "solid",
-    "chess-queen"
+    "chart-line"
   ],
   [
     "solid",
-    "chess-rook"
+    "check"
   ],
   [
     "solid",
-    "chess-pawn"
-  ],
-  [
-    "solid",
-    "camera-retro"
-  ],
-  [
-    "solid",
-    "chess"
+    "cheese"
   ],
   [
     "solid",
@@ -8385,19 +8385,11 @@
   ],
   [
     "solid",
-    "chevron-circle-right"
+    "chess-rook"
   ],
   [
     "solid",
-    "chevron-down"
-  ],
-  [
-    "solid",
-    "chevron-circle-down"
-  ],
-  [
-    "solid",
-    "chevron-circle-left"
+    "chess-board"
   ],
   [
     "solid",
@@ -8405,23 +8397,23 @@
   ],
   [
     "solid",
-    "chevron-up"
+    "chess"
   ],
   [
     "solid",
-    "burn"
+    "chess-queen"
   ],
   [
     "solid",
-    "chevron-left"
+    "chevron-circle-down"
   ],
   [
     "solid",
-    "campground"
+    "chess-pawn"
   ],
   [
     "solid",
-    "chevron-right"
+    "chevron-circle-right"
   ],
   [
     "solid",
@@ -8429,67 +8421,19 @@
   ],
   [
     "solid",
-    "church"
+    "chevron-left"
   ],
   [
     "solid",
-    "city"
+    "chevron-circle-left"
   ],
   [
     "solid",
-    "chart-bar"
+    "chevron-right"
   ],
   [
     "solid",
-    "clinic-medical"
-  ],
-  [
-    "solid",
-    "clipboard-check"
-  ],
-  [
-    "solid",
-    "clock"
-  ],
-  [
-    "solid",
-    "birthday-cake"
-  ],
-  [
-    "solid",
-    "clipboard-list"
-  ],
-  [
-    "solid",
-    "circle-notch"
-  ],
-  [
-    "solid",
-    "circle"
-  ],
-  [
-    "solid",
-    "cloud-moon-rain"
-  ],
-  [
-    "solid",
-    "closed-captioning"
-  ],
-  [
-    "solid",
-    "clone"
-  ],
-  [
-    "solid",
-    "cloud-meatball"
-  ],
-  [
-    "solid",
-    "book"
-  ],
-  [
-    "solid",
-    "cloud-sun-rain"
+    "chevron-up"
   ],
   [
     "solid",
@@ -8497,31 +8441,51 @@
   ],
   [
     "solid",
-    "cloud-moon"
+    "chevron-down"
   ],
   [
     "solid",
-    "cloud-showers-heavy"
+    "clipboard-check"
   ],
   [
     "solid",
-    "cloud-sun"
+    "church"
   ],
   [
     "solid",
-    "cloud"
+    "circle"
   ],
   [
     "solid",
-    "cocktail"
+    "city"
   ],
   [
     "solid",
-    "code-branch"
+    "circle-notch"
   ],
   [
     "solid",
-    "cloud-download-alt"
+    "clipboard-list"
+  ],
+  [
+    "solid",
+    "clipboard"
+  ],
+  [
+    "solid",
+    "clinic-medical"
+  ],
+  [
+    "solid",
+    "cloud-meatball"
+  ],
+  [
+    "solid",
+    "cloud-moon-rain"
+  ],
+  [
+    "solid",
+    "clock"
   ],
   [
     "solid",
@@ -8529,11 +8493,71 @@
   ],
   [
     "solid",
-    "code"
+    "clone"
+  ],
+  [
+    "solid",
+    "cloud-download-alt"
+  ],
+  [
+    "solid",
+    "closed-captioning"
+  ],
+  [
+    "solid",
+    "cloud-moon"
+  ],
+  [
+    "solid",
+    "cloud-sun"
+  ],
+  [
+    "solid",
+    "cloud-showers-heavy"
+  ],
+  [
+    "solid",
+    "cloud-upload-alt"
+  ],
+  [
+    "solid",
+    "cloud-sun-rain"
+  ],
+  [
+    "solid",
+    "coffee"
+  ],
+  [
+    "solid",
+    "code-branch"
+  ],
+  [
+    "solid",
+    "comment-dollar"
+  ],
+  [
+    "solid",
+    "comment-alt"
+  ],
+  [
+    "solid",
+    "columns"
+  ],
+  [
+    "solid",
+    "comment-dots"
   ],
   [
     "solid",
     "cogs"
+  ],
+  [
+    "solid",
+    "comment-medical"
+  ],
+  [
+    "solid",
+    "comment"
   ],
   [
     "solid",
@@ -8545,35 +8569,15 @@
   ],
   [
     "solid",
-    "comment-alt"
-  ],
-  [
-    "solid",
-    "comment-dollar"
-  ],
-  [
-    "solid",
-    "columns"
-  ],
-  [
-    "solid",
-    "comment-medical"
-  ],
-  [
-    "solid",
-    "comment-dots"
-  ],
-  [
-    "solid",
-    "comment"
-  ],
-  [
-    "solid",
-    "compass"
-  ],
-  [
-    "solid",
     "comment-slash"
+  ],
+  [
+    "solid",
+    "cloud"
+  ],
+  [
+    "solid",
+    "comments-dollar"
   ],
   [
     "solid",
@@ -8581,47 +8585,7 @@
   ],
   [
     "solid",
-    "compress-arrows-alt"
-  ],
-  [
-    "solid",
     "compress-alt"
-  ],
-  [
-    "solid",
-    "compact-disc"
-  ],
-  [
-    "solid",
-    "comments"
-  ],
-  [
-    "solid",
-    "cloud-upload-alt"
-  ],
-  [
-    "solid",
-    "cookie-bite"
-  ],
-  [
-    "solid",
-    "concierge-bell"
-  ],
-  [
-    "solid",
-    "copyright"
-  ],
-  [
-    "solid",
-    "credit-card"
-  ],
-  [
-    "solid",
-    "copy"
-  ],
-  [
-    "solid",
-    "crop"
   ],
   [
     "solid",
@@ -8629,7 +8593,27 @@
   ],
   [
     "solid",
-    "crop-alt"
+    "compass"
+  ],
+  [
+    "solid",
+    "compact-disc"
+  ],
+  [
+    "solid",
+    "copy"
+  ],
+  [
+    "solid",
+    "copyright"
+  ],
+  [
+    "solid",
+    "concierge-bell"
+  ],
+  [
+    "solid",
+    "credit-card"
   ],
   [
     "solid",
@@ -8637,15 +8621,7 @@
   ],
   [
     "solid",
-    "crutch"
-  ],
-  [
-    "solid",
-    "crow"
-  ],
-  [
-    "solid",
-    "cross"
+    "code"
   ],
   [
     "solid",
@@ -8653,15 +8629,31 @@
   ],
   [
     "solid",
+    "crop"
+  ],
+  [
+    "solid",
+    "crop-alt"
+  ],
+  [
+    "solid",
+    "crow"
+  ],
+  [
+    "solid",
+    "cocktail"
+  ],
+  [
+    "solid",
+    "cross"
+  ],
+  [
+    "solid",
+    "cookie-bite"
+  ],
+  [
+    "solid",
     "crown"
-  ],
-  [
-    "solid",
-    "cube"
-  ],
-  [
-    "solid",
-    "deaf"
   ],
   [
     "solid",
@@ -8669,23 +8661,11 @@
   ],
   [
     "solid",
+    "cube"
+  ],
+  [
+    "solid",
     "democrat"
-  ],
-  [
-    "solid",
-    "cubes"
-  ],
-  [
-    "solid",
-    "cut"
-  ],
-  [
-    "solid",
-    "dharmachakra"
-  ],
-  [
-    "solid",
-    "diagnoses"
   ],
   [
     "solid",
@@ -8693,11 +8673,23 @@
   ],
   [
     "solid",
-    "dice-five"
+    "deaf"
   ],
   [
     "solid",
     "dice-d20"
+  ],
+  [
+    "solid",
+    "diagnoses"
+  ],
+  [
+    "solid",
+    "dharmachakra"
+  ],
+  [
+    "solid",
+    "dice-five"
   ],
   [
     "solid",
@@ -8713,11 +8705,11 @@
   ],
   [
     "solid",
-    "dice-two"
+    "dice"
   ],
   [
     "solid",
-    "dice"
+    "dice-three"
   ],
   [
     "solid",
@@ -8725,7 +8717,7 @@
   ],
   [
     "solid",
-    "comments-dollar"
+    "divide"
   ],
   [
     "solid",
@@ -8733,11 +8725,23 @@
   ],
   [
     "solid",
-    "divide"
+    "dice-two"
   ],
   [
     "solid",
     "directions"
+  ],
+  [
+    "solid",
+    "disease"
+  ],
+  [
+    "solid",
+    "dna"
+  ],
+  [
+    "solid",
+    "dog"
   ],
   [
     "solid",
@@ -8749,35 +8753,7 @@
   ],
   [
     "solid",
-    "dog"
-  ],
-  [
-    "solid",
-    "disease"
-  ],
-  [
-    "solid",
-    "dolly-flatbed"
-  ],
-  [
-    "solid",
-    "dna"
-  ],
-  [
-    "solid",
-    "dice-three"
-  ],
-  [
-    "solid",
     "dolly"
-  ],
-  [
-    "solid",
-    "donate"
-  ],
-  [
-    "solid",
-    "dot-circle"
   ],
   [
     "solid",
@@ -8785,31 +8761,7 @@
   ],
   [
     "solid",
-    "download"
-  ],
-  [
-    "solid",
-    "dove"
-  ],
-  [
-    "solid",
-    "draw-polygon"
-  ],
-  [
-    "solid",
-    "drafting-compass"
-  ],
-  [
-    "solid",
-    "dragon"
-  ],
-  [
-    "solid",
-    "drum-steelpan"
-  ],
-  [
-    "solid",
-    "drumstick-bite"
+    "dolly-flatbed"
   ],
   [
     "solid",
@@ -8817,7 +8769,47 @@
   ],
   [
     "solid",
+    "donate"
+  ],
+  [
+    "solid",
+    "download"
+  ],
+  [
+    "solid",
+    "comments"
+  ],
+  [
+    "solid",
+    "dragon"
+  ],
+  [
+    "solid",
+    "dove"
+  ],
+  [
+    "solid",
+    "dot-circle"
+  ],
+  [
+    "solid",
+    "drumstick-bite"
+  ],
+  [
+    "solid",
+    "drafting-compass"
+  ],
+  [
+    "solid",
     "drum"
+  ],
+  [
+    "solid",
+    "drum-steelpan"
+  ],
+  [
+    "solid",
+    "dumpster-fire"
   ],
   [
     "solid",
@@ -8825,23 +8817,7 @@
   ],
   [
     "solid",
-    "dungeon"
-  ],
-  [
-    "solid",
-    "edit"
-  ],
-  [
-    "solid",
     "dumbbell"
-  ],
-  [
-    "solid",
-    "egg"
-  ],
-  [
-    "solid",
-    "eject"
   ],
   [
     "solid",
@@ -8849,19 +8825,23 @@
   ],
   [
     "solid",
+    "edit"
+  ],
+  [
+    "solid",
+    "dungeon"
+  ],
+  [
+    "solid",
     "ellipsis-v"
   ],
   [
     "solid",
-    "envelope-open-text"
+    "eject"
   ],
   [
     "solid",
-    "envelope-square"
-  ],
-  [
-    "solid",
-    "envelope-open"
+    "egg"
   ],
   [
     "solid",
@@ -8869,7 +8849,7 @@
   ],
   [
     "solid",
-    "eraser"
+    "envelope-open-text"
   ],
   [
     "solid",
@@ -8877,7 +8857,7 @@
   ],
   [
     "solid",
-    "exchange-alt"
+    "envelope-square"
   ],
   [
     "solid",
@@ -8885,11 +8865,23 @@
   ],
   [
     "solid",
-    "euro-sign"
+    "eraser"
   ],
   [
     "solid",
     "exclamation-circle"
+  ],
+  [
+    "solid",
+    "exchange-alt"
+  ],
+  [
+    "solid",
+    "euro-sign"
+  ],
+  [
+    "solid",
+    "expand-alt"
   ],
   [
     "solid",
@@ -8905,11 +8897,11 @@
   ],
   [
     "solid",
-    "expand-alt"
+    "expand"
   ],
   [
     "solid",
-    "eye-dropper"
+    "eye-slash"
   ],
   [
     "solid",
@@ -8921,15 +8913,7 @@
   ],
   [
     "solid",
-    "expand"
-  ],
-  [
-    "solid",
-    "eye-slash"
-  ],
-  [
-    "solid",
-    "eye"
+    "eye-dropper"
   ],
   [
     "solid",
@@ -8937,15 +8921,7 @@
   ],
   [
     "solid",
-    "fax"
-  ],
-  [
-    "solid",
     "fan"
-  ],
-  [
-    "solid",
-    "feather"
   ],
   [
     "solid",
@@ -8953,19 +8929,11 @@
   ],
   [
     "solid",
-    "dumpster-fire"
+    "fax"
   ],
   [
     "solid",
-    "feather-alt"
-  ],
-  [
-    "solid",
-    "fighter-jet"
-  ],
-  [
-    "solid",
-    "female"
+    "eye"
   ],
   [
     "solid",
@@ -8973,11 +8941,31 @@
   ],
   [
     "solid",
-    "file-code"
+    "compress-arrows-alt"
   ],
   [
     "solid",
-    "file-archive"
+    "feather-alt"
+  ],
+  [
+    "solid",
+    "feather"
+  ],
+  [
+    "solid",
+    "female"
+  ],
+  [
+    "solid",
+    "fighter-jet"
+  ],
+  [
+    "solid",
+    "file-alt"
+  ],
+  [
+    "solid",
+    "file-code"
   ],
   [
     "solid",
@@ -8985,15 +8973,7 @@
   ],
   [
     "solid",
-    "file-excel"
-  ],
-  [
-    "solid",
-    "file-csv"
-  ],
-  [
-    "solid",
-    "file-contract"
+    "file-archive"
   ],
   [
     "solid",
@@ -9001,11 +8981,19 @@
   ],
   [
     "solid",
+    "file-csv"
+  ],
+  [
+    "solid",
     "file-export"
   ],
   [
     "solid",
-    "file-invoice-dollar"
+    "file-contract"
+  ],
+  [
+    "solid",
+    "file-excel"
   ],
   [
     "solid",
@@ -9021,11 +9009,11 @@
   ],
   [
     "solid",
-    "file-medical"
+    "file-invoice-dollar"
   ],
   [
     "solid",
-    "file-powerpoint"
+    "file-medical"
   ],
   [
     "solid",
@@ -9037,15 +9025,11 @@
   ],
   [
     "solid",
-    "file-upload"
-  ],
-  [
-    "solid",
     "file-prescription"
   ],
   [
     "solid",
-    "file-word"
+    "file-powerpoint"
   ],
   [
     "solid",
@@ -9053,15 +9037,15 @@
   ],
   [
     "solid",
-    "file-video"
+    "envelope-open"
   ],
   [
     "solid",
-    "file"
+    "file-word"
   ],
   [
     "solid",
-    "filter"
+    "file-upload"
   ],
   [
     "solid",
@@ -9069,11 +9053,15 @@
   ],
   [
     "solid",
-    "file-alt"
+    "fill"
   ],
   [
     "solid",
-    "fire-extinguisher"
+    "file-video"
+  ],
+  [
+    "solid",
+    "filter"
   ],
   [
     "solid",
@@ -9081,23 +9069,7 @@
   ],
   [
     "solid",
-    "fire-alt"
-  ],
-  [
-    "solid",
-    "fill"
-  ],
-  [
-    "solid",
-    "first-aid"
-  ],
-  [
-    "solid",
-    "fish"
-  ],
-  [
-    "solid",
-    "flag"
+    "file"
   ],
   [
     "solid",
@@ -9105,7 +9077,27 @@
   ],
   [
     "solid",
-    "flag-usa"
+    "fire-alt"
+  ],
+  [
+    "solid",
+    "fish"
+  ],
+  [
+    "solid",
+    "fire-extinguisher"
+  ],
+  [
+    "solid",
+    "first-aid"
+  ],
+  [
+    "solid",
+    "fist-raised"
+  ],
+  [
+    "solid",
+    "fire"
   ],
   [
     "solid",
@@ -9117,7 +9109,7 @@
   ],
   [
     "solid",
-    "folder-open"
+    "flag-usa"
   ],
   [
     "solid",
@@ -9129,23 +9121,11 @@
   ],
   [
     "solid",
+    "flag"
+  ],
+  [
+    "solid",
     "folder-minus"
-  ],
-  [
-    "solid",
-    "font-awesome-logo-full"
-  ],
-  [
-    "solid",
-    "font"
-  ],
-  [
-    "solid",
-    "folder"
-  ],
-  [
-    "solid",
-    "fist-raised"
   ],
   [
     "solid",
@@ -9153,11 +9133,19 @@
   ],
   [
     "solid",
-    "forward"
+    "folder"
   ],
   [
     "solid",
-    "frown"
+    "font-awesome-logo-full"
+  ],
+  [
+    "solid",
+    "folder-open"
+  ],
+  [
+    "solid",
+    "font"
   ],
   [
     "solid",
@@ -9169,23 +9157,27 @@
   ],
   [
     "solid",
+    "forward"
+  ],
+  [
+    "solid",
+    "crutch"
+  ],
+  [
+    "solid",
+    "frown"
+  ],
+  [
+    "solid",
+    "frog"
+  ],
+  [
+    "solid",
     "futbol"
   ],
   [
     "solid",
     "gas-pump"
-  ],
-  [
-    "solid",
-    "gamepad"
-  ],
-  [
-    "solid",
-    "clipboard"
-  ],
-  [
-    "solid",
-    "gem"
   ],
   [
     "solid",
@@ -9197,15 +9189,11 @@
   ],
   [
     "solid",
-    "gifts"
+    "gamepad"
   ],
   [
     "solid",
     "genderless"
-  ],
-  [
-    "solid",
-    "glass-cheers"
   ],
   [
     "solid",
@@ -9217,7 +9205,11 @@
   ],
   [
     "solid",
-    "glass-whiskey"
+    "glass-cheers"
+  ],
+  [
+    "solid",
+    "gifts"
   ],
   [
     "solid",
@@ -9225,31 +9217,15 @@
   ],
   [
     "solid",
-    "globe-africa"
-  ],
-  [
-    "solid",
-    "globe-americas"
-  ],
-  [
-    "solid",
     "glasses"
   ],
   [
     "solid",
-    "globe"
+    "globe-africa"
   ],
   [
     "solid",
-    "globe-europe"
-  ],
-  [
-    "solid",
-    "golf-ball"
-  ],
-  [
-    "solid",
-    "gopuram"
+    "glass-whiskey"
   ],
   [
     "solid",
@@ -9257,11 +9233,23 @@
   ],
   [
     "solid",
+    "globe-europe"
+  ],
+  [
+    "solid",
+    "globe-americas"
+  ],
+  [
+    "solid",
+    "golf-ball"
+  ],
+  [
+    "solid",
     "graduation-cap"
   ],
   [
     "solid",
-    "grimace"
+    "globe"
   ],
   [
     "solid",
@@ -9273,11 +9261,15 @@
   ],
   [
     "solid",
-    "grin-beam-sweat"
+    "grimace"
   ],
   [
     "solid",
     "grin-beam"
+  ],
+  [
+    "solid",
+    "gopuram"
   ],
   [
     "solid",
@@ -9289,11 +9281,19 @@
   ],
   [
     "solid",
-    "grin-squint-tears"
+    "grin-beam-sweat"
+  ],
+  [
+    "solid",
+    "grin-tongue-squint"
   ],
   [
     "solid",
     "grin-stars"
+  ],
+  [
+    "solid",
+    "grin-squint-tears"
   ],
   [
     "solid",
@@ -9305,15 +9305,7 @@
   ],
   [
     "solid",
-    "grin-tongue-squint"
-  ],
-  [
-    "solid",
     "grin-tongue-wink"
-  ],
-  [
-    "solid",
-    "grin-tongue"
   ],
   [
     "solid",
@@ -9321,31 +9313,11 @@
   ],
   [
     "solid",
+    "grin-tongue"
+  ],
+  [
+    "solid",
     "grip-horizontal"
-  ],
-  [
-    "solid",
-    "grin-wink"
-  ],
-  [
-    "solid",
-    "grin"
-  ],
-  [
-    "solid",
-    "grip-lines"
-  ],
-  [
-    "solid",
-    "grip-vertical"
-  ],
-  [
-    "solid",
-    "guitar"
-  ],
-  [
-    "solid",
-    "hamsa"
   ],
   [
     "solid",
@@ -9353,7 +9325,15 @@
   ],
   [
     "solid",
-    "hamburger"
+    "grin-wink"
+  ],
+  [
+    "solid",
+    "grip-vertical"
+  ],
+  [
+    "solid",
+    "grin"
   ],
   [
     "solid",
@@ -9361,11 +9341,7 @@
   ],
   [
     "solid",
-    "hammer"
-  ],
-  [
-    "solid",
-    "hand-holding-medical"
+    "guitar"
   ],
   [
     "solid",
@@ -9373,7 +9349,7 @@
   ],
   [
     "solid",
-    "hand-holding"
+    "hand-holding-medical"
   ],
   [
     "solid",
@@ -9381,7 +9357,11 @@
   ],
   [
     "solid",
-    "hand-peace"
+    "hammer"
+  ],
+  [
+    "solid",
+    "hamsa"
   ],
   [
     "solid",
@@ -9389,15 +9369,11 @@
   ],
   [
     "solid",
-    "hand-middle-finger"
+    "grip-lines"
   ],
   [
     "solid",
-    "hand-point-down"
-  ],
-  [
-    "solid",
-    "hand-paper"
+    "hamburger"
   ],
   [
     "solid",
@@ -9405,7 +9381,11 @@
   ],
   [
     "solid",
-    "hand-point-up"
+    "hand-paper"
+  ],
+  [
+    "solid",
+    "hand-holding"
   ],
   [
     "solid",
@@ -9413,15 +9393,19 @@
   ],
   [
     "solid",
+    "hand-middle-finger"
+  ],
+  [
+    "solid",
+    "hand-peace"
+  ],
+  [
+    "solid",
+    "hand-point-down"
+  ],
+  [
+    "solid",
     "hand-scissors"
-  ],
-  [
-    "solid",
-    "hand-sparkles"
-  ],
-  [
-    "solid",
-    "hand-pointer"
   ],
   [
     "solid",
@@ -9429,7 +9413,7 @@
   ],
   [
     "solid",
-    "hand-rock"
+    "draw-polygon"
   ],
   [
     "solid",
@@ -9437,15 +9421,15 @@
   ],
   [
     "solid",
-    "hands-wash"
+    "hand-pointer"
   ],
   [
     "solid",
-    "hands"
+    "hand-sparkles"
   ],
   [
     "solid",
-    "hanukiah"
+    "hand-rock"
   ],
   [
     "solid",
@@ -9453,11 +9437,11 @@
   ],
   [
     "solid",
-    "handshake-slash"
+    "hands-wash"
   ],
   [
     "solid",
-    "hard-hat"
+    "handshake-slash"
   ],
   [
     "solid",
@@ -9465,7 +9449,27 @@
   ],
   [
     "solid",
+    "hands"
+  ],
+  [
+    "solid",
+    "hard-hat"
+  ],
+  [
+    "solid",
+    "hanukiah"
+  ],
+  [
+    "solid",
+    "hand-point-up"
+  ],
+  [
+    "solid",
     "hat-cowboy-side"
+  ],
+  [
+    "solid",
+    "head-side-cough"
   ],
   [
     "solid",
@@ -9477,7 +9481,7 @@
   ],
   [
     "solid",
-    "head-side-cough"
+    "head-side-cough-slash"
   ],
   [
     "solid",
@@ -9489,19 +9493,7 @@
   ],
   [
     "solid",
-    "coffee"
-  ],
-  [
-    "solid",
-    "head-side-virus"
-  ],
-  [
-    "solid",
-    "head-side-mask"
-  ],
-  [
-    "solid",
-    "fire"
+    "heading"
   ],
   [
     "solid",
@@ -9509,7 +9501,7 @@
   ],
   [
     "solid",
-    "headphones"
+    "head-side-mask"
   ],
   [
     "solid",
@@ -9517,11 +9509,19 @@
   ],
   [
     "solid",
-    "helicopter"
+    "head-side-virus"
   ],
   [
     "solid",
-    "heart-broken"
+    "cut"
+  ],
+  [
+    "solid",
+    "headphones"
+  ],
+  [
+    "solid",
+    "helicopter"
   ],
   [
     "solid",
@@ -9529,19 +9529,15 @@
   ],
   [
     "solid",
-    "hiking"
-  ],
-  [
-    "solid",
     "highlighter"
   ],
   [
     "solid",
-    "hippo"
+    "hockey-puck"
   ],
   [
     "solid",
-    "heading"
+    "hiking"
   ],
   [
     "solid",
@@ -9553,11 +9549,15 @@
   ],
   [
     "solid",
-    "hockey-puck"
+    "holly-berry"
   ],
   [
     "solid",
-    "home"
+    "hippo"
+  ],
+  [
+    "solid",
+    "horse-head"
   ],
   [
     "solid",
@@ -9565,15 +9565,19 @@
   ],
   [
     "solid",
-    "hospital-user"
-  ],
-  [
-    "solid",
     "hot-tub"
   ],
   [
     "solid",
-    "hotdog"
+    "hospital-alt"
+  ],
+  [
+    "solid",
+    "horse"
+  ],
+  [
+    "solid",
+    "home"
   ],
   [
     "solid",
@@ -9581,11 +9585,7 @@
   ],
   [
     "solid",
-    "hotel"
-  ],
-  [
-    "solid",
-    "hourglass"
+    "hospital-user"
   ],
   [
     "solid",
@@ -9593,11 +9593,7 @@
   ],
   [
     "solid",
-    "hourglass-start"
-  ],
-  [
-    "solid",
-    "house-damage"
+    "hotdog"
   ],
   [
     "solid",
@@ -9605,7 +9601,19 @@
   ],
   [
     "solid",
-    "ice-cream"
+    "hotel"
+  ],
+  [
+    "solid",
+    "cubes"
+  ],
+  [
+    "solid",
+    "hourglass"
+  ],
+  [
+    "solid",
+    "house-damage"
   ],
   [
     "solid",
@@ -9613,23 +9621,27 @@
   ],
   [
     "solid",
-    "hryvnia"
-  ],
-  [
-    "solid",
     "i-cursor"
   ],
   [
     "solid",
-    "icicles"
+    "hourglass-start"
   ],
   [
     "solid",
-    "holly-berry"
+    "id-card"
   ],
   [
     "solid",
-    "icons"
+    "id-card-alt"
+  ],
+  [
+    "solid",
+    "igloo"
+  ],
+  [
+    "solid",
+    "ice-cream"
   ],
   [
     "solid",
@@ -9637,7 +9649,7 @@
   ],
   [
     "solid",
-    "id-card-alt"
+    "icicles"
   ],
   [
     "solid",
@@ -9649,11 +9661,7 @@
   ],
   [
     "solid",
-    "image"
-  ],
-  [
-    "solid",
-    "igloo"
+    "info-circle"
   ],
   [
     "solid",
@@ -9665,19 +9673,7 @@
   ],
   [
     "solid",
-    "info-circle"
-  ],
-  [
-    "solid",
-    "info"
-  ],
-  [
-    "solid",
     "infinity"
-  ],
-  [
-    "solid",
-    "id-card"
   ],
   [
     "solid",
@@ -9685,11 +9681,7 @@
   ],
   [
     "solid",
-    "kaaba"
-  ],
-  [
-    "solid",
-    "hospital-alt"
+    "info"
   ],
   [
     "solid",
@@ -9697,31 +9689,7 @@
   ],
   [
     "solid",
-    "key"
-  ],
-  [
-    "solid",
-    "khanda"
-  ],
-  [
-    "solid",
-    "kiss-beam"
-  ],
-  [
-    "solid",
-    "head-side-cough-slash"
-  ],
-  [
-    "solid",
-    "kiss-wink-heart"
-  ],
-  [
-    "solid",
-    "kiss"
-  ],
-  [
-    "solid",
-    "kiwi-bird"
+    "kaaba"
   ],
   [
     "solid",
@@ -9729,15 +9697,19 @@
   ],
   [
     "solid",
-    "landmark"
+    "icons"
   ],
   [
     "solid",
-    "laptop-house"
+    "key"
   ],
   [
     "solid",
-    "horse"
+    "image"
+  ],
+  [
+    "solid",
+    "kiss-wink-heart"
   ],
   [
     "solid",
@@ -9745,19 +9717,43 @@
   ],
   [
     "solid",
-    "frog"
-  ],
-  [
-    "solid",
-    "laptop"
-  ],
-  [
-    "solid",
     "joint"
   ],
   [
     "solid",
+    "khanda"
+  ],
+  [
+    "solid",
+    "landmark"
+  ],
+  [
+    "solid",
+    "laptop-code"
+  ],
+  [
+    "solid",
+    "laptop-house"
+  ],
+  [
+    "solid",
+    "language"
+  ],
+  [
+    "solid",
+    "kiss-beam"
+  ],
+  [
+    "solid",
+    "laptop-medical"
+  ],
+  [
+    "solid",
     "laugh-beam"
+  ],
+  [
+    "solid",
+    "laptop"
   ],
   [
     "solid",
@@ -9769,11 +9765,15 @@
   ],
   [
     "solid",
-    "less-than-equal"
+    "laugh-squint"
   ],
   [
     "solid",
     "leaf"
+  ],
+  [
+    "solid",
+    "layer-group"
   ],
   [
     "solid",
@@ -9785,11 +9785,15 @@
   ],
   [
     "solid",
-    "link"
+    "less-than-equal"
   ],
   [
     "solid",
-    "list-ul"
+    "level-down-alt"
+  ],
+  [
+    "solid",
+    "life-ring"
   ],
   [
     "solid",
@@ -9797,15 +9801,11 @@
   ],
   [
     "solid",
-    "list-alt"
+    "hryvnia"
   ],
   [
     "solid",
-    "language"
-  ],
-  [
-    "solid",
-    "life-ring"
+    "list-ol"
   ],
   [
     "solid",
@@ -9817,11 +9817,11 @@
   ],
   [
     "solid",
-    "location-arrow"
+    "list-ul"
   ],
   [
     "solid",
-    "horse-head"
+    "link"
   ],
   [
     "solid",
@@ -9829,27 +9829,7 @@
   ],
   [
     "solid",
-    "lock"
-  ],
-  [
-    "solid",
-    "laptop-medical"
-  ],
-  [
-    "solid",
-    "long-arrow-alt-left"
-  ],
-  [
-    "solid",
-    "long-arrow-alt-down"
-  ],
-  [
-    "solid",
-    "level-down-alt"
-  ],
-  [
-    "solid",
-    "luggage-cart"
+    "location-arrow"
   ],
   [
     "solid",
@@ -9857,11 +9837,15 @@
   ],
   [
     "solid",
-    "lungs"
+    "lock"
   ],
   [
     "solid",
-    "lungs-virus"
+    "long-arrow-alt-down"
+  ],
+  [
+    "solid",
+    "kiss"
   ],
   [
     "solid",
@@ -9869,55 +9853,23 @@
   ],
   [
     "solid",
-    "magic"
+    "kiwi-bird"
   ],
   [
     "solid",
-    "mail-bulk"
+    "lungs"
   ],
   [
     "solid",
-    "magnet"
+    "long-arrow-alt-left"
   ],
   [
     "solid",
-    "list-ol"
+    "lungs-virus"
   ],
   [
     "solid",
-    "laptop-code"
-  ],
-  [
-    "solid",
-    "map-marked-alt"
-  ],
-  [
-    "solid",
-    "map-marker-alt"
-  ],
-  [
-    "solid",
-    "level-up-alt"
-  ],
-  [
-    "solid",
-    "map-signs"
-  ],
-  [
-    "solid",
-    "map"
-  ],
-  [
-    "solid",
-    "map-pin"
-  ],
-  [
-    "solid",
-    "marker"
-  ],
-  [
-    "solid",
-    "mars-double"
+    "gem"
   ],
   [
     "solid",
@@ -9925,35 +9877,11 @@
   ],
   [
     "solid",
-    "mars-stroke-h"
+    "magic"
   ],
   [
     "solid",
-    "mars-stroke"
-  ],
-  [
-    "solid",
-    "mars"
-  ],
-  [
-    "solid",
-    "mars-stroke-v"
-  ],
-  [
-    "solid",
-    "medal"
-  ],
-  [
-    "solid",
-    "mask"
-  ],
-  [
-    "solid",
-    "meh"
-  ],
-  [
-    "solid",
-    "medkit"
+    "male"
   ],
   [
     "solid",
@@ -9961,119 +9889,19 @@
   ],
   [
     "solid",
-    "menorah"
+    "mail-bulk"
   ],
   [
     "solid",
-    "meh-rolling-eyes"
+    "list-alt"
   ],
   [
     "solid",
-    "microphone-alt-slash"
+    "map-pin"
   ],
   [
     "solid",
-    "mercury"
-  ],
-  [
-    "solid",
-    "layer-group"
-  ],
-  [
-    "solid",
-    "microchip"
-  ],
-  [
-    "solid",
-    "microphone-slash"
-  ],
-  [
-    "solid",
-    "microphone-alt"
-  ],
-  [
-    "solid",
-    "microscope"
-  ],
-  [
-    "solid",
-    "microphone"
-  ],
-  [
-    "solid",
-    "minus-circle"
-  ],
-  [
-    "solid",
-    "minus-square"
-  ],
-  [
-    "solid",
-    "minus"
-  ],
-  [
-    "solid",
-    "mobile-alt"
-  ],
-  [
-    "solid",
-    "mitten"
-  ],
-  [
-    "solid",
-    "money-bill-alt"
-  ],
-  [
-    "solid",
-    "money-bill-wave"
-  ],
-  [
-    "solid",
-    "money-check-alt"
-  ],
-  [
-    "solid",
-    "money-bill-wave-alt"
-  ],
-  [
-    "solid",
-    "moon"
-  ],
-  [
-    "solid",
-    "monument"
-  ],
-  [
-    "solid",
-    "money-bill"
-  ],
-  [
-    "solid",
-    "money-check"
-  ],
-  [
-    "solid",
-    "mortar-pestle"
-  ],
-  [
-    "solid",
-    "mobile"
-  ],
-  [
-    "solid",
-    "meh-blank"
-  ],
-  [
-    "solid",
-    "mosque"
-  ],
-  [
-    "solid",
-    "motorcycle"
-  ],
-  [
-    "solid",
-    "mountain"
+    "luggage-cart"
   ],
   [
     "solid",
@@ -10081,11 +9909,179 @@
   ],
   [
     "solid",
+    "map"
+  ],
+  [
+    "solid",
+    "marker"
+  ],
+  [
+    "solid",
+    "map-signs"
+  ],
+  [
+    "solid",
+    "mars-double"
+  ],
+  [
+    "solid",
+    "mask"
+  ],
+  [
+    "solid",
+    "magnet"
+  ],
+  [
+    "solid",
+    "mars-stroke-v"
+  ],
+  [
+    "solid",
+    "mars-stroke"
+  ],
+  [
+    "solid",
+    "medal"
+  ],
+  [
+    "solid",
+    "mars"
+  ],
+  [
+    "solid",
+    "medkit"
+  ],
+  [
+    "solid",
+    "map-marker-alt"
+  ],
+  [
+    "solid",
+    "meh-blank"
+  ],
+  [
+    "solid",
+    "meh-rolling-eyes"
+  ],
+  [
+    "solid",
+    "menorah"
+  ],
+  [
+    "solid",
+    "mercury"
+  ],
+  [
+    "solid",
+    "meteor"
+  ],
+  [
+    "solid",
+    "memory"
+  ],
+  [
+    "solid",
+    "microchip"
+  ],
+  [
+    "solid",
+    "microphone-alt-slash"
+  ],
+  [
+    "solid",
+    "microphone-alt"
+  ],
+  [
+    "solid",
+    "microphone"
+  ],
+  [
+    "solid",
+    "microphone-slash"
+  ],
+  [
+    "solid",
+    "mitten"
+  ],
+  [
+    "solid",
+    "microscope"
+  ],
+  [
+    "solid",
+    "minus-circle"
+  ],
+  [
+    "solid",
+    "minus"
+  ],
+  [
+    "solid",
+    "meh"
+  ],
+  [
+    "solid",
+    "mobile"
+  ],
+  [
+    "solid",
+    "money-bill-alt"
+  ],
+  [
+    "solid",
+    "mobile-alt"
+  ],
+  [
+    "solid",
+    "money-bill-wave"
+  ],
+  [
+    "solid",
+    "minus-square"
+  ],
+  [
+    "solid",
+    "money-bill-wave-alt"
+  ],
+  [
+    "solid",
+    "money-check"
+  ],
+  [
+    "solid",
+    "money-bill"
+  ],
+  [
+    "solid",
+    "money-check-alt"
+  ],
+  [
+    "solid",
+    "moon"
+  ],
+  [
+    "solid",
+    "motorcycle"
+  ],
+  [
+    "solid",
+    "monument"
+  ],
+  [
+    "solid",
     "mouse-pointer"
   ],
   [
     "solid",
-    "mouse"
+    "mosque"
+  ],
+  [
+    "solid",
+    "mortar-pestle"
+  ],
+  [
+    "solid",
+    "mountain"
   ],
   [
     "solid",
@@ -10097,67 +10093,7 @@
   ],
   [
     "solid",
-    "mug-hot"
-  ],
-  [
-    "solid",
-    "network-wired"
-  ],
-  [
-    "solid",
-    "not-equal"
-  ],
-  [
-    "solid",
-    "notes-medical"
-  ],
-  [
-    "solid",
-    "otter"
-  ],
-  [
-    "solid",
-    "object-group"
-  ],
-  [
-    "solid",
-    "om"
-  ],
-  [
-    "solid",
-    "pager"
-  ],
-  [
-    "solid",
-    "oil-can"
-  ],
-  [
-    "solid",
-    "paint-brush"
-  ],
-  [
-    "solid",
-    "paint-roller"
-  ],
-  [
-    "solid",
-    "outdent"
-  ],
-  [
-    "solid",
-    "object-ungroup"
-  ],
-  [
-    "solid",
-    "pallet"
-  ],
-  [
-    "solid",
-    "parachute-box"
-  ],
-  [
-    "solid",
-    "meteor"
+    "mouse"
   ],
   [
     "solid",
@@ -10165,15 +10101,67 @@
   ],
   [
     "solid",
+    "network-wired"
+  ],
+  [
+    "solid",
+    "mug-hot"
+  ],
+  [
+    "solid",
+    "not-equal"
+  ],
+  [
+    "solid",
+    "om"
+  ],
+  [
+    "solid",
+    "object-group"
+  ],
+  [
+    "solid",
+    "notes-medical"
+  ],
+  [
+    "solid",
+    "map-marked-alt"
+  ],
+  [
+    "solid",
+    "outdent"
+  ],
+  [
+    "solid",
+    "oil-can"
+  ],
+  [
+    "solid",
+    "otter"
+  ],
+  [
+    "solid",
+    "pager"
+  ],
+  [
+    "solid",
+    "paint-roller"
+  ],
+  [
+    "solid",
+    "paint-brush"
+  ],
+  [
+    "solid",
+    "pallet"
+  ],
+  [
+    "solid",
+    "palette"
+  ],
+  [
+    "solid",
     "paper-plane"
-  ],
-  [
-    "solid",
-    "paragraph"
-  ],
-  [
-    "solid",
-    "paperclip"
   ],
   [
     "solid",
@@ -10181,7 +10169,15 @@
   ],
   [
     "solid",
+    "paperclip"
+  ],
+  [
+    "solid",
     "paste"
+  ],
+  [
+    "solid",
+    "paragraph"
   ],
   [
     "solid",
@@ -10189,11 +10185,15 @@
   ],
   [
     "solid",
+    "pause"
+  ],
+  [
+    "solid",
     "paw"
   ],
   [
     "solid",
-    "pause"
+    "parking"
   ],
   [
     "solid",
@@ -10201,19 +10201,11 @@
   ],
   [
     "solid",
-    "passport"
-  ],
-  [
-    "solid",
     "pen-alt"
   ],
   [
     "solid",
-    "pencil-alt"
-  ],
-  [
-    "solid",
-    "pen-nib"
+    "pen-fancy"
   ],
   [
     "solid",
@@ -10225,15 +10217,11 @@
   ],
   [
     "solid",
-    "people-arrows"
+    "object-ungroup"
   ],
   [
     "solid",
-    "pen-fancy"
-  ],
-  [
-    "solid",
-    "people-carry"
+    "pen-nib"
   ],
   [
     "solid",
@@ -10241,87 +10229,11 @@
   ],
   [
     "solid",
-    "percentage"
+    "pencil-alt"
   ],
   [
     "solid",
-    "pencil-ruler"
-  ],
-  [
-    "solid",
-    "phone-alt"
-  ],
-  [
-    "solid",
-    "palette"
-  ],
-  [
-    "solid",
-    "phone-square"
-  ],
-  [
-    "solid",
-    "photo-video"
-  ],
-  [
-    "solid",
-    "phone-slash"
-  ],
-  [
-    "solid",
-    "phone"
-  ],
-  [
-    "solid",
-    "phone-square-alt"
-  ],
-  [
-    "solid",
-    "phone-volume"
-  ],
-  [
-    "solid",
-    "pills"
-  ],
-  [
-    "solid",
-    "piggy-bank"
-  ],
-  [
-    "solid",
-    "place-of-worship"
-  ],
-  [
-    "solid",
-    "pizza-slice"
-  ],
-  [
-    "solid",
-    "male"
-  ],
-  [
-    "solid",
-    "plane-departure"
-  ],
-  [
-    "solid",
-    "plane"
-  ],
-  [
-    "solid",
-    "play-circle"
-  ],
-  [
-    "solid",
-    "play"
-  ],
-  [
-    "solid",
-    "plane-slash"
-  ],
-  [
-    "solid",
-    "percent"
+    "people-arrows"
   ],
   [
     "solid",
@@ -10329,11 +10241,91 @@
   ],
   [
     "solid",
-    "plus-square"
+    "percentage"
   ],
   [
     "solid",
-    "poo-storm"
+    "phone-slash"
+  ],
+  [
+    "solid",
+    "pencil-ruler"
+  ],
+  [
+    "solid",
+    "people-carry"
+  ],
+  [
+    "solid",
+    "phone-square-alt"
+  ],
+  [
+    "solid",
+    "level-up-alt"
+  ],
+  [
+    "solid",
+    "phone-alt"
+  ],
+  [
+    "solid",
+    "phone-volume"
+  ],
+  [
+    "solid",
+    "photo-video"
+  ],
+  [
+    "solid",
+    "parachute-box"
+  ],
+  [
+    "solid",
+    "pizza-slice"
+  ],
+  [
+    "solid",
+    "piggy-bank"
+  ],
+  [
+    "solid",
+    "phone"
+  ],
+  [
+    "solid",
+    "plane-arrival"
+  ],
+  [
+    "solid",
+    "pills"
+  ],
+  [
+    "solid",
+    "place-of-worship"
+  ],
+  [
+    "solid",
+    "plane-slash"
+  ],
+  [
+    "solid",
+    "plane"
+  ],
+  [
+    "solid",
+    "plane-departure"
+  ],
+  [
+    "solid",
+    "play-circle"
+  ],
+  [
+    "solid",
+    "plug"
+  ],
+  [
+    "solid",
+    "plus"
   ],
   [
     "solid",
@@ -10345,15 +10337,15 @@
   ],
   [
     "solid",
+    "play"
+  ],
+  [
+    "solid",
+    "plus-square"
+  ],
+  [
+    "solid",
     "poll-h"
-  ],
-  [
-    "solid",
-    "poll"
-  ],
-  [
-    "solid",
-    "poo"
   ],
   [
     "solid",
@@ -10361,11 +10353,7 @@
   ],
   [
     "solid",
-    "plus"
-  ],
-  [
-    "solid",
-    "pray"
+    "percent"
   ],
   [
     "solid",
@@ -10373,11 +10361,19 @@
   ],
   [
     "solid",
+    "poll"
+  ],
+  [
+    "solid",
+    "portrait"
+  ],
+  [
+    "solid",
     "praying-hands"
   ],
   [
     "solid",
-    "prescription-bottle-alt"
+    "poo-storm"
   ],
   [
     "solid",
@@ -10385,15 +10381,31 @@
   ],
   [
     "solid",
+    "passport"
+  ],
+  [
+    "solid",
+    "prescription-bottle-alt"
+  ],
+  [
+    "solid",
+    "poo"
+  ],
+  [
+    "solid",
     "prescription"
   ],
   [
     "solid",
-    "print"
+    "pray"
   ],
   [
     "solid",
-    "prescription-bottle"
+    "project-diagram"
+  ],
+  [
+    "solid",
+    "print"
   ],
   [
     "solid",
@@ -10405,19 +10417,11 @@
   ],
   [
     "solid",
-    "portrait"
-  ],
-  [
-    "solid",
     "pump-soap"
   ],
   [
     "solid",
-    "puzzle-piece"
-  ],
-  [
-    "solid",
-    "qrcode"
+    "prescription-bottle"
   ],
   [
     "solid",
@@ -10425,11 +10429,11 @@
   ],
   [
     "solid",
-    "quote-right"
+    "question"
   ],
   [
     "solid",
-    "question"
+    "qrcode"
   ],
   [
     "solid",
@@ -10441,11 +10445,11 @@
   ],
   [
     "solid",
-    "quran"
+    "quote-right"
   ],
   [
     "solid",
-    "radiation-alt"
+    "quran"
   ],
   [
     "solid",
@@ -10457,19 +10461,11 @@
   ],
   [
     "solid",
-    "record-vinyl"
-  ],
-  [
-    "solid",
     "random"
   ],
   [
     "solid",
-    "plug"
-  ],
-  [
-    "solid",
-    "redo-alt"
+    "receipt"
   ],
   [
     "solid",
@@ -10477,7 +10473,15 @@
   ],
   [
     "solid",
+    "redo-alt"
+  ],
+  [
+    "solid",
     "registered"
+  ],
+  [
+    "solid",
+    "record-vinyl"
   ],
   [
     "solid",
@@ -10485,15 +10489,7 @@
   ],
   [
     "solid",
-    "remove-format"
-  ],
-  [
-    "solid",
     "reply-all"
-  ],
-  [
-    "solid",
-    "republican"
   ],
   [
     "solid",
@@ -10501,7 +10497,15 @@
   ],
   [
     "solid",
+    "remove-format"
+  ],
+  [
+    "solid",
     "restroom"
+  ],
+  [
+    "solid",
+    "republican"
   ],
   [
     "solid",
@@ -10517,15 +10521,15 @@
   ],
   [
     "solid",
+    "rocket"
+  ],
+  [
+    "solid",
     "road"
   ],
   [
     "solid",
-    "project-diagram"
-  ],
-  [
-    "solid",
-    "rocket"
+    "robot"
   ],
   [
     "solid",
@@ -10533,15 +10537,7 @@
   ],
   [
     "solid",
-    "rss-square"
-  ],
-  [
-    "solid",
-    "rss"
-  ],
-  [
-    "solid",
-    "ruler-horizontal"
+    "puzzle-piece"
   ],
   [
     "solid",
@@ -10553,7 +10549,15 @@
   ],
   [
     "solid",
-    "ruler-vertical"
+    "rss"
+  ],
+  [
+    "solid",
+    "rss-square"
+  ],
+  [
+    "solid",
+    "ruler-horizontal"
   ],
   [
     "solid",
@@ -10561,27 +10565,7 @@
   ],
   [
     "solid",
-    "ruler"
-  ],
-  [
-    "solid",
     "rupee-sign"
-  ],
-  [
-    "solid",
-    "sad-cry"
-  ],
-  [
-    "solid",
-    "sad-tear"
-  ],
-  [
-    "solid",
-    "save"
-  ],
-  [
-    "solid",
-    "satellite-dish"
   ],
   [
     "solid",
@@ -10589,11 +10573,31 @@
   ],
   [
     "solid",
-    "screwdriver"
+    "sad-cry"
+  ],
+  [
+    "solid",
+    "ruler"
+  ],
+  [
+    "solid",
+    "satellite-dish"
+  ],
+  [
+    "solid",
+    "sad-tear"
   ],
   [
     "solid",
     "school"
+  ],
+  [
+    "solid",
+    "radiation-alt"
+  ],
+  [
+    "solid",
+    "save"
   ],
   [
     "solid",
@@ -10609,27 +10613,11 @@
   ],
   [
     "solid",
-    "search-location"
-  ],
-  [
-    "solid",
     "search-plus"
   ],
   [
     "solid",
-    "robot"
-  ],
-  [
-    "solid",
-    "search-minus"
-  ],
-  [
-    "solid",
-    "shapes"
-  ],
-  [
-    "solid",
-    "seedling"
+    "search-location"
   ],
   [
     "solid",
@@ -10637,11 +10625,23 @@
   ],
   [
     "solid",
-    "share-alt-square"
+    "seedling"
   ],
   [
     "solid",
-    "receipt"
+    "search-minus"
+  ],
+  [
+    "solid",
+    "server"
+  ],
+  [
+    "solid",
+    "shapes"
+  ],
+  [
+    "solid",
+    "share-alt-square"
   ],
   [
     "solid",
@@ -10653,15 +10653,11 @@
   ],
   [
     "solid",
+    "share-square"
+  ],
+  [
+    "solid",
     "shield-alt"
-  ],
-  [
-    "solid",
-    "shekel-sign"
-  ],
-  [
-    "solid",
-    "shipping-fast"
   ],
   [
     "solid",
@@ -10669,15 +10665,11 @@
   ],
   [
     "solid",
+    "shekel-sign"
+  ],
+  [
+    "solid",
     "ship"
-  ],
-  [
-    "solid",
-    "shoe-prints"
-  ],
-  [
-    "solid",
-    "server"
   ],
   [
     "solid",
@@ -10685,7 +10677,11 @@
   ],
   [
     "solid",
-    "shower"
+    "shoe-prints"
+  ],
+  [
+    "solid",
+    "ruler-vertical"
   ],
   [
     "solid",
@@ -10693,11 +10689,7 @@
   ],
   [
     "solid",
-    "shuttle-van"
-  ],
-  [
-    "solid",
-    "sign-language"
+    "shopping-basket"
   ],
   [
     "solid",
@@ -10705,47 +10697,19 @@
   ],
   [
     "solid",
-    "share-square"
+    "shower"
   ],
   [
     "solid",
-    "signal"
+    "shuttle-van"
   ],
   [
     "solid",
-    "sign"
+    "phone-square"
   ],
   [
     "solid",
-    "sim-card"
-  ],
-  [
-    "solid",
-    "signature"
-  ],
-  [
-    "solid",
-    "sink"
-  ],
-  [
-    "solid",
-    "skating"
-  ],
-  [
-    "solid",
-    "sitemap"
-  ],
-  [
-    "solid",
-    "skiing-nordic"
-  ],
-  [
-    "solid",
-    "skiing"
-  ],
-  [
-    "solid",
-    "shopping-basket"
+    "sign-language"
   ],
   [
     "solid",
@@ -10753,11 +10717,31 @@
   ],
   [
     "solid",
-    "skull"
+    "sign"
   ],
   [
     "solid",
-    "slash"
+    "signal"
+  ],
+  [
+    "solid",
+    "signature"
+  ],
+  [
+    "solid",
+    "sitemap"
+  ],
+  [
+    "solid",
+    "skating"
+  ],
+  [
+    "solid",
+    "sink"
+  ],
+  [
+    "solid",
+    "skiing"
   ],
   [
     "solid",
@@ -10765,15 +10749,35 @@
   ],
   [
     "solid",
-    "border-all"
+    "skiing-nordic"
   ],
   [
     "solid",
-    "smile"
+    "skull-crossbones"
+  ],
+  [
+    "solid",
+    "slash"
+  ],
+  [
+    "solid",
+    "skull"
+  ],
+  [
+    "solid",
+    "sliders-h"
   ],
   [
     "solid",
     "smile-wink"
+  ],
+  [
+    "solid",
+    "smile-beam"
+  ],
+  [
+    "solid",
+    "smile"
   ],
   [
     "solid",
@@ -10785,23 +10789,23 @@
   ],
   [
     "solid",
-    "skull-crossbones"
-  ],
-  [
-    "solid",
-    "smile-beam"
-  ],
-  [
-    "solid",
     "snowboarding"
   ],
   [
     "solid",
-    "sliders-h"
+    "smoking-ban"
   ],
   [
     "solid",
-    "snowplow"
+    "sms"
+  ],
+  [
+    "solid",
+    "sim-card"
+  ],
+  [
+    "solid",
+    "shipping-fast"
   ],
   [
     "solid",
@@ -10813,7 +10817,7 @@
   ],
   [
     "solid",
-    "solar-panel"
+    "soap"
   ],
   [
     "solid",
@@ -10821,7 +10825,11 @@
   ],
   [
     "solid",
-    "soap"
+    "solar-panel"
+  ],
+  [
+    "solid",
+    "sort-alpha-down"
   ],
   [
     "solid",
@@ -10829,15 +10837,11 @@
   ],
   [
     "solid",
-    "smoking-ban"
-  ],
-  [
-    "solid",
     "sort-amount-down-alt"
   ],
   [
     "solid",
-    "sms"
+    "heart-broken"
   ],
   [
     "solid",
@@ -10845,15 +10849,11 @@
   ],
   [
     "solid",
-    "sort-amount-down"
-  ],
-  [
-    "solid",
     "sort-amount-up"
   ],
   [
     "solid",
-    "sort-down"
+    "sort-amount-up-alt"
   ],
   [
     "solid",
@@ -10861,7 +10861,7 @@
   ],
   [
     "solid",
-    "sort-numeric-up-alt"
+    "sort-down"
   ],
   [
     "solid",
@@ -10869,15 +10869,15 @@
   ],
   [
     "solid",
-    "sort"
+    "sort-up"
+  ],
+  [
+    "solid",
+    "sort-numeric-up-alt"
   ],
   [
     "solid",
     "sort-numeric-up"
-  ],
-  [
-    "solid",
-    "sort-up"
   ],
   [
     "solid",
@@ -10889,15 +10889,19 @@
   ],
   [
     "solid",
+    "sort"
+  ],
+  [
+    "solid",
+    "space-shuttle"
+  ],
+  [
+    "solid",
     "spider"
   ],
   [
     "solid",
-    "snowflake"
-  ],
-  [
-    "solid",
-    "splotch"
+    "spray-can"
   ],
   [
     "solid",
@@ -10905,11 +10909,15 @@
   ],
   [
     "solid",
+    "splotch"
+  ],
+  [
+    "solid",
     "square-full"
   ],
   [
     "solid",
-    "spray-can"
+    "stamp"
   ],
   [
     "solid",
@@ -10921,11 +10929,7 @@
   ],
   [
     "solid",
-    "stamp"
-  ],
-  [
-    "solid",
-    "sort-alpha-down"
+    "star-and-crescent"
   ],
   [
     "solid",
@@ -10933,15 +10937,11 @@
   ],
   [
     "solid",
-    "star-of-david"
-  ],
-  [
-    "solid",
     "star-half"
   ],
   [
     "solid",
-    "step-backward"
+    "star-of-david"
   ],
   [
     "solid",
@@ -10949,7 +10949,7 @@
   ],
   [
     "solid",
-    "space-shuttle"
+    "star"
   ],
   [
     "solid",
@@ -10957,7 +10957,7 @@
   ],
   [
     "solid",
-    "stethoscope"
+    "step-backward"
   ],
   [
     "solid",
@@ -10965,19 +10965,15 @@
   ],
   [
     "solid",
-    "stop-circle"
-  ],
-  [
-    "solid",
-    "stopwatch-20"
-  ],
-  [
-    "solid",
     "stop"
   ],
   [
     "solid",
-    "store-alt"
+    "stethoscope"
+  ],
+  [
+    "solid",
+    "stop-circle"
   ],
   [
     "solid",
@@ -10989,7 +10985,11 @@
   ],
   [
     "solid",
-    "stream"
+    "stopwatch-20"
+  ],
+  [
+    "solid",
+    "store-alt"
   ],
   [
     "solid",
@@ -10997,83 +10997,7 @@
   ],
   [
     "solid",
-    "sort-amount-up-alt"
-  ],
-  [
-    "solid",
-    "stroopwafel"
-  ],
-  [
-    "solid",
-    "street-view"
-  ],
-  [
-    "solid",
-    "strikethrough"
-  ],
-  [
-    "solid",
-    "suitcase-rolling"
-  ],
-  [
-    "solid",
-    "subscript"
-  ],
-  [
-    "solid",
-    "suitcase"
-  ],
-  [
-    "solid",
-    "subway"
-  ],
-  [
-    "solid",
-    "sun"
-  ],
-  [
-    "solid",
-    "superscript"
-  ],
-  [
-    "solid",
-    "swimmer"
-  ],
-  [
-    "solid",
-    "swatchbook"
-  ],
-  [
-    "solid",
-    "surprise"
-  ],
-  [
-    "solid",
-    "star"
-  ],
-  [
-    "solid",
-    "swimming-pool"
-  ],
-  [
-    "solid",
-    "sync-alt"
-  ],
-  [
-    "solid",
-    "syringe"
-  ],
-  [
-    "solid",
-    "tablet-alt"
-  ],
-  [
-    "solid",
-    "sync"
-  ],
-  [
-    "solid",
-    "table-tennis"
+    "stream"
   ],
   [
     "solid",
@@ -11081,7 +11005,87 @@
   ],
   [
     "solid",
+    "strikethrough"
+  ],
+  [
+    "solid",
+    "street-view"
+  ],
+  [
+    "solid",
+    "stroopwafel"
+  ],
+  [
+    "solid",
+    "subscript"
+  ],
+  [
+    "solid",
+    "sun"
+  ],
+  [
+    "solid",
+    "suitcase-rolling"
+  ],
+  [
+    "solid",
+    "subway"
+  ],
+  [
+    "solid",
+    "suitcase"
+  ],
+  [
+    "solid",
+    "surprise"
+  ],
+  [
+    "solid",
+    "superscript"
+  ],
+  [
+    "solid",
+    "swimming-pool"
+  ],
+  [
+    "solid",
+    "swimmer"
+  ],
+  [
+    "solid",
+    "sync-alt"
+  ],
+  [
+    "solid",
+    "snowflake"
+  ],
+  [
+    "solid",
+    "sync"
+  ],
+  [
+    "solid",
+    "sort-amount-down"
+  ],
+  [
+    "solid",
+    "swatchbook"
+  ],
+  [
+    "solid",
+    "table-tennis"
+  ],
+  [
+    "solid",
+    "synagogue"
+  ],
+  [
+    "solid",
     "tablet"
+  ],
+  [
+    "solid",
+    "archive"
   ],
   [
     "solid",
@@ -11093,15 +11097,7 @@
   ],
   [
     "solid",
-    "synagogue"
-  ],
-  [
-    "solid",
     "tag"
-  ],
-  [
-    "solid",
-    "tape"
   ],
   [
     "solid",
@@ -11109,11 +11105,15 @@
   ],
   [
     "solid",
-    "teeth"
+    "taxi"
   ],
   [
     "solid",
-    "taxi"
+    "tape"
+  ],
+  [
+    "solid",
+    "table"
   ],
   [
     "solid",
@@ -11121,27 +11121,7 @@
   ],
   [
     "solid",
-    "temperature-low"
-  ],
-  [
-    "solid",
-    "tenge"
-  ],
-  [
-    "solid",
-    "terminal"
-  ],
-  [
-    "solid",
-    "teeth-open"
-  ],
-  [
-    "solid",
-    "th-list"
-  ],
-  [
-    "solid",
-    "text-height"
+    "tablet-alt"
   ],
   [
     "solid",
@@ -11149,11 +11129,27 @@
   ],
   [
     "solid",
-    "th"
+    "terminal"
   ],
   [
     "solid",
-    "text-width"
+    "snowplow"
+  ],
+  [
+    "solid",
+    "teeth"
+  ],
+  [
+    "solid",
+    "teeth-open"
+  ],
+  [
+    "solid",
+    "text-height"
+  ],
+  [
+    "solid",
+    "tenge"
   ],
   [
     "solid",
@@ -11161,11 +11157,11 @@
   ],
   [
     "solid",
-    "thermometer-empty"
+    "screwdriver"
   ],
   [
     "solid",
-    "thermometer-half"
+    "th"
   ],
   [
     "solid",
@@ -11177,7 +11173,7 @@
   ],
   [
     "solid",
-    "thumbs-down"
+    "thermometer"
   ],
   [
     "solid",
@@ -11185,11 +11181,11 @@
   ],
   [
     "solid",
-    "thermometer"
+    "thermometer-empty"
   ],
   [
     "solid",
-    "thumbtack"
+    "thermometer-three-quarters"
   ],
   [
     "solid",
@@ -11197,7 +11193,11 @@
   ],
   [
     "solid",
-    "thermometer-three-quarters"
+    "thumbs-down"
+  ],
+  [
+    "solid",
+    "thermometer-half"
   ],
   [
     "solid",
@@ -11209,15 +11209,11 @@
   ],
   [
     "solid",
-    "times"
-  ],
-  [
-    "solid",
-    "ticket-alt"
-  ],
-  [
-    "solid",
     "tint"
+  ],
+  [
+    "solid",
+    "times"
   ],
   [
     "solid",
@@ -11225,27 +11221,7 @@
   ],
   [
     "solid",
-    "toggle-off"
-  ],
-  [
-    "solid",
-    "toilet-paper-slash"
-  ],
-  [
-    "solid",
     "toggle-on"
-  ],
-  [
-    "solid",
-    "tools"
-  ],
-  [
-    "solid",
-    "toilet-paper"
-  ],
-  [
-    "solid",
-    "toolbox"
   ],
   [
     "solid",
@@ -11253,7 +11229,23 @@
   ],
   [
     "solid",
-    "torah"
+    "toggle-off"
+  ],
+  [
+    "solid",
+    "toolbox"
+  ],
+  [
+    "solid",
+    "toilet-paper"
+  ],
+  [
+    "solid",
+    "toilet-paper-slash"
+  ],
+  [
+    "solid",
+    "thumbtack"
   ],
   [
     "solid",
@@ -11261,11 +11253,35 @@
   ],
   [
     "solid",
+    "tooth"
+  ],
+  [
+    "solid",
+    "trademark"
+  ],
+  [
+    "solid",
+    "tools"
+  ],
+  [
+    "solid",
+    "torah"
+  ],
+  [
+    "solid",
+    "ticket-alt"
+  ],
+  [
+    "solid",
+    "traffic-light"
+  ],
+  [
+    "solid",
     "tractor"
   ],
   [
     "solid",
-    "tooth"
+    "train"
   ],
   [
     "solid",
@@ -11277,23 +11293,7 @@
   ],
   [
     "solid",
-    "trademark"
-  ],
-  [
-    "solid",
-    "train"
-  ],
-  [
-    "solid",
-    "trash-alt"
-  ],
-  [
-    "solid",
     "transgender"
-  ],
-  [
-    "solid",
-    "tram"
   ],
   [
     "solid",
@@ -11301,7 +11301,7 @@
   ],
   [
     "solid",
-    "trash"
+    "trash-alt"
   ],
   [
     "solid",
@@ -11309,15 +11309,11 @@
   ],
   [
     "solid",
-    "table"
+    "tram"
   ],
   [
     "solid",
-    "trophy"
-  ],
-  [
-    "solid",
-    "tree"
+    "trash"
   ],
   [
     "solid",
@@ -11325,11 +11321,19 @@
   ],
   [
     "solid",
+    "tree"
+  ],
+  [
+    "solid",
+    "truck-monster"
+  ],
+  [
+    "solid",
     "truck-pickup"
   ],
   [
     "solid",
-    "truck-loading"
+    "trophy"
   ],
   [
     "solid",
@@ -11337,19 +11341,11 @@
   ],
   [
     "solid",
-    "traffic-light"
+    "tshirt"
   ],
   [
     "solid",
-    "tty"
-  ],
-  [
-    "solid",
-    "tv"
-  ],
-  [
-    "solid",
-    "underline"
+    "truck-loading"
   ],
   [
     "solid",
@@ -11357,11 +11353,11 @@
   ],
   [
     "solid",
-    "undo-alt"
+    "tv"
   ],
   [
     "solid",
-    "universal-access"
+    "tty"
   ],
   [
     "solid",
@@ -11369,11 +11365,11 @@
   ],
   [
     "solid",
-    "undo"
+    "underline"
   ],
   [
     "solid",
-    "unlock-alt"
+    "undo"
   ],
   [
     "solid",
@@ -11381,7 +11377,19 @@
   ],
   [
     "solid",
+    "undo-alt"
+  ],
+  [
+    "solid",
+    "unlock-alt"
+  ],
+  [
+    "solid",
     "unlink"
+  ],
+  [
+    "solid",
+    "universal-access"
   ],
   [
     "solid",
@@ -11397,31 +11405,11 @@
   ],
   [
     "solid",
-    "upload"
-  ],
-  [
-    "solid",
-    "user-cog"
-  ],
-  [
-    "solid",
-    "user-check"
-  ],
-  [
-    "solid",
     "user-astronaut"
   ],
   [
     "solid",
-    "user-circle"
-  ],
-  [
-    "solid",
-    "truck-monster"
-  ],
-  [
-    "solid",
-    "tshirt"
+    "upload"
   ],
   [
     "solid",
@@ -11429,11 +11417,15 @@
   ],
   [
     "solid",
-    "user-injured"
+    "user-clock"
   ],
   [
     "solid",
-    "user-clock"
+    "user-check"
+  ],
+  [
+    "solid",
+    "user-circle"
   ],
   [
     "solid",
@@ -11441,23 +11433,7 @@
   ],
   [
     "solid",
-    "user-lock"
-  ],
-  [
-    "solid",
-    "user-minus"
-  ],
-  [
-    "solid",
-    "user-friends"
-  ],
-  [
-    "solid",
-    "user-secret"
-  ],
-  [
-    "solid",
-    "user-ninja"
+    "user-cog"
   ],
   [
     "solid",
@@ -11465,11 +11441,27 @@
   ],
   [
     "solid",
+    "user-friends"
+  ],
+  [
+    "solid",
+    "user-injured"
+  ],
+  [
+    "solid",
+    "user-minus"
+  ],
+  [
+    "solid",
     "user-plus"
   ],
   [
     "solid",
-    "user-tag"
+    "user-lock"
+  ],
+  [
+    "solid",
+    "user-shield"
   ],
   [
     "solid",
@@ -11477,15 +11469,11 @@
   ],
   [
     "solid",
+    "user-ninja"
+  ],
+  [
+    "solid",
     "user-slash"
-  ],
-  [
-    "solid",
-    "user"
-  ],
-  [
-    "solid",
-    "user-tie"
   ],
   [
     "solid",
@@ -11493,11 +11481,15 @@
   ],
   [
     "solid",
-    "users-cog"
+    "user-tie"
   ],
   [
     "solid",
-    "users"
+    "user-tag"
+  ],
+  [
+    "solid",
+    "users-cog"
   ],
   [
     "solid",
@@ -11505,11 +11497,19 @@
   ],
   [
     "solid",
-    "utensils"
+    "user"
   ],
   [
     "solid",
     "utensil-spoon"
+  ],
+  [
+    "solid",
+    "users"
+  ],
+  [
+    "solid",
+    "utensils"
   ],
   [
     "solid",
@@ -11525,11 +11525,7 @@
   ],
   [
     "solid",
-    "vial"
-  ],
-  [
-    "solid",
-    "user-shield"
+    "venus"
   ],
   [
     "solid",
@@ -11545,11 +11541,23 @@
   ],
   [
     "solid",
+    "vial"
+  ],
+  [
+    "solid",
+    "virus-slash"
+  ],
+  [
+    "solid",
     "vihara"
   ],
   [
     "solid",
-    "virus"
+    "viruses"
+  ],
+  [
+    "solid",
+    "voicemail"
   ],
   [
     "solid",
@@ -11557,7 +11565,19 @@
   ],
   [
     "solid",
-    "virus-slash"
+    "volume-mute"
+  ],
+  [
+    "solid",
+    "virus"
+  ],
+  [
+    "solid",
+    "volume-off"
+  ],
+  [
+    "solid",
+    "volume-up"
   ],
   [
     "solid",
@@ -11569,15 +11589,11 @@
   ],
   [
     "solid",
+    "walking"
+  ],
+  [
+    "solid",
     "vr-cardboard"
-  ],
-  [
-    "solid",
-    "volume-up"
-  ],
-  [
-    "solid",
-    "viruses"
   ],
   [
     "solid",
@@ -11585,11 +11601,7 @@
   ],
   [
     "solid",
-    "volume-off"
-  ],
-  [
-    "solid",
-    "walking"
+    "water"
   ],
   [
     "solid",
@@ -11601,11 +11613,11 @@
   ],
   [
     "solid",
-    "weight-hanging"
+    "weight"
   ],
   [
     "solid",
-    "water"
+    "weight-hanging"
   ],
   [
     "solid",
@@ -11613,11 +11625,11 @@
   ],
   [
     "solid",
-    "wifi"
+    "wind"
   ],
   [
     "solid",
-    "weight"
+    "wifi"
   ],
   [
     "solid",
@@ -11625,15 +11637,7 @@
   ],
   [
     "solid",
-    "wine-glass-alt"
-  ],
-  [
-    "solid",
-    "wind"
-  ],
-  [
-    "solid",
-    "volume-mute"
+    "window-restore"
   ],
   [
     "solid",
@@ -11645,11 +11649,11 @@
   ],
   [
     "solid",
-    "window-restore"
+    "wine-bottle"
   ],
   [
     "solid",
-    "won-sign"
+    "wine-glass-alt"
   ],
   [
     "solid",
@@ -11657,7 +11661,7 @@
   ],
   [
     "solid",
-    "wine-bottle"
+    "won-sign"
   ],
   [
     "solid",
@@ -11669,23 +11673,23 @@
   ],
   [
     "solid",
+    "temperature-low"
+  ],
+  [
+    "solid",
+    "th-list"
+  ],
+  [
+    "solid",
     "yen-sign"
   ],
   [
     "solid",
-    "voicemail"
+    "text-width"
   ],
   [
     "solid",
-    "plane-arrival"
-  ],
-  [
-    "solid",
-    "memory"
-  ],
-  [
-    "solid",
-    "parking"
+    "syringe"
   ],
   [
     "solid",
@@ -11693,14 +11697,10 @@
   ],
   [
     "solid",
-    "star-and-crescent"
+    "mars-stroke-h"
   ],
   [
     "solid",
-    "venus"
-  ],
-  [
-    "solid",
-    "laugh-squint"
+    "user-secret"
   ]
 ]

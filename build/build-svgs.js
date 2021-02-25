@@ -80,7 +80,7 @@ const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: '1em',
   height: '1em',
-  viewBox: '0 0 16 16'
+  // viewBox: '0 0 16 16'
 }
 
 /**
@@ -95,7 +95,13 @@ async function processFile(filepath, config, CLASSPREFIX)
   const originalSvg = await fs.readFile(filepath, 'utf8');
 
   // Clean the code:
-  const optimizedSvg = await optimize(originalSvg);
+  // const optimizedSvg = await optimize(originalSvg);
+
+	// Hauptsache komplizierter als früher.
+	const optimizedSvg = await optimize(originalSvg, {
+		path: filepath,
+		...config
+	});
 
   // "Prepare" for "jQuery talk":
   const $ = await cheerio.load(optimizedSvg.data, {
