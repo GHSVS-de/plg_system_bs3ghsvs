@@ -10,11 +10,7 @@ const fse = require('fs-extra');
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
-
-// const SVGO = require('svgo');
-const { optimize } = require('svgo');
-
-const yaml = require('js-yaml')
+const { loadConfig, optimize } = require('svgo')
 
 // Collect some messages for 'prepped-icons.txt'.
 var loger = [];
@@ -84,17 +80,7 @@ const svgAttributes = {
   xmlns: 'http://www.w3.org/2000/svg',
   width: '1em',
   height: '1em',
-  // viewBox: '0 0 16 16'
-}
-
-// Function to get code *.svg cleaner rules.
-async function getSvgoConfig()
-{
-  const svgoConfigFile = await fs.readFile(
-    path.join(__dirname, '../svgo.yml'), 'utf8'
-  )
-
-  return yaml.load(svgoConfigFile)
+  viewBox: '0 0 16 16'
 }
 
 /**
@@ -106,9 +92,7 @@ async function processFile(filepath, config, CLASSPREFIX)
 {
   // Pure svg filename without extension.
   const fileBasename = path.basename(filepath, '.svg');
-
   const originalSvg = await fs.readFile(filepath, 'utf8');
-  //const svgo = await new SVGO(config);
 
   // Clean the code:
   const optimizedSvg = await optimize(originalSvg);
@@ -163,7 +147,8 @@ module.exports.main = async () =>
     console.log(chalk.cyan(`[${basename}] started`));
     console.time(timeLabel);
 
-    const config = await getSvgoConfig();
+		const config = await loadConfig(path.join(__dirname, '../svgo.config.js'));
+
     let count = 0;
 
     for (let folderinfo of Folders)
