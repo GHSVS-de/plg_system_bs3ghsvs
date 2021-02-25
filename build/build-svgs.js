@@ -10,7 +10,10 @@ const fse = require('fs-extra');
 const path = require('path')
 const chalk = require('chalk')
 const cheerio = require('cheerio')
-const SVGO = require('svgo')
+
+// const SVGO = require('svgo');
+const { optimize } = require('svgo');
+
 const yaml = require('js-yaml')
 
 // Collect some messages for 'prepped-icons.txt'.
@@ -105,10 +108,10 @@ async function processFile(filepath, config, CLASSPREFIX)
   const fileBasename = path.basename(filepath, '.svg');
 
   const originalSvg = await fs.readFile(filepath, 'utf8');
-  const svgo = await new SVGO(config);
+  //const svgo = await new SVGO(config);
 
   // Clean the code:
-  const optimizedSvg = await svgo.optimize(originalSvg);
+  const optimizedSvg = await optimize(originalSvg);
 
   // "Prepare" for "jQuery talk":
   const $ = await cheerio.load(optimizedSvg.data, {
@@ -147,65 +150,6 @@ async function processFile(filepath, config, CLASSPREFIX)
 
   loger.push([CLASSPREFIX, fileBasename]);
 }
-
-const processFile_old = (file, config, CLASSPREFIX) => new Promise((resolve, reject) => {
-
-  fs.readFile(file, 'utf8')
-    .then(data => {
-      const svgo = new SVGO(config)
-
-      svgo.optimize(data)
-        .then(result => {
-
-result.data = result.data.replace(/[\n\r]/g, '');
-
-          const $ = cheerio.load(result.data)
-          const svg = $('svg')
-
-          svg.replaceWith(() => $('<svg>').append($(this).html()))
-
-          for (const [attr, val] of Object.entries(svgAttributes)) {
-            $(svg).removeAttr(attr)
-            $(svg).attr(attr, val)
-          }
-
-          //const dimensions = $(svg).attr('viewBox').split(' ')
-          //const svgWidth = dimensions[2] / 16
-          //const svgHeight = dimensions[3] / 16
-
-					const svgWidth = 1;
-					const svgHeight = 1;
-
-          $(svg).attr('width', `${svgWidth}em`)
-          $(svg).attr('height', `${svgHeight}em`)
-
-          // Todo: Pass argument to script to flip between ems and pixels.
-          // Until then, leaving code here—font-family generation requires
-          // use of pixels.
-
-          // const svgWidth = dimensions[2]
-          // const svgHeight = dimensions[3]
-
-          // $(svg).attr('width', `${svgWidth}`)
-          // $(svg).attr('height', `${svgHeight}`)
-
-
-          // $(svg).attr('class', `bi bi-${path.basename(file, '.svg')}`)
-
-					$(svg).attr('class', `bi ${CLASSPREFIX}-${path.basename(file, '.svg')}`);
-// console.log(file);
-          fse.writeFile(file, $(svg), 'utf8')
-            .then(() => {
-              //console.log(`- ${path.basename(file, '.svg')}`)
-							loger.push([CLASSPREFIX, path.basename(file, '.svg')]);
-              resolve()
-            })
-            .catch(error => reject(error))
-        })
-        .catch(error => reject(error))
-    })
-    .catch(error => reject(error))
-})
 
 // const main = async () => {
 module.exports.main = async () =>

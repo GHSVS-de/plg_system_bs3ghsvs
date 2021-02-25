@@ -94,8 +94,7 @@
 			liClass: "toc-list-group-item",
 			//indentChar: "&gt;"
 			indentChar: "",
-			//indentChar: ""
-			divClass: "",
+			divClass: "div4Toc",
 			// If a heading tag has one of these classes force
 			// isItVisble value to true and set a link to the
 			// unvisible headline.
@@ -130,7 +129,6 @@
 
 			if (this.config.containerWithHeadings && this.config.attachElement)
 			{
-				console.log(this.config.containerWithHeadings + ' ' + this.config.attachElement);
 				this.containerWithHeadings = document.querySelector(this.config.containerWithHeadings);
 				attachElement = document.querySelector(this.config.attachElement);
 			}
@@ -144,17 +142,11 @@
 			}
 
 			this.getHeadings();
-			if (Object.keys(this.headingElementsArr).length < 1)
-			{
-				this.hideIfNothingFound();
-				return;
-			}
-
-
 
 			/*
 			Der Sticky header benötigt beim Scrollen einen extra Space.
 			Deshalb in's CSS:
+			Siehe auch template.js mit Helfer.
 			.isATocId:before {
 				content: '';
 				display: block;
@@ -195,50 +187,64 @@
 			//Hier wird das CSS aus SkipTo.css während build reingepackt.
 			// this.addStyles("@@cssContent");
 
-			// GHSVS. Button not needed.
 			this.dropdownHTML = '';
 
-			let ulId = '';
-			if (this.config.ulId)
+			if (this.headingsLength > 0)
 			{
-				ulId = ' id="'
-					+ this.config.ulId.replace('%s', this.config.moduleId)
-					+ '"';
-			}
-			if (this.config.ulClass)
-			{
-				ulId += ' class="'
-					+ this.config.ulClass
-					+ '"';
-			}
-			if (this.config.ulRole)
-			{
-				ulId += ' role="'
-					+ this.config.ulRole
-					+ '"';
-			}
-			if (this.config.ulRole)
-			{
-				ulId += ' role="'
-					+ this.config.ulRole
-					+ '"';
-			}
-			if (this.config.ulAriaLabel)
-			{
-				ulId += ' aria-label="'
-					+ this.config.ulAriaLabel
-					+ '"';
-			}
+				let ulId = '';
 
-			this.dropdownHTML += '<ul' + ulId + '>';
-			htmlStr = this.getdropdownHTML();
-			this.dropdownHTML += htmlStr + '</ul>';
+				if (this.config.ulId)
+				{
+					ulId = ' id="'
+						+ this.config.ulId.replace('%s', this.config.moduleId)
+						+ '"';
+				}
+				if (this.config.ulClass)
+				{
+					ulId += ' class="'
+						+ this.config.ulClass
+						+ '"';
+				}
+				if (this.config.ulRole)
+				{
+					ulId += ' role="'
+						+ this.config.ulRole
+						+ '"';
+				}
+				if (this.config.ulRole)
+				{
+					ulId += ' role="'
+						+ this.config.ulRole
+						+ '"';
+				}
+				if (this.config.ulAriaLabel)
+				{
+					ulId += ' aria-label="'
+						+ this.config.ulAriaLabel
+						+ '"';
+				}
+
+				this.dropdownHTML += '<ul' + ulId + '>';
+				htmlStr = this.getdropdownHTML();
+				this.dropdownHTML += htmlStr + '</ul>';
+			}
+			else
+			{
+				htmlStr = '<p>Leider kein Inhaltsverzeichnis verfügbar</p>';
+				this.dropdownHTML = htmlStr;
+			}
 
 			if (htmlStr.length > 0)
 			{
 				div.className = this.config.divClass;
 				attachElement.insertBefore(div, attachElement.firstChild);
 				div.innerHTML = this.dropdownHTML;
+			}
+
+			if (!this.headingsLength)
+			{
+				this.hideIfNothingFound();
+				return;
 			}
 		},
 
@@ -297,14 +303,11 @@
 		},
 		getHeadings: function () {
 			var targets = this.config.headings;
-			if (typeof targets !== 'string' || targets.length === 0) return;
-			// GHSVS. Absolute must for several instances of this script.
-			this.headingElementsArr = [];
-			// console.log(this.headingElementsArr);exit;
-			// GHSVS Search in custom container.
-			//var headings = document.querySelectorAll(targets),
-			var headings = this.containerWithHeadings.querySelectorAll(targets);
 
+			if (typeof targets !== 'string' || targets.length === 0) return;
+
+			this.headingElementsArr = [];
+			var headings = this.containerWithHeadings.querySelectorAll(targets);
 			this.headingsLength = headings.length;
 /*
 Siehe in template.js. Das hier ist Schmarrn.
@@ -332,15 +335,15 @@ Siehe in template.js. Das hier ist Schmarrn.
 				name,
 				isItVisible,
 				prefix;
-			// console.log(headings);
 			for (i = 0, j = headings.length; i < j; i = i + 1)
 			{
 				// [object HTMLHeadingElement]
 				heading = headings[i];
-				// console.log('Heading is:');
-				// console.log(heading);
 				role = heading.getAttribute('role');
-				if ((typeof role === 'string') && (role === 'presentation')) continue;
+				if ((typeof role === 'string') && (role === 'presentation'))
+				{
+					continue;
+				}
 
 				// GHSVS. Changed ussage.
 				isItVisible = this.isVisible(heading, this.config.forceIsItVisibleClasses);
@@ -381,17 +384,14 @@ Siehe in template.js. Das hier ist Schmarrn.
 
 				//this.headingElementsArr[id] = heading.tagName.toLowerCase() + ": " + this.getTextContent(heading);
 				//IE8 fix: Use JSON object to supply names to array values. This allows enumerating over the array without picking up prototype properties.
-				this.headingElementsArr[id] =
+				this.headingElementsArr[i] =
 				{
 					id: id,
 					name: name,
 					prefix: prefix,
 					isItVisible: isItVisible
 				};
-				// console.log(id);
-				// console.log(this.headingElementsArr[id]);
 			}
-			//console.log(this.headingElementsArr);exit;
 		},
 		// GHSVS. Not used.
 		isVisible: function(element, forceIsItVisibleClasses)
@@ -416,7 +416,6 @@ Siehe in template.js. Das hier ist Schmarrn.
 				var hidden = el.getAttribute('hidden');
 				var ariaHidden = el.getAttribute('aria-hidden');
 				var clientRect = el.getBoundingClientRect();
-//console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).getPropertyValue('visibility'));
 
 				if (
 					(display === 'none') ||
@@ -454,23 +453,14 @@ Siehe in template.js. Das hier ist Schmarrn.
 				isItVisible = true,
 				countLoops = 0;
 
-			//for...in loop enumerates over all properties in an object including its prototype. This was returning some undesirable items such as indexof
-			//James' workaround to get for JSON name/value pair appears to address the issue.
-
 			for (key in this.headingElementsArr)
 			{
-				if (countLoops < this.headingsLength && this.headingElementsArr[key].name)
+				if ((countLoops < this.headingsLength) && this.headingElementsArr[key].name)
 				{
 					if (this.config.indentChar)
 					{
 						prefix = this.headingElementsArr[key].prefix;
-						if (!prefix)
-						{
-							console.log('NO Prefix!');
-							console.log(this.headingElementsArr[key]);
-						}
-
-						indentChar = this.config.indentChar.repeat(parseInt(prefix.substring(1))) + ' ';
+						indentChar = this.config.indentChar.repeat(parseInt(prefix.substring(1))) + '| ';
 					}
 					let liClass = ' class="' + this.config.liClass + ' po-'
 						+ this.headingElementsArr[key].prefix + '"';
@@ -479,7 +469,8 @@ Siehe in template.js. Das hier ist Schmarrn.
 
 					if (this.headingElementsArr[key].isItVisible !== false)
 					{
-						htmlStr += '<a tabindex="-1"' + ' href="#' + key + '">';
+						htmlStr += '<a tabindex="-1"' + ' href="#'
+							+ this.headingElementsArr[key].id + '">';
 					}
 
 					if (this.config.enumerateElements !== 'false')
@@ -492,7 +483,6 @@ Siehe in template.js. Das hier ist Schmarrn.
 						listEntryPrefix = this.headingElementsArr[key].prefix;
 					}
 
-
 					htmlStr += '<span class="listEntryPrefix">'
 						+ listEntryPrefix + ': </span>'
 						+ this.headingElementsArr[key].name;
@@ -503,8 +493,8 @@ Siehe in template.js. Das hier ist Schmarrn.
 					}
 
 					htmlStr += '</li>'
+countLoops = countLoops + 1;
 
-					countLoops = countLoops + 1;
 				}
 			}
 

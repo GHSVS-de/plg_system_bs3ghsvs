@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '4071e7f866b07b32c8fec3d1573252587582db8a',
+    'reference' => '82fa2d068373aaf469ac470bf3baa345b2b0a2a1',
     'name' => '__root__',
   ),
   'versions' => 
@@ -31,7 +31,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '4071e7f866b07b32c8fec3d1573252587582db8a',
+      'reference' => '82fa2d068373aaf469ac470bf3baa345b2b0a2a1',
     ),
     'guzzlehttp/psr7' => 
     array (
