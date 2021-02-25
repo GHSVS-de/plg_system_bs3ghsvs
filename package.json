@@ -3,7 +3,7 @@
 	"filename": "bs3ghsvs",
 	"version": "2021.02.26",
 	"minimumPhp": "7.3.0",
-	"maximumPhp": "",
+	"maximumPhp": "7.99999.99999",
 	"minimumJoomla": "3.9.8",
 	"maximumJoomla": "3.10.99999",
 	"allowDowngrades": "1",
