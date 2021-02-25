@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="attribs" label="COM_CONTENT_FIELD_IMAGE_OPTIONS">
+		<fieldset name="bs3GhsvsArticleParams" label="bs3Ghsvs Article Params">
+
+			<field name="introClassGhsvsSpacer" type="note"
+				class="alertsss alert-info"
+				label="Intro-Klassen [introClassGhsvs]"
+				description="Template-Overrides können diesen Parameter als 'introClassGhsvs' verwenden."
+			/>
+			<field name="introClassGhsvs" type="text" default="" filter="string"
+				label="Intro-Klasse"
+				hint="z.B. 'bg-green text-center'"
+				class="extended-width" />
+		</fieldset>
+	</fields>
+</form>

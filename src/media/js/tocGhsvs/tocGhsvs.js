@@ -22,10 +22,9 @@
 
 
 (function () {
-	
 	"use strict";
 	var tocGhsvs = {};
-	
+
 	// GHSVS. if you need a cosntructor.
   //var tocGhsvs = function () {
     //this.init(options)
@@ -34,6 +33,8 @@
 
 	tocGhsvs.prototype = {
 		headingElementsArr:  [],
+		// Really found h tags.
+		headingsLength: 0,
 		// GHSVS. Not used.
 		// landmarkElementsArr:  [],
 		// idElementsArr:  [],
@@ -101,13 +102,14 @@
 			forceIsItVisibleClasses: []
 		},
 
+		// merge custom options.
 		setUpConfig: function (appConfig) {
 
 			var localConfig = this.config,
 				name,
 				appConfigSettings = typeof appConfig.settings !== 'undefined'
 					? appConfig.settings.TocGhsvs : {};
-				
+
 			for (name in appConfigSettings) {
 				//overwrite values of our local config, based on the external config
 				if (
@@ -120,7 +122,7 @@
 		},
 
 		init: function (appConfig)
-		{	
+		{
 			let attachElement = null,
 			key;
 
@@ -128,6 +130,7 @@
 
 			if (this.config.containerWithHeadings && this.config.attachElement)
 			{
+				console.log(this.config.containerWithHeadings + ' ' + this.config.attachElement);
 				this.containerWithHeadings = document.querySelector(this.config.containerWithHeadings);
 				attachElement = document.querySelector(this.config.attachElement);
 			}
@@ -147,6 +150,19 @@
 				return;
 			}
 
+
+
+			/*
+			Der Sticky header benötigt beim Scrollen einen extra Space.
+			Deshalb in's CSS:
+			.isATocId:before {
+				content: '';
+				display: block;
+				height:      200px;
+				margin-top: -200px;
+				visibility: hidden;
+			  }
+			*/
 			var divId = this.config.divId;
 			// if the menu exists, recreate it
 			if (document.getElementById(divId) !== null)
@@ -174,7 +190,7 @@
 			{
 				div.setAttribute('aria-label', this.config.divAriaLabel);
 			}
-			
+
 			// GHSVS. Implement CSS later or not!
 			//Hier wird das CSS aus SkipTo.css während build reingepackt.
 			// this.addStyles("@@cssContent");
@@ -229,7 +245,7 @@
 		hideIfNothingFound: function()
 		{
 			if (
-				this.config.hideIfNothingFound 
+				this.config.hideIfNothingFound
 				&& document.querySelector(this.config.hideIfNothingFound) !== null
 			){
 				this.addStyles(this.config.hideIfNothingFound + "{display:none !important;visibility: hidden !important");
@@ -284,10 +300,31 @@
 			if (typeof targets !== 'string' || targets.length === 0) return;
 			// GHSVS. Absolute must for several instances of this script.
 			this.headingElementsArr = [];
+			// console.log(this.headingElementsArr);exit;
 			// GHSVS Search in custom container.
 			//var headings = document.querySelectorAll(targets),
-			var headings = this.containerWithHeadings.querySelectorAll(targets),
-				i,
+			var headings = this.containerWithHeadings.querySelectorAll(targets);
+
+			this.headingsLength = headings.length;
+/*
+Siehe in template.js. Das hier ist Schmarrn.
+			var elem = document.getElementById('astroid-sticky-header');
+			var height = elem.getBoundingClientRect().height;
+			if (height)
+			{
+				height = (parseInt(height)+10) + 'px';
+				alert(height);
+				var css = document.createElement('style');
+				css.type = 'text/css';
+				var styles = '#header { color: #555 }';
+				styles += ' #content { color: #333; text-align: left; }';
+				if (css.styleSheet) css.styleSheet.cssText = styles;
+				else css.appendChild(document.createTextNode(styles));
+				document.getElementsByTagName("head")[0].appendChild(css);
+			}
+*/
+
+			var	i,
 				j,
 				heading,
 				role,
@@ -295,67 +332,74 @@
 				name,
 				isItVisible,
 				prefix;
-			for (i = 0, j = headings.length; i < j; i = i + 1) {
+			// console.log(headings);
+			for (i = 0, j = headings.length; i < j; i = i + 1)
+			{
 				// [object HTMLHeadingElement]
 				heading = headings[i];
+				// console.log('Heading is:');
+				// console.log(heading);
 				role = heading.getAttribute('role');
 				if ((typeof role === 'string') && (role === 'presentation')) continue;
 
 				// GHSVS. Changed ussage.
 				isItVisible = this.isVisible(heading, this.config.forceIsItVisibleClasses);
 
-				// if (this.isVisible(heading))
+				// GHSVS. "Avoid endless monsters if there are embedded spans and stuff".
+				//id = heading.getAttribute('id') || heading.innerHTML.replace(/\s+/g, '_').toLowerCase().replace(/[&\/\\#,+()$~%.'"!:*?<>{}¹]/g, '') + '_' + i;
+
+				if (heading.getAttribute('id'))
 				{
-					// GHSVS. "Avoid endless monsters if there are embedded spans and stuff".
-					//id = heading.getAttribute('id') || heading.innerHTML.replace(/\s+/g, '_').toLowerCase().replace(/[&\/\\#,+()$~%.'"!:*?<>{}¹]/g, '') + '_' + i;
-
-					if (heading.getAttribute('id'))
-					{
-						id = heading.getAttribute('id');
-					}
-					else
-					{
-						id = heading.innerText.replace(/\s+/g, '_').toLowerCase()
-							.replace(/[&\/\\#,+()$~%.'"!:*?<>{}¹]/g, '');
-					
-						if (id.length > this.config.fragmentLimit)
-						{
-							id = id.substring(0, this.config.fragmentLimit);
-						}
-
-						// Pedantry
-						id = id.replace(/_+$/g,"");
-						id += '_' + i;
-					}
-
-					heading.tabIndex = "-1";
-					heading.setAttribute('id', id);
-					name = this.getTextContent(heading);
-
-					// if (this.config.enumerateElements === 'false')
-					{
-						prefix = heading.tagName.toLowerCase();
-						// name = heading.tagName.toLowerCase() + ": " + name;
-					}
-					
-					//this.headingElementsArr[id] = heading.tagName.toLowerCase() + ": " + this.getTextContent(heading);
-					//IE8 fix: Use JSON object to supply names to array values. This allows enumerating over the array without picking up prototype properties.
-					this.headingElementsArr[id] = {
-						id: id,
-						name: name,
-						prefix: prefix,
-						isItVisible: isItVisible
-					};
+					id = heading.getAttribute('id');
 				}
+				else
+				{
+					id = heading.innerText.replace(/\s+/g, '_').toLowerCase()
+						.replace(/[&\/\\#,+()$~%.'"!:*?<>{}¹]/g, '');
+
+					if (id.length > this.config.fragmentLimit)
+					{
+						id = id.substring(0, this.config.fragmentLimit);
+					}
+
+					// Pedantry
+					id = id.replace(/_+$/g,"");
+					id += '_' + i;
+				}
+
+				heading.tabIndex = "-1";
+				heading.setAttribute('id', id);
+
+				heading.setAttribute('class', 'isATocId ' + heading.className);
+				name = this.getTextContent(heading);
+
+				// if (this.config.enumerateElements === 'false')
+				{
+					prefix = heading.tagName.toLowerCase();
+					// name = heading.tagName.toLowerCase() + ": " + name;
+				}
+
+				//this.headingElementsArr[id] = heading.tagName.toLowerCase() + ": " + this.getTextContent(heading);
+				//IE8 fix: Use JSON object to supply names to array values. This allows enumerating over the array without picking up prototype properties.
+				this.headingElementsArr[id] =
+				{
+					id: id,
+					name: name,
+					prefix: prefix,
+					isItVisible: isItVisible
+				};
+				// console.log(id);
+				// console.log(this.headingElementsArr[id]);
 			}
+			//console.log(this.headingElementsArr);exit;
 		},
 		// GHSVS. Not used.
 		isVisible: function(element, forceIsItVisibleClasses)
 		{
 			function isVisibleRec (el, forceIsItVisibleClasses)
 			{
-				
-			var k, l;
+
+				var k, l;
 
 				if (el.nodeType === 9) return true; // IE8 does not support Node.DOCUMENT_NODE
 
@@ -372,7 +416,7 @@
 				var hidden = el.getAttribute('hidden');
 				var ariaHidden = el.getAttribute('aria-hidden');
 				var clientRect = el.getBoundingClientRect();
-console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).getPropertyValue('visibility'));
+//console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).getPropertyValue('visibility'));
 
 				if (
 					(display === 'none') ||
@@ -392,10 +436,10 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 					}
 					return false;
 				}
-				
+
 				return isVisibleRec(el.parentNode, forceIsItVisibleClasses);
 			}
-			
+
 			return isVisibleRec(element, forceIsItVisibleClasses);
 		},
 		getdropdownHTML: function(){
@@ -407,16 +451,25 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 				indentChar = '',
 				prefix = '',
 				listEntryPrefix = '',
-				isItVisible = true;
+				isItVisible = true,
+				countLoops = 0;
 
 			//for...in loop enumerates over all properties in an object including its prototype. This was returning some undesirable items such as indexof
 			//James' workaround to get for JSON name/value pair appears to address the issue.
-			for (key in this.headingElementsArr) {
-				if (this.headingElementsArr[key].name){
-					
+
+			for (key in this.headingElementsArr)
+			{
+				if (countLoops < this.headingsLength && this.headingElementsArr[key].name)
+				{
 					if (this.config.indentChar)
 					{
 						prefix = this.headingElementsArr[key].prefix;
+						if (!prefix)
+						{
+							console.log('NO Prefix!');
+							console.log(this.headingElementsArr[key]);
+						}
+
 						indentChar = this.config.indentChar.repeat(parseInt(prefix.substring(1))) + ' ';
 					}
 					let liClass = ' class="' + this.config.liClass + ' po-'
@@ -439,7 +492,7 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 						listEntryPrefix = this.headingElementsArr[key].prefix;
 					}
 
-					
+
 					htmlStr += '<span class="listEntryPrefix">'
 						+ listEntryPrefix + ': </span>'
 						+ this.headingElementsArr[key].name;
@@ -448,8 +501,10 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 					{
 						htmlStr += '</a>';
 					}
-					
+
 					htmlStr += '</li>'
+
+					countLoops = countLoops + 1;
 				}
 			}
 
@@ -481,4 +536,3 @@ console.log(el.tagName + '::' + document.defaultView.getComputedStyle(el,null).g
 	};
 
 }({}));
-

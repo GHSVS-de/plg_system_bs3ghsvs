@@ -236,6 +236,14 @@ Meint: Weitere Optionen im Plugin anbieten für dies und das.
 							<option value="1">JYES</option>
 							<option value="0">JNO</option>
 					</field>
+
+					<field name="xml_articleSettings" type="list" default="0"
+						filter="integer"
+						label="articleSettings.xml"
+						description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC">
+							<option value="1">JYES</option>
+							<option value="0">JNO</option>
+					</field>
 				</fields><!--/XmlActiveArticle-->
 
 				<fields name="XmlActiveModule">
