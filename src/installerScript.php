@@ -31,6 +31,11 @@ class plgSystemBs3GhsvsInstallerScript extends InstallerScript
 		'/plugins/system/bs3ghsvs/vendor/spatie/schema-org/src/LockerDelivery.php',
 		'/plugins/system/bs3ghsvs/vendor/spatie/schema-org/src/ParcelService.php',
 		'/plugins/system/bs3ghsvs/vendor/spatie/schema-org/src/Contracts/ParcelServiceContract.php',
+		'/media/plg_system_bs3ghsvs/svgs/bi/patch-check-fll.svg',
+		'/media/plg_system_bs3ghsvs/svgs/bi/patch-exclamation-fll.svg',
+		'/media/plg_system_bs3ghsvs/svgs/bi/patch-minus-fll.svg',
+		'/media/plg_system_bs3ghsvs/svgs/bi/patch-plus-fll.svg',
+		'/media/plg_system_bs3ghsvs/svgs/bi/patch-question-fll.svg',
 	);
 
 	/**

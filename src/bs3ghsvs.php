@@ -743,7 +743,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 			// && $this->params->get('imageoptimizer_articletext') === 1
 			&& in_array($context, array('com_content.article'))
 			&& $view === 'article'
-			// Collection already done?
+			// Collection already done? If true leave!
 			&& strpos($article->images, '"articletext_imagesghsvs":') === false
 			// All images found in article text.
 			&& ($imagesInArticle = Bs3ghsvsItem::getAllImgSrc($article->text))
@@ -772,6 +772,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 					$this->params->set('jlayout_articletext', $jlayout_articletext_print);
 				}
 
+				// Kann man also im Plugin einstellen.
 				if (($jlayout_articletext = trim($this->params->get('jlayout_articletext', 'ghsvs.article_image'))))
 				{
 					// The array indices are the same for $imgTags and $collect_images.

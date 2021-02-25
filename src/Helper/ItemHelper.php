@@ -311,11 +311,13 @@ class Bs3ghsvsItem
 		* @return array Array with above keys | empty array.
 	 */
 	public static function getAllImgSrc(
-		$txt,
+		// Reference. If we have to handle <figcaption>.
+		&$txt,
 		$filter = 'png|jpg|jpeg|gif|webp'
 	){
 		if (stripos($txt, '<img ') !== false)
 		{
+			self::replaceFigureImg($txt, $filter);
 			#/<img(\s+[^>]*)src=("|'|)([^>]+?\.(png|jpg|jpeg|gif))("|'|)([^>]*>)/i
 			$muster = array();
 			$muster[] = '<img';
@@ -324,11 +326,8 @@ class Bs3ghsvsItem
 
 			// Quotes. HTML5 allows also unquoted ones
 			$muster[] = '("|\'|)';
-			
 			$muster[] = '([^>]+?\.(' . $filter . '))';
-			
 			$muster[] = '("|\'|)';
-			
 			$muster[] = '([^>]*>)';
 
 			if (preg_match_all('/' . implode('', $muster) . '/i', $txt, $matches))
@@ -349,6 +348,61 @@ class Bs3ghsvsItem
 			}
 		}
 		return array();
+	}
+
+	/**
+	 * Zerlegt <figure>-Blöcke in einzelne <img>.
+	 * Entfernt alle Attribute des <img>, die später stören.
+	 * Extrahiert <figcaption>
+	 * Ersetzt auf Umweg direkt z.B. im $article->text (txt ist eine Referenz).
+	*/
+	public static function replaceFigureImg(&$txt, $filter)
+	{
+		if (stripos($txt, '<figure ') === false
+			&& stripos($txt, '<img ') === false)
+		{
+			return;
+		}
+
+		# Zum debuggen: Beiträge bei Kujm, die <figure> drin haben: 2275, 2294,2638
+
+		$muster = '/<figure [^>]*?>.*?'
+		. '(<img [^>]*>)'
+		.'(.*?)'
+		. '<\/figure>'
+		.'/is';
+
+		if (preg_match_all($muster, $txt, $matches, PREG_SET_ORDER))
+		{
+			foreach ($matches as $match)
+			{
+				$attributes = Utility::parseAttributes($match[1]);
+				unset(
+					$attributes['style'],
+					$attributes['width'],
+					$attributes['height']
+				);
+
+				if (
+					isset($attributes['title'])
+					&& !trim($attributes['title'])
+				){
+					unset($attributes['title']);
+				}
+
+				// Should be the <figcaption> if no markup error.
+				if($match[2] = self::strip_tags($match[2]))
+				{
+					// Muss im JLayout o.ä extrahiert werden.
+					$attributes['data-caption-from-replaceFigureImg']
+						= htmlspecialchars($match[2], ENT_QUOTES, 'UTF-8');
+				}
+
+				$replaceWith = '<img ' . ArrayHelper::toString($attributes)
+					. ' />';
+				$txt = str_replace($match[0], $replaceWith, $txt);
+			}
+		}
 	}
 
 	/**
@@ -463,30 +517,28 @@ class Bs3ghsvsItem
 	 * If getimagesize fails return array('width' => 0, 'height' => 0).
 	 * Even if PHP manual says "BEFORE PHP 7.1.0, list() only worked on numerical arrays and assumes the numerical indices start at 0." PHP 7.3 doesn't care and still throws Notices like "Undefined offset: 0 in /ItemHelper.php on line 242" if you don't convert indices to numerical ones and then use list(). => $numericalIndices established that returns array(0 => $w, 0 => $h)
 	 */
-	public static function getImageSize(string $image, bool $numericalIndices = false) : array
-	{
-		$w = $h = null;
+	public static function getImageSize(
+		string $image,
+		bool $numericalIndices = false
+	) : array {
+		$w = $h = 0;
 
 		if (!self::hasScheme($image))
 		{
 			$image = JPATH_SITE . '/' . ltrim($image, '/\\');
+		}
 
-			// A smmll fall back for urlencoded images (space replaced with %20 and other shit).
-			if (!\is_file($image) && \is_file(urldecode($image)))
+		/* A smmll fall back for urlencoded images (space replaced with %20
+		and other shit). */
+		if (!\is_file($image))
 			{
 				$image = urldecode($image);
 			}
-		}
 		
-		// Since PHP 8 "@getimagesize()" throws error. Therefore some stupid bullshit:
-		try
+		if (is_file($image))
 		{
 			$imagesize = getimagesize($image);
 			list($w, $h) = $imagesize;
-		}
-		catch (Exception $e)
-		{
-			$w = $h = 0;
 		}
 		
 		if ($numericalIndices === true)
@@ -496,20 +548,65 @@ class Bs3ghsvsItem
 		return array('width' => $w, 'height' => $h);
 	}
 	
-	/**
+	/*
 	 * Build and return array with sources block and infos for fallback <img>.
+	 * Returns something like. Example for just one intro_image:
+Array
+(
+    [0] => Array
+        (
+            [sources] => <source srcset="cache/images/Plakat_DJLP-2020_Paul_quer_i_s.jpg" media="(max-width: 575px)">
+<source srcset="cache/images/Plakat_DJLP-2020_Paul_quer_i_l.jpg" media="(max-width: 1199px)">
+<source srcset="cache/images/Plakat_DJLP-2020_Paul_quer_i_x.jpg" media="(min-width: 1200px)">
+<source srcset="cache/images/Plakat_DJLP-2020_Paul_quer_i_x.jpg">
+            [assets] => Array
+                (
+                    [img] => cache/images/Plakat_DJLP-2020_Paul_quer_i_x.jpg
+                    [width] => 700
+                    [height] => 219
+                )
+        )
+)
 	*/
 	public static function getSources(array $imgs, array $mediaQueries, string $origImage): array
 	{
 		$returnArray = array();
 
+/*
+$mediaQueries. Ungeprüft. Wie vom JLayout übergeben.
+Array
+(
+    [(max-width: 575px)] => _s
+    [(max-width: 767px)] => _m
+    [(max-width: 1199px)] => _l
+    [(min-width: 1200px)] => _x
+		[srcSetKey] =>
+)
+*/
+
 		// $imgs contains resized images. If resizer deactivated no $imgs.
 		if ($imgs && $mediaQueries)
 		{
 			$sources  = array();
+/*
+$ordering Im einfachsten Fall:
+Array
+(
+    [0] => 1
+)
+*/
 			$ordering = \explode(',', $imgs['order']);
 			unset($imgs['order']);
 	
+/*
+$srcSetKeys falls keiner erxplizit übergeben
+Array
+(
+    [0] => 1612722753
+    [1] => _x
+    [2] => _u
+)
+*/
 			$srcSetKeys = array(
 				empty($mediaQueries['srcSetKey']) ? time() : $mediaQueries['srcSetKey'],
 				'_x',
@@ -519,6 +616,54 @@ class Bs3ghsvsItem
 	
 			$count = count($mediaQueries);
 	
+//echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($imgs, true) . '</pre>';exit;
+/*
+$sizedImageKey ist numerischer Index. Bei intro_image gibts bspw. nur einen (0).
+Bei article_images können es aber mehrere sein.
+*/
+
+/*
+$sizedImages
+Array
+(
+    [_x] => Array
+        (
+            [img-1] => cache/images/Plakat_DJLP-2020_Paul_quer_i_x.jpg
+            [count] => 1
+            [width] => 700
+            [height] => 219
+            [size] => _x
+        )
+
+    [_l] => Array
+        (
+            [img-1] => cache/images/Plakat_DJLP-2020_Paul_quer_i_l.jpg
+            [count] => 1
+            [width] => 480
+            [height] => 150
+            [size] => _l
+        )
+
+    [_s] => Array
+        (
+            [img-1] => cache/images/Plakat_DJLP-2020_Paul_quer_i_s.jpg
+            [count] => 1
+            [width] => 320
+            [height] => 100
+            [size] => _s
+        )
+
+    [_u] => Array
+        (
+            [img-1] => images/Plakat_DJLP-2020_Paul_quer.jpg
+            [width] => 1200
+            [height] => 375
+            [count] => 1
+            [size] => _u
+        )
+
+)
+*/
 			foreach ($imgs as $sizedImageKey => $sizedImages)
 			{
 				foreach ($ordering as $order)
@@ -528,11 +673,26 @@ class Bs3ghsvsItem
 	
 					foreach ($mediaQueries as $mediaQuery => $sizeIndex)
 					{
+/*
+Ein _m fehlt z.B. oben.
+*/
 						if (!isset($sizedImages[$sizeIndex]))
 						{
+							// Reduce amount of mediaQueries.
+							$count--;
 							continue;
 						}
-						
+/*
+$image z.B. für $sizeIndex _s
+Array
+(
+    [img-1] => cache/images/Plakat_DJLP-2020_Paul_quer_i_s.jpg
+    [count] => 1
+    [width] => 320
+    [height] => 100
+    [size] => _s
+)
+*/
 						$image = $sizedImages[$sizeIndex];
 						
 						// Fall back to first image.
@@ -541,9 +701,11 @@ class Bs3ghsvsItem
 							$imgKey = 'img-1';
 						}
 	
+						// Übernimmt also den numerischen Key des imgs-Arrays.
 						$sources[$sizedImageKey][] = '<source srcset="' . $image[$imgKey] . '" media="' . $mediaQuery . '">';
 						$i++;
 						
+						// $count ist die übergebene Anzahl an mediaQueries.
 						if ($i > $count)
 						{
 							foreach ($srcSetKeys as $srcSetKey)

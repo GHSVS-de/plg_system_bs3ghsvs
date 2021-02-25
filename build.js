@@ -136,12 +136,12 @@ async function buildOverview()
 
 		await rimRaf("./src/media/svgs");
 
-  		await fse.copy(
+  	await fse.copy(
 			"./node_modules/@fortawesome/fontawesome-free/svgs",
 			"./src/media/svgs"
 		);
 
-  		await fse.copy(
+  	await fse.copy(
 			"./node_modules/bootstrap-icons/icons",
 			"./src/media/svgs/bi"
 		);

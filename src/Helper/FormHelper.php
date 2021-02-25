@@ -80,7 +80,7 @@ class Bs3GhsvsFormHelper
 					$form->setFieldAttribute(
 						$field->fieldname,
 						'class',
-						$class . ' form-control',
+						$class . ' form-control findMich01',
 						$field->group
 					);
 				}

@@ -321,7 +321,7 @@ Array
 	{
 		if (!isset(static::$loaded[__METHOD__]))
 		{
-			$menu = Factory::getApplication()->getMenu()->getActive();
+			$menu = self::getActiveMenu();
 		
 			//Bugfix removed isset($menu->params). Always false.
 			if ($menu)

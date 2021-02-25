@@ -8,23 +8,33 @@
 
 				<field type="note" name="moduleSubHeaderNote"
 				label="Modul Sub-Header [moduleSubHeader]"
-					description="Setzt Modul-Override voraus, der Feld 'moduleSubHeader' verwendet. Es kann auch ein Sprach-String eingegeben werden."/>
+					description="Setzt Modul-Override voraus, der Parameter 'moduleSubHeader' verwendet. Kann letztlich für Diverses verwendet werden."
+					class="alert-info"/>
 				
 				<field name="moduleSubHeader" type="text" filter="string"
 					label="Modul Sub-Header"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					class="extended-width"/>				
 				
+				<field name="connectorKeySpacer" type="note"
+					label="Connector Key"
+					description="PLG_SYSTEM_BS3GHSVS_MODULE_CONNECTORKEY"
+					class="alertsss alert-info" />
 				
 				<field name="connectorKey" type="text" filter="ALNUM"
-					label="Eindeutiger, alphanumerischer Key zum Verknüpfen mehrerer Module. Bspw. Button und Modal-Inhalt in 2 verschiedenen Positionen. Das ist nur nötig für Module, von denen mehrere auf 1 Seite denkbar sind. Setzt Modul-Override voraus, der Feld 'connectorKey' verwendet."
+					label="Connector Key"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					class="extended-width"/>
 
-				<field name="lederBG" type="mediajce" default="images/template/bg/bg-title-shop.jpg"
+				<field name="lederBGSpacer" type="note"
+					label="Bild oder Hintergrundbild oder ..."
+					description="Setzt Modul-Override voraus der Feld/Parameter 'lederBG' verwendet."
+					class="alertsss alert-info" />
+
+				<field name="lederBG" type="mediajce" default=""
 					addfieldpath="plugins/system/jce/fields"
-					label="Nur für Leder-Hofmann und Breadcrumb-Module mit Layouts, die Breadcrump-Hintergrund-Bild verwenden."
-					description="Leder-Hofmann Special" />
+					label="Bild oder Hintergrundbild oder ..."
+					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC" />
 
 				<!--<field name="lederCOLOR" type="list" default="color-black-important"
 					label="Nur für Leder-Hofmann Breadcrump-Schriftfarben-Klasse, falls Hintergrundbild."
@@ -55,7 +65,7 @@
 				</field>
 
 
-<field name="frontendEditingOnSpacer" type="note" class="alert alert-info"
+<field name="frontendEditingOnSpacer" type="note" class="alertsss alert-info"
 	label="Frontend-Editing-Feature für dieses Modul aktivieren?"
 	description="PLG_SYSTEM_BS3GHSVS_MODULE_FRONTENDEDITING" />
 				<field name="frontendEditingOn" type="list" filter="integer" default="0"

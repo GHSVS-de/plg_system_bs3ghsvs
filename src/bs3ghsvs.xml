@@ -8,52 +8,6 @@
 	<authorUrl>{{authorUrl}}</authorUrl>
 	<version>{{version}}</version>
 	<versionHistory>
-2015.10.01: ghsvs.de
-2016.01.16: Komplett neu überarbeitet. Begann wegen Bugs mit Templatestilen in Menüeinträgen.
-2017.08.05: irc-finance.ch
-- Überarbeitung für saubere Installation, auch auf ghsvs.de.
-2017.08.06:
-- Kleinere Aufräumarbeiten.
-2018.01.24:
-- Kleinere Anpassungen.
-- Update venobox, footables, moment, SlickNav
-2018.01.25:
-- Add scriptfile.
-- Add minimumJoomla and minimumPhp as custom tags in manifest xml.
-2019.06.29
-		https://updates.ghsvs.de/changelog.php?file=bs3ghsvs
-2019.08.26:
-- bs3ghsvs.php, pagebreakghsvs-feature: Print-Output: $title2 was missing in headlines.
-- Some additions from ghsvs-de-relaunch-bs3
-2019.09.04:
-- http://localhost/leder-hofmann: Grave bug in TemplateHelper.php::getLessPluginParams (getTemplate removed). Needs also fix in html/lessghsvs.php (See $tplName).
-- Versuch in onAfterRoute Vorschalt-Seite zu integrieren.
-2019.09.29:
-- spielereien.illovo.de Optionen 'otherFileName' (vielleicht sinnfrei?) und 'mediaLoad'
-- Add fontawesome-free 5
-2019.11.09:
-- relaunch-bs3.ghsvs.de
-- Aufräumen Parameter in plgSystemBs3Ghsvs.json
-- Bootstrap 4 nach /media/
-2019.12.14:
-- module.xml deaktivierbar machen.
-- Leder-Hofmann-"Special" übernommen (menuItem.xml), da Gefahr zu groß, dass bei Update kaputt geht.
-2020.03.22:
-- Smoothscroll auf nativen Browser-Support umgestellt.
-- Weitere animate()-abhängigkeiten entfernt. Bleibt leider noch venobox bis ich jquery-slim verwenden kann.
-- ESTABLISH NEW UPDATESERVER, CHANGELOG filename "bs3ghsvs2020". Um nicht mit Installationen bei Kunden zu kollidieren
-- gs-wd.ghsvs.de
-- Versuch, ohne HTMLHELPER overrides auszukommen wegen f** WebAssetManager ab Joomla 4.
-Meint: Weitere Optionen im Plugin anbieten für dies und das.
-2020.04.20:
-2020.05.14:
-- Bootstrap 4.5.0
-- JQuery 3.5.1
-2020.06.30:
-- fontawesome-free 5.13.1
-- use ...CMS\Image\Image; See https://github.com/joomla/joomla-cms/issues/29853
-- Make uninstallation possible if custom requirements don't match.
-
 	https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020
 	</versionHistory>
 	<description>{{nameUpper}}_DESC</description>
