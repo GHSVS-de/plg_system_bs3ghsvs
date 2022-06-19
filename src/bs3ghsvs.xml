@@ -14,9 +14,7 @@
 
 	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-update.xml</server></updateservers>
 
-	<changelogurl>
-		https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-changelog.xml
-	</changelogurl>
+	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/bs3ghsvs2020-changelog.xml</changelogurl>
 
 	<infourl>https://updates.ghsvs.de/changelog.php?file=bs3ghsvs2020</infourl>
 
@@ -26,7 +24,7 @@
 	<minimumJoomla>{{minimumJoomla}}</minimumJoomla>
 	<maximumJoomla>{{maximumJoomla}}</maximumJoomla>
 	<allowDowngrades>{{allowDowngrades}}</allowDowngrades>
-	<!--Comma separated. No spaces:-->
+	<!--Comma separated. No spaces. Das ist eine Erfindung von mir! Nicht Joomla core. Und habe ich auch nicht in script.php, weil irgendwas nicht klappte.-->
 	<databaseServerType>mysql</databaseServerType>
 
 	<files>
@@ -703,7 +701,7 @@
 				label="PLG_SYSTEM_BS3GHSVS_FIELDSET_STRUCTUREDDATA"
 				description="PLG_SYSTEM_BS3GHSVS_FIELDSET_STRUCTUREDDATA_DESC">
 
-				<field name="structureddataActive" type="list" default="1"
+				<field name="structureddataActive" type="list" default="0"
 					label="PLG_SYSTEM_BS3GHSVS_STRUCTUREDDATAACTIVE"
 					description="PLG_SYSTEM_BS3GHSVS_EMPTY_DESC"
 					filter="integer">

@@ -903,7 +903,7 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		###### schema-org - START
 		if (
 			$this->sd_robotsStateOk
-			&& $this->params->get('structureddataActive', 1) === 1
+			&& $this->params->get('structureddataActive', 0) === 1
 			&& Factory::getDocument()->getType() === 'html'
 		){
 			JLoader::register('Bs3ghsvsStructuredData', __DIR__ . '/Helper/StructuredData.php');
@@ -1098,8 +1098,8 @@ class PlgSystemBS3Ghsvs extends CMSPlugin
 		}
 
 		$done             = 0;
-		$sd_killmicrodata = $this->params->get('structureddataActive', 1) === 1
-			&& $this->params->get('sd_killmicrodata') === 1;
+		$sd_killmicrodata = $this->params->get('structureddataActive', 0) === 1
+			&& $this->params->get('sd_killmicrodata', 1) === 1;
 		$svgSupport       = $this->params->get('svgSupport', 1) === 1;
 
 		if ($sd_killmicrodata || $svgSupport)
