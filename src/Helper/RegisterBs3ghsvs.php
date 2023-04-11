@@ -2,7 +2,7 @@
 /*
 J3.8.9
 */
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Log\Log;
@@ -48,7 +48,7 @@ class Bs3GhsvsRegisterBs3ghsvs
 			$class = $prefix . ucfirst($file);
 
 			JLoader::register($class, __DIR__ . '/../html/' . $file . '.php');
-			
+
 			foreach ($what as $method)
 			{
 				HTMLHelper::register('bs3ghsvs.' . $method, $class . '::' . $method);

@@ -1,5 +1,5 @@
 <?php
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Helper\TagsHelper;
 use Joomla\CMS\Language\Text;
@@ -8,7 +8,7 @@ use Joomla\Registry\Registry;
 class Bs3GhsvsFormHelper
 {
 	protected static $loaded = array();
-	
+
 	public static function getActiveXml($key, $paras, $status = array(1, 2))
 	{
 		$params = clone $paras;
@@ -39,7 +39,7 @@ class Bs3GhsvsFormHelper
 		}
 		return $XmlActive;
 	}
-	
+
 	/**
 	 * Placeholder einsetzen statt Labels. Labels erhalten sr-only, damit Validierung noch klappt.
 	 * Klasse form-control einsetzen für BS 3.
@@ -63,14 +63,14 @@ class Bs3GhsvsFormHelper
 		 'spacer',
 		 'captcha',
 		);
-		
+
 		foreach ($fields as $field)
 		{
 			if (in_array($field->getAttribute('type'), $excludeTypes))
 			{
 				continue;
 			}
-			
+
 			if (!\in_array('form-control', $ignore))
 			{
 				$class = $field->getAttribute('class');
@@ -104,7 +104,7 @@ class Bs3GhsvsFormHelper
 			if ($hint)
 			{
 				$hint = Text::_($hint);
-				
+
 				if (!$field->required)
 				{
 					$hint .= ' ' . Text::_('PLG_SYSTEM_BS3GHSVS_OPTIONAL');
@@ -113,7 +113,7 @@ class Bs3GhsvsFormHelper
 				{
 					$hint .= ' *';
 				}
-		
+
 				$form->setFieldAttribute($field->fieldname, 'hint', $hint, $field->group);
 				$form->setFieldAttribute($field->fieldname, 'translateHint', true, $field->group);
 

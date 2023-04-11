@@ -1,6 +1,6 @@
 <?php
 /* lessghsvs.php JHtmlLessGhsvs */
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Filesystem\File;
@@ -13,8 +13,8 @@ use Joomla\Registry\Registry;
 abstract class JHtmlLessGhsvs
 {
 	protected static $loaded = array();
-	private static $lessplugin = array('system', 'lessghsvs');	
-	
+	private static $lessplugin = array('system', 'lessghsvs');
+
 /**
 2015-11-10
 $input: Less-File. Ohne Pfad. Wird mit file_get_contents eingebunden.
@@ -63,11 +63,11 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 
 			return false;
 		}
-		
+
 		$tplName = Factory::getApplication()->getTemplate();
-		
+
 		$tplPath = 'templates/' . $tplName;
-		
+
 		$default_options = array(
 			'inputDir' => $tplPath . '/less/' . $folder,
 			'output' => $tplPath . '/css/' . $folder . '/' . $input . '.css',
@@ -103,7 +103,7 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 				$options[$chck] = array();
 			}
 		}
-		
+
 		$options = new Registry($options);
 
 		// Falls false oder leer übergeben wurde,
@@ -113,15 +113,15 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 		{
 			$options->set('inputDir', $tplPath . '/less');
 		}
-		
+
 		$lessFile = Path::clean(
 			$options->get('inputDir') . '/' .$input,
 			'/'
 		);
 		$lessFile = trim($lessFile, ' /\\');
-		
+
 		$lessFileAbs = JPATH_SITE . '/' . $lessFile;
-		
+
 		if (!file_exists($lessFileAbs))
 		{
 			if (PlgSystemBS3Ghsvs::$log)
@@ -132,7 +132,7 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 
 			return false;
 		}
-  
+
 		// Ein vom LESS abweichender CSS-Dateiname?
 		if ($options->get('outputFile', ''))
 		{
@@ -140,10 +140,10 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 				$tplPath . '/css/' . $folder . '/' . $options->get('outputFile') . '.css'
 			);
 		}
-		
+
 		$output = Path::clean($options->get('output'), '/');
 		$output = trim($output, ' /\\');
-  
+
 		$outputAbs = JPATH_SITE . '/' . $output;
 
 		if (!file_exists($outputAbs))
@@ -203,7 +203,7 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 		$lessContent[] = $marker;
 		//DEBUG: $lessContent[] = '.test-ghsvs1{font-size: @testghsvs1;}';
 		$lessContent = implode('', $lessContent);
-		
+
 		// Is there a cache path in configuration.php?
 		if (!($cache_path = trim(Factory::getConfig()->get('cache_path', ''))))
 		{
@@ -223,7 +223,7 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 		// Immer konstanten timestamp für diese Datei.
 		// Sonst gibt Cache-Vergleich immer aus, dass neu.
 		touch($compileFile, $constantTimestamp, $constantTimestamp);
-		
+
 		// Die ggf. früher gecachten Daten.
 		$cacheFile = $compileFile . '.cache';
 
@@ -252,18 +252,18 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 			// File::write hat Vorteil, dass Verzeichnis erstellt wird.
 			$content = serialize($newCache);
 			File::write($cacheFile, $content);
-			
+
 			$content = array('/* ' . basename($output) . ' */');
 			$content[] = '/** Compiled by ' . __METHOD__ . ' ' . date('c', time());
 			$content[] = 'Source: ' . str_replace(JPATH_SITE, '', $lessFileAbs) . " */\n";
 			$content = implode(' ', $content) . $newCache['compiled'];
-			
+
 			// File::write hat Vorteil, dass Verzeichnis erstellt wird.
 			File::write($outputAbs, $content);
 		}
-		
+
 		File::delete($compileFile);
-		
+
 		if ((bool) $options->get('addStyleSheet'))
 		{
 			Factory::getDocument()->addStyleSheet($output);
@@ -276,8 +276,8 @@ Oder falls 'returnInOut' = true, ein Array mit Input und Outputfile
 				'input' => $lessFile
 			);
 		}
-		
+
 		// relativer CSS-Pfad oder false bei Fehler:
-		return $output;		
+		return $output;
 	}
 }

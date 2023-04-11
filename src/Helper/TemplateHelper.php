@@ -1,5 +1,5 @@
 <?php
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Application\ApplicationHelper;
 use Joomla\CMS\Factory;
@@ -14,7 +14,7 @@ class Bs3ghsvsTemplate
 	protected static $templates = null;
 	protected static $templateOptionsFile = '/html/plgSystemBs3Ghsvs.json';
 	protected static $loaded;
-	
+
 	/**
 	 * Return an array of template names (folders) where the plugin specific json configuration file exists.
 	 */
@@ -24,7 +24,7 @@ class Bs3ghsvsTemplate
 		{
 			return self::$templates;
 		}
-		
+
 		$path = JPATH_SITE . '/templates/';
 		self::$templates = Folder::folders($path);
 
@@ -75,20 +75,20 @@ Array
 		$templateOptions = file_get_contents($file);
 		return json_decode(trim($templateOptions), true);
 	}
-	
+
 	public static function getTemplateByStyleId($id)
 	{
 		if (empty(static::$loaded[__METHOD__]))
 		{
 			$db = Factory::getDbo();
-	
+
 			$query = $db->getQuery(true)
 				->select($db->qn('template'))
 				->from($db->qn('#__template_styles'))
 				->where($db->qn('id') . ' = ' . (int) $id)
 			;
 			$db->setQuery($query);
-	
+
 			try
 			{
 				static::$loaded[__METHOD__] = $db->loadResult('field');
@@ -100,7 +100,7 @@ Array
 		}
 		return static::$loaded[__METHOD__];
 	}
-	
+
 	public static function getLessPluginParams()
 	{
 		if (empty(static::$loaded[__METHOD__]))
@@ -108,7 +108,7 @@ Array
 			$plugin = PluginHelper::getPlugin('system', 'lessghsvs');
 			$pluginPath = 'system/lessghsvs';
 			$params = null;
-			
+
 			if (!empty($plugin->params))
 			{
 				$params = new Registry($plugin->params);
@@ -125,11 +125,11 @@ Array
 					->where($db->qn('folder') . ' = ' . $db->q('system'))
 				;
 				$db->setQuery($query);
-	
+
 				try
 				{
 					$params = $db->loadResult();
-	
+
 					if ($params)
 					{
 						$params = new Registry($params);
@@ -141,11 +141,11 @@ Array
 					// return false;
 				}
 			}
-	
+
 			if (($params instanceof Registry) && $params->get('sitelessc'))
 			{
 				$lesscPath = $pluginPath . '/lessc/' . $params->get('sitelessc') . '.php';
-	
+
 				if (is_file(JPATH_PLUGINS . '/' . $lesscPath))
 				{
 					$params->set('lesscPath', $lesscPath);
@@ -158,23 +158,23 @@ Array
 				$params = new Registry;
 				$params->set('isInstalled', 0);
 			}
-			
+
 			$params->set('checkedPlugin', $pluginPath);
-			
+
 			// NO! NO! NO! Too early under some circumstances.
 			#### $params->set('tplName', Factory::getApplication()->getTemplate());
-			
+
 			static::$loaded[__METHOD__] = $params;
 		}
 		return static::$loaded[__METHOD__];
 	}
-	
+
 	public static function getIsFrontpage()
 	{
 		if (!isset(static::$loaded[__METHOD__]))
 		{
 			$menu = Factory::getApplication()->getMenu();
-	
+
 			if ($menu->getActive() === $menu->getDefault(Factory::getLanguage()->getTag()))
 			{
 				static::$loaded[__METHOD__] = true;
@@ -207,7 +207,7 @@ Array
 			$BodyClasses = array();
 
 			$template->params->set('isFrontpage', static::getIsFrontpage());
-			
+
 			if (!$template->params->get('sitetitle'))
 			{
 				$template->params->set('sitetitle', trim($app->getCfg('sitename')));
@@ -227,7 +227,7 @@ Array
 				{
 					$BodyClasses[] = 'categoryView-article';
 				}
-						
+
 				// 2015-12-31
 				// "Seitentitel im Browser", der im Menüeintrag eingetragen ist
 				$template->params->set('page_titleMenu', trim($menuParams->get('page_title', '')));
@@ -235,7 +235,7 @@ Array
 
 			$BodyClasses[] = $option ? 'option-' . $option : 'no-option';
 			$BodyClasses[] = $view ? 'view-' . $view : 'no-view';
-			
+
 			if ($view === 'article')
 			{
 				$BodyClasses[] = 'articleId-' . $app->input->getInt('id', 0);
@@ -252,15 +252,15 @@ Array
 
 			// In meinem Templatestil einstellbar
 			$BodyClasses[] = $template->params->get('templatestyleclass', '');
-			
+
 			$BodyClasses[] = static::getIsFrontpage() ? 'isFrontpage' : 'isNotFrontpage';
 			$template->params->set('isRobot', $app->client->robot);
-			
+
 			$BodyClasses[] = $app->client->robot ? 'isRobot' : 'isNotRobot';
-			
+
 			$template->params->set('BodyClasses', $BodyClasses);
 
-			####START - LOGO, SEITENTITEL, SITEDESCRIPTION, SITENAME 
+			####START - LOGO, SEITENTITEL, SITEDESCRIPTION, SITENAME
 			#Logo-Bild:
 			$logo = $template->params->get('logo', '');
 			$path = $tplPath . '/images/logos/';
@@ -300,13 +300,13 @@ Array
 		if (!isset(static::$loaded[__METHOD__]))
 		{
 			$classes = (string) $params->get('pageclass_sfx');
-	
+
 			if ($classes = trim($classes))
 			{
 				$classes = preg_replace('/\s\s+/', ' ', $classes);
 				$classes = str_replace(' ', 'Body' . ' ', $classes) . 'Body';
 			}
-	
+
 			static::$loaded[__METHOD__] = explode(' ', $classes);
 		}
 		return static::$loaded[__METHOD__];
@@ -322,7 +322,7 @@ Array
 		if (!isset(static::$loaded[__METHOD__]))
 		{
 			$menu = self::getActiveMenu();
-		
+
 			//Bugfix removed isset($menu->params). Always false.
 			if ($menu)
 			{
@@ -369,7 +369,7 @@ Array
 		{
 			$item = $menu->getItem($app->input->getInt('Itemid', null));
 		}
-		
+
 		$id = 0;
 
 		if (is_object($item))
@@ -453,7 +453,7 @@ Array
 
 		// Need to filter the default value as well
 		$template->template = InputFilter::getInstance()->clean($template->template, 'cmd');
-		
+
 		// Fallback template
 		if (!file_exists(JPATH_THEMES . '/' . $template->template . '/index.php'))
 		{

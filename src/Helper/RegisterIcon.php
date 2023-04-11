@@ -2,7 +2,7 @@
 /*
 J3.8.9
 */
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Log\Log;

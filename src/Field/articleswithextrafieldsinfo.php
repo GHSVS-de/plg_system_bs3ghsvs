@@ -3,7 +3,7 @@
  * Collect configuration infos from plgSystemBs3Ghsvs.json in templates html/ folders.
  * Simple output.
  */
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Form\FormField;
@@ -20,7 +20,7 @@ class JFormFieldArticlesWithExtrafieldsInfo extends FormField
 	protected function getInput()
 	{
 		$html = array('<h4>' . Text::_('PLG_SYSTEM_BS3GHSVS_TEMPLATES_JSON_CONFIGURATION_INFO') . '</h4>');
-		
+
 		$db = Factory::getDbo();
 		$query = $db->getQuery(true)
 			->select($db->qn(array('article_id', 'key', 'value')))
@@ -30,16 +30,16 @@ class JFormFieldArticlesWithExtrafieldsInfo extends FormField
 			#	. implode(', ', $db->q($activeXml)) . ')')
 		;
 		$results = $db->setQuery($query)->loadObjectList();
-		
+
 		$collect = array();
-		
+
 		foreach ($results as $result)
 		{
 //administrator/index.php?option=com_content&task=article.edit&id=262
 			$link = '<a href=index.php?option=com_content&task=article.edit&id=' . $result->article_id . ' target=_blank>edit</a>';
 			$collect[$result->key][$result->article_id] = $link;
 		}
-		
+
 		return '<pre>' . print_r($collect, true) . '</pre>';
 	}
 }

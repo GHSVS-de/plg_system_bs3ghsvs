@@ -1,5 +1,5 @@
 <?php
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Form\FormField;
 use Joomla\CMS\Language\Text;
@@ -12,7 +12,7 @@ class plgSystemBs3GhsvsFormFieldLessenabled extends FormField
 	{
 		JLoader::register('Bs3ghsvsTemplate', __DIR__ . '/../Helper/TemplateHelper.php');
 		$params = Bs3ghsvsTemplate::getLessPluginParams();
-		
+
 		$txt = Text::sprintf(
 		 'GHSVS_LESSPLUGIN_INFO',
 			$params->get('checkedPlugin'),

@@ -1,5 +1,5 @@
 <?php
-defined('JPATH_PLATFORM') or die;
+defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\TagsHelper;
@@ -25,7 +25,7 @@ class Bs3ghsvsItem
 	 */
 	public static function setCatTagsToItem(
 		&$item,
-		$typeAlias = 'com_content.category', 
+		$typeAlias = 'com_content.category',
 		$catKey = 'catid'
 	){
 		if (!empty($item->tagsCatGhsvs) || empty($item->$catKey))
@@ -47,7 +47,7 @@ class Bs3ghsvsItem
 		{
 			return;
 		}
-		
+
 		/* Adds text property to [itemTags]-Objects. Why the hell does this need an extra step? */
 		// Warum nicht einfach title nehmen? Weil es auch verschachtelte Tags geben kann. text bildet das ab: "obertag/untertag".
 		$item->tagsCatGhsvs->convertPathsToNames($item->tagsCatGhsvs->itemTags);
@@ -62,7 +62,7 @@ class Bs3ghsvsItem
 		sort($item->tagsCatGhsvs->titles);
 		return true;
 	}
-	
+
 	/**
 	 * Populate item->Imagesghsvs (catgory or article).
 	 * Thus also category images can be displayed via common JLayouts.
@@ -141,7 +141,7 @@ class Bs3ghsvsItem
 		}
 		return $item->Imagesghsvs;
 	}
-	
+
 	/**
 	 * $what bspw. 'image_intro' für <fields name="image_intro"> in bs3ghsvs.xml.
 	 */
@@ -198,7 +198,7 @@ class Bs3ghsvsItem
 
 	/**
 	 * Create collection of all relevant resized images.
-	 * 
+	 *
 	 * $what 'image_intro', 'image_fulltext', 'image_articletext' (see settings fields in bs3ghsvs.xml)
 	 * and 'image_module' (see PlgSystemBS3Ghsvs::moduleImagesResizing()).
 	 * $useSizePostfixes Force usage of this sizePostfixes. E.g. modules should use 'image_articletext'.
@@ -216,7 +216,7 @@ class Bs3ghsvsItem
 		// Weiterer Kennzeichner in Dateinamen. i für Intro-Bilder.
 		// e.g. 'image_intro' => '_i'
 		$groupPrefix = substr($what, 5, 2);
-		
+
 		// Get plugin settings for resizing.
 		if ($useSizePostfixes === '')
 		{
@@ -231,7 +231,7 @@ class Bs3ghsvsItem
 		{
 			return $collect_images;
 		}
-		
+
 		self::loadImageResizer();
 
 		foreach ($IMAGES as $key => $IMAGE)
@@ -242,7 +242,7 @@ class Bs3ghsvsItem
 				$sizePostfixes['_u']['w'],
 				$sizePostfixes['_u']['h']
 			) = self::getImageSize($IMAGE, true);
-			
+
 			$sizePostfixes['_u']['maxonly'] = 1;
 			$sizePostfixes['_u']['quality'] = null;
 			$sizePostfixes['_u']['size'] = '_u';
@@ -302,7 +302,7 @@ class Bs3ghsvsItem
 		*  src : array of strings SRC value.
 		*  post : array of strings Attributes after SRC. Includes surrounding spaces AND(!) closing >.
 		*  attributes : array of Registry Objects. Like alt, data-xyz.
-		*   The attributes extraction relies on quoted attributes!! 
+		*   The attributes extraction relies on quoted attributes!!
 		*
 		* @param string $txt String that contains IMG tags.
 		* @param string $filter File/image extensions as regex (default: 'png|jpg|jpeg|gif').
@@ -338,7 +338,7 @@ class Bs3ghsvsItem
 				$results['quote'] = $matches[2];
 				$results['src'] = $matches[3];
 				$results['post'] = $matches[6];
-				
+
 				foreach ($results['pre'] as $key => $pre)
 				{
 					$str = str_replace("'", '"', $pre . $results['post'][$key]);
@@ -439,11 +439,11 @@ class Bs3ghsvsItem
 				{
 					$results['replaceWhat'][$key] = $match[0];
 					$svg = JPATH_SITE . '/media/plg_system_bs3ghsvs/svgs/' . $match[1] . '.svg';
-					
+
 					if (file_exists($svg))
 					{
 						$svg = file_get_contents($svg);
-						
+
 						if ($options->get('addSpan'))
 						{
 							$class = trim($options->get('spanClass', ''));
@@ -453,7 +453,7 @@ class Bs3ghsvsItem
 							{
 								$class .= ' ' . $passedAttributes['class'];
 							}
-							
+
 							$svg   = '<span aria-hidden="true"' . ($class ? ' class="' . $class . '"' : '') . '>'
 								. $svg . '</span>';
 						}
@@ -478,7 +478,7 @@ class Bs3ghsvsItem
 		return $txt;
 	}
 
-	protected static function loadImageResizer() 
+	protected static function loadImageResizer()
 	{
 		if (is_null(self::$imageResizer))
 		{
@@ -486,7 +486,7 @@ class Bs3ghsvsItem
 			self::$imageResizer = new ImgResizeCache(PlgSystemBS3Ghsvs::getPluginParams());
 		}
 	}
-	
+
 	public static function strip_tags($content)
 	{
 		$content = preg_replace("'<script[^>]*>.*?</script>'si", '', $content);
@@ -511,7 +511,7 @@ class Bs3ghsvsItem
 		}
 		return $path;
 	}
-	
+
 	/**
 	 * Returns Array array('width' => $w, 'height' => $h).
 	 * If getimagesize fails return array('width' => 0, 'height' => 0).
@@ -534,20 +534,20 @@ class Bs3ghsvsItem
 			{
 				$image = urldecode($image);
 			}
-		
+
 		if (is_file($image))
 		{
 			$imagesize = getimagesize($image);
 			list($w, $h) = $imagesize;
 		}
-		
+
 		if ($numericalIndices === true)
 		{
 			return array(0 => $w, 1 => $h);
 		}
 		return array('width' => $w, 'height' => $h);
 	}
-	
+
 	/*
 	 * Build and return array with sources block and infos for fallback <img>.
 	 * Returns something like. Example for just one intro_image:
@@ -597,7 +597,7 @@ Array
 */
 			$ordering = \explode(',', $imgs['order']);
 			unset($imgs['order']);
-	
+
 /*
 $srcSetKeys falls keiner erxplizit übergeben
 Array
@@ -613,9 +613,9 @@ Array
 				'_u',
 			);
 			unset($mediaQueries['srcSetKey']);
-	
+
 			$count = count($mediaQueries);
-	
+
 //echo ' 4654sd48sa7d98sD81s8d71dsa <pre>' . print_r($imgs, true) . '</pre>';exit;
 /*
 $sizedImageKey ist numerischer Index. Bei intro_image gibts bspw. nur einen (0).
@@ -670,7 +670,7 @@ Array
 				{
 					$i      = 1;
 					$imgKey = 'img-' . $order;
-	
+
 					foreach ($mediaQueries as $mediaQuery => $sizeIndex)
 					{
 /*
@@ -694,17 +694,17 @@ Array
 )
 */
 						$image = $sizedImages[$sizeIndex];
-						
+
 						// Fall back to first image.
 						if ($image['count'] < $order)
 						{
 							$imgKey = 'img-1';
 						}
-	
+
 						// Übernimmt also den numerischen Key des imgs-Arrays.
 						$sources[$sizedImageKey][] = '<source srcset="' . $image[$imgKey] . '" media="' . $mediaQuery . '">';
 						$i++;
-						
+
 						// $count ist die übergebene Anzahl an mediaQueries.
 						if ($i > $count)
 						{
@@ -718,20 +718,20 @@ Array
 									break;
 								}
 							}
-							
+
 							// Paranoia:
 							if (!isset($srcSetImage))
 							{
 								$srcSetImage = $origImage;
 							}
-	
+
 							$sources[$sizedImageKey][] = '<source srcset="' . $srcSetImage . '">';
 						} // if ($i > $count)
 					} // foreach ($mediaQueries as $mediaQuery => $sizeIndex)
 				} // foreach ($ordering as $order)
-	
+
 				$returnArray[$sizedImageKey]['sources'] = implode("\n", $sources[$sizedImageKey]);
-				
+
 				// ToDo: There should be an earlier place in code to get missing width and height
 				//  instead of running self::getImageSize() again and again here and there.
 				//  The imageresizer returns false in _checkImage(...) with no width/height and
@@ -750,14 +750,14 @@ Array
 				);
 			} // foreach ($imgs as $sizedImageKey => $sizedImages)
 		} // if ($imgs && $mediaQueries)
-		
+
 		// Resizer disabled.
 		if (!$returnArray && $origImage)
 		{
 			$returnArray[0]['sources']       = '<source srcset="' . $origImage . '">';
 			$returnArray[0]['assets']['img'] = $origImage;
 			$returnArray[0]['assets']        = \array_merge($returnArray[0]['assets'], self::getImageSize($origImage));
-			
+
 		}
 		return $returnArray;
 	}
